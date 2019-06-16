@@ -4,6 +4,7 @@ const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const fs = require('fs');
 
 fs.copyFile(path.resolve(__dirname, "pages", "index.pug"), './pages/index.BEMDECL', (err) => {
@@ -16,7 +17,7 @@ module.exports = {
         app: path.resolve(__dirname, "pages", "index.js"),
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
     devtool: 'inline-source-map',
@@ -34,7 +35,7 @@ module.exports = {
                         // Передаем результат в bemdecl-to-fs-loader
                         loader: 'bemdecl-to-fs-loader',
                         // Указываем уровни переопределения и расширения технологий
-                        options: { levels: ['Common.blocks','Desktop.blocks','Mobile.blocks'], extensions: ['scss', 'js'] }
+                        options: { levels: ['Common.blocks','Desktop.blocks','Mobile.blocks'], extensions: ['scss', 'js', 'pug'] }
                     },
                     // Для начала передаем файл в html2bemdecl-loader
                     { loader: 'html2bemdecl-loader' },
@@ -55,7 +56,14 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader", // creates style nodes from JS strings
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: true,
+                            /*reloadAll: true,*/
+                        },
+                    },
+                    /*"style-loader", // creates style nodes from JS strings*/
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
@@ -67,6 +75,12 @@ module.exports = {
        /* new CleanWebpackPlugin(),*/
         new HtmlWebpackPlugin({
             template: './pages/index.pug'
+        }),
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: '[name].css',
+            chunkFilename: '[id].css',
         }),
     ],
     optimization: {
