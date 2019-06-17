@@ -1,13 +1,21 @@
+include ../Common.blocks/Logo/Logo.pug
+include ../Common.blocks/Logo/__Parth1/Logo__Parth1.pug
+include ../Common.blocks/Logo/__Parth2/Logo__Parth2.pug
+include ../Common.blocks/LogoWrapper/LogoWrapper.pug
 include ../Common.blocks/Container/Container.pug
+
 doctype html
 html
     head
-        title
+        title UI Kit
         meta(name='viewport' content='width=device-width, initial-scale=1')
         meta(name='HandheldFriendly' content='true')
         meta(name='MobileOptimazed' content='width')
         meta(name='apple-mobile-web-app-capable' content='yes')
     body
+        +Container()
+            +LogoWrapper()
+                +Logo()
+                    //+Logo__Parth1()
+                    //+Logo__Parth2()
 
-
-+Container('section')

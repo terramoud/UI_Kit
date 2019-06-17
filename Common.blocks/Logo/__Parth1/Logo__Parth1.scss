@@ -1,0 +1,24 @@
+.Logo__Parth1 {
+  position: relative;
+  top: 15px;
+  left: -2px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2.5px solid rgba(31, 32, 65, 0.25);
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(36deg);
+  &::after {
+    content: '';
+    position: relative;
+    display: block;
+    background-color: #FFFFFF;
+    width: 10px;
+    height: 12px;
+    left: 14px;
+    top: 5px;
+    border-radius: 25%;
+  }
+}

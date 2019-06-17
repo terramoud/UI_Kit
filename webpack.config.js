@@ -35,7 +35,7 @@ module.exports = {
                         // Передаем результат в bemdecl-to-fs-loader
                         loader: 'bemdecl-to-fs-loader',
                         // Указываем уровни переопределения и расширения технологий
-                        options: { levels: ['Common.blocks','Desktop.blocks','Mobile.blocks'], extensions: ['scss', 'js', 'pug'] }
+                        options: { levels: ['Common.blocks','Desktop.blocks','Mobile.blocks'], extensions: ['scss', 'js'] }
                     },
                     // Для начала передаем файл в html2bemdecl-loader
                     { loader: 'html2bemdecl-loader' },
@@ -72,7 +72,7 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-       /* new CleanWebpackPlugin(),*/
+        /*new CleanWebpackPlugin(),*/
         new HtmlWebpackPlugin({
             template: './pages/index.pug'
         }),

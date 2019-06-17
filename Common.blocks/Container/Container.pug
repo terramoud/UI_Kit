@@ -1,2 +1,4 @@
-mixin Container(el)
-    #{el}.Container
+mixin Container(content)
+    section.Container #{content}
+        if block
+            block
