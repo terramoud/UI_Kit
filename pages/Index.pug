@@ -1,4 +1,6 @@
 include ../Common.blocks/Logo/Logo.pug
+include ../Common.blocks/Content/Content.pug
+include ../Common.blocks/Content/__WrapperLeft/Content__WrapperLeft.pug
 include ../Common.blocks/LogoWrapper/LogoWrapper.pug
 include ../Common.blocks/Container/Container.pug
 
@@ -14,4 +16,5 @@ html
         +Container()
             +LogoWrapper()
                 +Logo()
-
+            +Content()
+                +Content__WrapperLeft()

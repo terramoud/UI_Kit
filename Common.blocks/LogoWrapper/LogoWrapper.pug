@@ -1,4 +1,4 @@
-mixin LogoWrapper(content)
-    div.LogoWrapper #{content}
+mixin LogoWrapper(content, cl)
+    div.LogoWrapper(class= cl) #{content}
         if block
             block
