@@ -1,0 +1,10 @@
+.Content__ColorSwatch {
+  width: 70px;
+  height: 70px;
+  background: #1F2041;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  &:nth-last-child() {
+    margin-bottom: 0;
+  }
+}

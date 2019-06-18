@@ -7,10 +7,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const fs = require('fs');
 
-fs.copyFile(path.resolve(__dirname, "pages", "index.pug"), './pages/index.BEMDECL', (err) => {
+/*fs.copyFile(path.resolve(__dirname, "pages", "index.pug"), './pages/index.BEMDECL', (err) => {
     if (err) throw err;
     console.log('index.pug was copied to index.BEMDECL');
-});
+});*/
 
 module.exports = {
     entry: {
@@ -19,6 +19,11 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
+    },
+    resolveLoader: {
+        alias: {
+            'parent-scope-loader': path.resolve('loaderBEMDECL.js')
+        },
     },
     devtool: 'inline-source-map',
     mode: 'development',
@@ -31,6 +36,13 @@ module.exports = {
             {
                 test: /\.BEMDECL$/,
                 use: [
+/*                    {
+                        loader: "file-loader",
+                        options: {
+                            name: '[bem].[bem]',
+                            outputPath: './dist',
+                        },
+                    },*/
                     {
                         // Передаем результат в bemdecl-to-fs-loader
                         loader: 'bemdecl-to-fs-loader',
@@ -50,6 +62,9 @@ module.exports = {
                         options: {
                             pretty: true,
                         }
+                    },
+                    {
+                        loader: "parent-scope-loader",
                     },
                 ]
             },
