@@ -9,7 +9,8 @@
     "w": "webpack",
     "start": "webpack-dev-server --open",
     "server": "http-server dist",
-    "dev-server": "node dev-server.js"
+    "dev-server": "node dev-server.js",
+    "s": "node dev-server.js"
   },
   "repository": {
     "type": "git",

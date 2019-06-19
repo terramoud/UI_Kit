@@ -5,12 +5,6 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const fs = require('fs');
-
-/*fs.copyFile(path.resolve(__dirname, "pages", "index.pug"), './pages/index.BEMDECL', (err) => {
-    if (err) throw err;
-    console.log('index.pug was copied to index.BEMDECL');
-});*/
 
 module.exports = {
     entry: {
@@ -22,7 +16,7 @@ module.exports = {
     },
     resolveLoader: {
         alias: {
-            'parent-scope-loader': path.resolve('loaderBEMDECL.js')
+            'pug-to-bemdecl-loader': path.resolve('pugToBemdeclLoader.js')
         },
     },
     devtool: 'inline-source-map',
@@ -36,13 +30,6 @@ module.exports = {
             {
                 test: /\.BEMDECL$/,
                 use: [
-/*                    {
-                        loader: "file-loader",
-                        options: {
-                            name: '[bem].[bem]',
-                            outputPath: './dist',
-                        },
-                    },*/
                     {
                         // Передаем результат в bemdecl-to-fs-loader
                         loader: 'bemdecl-to-fs-loader',
@@ -64,7 +51,7 @@ module.exports = {
                         }
                     },
                     {
-                        loader: "parent-scope-loader",
+                        loader: "pug-to-bemdecl-loader",
                     },
                 ]
             },
@@ -82,7 +69,15 @@ module.exports = {
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS, using Node Sass by default
                 ]
-            }
+            },
+            {
+                 test: /\.(woff|woff2|eot|ttf|otf)$/,
+                 use: [
+                     {
+                         loader: 'file-loader',
+                     },
+                 ],
+            },
         ]
     },
     plugins: [

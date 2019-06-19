@@ -1,3 +1,8 @@
+include ../Common.blocks/Content/__ColorDescriptionWrapper/Content__ColorDescriptionWrapper.pug
+include ../Common.blocks/Content/__ColorNameDescription/Content__ColorNameDescription.pug
+include ../Common.blocks/Content/__ColorName/Content__ColorName.pug
+include ../Common.blocks/Content/__ColorSwatchWrapper/Content__ColorSwatchWrapper.pug
+include ../Common.blocks/Content/__WrapperRight/Content__WrapperRight.pug
 include ../Common.blocks/Logo/Logo.pug
 include ../Common.blocks/Content/Content.pug
 include ../Common.blocks/Content/__ColorSwatch/Content__ColorSwatch.pug
@@ -12,17 +17,41 @@ html
         meta(name='viewport' content='width=device-width, initial-scale=1')
         meta(name='HandheldFriendly' content='true')
         meta(name='MobileOptimazed' content='width')
-        meta(name='apple-mobile-web-app-capable' content='yes')
+
     body
         +Container()
             +LogoWrapper()
                 +Logo()
             +Content()
                 +Content__WrapperLeft()
-                    +Content__ColorSwatch()
-                    +Content__ColorSwatch('', 'Content_DarkShade_75')
-                    +Content__ColorSwatch('', 'Content_DarkShade_50')
-                    +Content__ColorSwatch('', 'Content_DarkShade_25')
-                    +Content__ColorSwatch('', 'Content_DarkShade_05')
-                    +Content__ColorSwatch('', 'Content_Bg_dsfsd')
-                    +Content__ColorSwatch('', 'Content_Fg_1')
+                    +Content__ColorSwatchWrapper()
+                        +Content__ColorSwatch()
+                        +Content__ColorSwatch('', 'Content_BgColor_DarkShade75')
+                        +Content__ColorSwatch('', 'Content_BgColor_DarkShade50')
+                        +Content__ColorSwatch('', 'Content_BgColor_DarkShade25')
+                        +Content__ColorSwatch('', 'Content_BgColor_DarkShade05')
+                        +Content__ColorSwatch('', 'Content_BgColor_Purple')
+                        +Content__ColorSwatch('', 'Content_BgColor_Green')
+                    +Content__ColorSwatchWrapper()
+                        +Content__ColorDescriptionWrapper()
+                            +Content__ColorName('Dark Shade 100%')
+                            +Content__ColorNameDescription('#1F2041')
+                        +Content__ColorDescriptionWrapper()
+                            +Content__ColorName('Dark Shade 75%')
+                            +Content__ColorNameDescription('#1F2041')
+                        +Content__ColorDescriptionWrapper()
+                            +Content__ColorName('Dark Shade 50%')
+                            +Content__ColorNameDescription('#1F2041')
+                        +Content__ColorDescriptionWrapper()
+                            +Content__ColorName('Dark Shade 25%')
+                            +Content__ColorNameDescription('#1F2041')
+                        +Content__ColorDescriptionWrapper()
+                            +Content__ColorName('Dark Shade 5%')
+                            +Content__ColorNameDescription('#1F2041')
+                        +Content__ColorDescriptionWrapper()
+                            +Content__ColorName('Purple')
+                            +Content__ColorNameDescription('#BC9CFF')
+                        +Content__ColorDescriptionWrapper()
+                            +Content__ColorName('Green')
+                            +Content__ColorNameDescription('#6FCF97')
+                +Content__WrapperRight()
