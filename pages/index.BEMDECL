@@ -1,12 +1,14 @@
-include ../Common.blocks/Content/__ColorDescriptionWrapper/Content__ColorDescriptionWrapper.pug
-include ../Common.blocks/Content/__ColorNameDescription/Content__ColorNameDescription.pug
-include ../Common.blocks/Content/__ColorName/Content__ColorName.pug
-include ../Common.blocks/Content/__ColorSwatchWrapper/Content__ColorSwatchWrapper.pug
-include ../Common.blocks/Content/__WrapperRight/Content__WrapperRight.pug
+include ../Common.blocks/FigureHtml5/__FigcaptionWrapper/FigureHtml5__FigcaptionWrapper.pug
+include ../Common.blocks/FigureHtml5/__Figcaption/FigureHtml5__Figcaption.pug
+include ../Common.blocks/FigureHtml5/__Image/FigureHtml5__Image.pug
+include ../Common.blocks/FigureHtml5/FigureHtml5.pug
+//include ../Common.blocks/ImageAndDescription/__Image/ImageAndDescription__Image.pug
+include ../Common.blocks/Wrapper/Wrapper.pug
+//include ../Common.blocks/ImageAndDescription/ImageAndDescription.pug
+include ../Common.blocks/ColorSwatch/ColorSwatch.pug
+include ../Common.blocks/Content/__Wrapper/Content__Wrapper.pug
 include ../Common.blocks/Logo/Logo.pug
 include ../Common.blocks/Content/Content.pug
-include ../Common.blocks/Content/__ColorSwatch/Content__ColorSwatch.pug
-include ../Common.blocks/Content/__WrapperLeft/Content__WrapperLeft.pug
 include ../Common.blocks/LogoWrapper/LogoWrapper.pug
 include ../Common.blocks/Container/Container.pug
 
@@ -22,36 +24,40 @@ html
         +Container()
             +LogoWrapper()
                 +Logo()
-            +Content()
-                +Content__WrapperLeft()
-                    +Content__ColorSwatchWrapper()
-                        +Content__ColorSwatch()
-                        +Content__ColorSwatch('', 'Content_BgColor_DarkShade75')
-                        +Content__ColorSwatch('', 'Content_BgColor_DarkShade50')
-                        +Content__ColorSwatch('', 'Content_BgColor_DarkShade25')
-                        +Content__ColorSwatch('', 'Content_BgColor_DarkShade05')
-                        +Content__ColorSwatch('', 'Content_BgColor_Purple')
-                        +Content__ColorSwatch('', 'Content_BgColor_Green')
-                    +Content__ColorSwatchWrapper()
-                        +Content__ColorDescriptionWrapper()
-                            +Content__ColorName('Dark Shade 100%')
-                            +Content__ColorNameDescription('#1F2041')
-                        +Content__ColorDescriptionWrapper()
-                            +Content__ColorName('Dark Shade 75%')
-                            +Content__ColorNameDescription('#1F2041')
-                        +Content__ColorDescriptionWrapper()
-                            +Content__ColorName('Dark Shade 50%')
-                            +Content__ColorNameDescription('#1F2041')
-                        +Content__ColorDescriptionWrapper()
-                            +Content__ColorName('Dark Shade 25%')
-                            +Content__ColorNameDescription('#1F2041')
-                        +Content__ColorDescriptionWrapper()
-                            +Content__ColorName('Dark Shade 5%')
-                            +Content__ColorNameDescription('#1F2041')
-                        +Content__ColorDescriptionWrapper()
-                            +Content__ColorName('Purple')
-                            +Content__ColorNameDescription('#BC9CFF')
-                        +Content__ColorDescriptionWrapper()
-                            +Content__ColorName('Green')
-                            +Content__ColorNameDescription('#6FCF97')
-                +Content__WrapperRight()
+            +Content('', 'Content__Wrapper')
+                +Wrapper()
+                    +FigureHtml5()
+                        +FigureHtml5__Image('', 'FigureHtml5_Bg_Dsh100')
+                        +FigureHtml5__FigcaptionWrapper()
+                            +FigureHtml5__Figcaption('Dark Shade 100%')
+                            +FigureHtml5__Figcaption('#1F2041', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
+                    +FigureHtml5()
+                        +FigureHtml5__Image('', 'FigureHtml5_Bg_Dsh75')
+                        +FigureHtml5__FigcaptionWrapper()
+                            +FigureHtml5__Figcaption('Dark Shade 75%')
+                            +FigureHtml5__Figcaption('#1F2041', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
+                    +FigureHtml5()
+                        +FigureHtml5__Image('', 'FigureHtml5_Bg_Dsh50')
+                        +FigureHtml5__FigcaptionWrapper()
+                            +FigureHtml5__Figcaption('Dark Shade 50%')
+                            +FigureHtml5__Figcaption('#1F2041', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
+                    +FigureHtml5()
+                        +FigureHtml5__Image('', 'FigureHtml5_Bg_Dsh25')
+                        +FigureHtml5__FigcaptionWrapper()
+                            +FigureHtml5__Figcaption('Dark Shade 25%')
+                            +FigureHtml5__Figcaption('#1F2041', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
+                    +FigureHtml5()
+                        +FigureHtml5__Image('', 'FigureHtml5_Bg_Dsh05')
+                        +FigureHtml5__FigcaptionWrapper('', 'FigureHtml5_PdTop')
+                            +FigureHtml5__Figcaption('Dark Shade 5%')
+                            +FigureHtml5__Figcaption('#1F2041', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
+                    +FigureHtml5()
+                        +FigureHtml5__Image('', 'FigureHtml5_Bg_Purple')
+                        +FigureHtml5__FigcaptionWrapper('', 'FigureHtml5_PdTop')
+                            +FigureHtml5__Figcaption('Purple')
+                            +FigureHtml5__Figcaption('#BC9CFF', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
+                    +FigureHtml5()
+                        +FigureHtml5__Image('', 'FigureHtml5_Bg_Green')
+                        +FigureHtml5__FigcaptionWrapper()
+                            +FigureHtml5__Figcaption('Green')
+                            +FigureHtml5__Figcaption('#6FCF97', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
