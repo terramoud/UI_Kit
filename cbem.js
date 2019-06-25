@@ -53,7 +53,7 @@ fs.writeFile( "Common.blocks/" + pathTo + '/' + fileName + '.scss', '.' + fileNa
 });
 
 if (!dirModificator) {
-    fs.writeFile( "Common.blocks/" + pathTo + '/' + fileName + '.pug', 'mixin ' + fileName + '(content, cl)\n' +
+    fs.writeFile( "Common.blocks/" + pathTo + '/' + fileName + '.pug', 'mixin ' + fileName + '(cl, content)\n' +
         '    div.' + fileName + '(class= cl) #{content}\n' +
         '        if block\n' +
         '            block', function (err) {
