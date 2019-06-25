@@ -4,9 +4,24 @@
   font-style: normal;
   font-weight: 700;
 }
+
 @font-face {
   font-family: "Quicksand-regular";
   src: url('./Quicksand-regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url('./Montserrat-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url('./Montserrat-Regular.ttf');
   font-style: normal;
   font-weight: 400;
 }

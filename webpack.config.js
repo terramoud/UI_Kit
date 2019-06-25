@@ -66,8 +66,19 @@ module.exports = {
                         },
                     },
                     /*"style-loader", // creates style nodes from JS strings*/
-                    "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                    { loader: 'css-loader', options: { sourceMap: true } },
+                    { loader: 'sass-loader', options: { sourceMap: true } },
+                    {
+                        loader: 'sass-resources-loader',
+                        options: {
+                            sourceMap: true,
+                            // Or array of paths
+                            resources: [
+                                './Common.blocks/Base/Variables.scss',
+                                './Common.blocks/Base/Mixins.scss',
+                            ]
+                        }
+                    }
                 ]
             },
             {
@@ -84,7 +95,9 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         /*new CleanWebpackPlugin(),*/
         new HtmlWebpackPlugin({
-            template: './pages/index.pug'
+            template: './pages/index.pug',
+            inject: 'body',
+            defer: ['app'],
         }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output

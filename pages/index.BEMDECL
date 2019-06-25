@@ -1,10 +1,12 @@
+include ../Common.blocks/ExampleText/__Wrapper/ExampleText__Wrapper.pug
+include ../Common.blocks/ExampleText/__Text/ExampleText__Text.pug
+include ../Common.blocks/ExampleText/__Header/ExampleText__Header.pug
+include ../Common.blocks/ExampleText/ExampleText.pug
 include ../Common.blocks/FigureHtml5/__FigcaptionWrapper/FigureHtml5__FigcaptionWrapper.pug
 include ../Common.blocks/FigureHtml5/__Figcaption/FigureHtml5__Figcaption.pug
 include ../Common.blocks/FigureHtml5/__Image/FigureHtml5__Image.pug
 include ../Common.blocks/FigureHtml5/FigureHtml5.pug
-//include ../Common.blocks/ImageAndDescription/__Image/ImageAndDescription__Image.pug
 include ../Common.blocks/Wrapper/Wrapper.pug
-//include ../Common.blocks/ImageAndDescription/ImageAndDescription.pug
 include ../Common.blocks/ColorSwatch/ColorSwatch.pug
 include ../Common.blocks/Content/__Wrapper/Content__Wrapper.pug
 include ../Common.blocks/Logo/Logo.pug
@@ -48,12 +50,12 @@ html
                             +FigureHtml5__Figcaption('#1F2041', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
                     +FigureHtml5()
                         +FigureHtml5__Image('', 'FigureHtml5_Bg_Dsh05')
-                        +FigureHtml5__FigcaptionWrapper('', 'FigureHtml5_PdTop')
+                        +FigureHtml5__FigcaptionWrapper()
                             +FigureHtml5__Figcaption('Dark Shade 5%')
                             +FigureHtml5__Figcaption('#1F2041', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
                     +FigureHtml5()
                         +FigureHtml5__Image('', 'FigureHtml5_Bg_Purple')
-                        +FigureHtml5__FigcaptionWrapper('', 'FigureHtml5_PdTop')
+                        +FigureHtml5__FigcaptionWrapper()
                             +FigureHtml5__Figcaption('Purple')
                             +FigureHtml5__Figcaption('#BC9CFF', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
                     +FigureHtml5()
@@ -61,3 +63,18 @@ html
                         +FigureHtml5__FigcaptionWrapper()
                             +FigureHtml5__Figcaption('Green')
                             +FigureHtml5__Figcaption('#6FCF97', 'FigureHtml5_Fw_400 FigureHtml5_Ff_QuicksandRegular')
+                +Wrapper()
+                    +ExampleText()
+                        +ExampleText__Header('H1', 'ExampleText_FontSize_24px ExampleText_LineH_29')
+                        +ExampleText__Text('This one is the sub-section or widget title', 'ExampleText_FontStyle_H1')
+                    +ExampleText()
+                        +ExampleText__Header('H2', 'ExampleText_FontSize_19px ExampleText_LineH_23')
+                        +ExampleText__Text('Next one is the item title inside widgets', 'ExampleText_FontStyle_H2')
+                    +ExampleText()
+                        +ExampleText__Header('H3', 'ExampleText_FontSize_12px ExampleText_TextTransf_Upper ExampleText_LineH_15')
+                        +ExampleText__Text('This is a label or CTA text', 'ExampleText_FontStyle_H3 ExampleText_PdBot_Correct')
+                    +ExampleText()
+                        +ExampleText__Header('Body', 'ExampleText_FontSize_14px ExampleText_LineH_24')
+                        +ExampleText__Text('This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'ExampleText_FontStyle_Body')
+
+
