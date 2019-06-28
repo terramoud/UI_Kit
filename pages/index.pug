@@ -1,3 +1,9 @@
+include ../Common.blocks/InputBlock/__Wrapper/InputBlock__Wrapper.pug
+include ../Common.blocks/Content/__WrapperForFormElements/Content__WrapperForFormElements.pug
+include ../Common.blocks/InputBlock/__FieldName/InputBlock__FieldName.pug
+include ../Common.blocks/InputBlock/__FieldDescription/InputBlock__FieldDescription.pug
+include ../Common.blocks/InputBlock/__InputField/InputBlock__InputField.pug
+include ../Common.blocks/InputBlock/InputBlock.pug
 include ../Common.blocks/ExampleText/__Wrapper/ExampleText__Wrapper.pug
 include ../Common.blocks/ExampleText/__Text/ExampleText__Text.pug
 include ../Common.blocks/ExampleText/__Header/ExampleText__Header.pug
@@ -79,10 +85,21 @@ html
         +Container('', 'Container_BgColor_White Container_MarBot_50px Container_Height_1853px')
             +LogoWrapper()
                 +Logo()
-            +Content('', 'Content__Wrapper')
+            +Content('', 'Content__WrapperForFormElements')
                 +Wrapper()
+                    +InputBlock()
+                        +InputBlock__Wrapper()
+                            +InputBlock__FieldName('', 'text field')
+                            +InputBlock__FieldDescription('', 'default')
+                        +InputBlock__InputField('input', 'InputBlock__InputField', 'text', 'Email')
+                        +InputBlock()
+                            +InputBlock__Wrapper()
+                                +InputBlock__FieldName('', 'text field')
+                                +InputBlock__FieldDescription('', 'HOVER  /FOCUS')
+                            +InputBlock__InputField('input','InputBlock__InputField', 'text', 'This is pretty awesome')
                 +Wrapper()
                     +Wrapper()
                         +Wrapper()
                         +Wrapper()
                     +Wrapper()
+

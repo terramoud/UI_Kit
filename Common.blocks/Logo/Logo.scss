@@ -1,4 +1,30 @@
-.Logo {
-  padding: 30px 0 0 30px;
+@media only screen  and (max-width: 576px) {
+  .Logo {
+    padding: 2% 0 0 2%;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .Logo {
+    padding: 30px 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .Logo {
+    padding: 30px 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+  .Logo {
+    padding: 30px 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .Logo {
+    padding: 30px 0 0 30px;
+  }
 }
 

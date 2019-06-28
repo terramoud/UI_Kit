@@ -46,8 +46,16 @@ fs.writeFile( "Common.blocks/" + pathTo + '/' + fileName + '.js', '', function (
     if (err) throw err;
     console.log('File.js is created successfully.');
 });
+var scssData =  '@media only screen  and (max-width: 576px) {\n .' + fileName +' {\n\n}\n}\n\n' +
+                '@media only screen and (min-width: 577px) and (max-width: 767px) {\n .' + fileName +' {\n\n }\n}\n\n' +
+                '@media only screen and (min-width: 768px) and (max-width: 1024px) {\n .' + fileName +' {\n\n }\n}\n\n' +
+                '@media only screen and (min-width: 1025px) and (max-width: 1439px) {\n .' + fileName +' {\n\n }\n}\n\n' +
+                '@media only screen and (min-width: 1440px) and (max-width: 1440px) {\n .' + fileName +' {\n\n }\n}\n\n' +
+                '@media only screen and (min-width: 1441px) and (max-width: 1680px) {\n .' + fileName +' {\n\n }\n}\n\n' +
+                '@media only screen and (min-width: 1681px) and (max-width: 1920px) {\n .' + fileName +' {\n\n }\n}\n\n';
+                '@media only screen and (min-width: 1681px) and (max-width: 1920px) {\n .' + fileName +' {\n\n }\n}\n\n';
 
-fs.writeFile( "Common.blocks/" + pathTo + '/' + fileName + '.scss', '.' + fileName +' {\n\n}', function (err) {
+fs.writeFile( "Common.blocks/" + pathTo + '/' + fileName + '.scss', scssData, function (err) {
     if (err) throw err;
     console.log('File.scss is created successfully.');
 });

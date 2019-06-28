@@ -1,3 +1,30 @@
-.ExampleText_PdR_34 {
-  padding-right: 34px;
+@media only screen  and (max-width: 576px) {
+  .ExampleText_PdR_34 {
+    padding-right: 0;
+  }
 }
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .ExampleText_PdR_34 {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .ExampleText_PdR_34 {
+    padding-right: 34px;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+  .ExampleText_PdR_34 {
+    padding-right: 34px;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+  .ExampleText_PdR_34 {
+    padding-right: 34px;
+  }
+}
+
