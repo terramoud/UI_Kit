@@ -1,3 +1,5 @@
+include ../Common.blocks/InputBlock/__Option/InputBlock__Option.pug
+include ../Common.blocks/InputBlock/__Select/InputBlock__Select.pug
 include ../Common.blocks/InputBlock/__Wrapper/InputBlock__Wrapper.pug
 include ../Common.blocks/Content/__WrapperForFormElements/Content__WrapperForFormElements.pug
 include ../Common.blocks/InputBlock/__FieldName/InputBlock__FieldName.pug
@@ -89,17 +91,29 @@ html
                 +Wrapper()
                     +InputBlock()
                         +InputBlock__Wrapper()
-                            +InputBlock__FieldName('', 'text field')
-                            +InputBlock__FieldDescription('', 'default')
-                        +InputBlock__InputField('input', 'InputBlock__InputField', 'text', 'Email')
-                        +InputBlock()
-                            +InputBlock__Wrapper()
-                                +InputBlock__FieldName('', 'text field')
-                                +InputBlock__FieldDescription('', 'HOVER  /FOCUS')
-                            +InputBlock__InputField('input','InputBlock__InputField', 'text', 'This is pretty awesome')
+                            +InputBlock__FieldName('text field')
+                            +InputBlock__FieldDescription('default')
+                        +InputBlock__InputField('InputBlock__InputField', 'text', 'Email')
+                    +InputBlock()
+                        +InputBlock__Wrapper()
+                            +InputBlock__FieldName('text field')
+                            +InputBlock__FieldDescription('HOVER  /FOCUS')
+                        +InputBlock__InputField('InputBlock__InputField InputBlock_BrColor_DrSh50', 'text', 'This is pretty awesome')
+                    +InputBlock()
+                        +InputBlock__Wrapper()
+                            +InputBlock__FieldName('dropdown')
+                            +InputBlock__FieldDescription('default')
+                        +InputBlock__InputField('InputBlock__InputField', 'text', 'This is pretty awesome')
+                    +InputBlock()
+                        +InputBlock__Wrapper()
+                            +InputBlock__FieldName('masked text field')
+                            +InputBlock__FieldDescription('default')
+                        +InputBlock__InputField('InputBlock__InputField', 'text', 'This is pretty awesome')
                 +Wrapper()
                     +Wrapper()
                         +Wrapper()
                         +Wrapper()
                     +Wrapper()
+
+
 

@@ -1,4 +1,4 @@
-mixin InputBlock__FieldDescription(cl, content)
-    div.InputBlock__FieldDescription(class= cl) #{content}
+mixin InputBlock__FieldDescription(content)
+    div.InputBlock__FieldDescription&attributes(attributes) #{content}
         if block
             block

@@ -1,4 +1,2 @@
-mixin InputBlock__InputField(tag, cl, type, placeholder)
-    #{tag}( class=cl, type=type, placeholder=placeholder  name='agreement' checked )
-        if block
-            block
+mixin InputBlock__InputField(cl, type, placeholder)
+    input(class=cl type=type, placeholder=placeholder)

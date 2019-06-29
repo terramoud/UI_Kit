@@ -1,4 +1,4 @@
-mixin InputBlock__FieldName(cl, content)
-    div.InputBlock__FieldName(class= cl) #{content}
+mixin InputBlock__FieldName(content)
+    div.InputBlock__FieldName&attributes(attributes) #{content}
         if block
             block

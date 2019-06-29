@@ -11,6 +11,8 @@ var fileName = (process.argv[4]);
 var dirElem = (process.argv[5]);
 var dirModificator = (process.argv[6]);
 var pathTo = dir;
+var now = new Date();
+console.log(now.getHours() +":"+ (now.getMinutes()<10?'0':'') + now.getMinutes() +":"+ now.getSeconds());
 
 try {
     if ( !fs.existsSync("Common.blocks/" + dir) ){
@@ -44,7 +46,7 @@ if  (dirModificator) {
 
 fs.writeFile( "Common.blocks/" + pathTo + '/' + fileName + '.js', '', function (err) {
     if (err) throw err;
-    console.log('File.js is created successfully.');
+    //console.log('File.js is created successfully.');
 });
 var scssData =  '@media only screen  and (max-width: 576px) {\n .' + fileName +' {\n\n}\n}\n\n' +
                 '@media only screen and (min-width: 577px) and (max-width: 767px) {\n .' + fileName +' {\n\n }\n}\n\n' +
@@ -57,7 +59,7 @@ var scssData =  '@media only screen  and (max-width: 576px) {\n .' + fileName +'
 
 fs.writeFile( "Common.blocks/" + pathTo + '/' + fileName + '.scss', scssData, function (err) {
     if (err) throw err;
-    console.log('File.scss is created successfully.');
+    //console.log('File.scss is created successfully.');
 });
 
 if (!dirModificator) {
@@ -66,7 +68,7 @@ if (!dirModificator) {
         '        if block\n' +
         '            block', function (err) {
         if (err) throw err;
-        console.log('File.pug is created successfully.');
+        //console.log('File.pug is created successfully.');
     });
 
     prependFile('pages/' + entryPoint + '.pug', 'include ../Common.blocks/' + pathTo + '/' + fileName + '.pug\n', function (err) {
@@ -75,7 +77,7 @@ if (!dirModificator) {
         }
 
         // Success
-        console.log('The "data to prepend" was prepended to file!');
+        //console.log('The "data to prepend" was prepended to file!');
     });
 
     var data = '\n+' + fileName + '()';
@@ -85,6 +87,6 @@ if (!dirModificator) {
         function(err) {
             if (err) throw err;
             // if no error
-            console.log("Data is appended to file successfully.")
+            //console.log("Data is appended to file successfully.")
         });
 }
