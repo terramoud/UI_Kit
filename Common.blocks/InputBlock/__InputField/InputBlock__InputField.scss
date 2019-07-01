@@ -49,6 +49,12 @@
    border: none;
    box-shadow: none
   }
+  &:hover {
+   border-color: $DarkShade50;
+  }
+  &:focus {
+   border-color: $DarkShade50;
+  }
  }
 }
 

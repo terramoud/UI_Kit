@@ -75,7 +75,6 @@ module.exports = {
                             // Or array of paths
                             resources: [
                                 './Common.blocks/Base/Variables.scss',
-                                './Common.blocks/Base/Mixins.scss',
                             ]
                         }
                     }

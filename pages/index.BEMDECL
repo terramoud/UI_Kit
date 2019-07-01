@@ -1,3 +1,4 @@
+include ../Common.blocks/InputBlock/__SelectArrow/InputBlock__SelectArrow.pug
 include ../Common.blocks/InputBlock/__Option/InputBlock__Option.pug
 include ../Common.blocks/InputBlock/__Select/InputBlock__Select.pug
 include ../Common.blocks/InputBlock/__Wrapper/InputBlock__Wrapper.pug
@@ -103,8 +104,12 @@ html
                         +InputBlock__Wrapper()
                             +InputBlock__FieldName('dropdown')
                             +InputBlock__FieldDescription('default')(class='InputBlock_PdTop_3px')
-                        select.InputBlock__InputField
-                            option(selected) Сколько гостей
+                        label
+                            +InputBlock__SelectArrow('expand_more')(class='material-icons')
+                            Select(class='InputBlock__Select InputBlock_PdTop_11px')
+                                option(selected) Сколько гостей
+                                option() Сколько гостей
+                                option() Сколько гостей
                     +InputBlock()
                         +InputBlock__Wrapper()
                             +InputBlock__FieldName('masked text field')
@@ -115,6 +120,10 @@ html
                         +Wrapper()
                         +Wrapper()
                     +Wrapper()
+
+
+
+
 
 
 
