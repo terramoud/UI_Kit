@@ -94,32 +94,58 @@ html
                         +InputBlock__Wrapper()
                             +InputBlock__FieldName('text field')
                             +InputBlock__FieldDescription('default')
-                        +InputBlock__InputField('InputBlock__InputField', 'text', 'Email')
+                        +InputBlock__InputField('InputBlock__InputField InputBlock_Color_Dark25', 'text', 'Email')
                     +InputBlock()
                         +InputBlock__Wrapper()
                             +InputBlock__FieldName('text field')
                             +InputBlock__FieldDescription('HOVER  /FOCUS')(class='InputBlock_PdTop_3px')
-                        +InputBlock__InputField('InputBlock__InputField InputBlock_BrColor_DrSh50', 'text', 'This is pretty awesome')
+                        +InputBlock__InputField('InputBlock__InputField InputBlock_Color_Dark75', 'text', 'This is pretty awesome')
                     +InputBlock()
                         +InputBlock__Wrapper()
                             +InputBlock__FieldName('dropdown')
                             +InputBlock__FieldDescription('default')(class='InputBlock_PdTop_3px')
-                        label
-                            +InputBlock__SelectArrow('expand_more')(class='material-icons')
-                            Select(class='InputBlock__Select InputBlock_PdTop_11px')
-                                option(selected) Сколько гостей
-                                option() Сколько гостей
-                                option() Сколько гостей
+                        +InputBlock__SelectArrow('expand_more')
+                        Select.InputBlock__InputField.InputBlock_Appearan_none.InputBlock_PdTop_11px.InputBlock_LetterSpacing_0px.InputBlock_MrBot_21px.InputBlock_Color_Dark75
+                            +InputBlock__Option('Сколько гостей', 'selected')
+                            +InputBlock__Option()
+                            +InputBlock__Option()               
                     +InputBlock()
                         +InputBlock__Wrapper()
                             +InputBlock__FieldName('masked text field')
-                            +InputBlock__FieldDescription('default')(class='InputBlock_PdTop_4px')
-                        +InputBlock__InputField('InputBlock__InputField', 'text', 'This is pretty awesome')
+                            +InputBlock__FieldDescription('default')(class='InputBlock_PdTop_2px')
+                        +InputBlock__InputField('InputBlock__InputField InputBlock_Color_Dark25 InputBlock_MrTop_5px InputBlock_MrBot_37px', 'text', 'ДД.ММ.ГГГГ')
+                    +InputBlock__Wrapper()
+                        +InputBlock()
+                            +InputBlock__Wrapper()
+                                +InputBlock__FieldName('date dropdown')
+                            +InputBlock__SelectArrow('expand_more')
+                            Select.InputBlock__InputField.InputBlock_Appearan_none.InputBlock_LetterSpacing_0px.InputBlock_MrBot_21px.InputBlock_Color_Dark75.InputBlock_Width_150px.InputBlock_PdTop_11px
+                                +InputBlock__Option('ДД.ММ.ГГГГ', 'selected')
+                                +InputBlock__Option()
+                                +InputBlock__Option()  
+                        +InputBlock()
+                            +InputBlock__Wrapper()
+                                +InputBlock__FieldName('date dropdown')
+                            +InputBlock__SelectArrow('expand_more')
+                            Select.InputBlock__InputField.InputBlock_Appearan_none.InputBlock_MrBot_21px.InputBlock_Color_Dark75.InputBlock_Width_150px.InputBlock_PdTop_11px
+                                +InputBlock__Option('19.08.2019', 'selected')
+                                +InputBlock__Option()
+                                +InputBlock__Option()
+                    +InputBlock()
+                        +InputBlock__Wrapper()
+                            +InputBlock__FieldName('filter rate dropdown')
+                            +InputBlock__FieldDescription('default')(class='InputBlock_PdTop_3px')
+                        +InputBlock__SelectArrow('expand_more')
+                        Select.InputBlock__InputField.InputBlock_Appearan_none.InputBlock_PdTop_11px.InputBlock_LetterSpacing_0px.InputBlock_MrBot_21px.InputBlock_Color_Dark75
+                            +InputBlock__Option('Сколько гостей', 'selected')
+                            +InputBlock__Option()
+                            +InputBlock__Option() 
                 +Wrapper()
                     +Wrapper()
                         +Wrapper()
                         +Wrapper()
                     +Wrapper()
+
 
 
 
