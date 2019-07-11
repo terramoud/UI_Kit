@@ -5,15 +5,26 @@ $("#filesB").multiselect({
   classes: 'InputBlock__InputField InputBlock_Width_265px InputBlock_Appearan_none InputBlock_PdTop_11px InputBlock_LetterSpacing_0px InputBlock_MrBot_19px InputBlock_Color_Dark75',
 	selectedList: 2,
   //listbox: 10,
-	options: { noneSelectedText: null,},
 	selectedText: function(numChecked, numTotal, checkedItems){
-    value = this.$inputs.filter(':checked').map(function() { return $(this).next().text().replace(/\n$/, '') }).get().join( this.options.selectedListSeparator);
+    value = this.$inputs.filter(':checked').map(function() { 
+
+      var valInputNumber = $(this).siblings('.quantity-block').children('input').val();
+      if (!valInputNumber) {
+        valInputNumber = "0 ";
+      } else {
+        valInputNumber += " ";
+      }
+      return $(this).next().text().replace(/\n$/, '').replace(/^/, valInputNumber) 
+
+    }).get().join( this.options.selectedListSeparator);
+
     if (numChecked >= 2) {
       var str = value.match( /(^[^,]+,[^,]+)/i );
       value = str[0] + '...';
     }
     this.$button[0].children[0].children[0].outerHTML = '<i class="material-icons">expand_more</i>'; 
-                 
+    console.log(this);
+
     return value;
 	},
 });
@@ -34,7 +45,7 @@ $('.ui-multiselect-checkboxes input[type=checkbox]').each(function(index) {
 $(".quantity-arrow-plus").click(function(eventObject){
   var targetPlus = $(this).prev();
   targetPlus.val( +targetPlus.val() + 1 );
-  
+ // $('.ui-multiselect').children('span').last().prepend(targetPlus.val() + ' ');
 });
 
 $(".quantity-arrow-minus").click(function(eventObject){
