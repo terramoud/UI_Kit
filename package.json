@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/terramoud/UI_kit#readme",
   "dependencies": {
+    "jquery": "^3.4.1",
     "npm": "^6.9.2",
-    "prepend-file": "^1.3.1"
+    "prepend-file": "^1.3.1",
+    "webpack-jquery-ui": "^2.0.1"
   },
   "devDependencies": {
     "bemdecl-to-fs-loader": "0.0.4",

@@ -1,4 +1,4 @@
-mixin InputBlock__Wrapper(cl, content)
-    div.InputBlock__Wrapper(class= cl) #{content}
+mixin InputBlock__Wrapper(content)
+    div.InputBlock__Wrapper&attributes(attributes) #{content}
         if block
             block
