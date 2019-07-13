@@ -1,8 +1,3 @@
-include ../Common.blocks/QuantityBlock/__InputNumber/QuantityBlock__InputNumber.pug
-include ../Common.blocks/QuantityBlock/__ArrowPlus/QuantityBlock__ArrowPlus.pug
-include ../Common.blocks/QuantityBlock/__ArrowMinus/QuantityBlock__ArrowMinus.pug
-include ../Common.blocks/QuantityBlock/QuantityBlock.pug
-
 include ../Common.blocks/InputBlock/__Dropdown/InputBlock__Dropdown.pug
 include ../Common.blocks/InputBlock/__WrapperForSelectWithArrow/InputBlock__WrapperForSelectWithArrow.pug
 include ../Common.blocks/InputBlock/__SelectArrow/InputBlock__SelectArrow.pug
@@ -38,6 +33,7 @@ html
         meta(name='viewport' content='width=device-width, initial-scale=1')
         meta(name='HandheldFriendly' content='true')
         meta(name='MobileOptimazed' content='width')
+
 
     body
         +Container('', 'Container_BgColor_White Container_MarBot_50px')
@@ -164,13 +160,10 @@ html
                         +InputBlock__Wrapper(class='InputBlock_Width_265px')
                             +InputBlock__FieldName('dropdown')
                             +InputBlock__FieldDescription('default')(class='InputBlock_PdTop_3px')
-                        select.InputBlock__InputField.InputBlock_Width_265px.InputBlock_Appearan_none.InputBlock_PdTop_11px.InputBlock_LetterSpacing_0px.InputBlock_MrBot_19px.InputBlock_Color_Dark75(multiple='multiple', id="filesB", name='filesB')
+                        select.InputBlock__Dropdown.InputBlock_Width_265px.InputBlock_Appearan_none.InputBlock_PdTop_11px.InputBlock_LetterSpacing_0px.InputBlock_MrBot_19px.InputBlock_Color_Dark75(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3')
                             +InputBlock__Option('спальни', 'selected')(value='bedrooms')
                             +InputBlock__Option('кровати', 'selected')(value='beds')                                
-                            +InputBlock__Option('одеяла')(value='blankets')   
-                            +InputBlock__Option('коври')(value='carpets')
-                            +InputBlock__Option('дорожки')(value='tracks')
-                            +InputBlock__Option('двери')(value='doors')                                             
+                            +InputBlock__Option('ванные комнаты')(value='bathrooms')                                              
                 +Wrapper()
                     +Wrapper()
                         +Wrapper()
@@ -185,9 +178,4 @@ html
 
 
 
-+InputBlock__Dropdown()
 
-+QuantityBlock()
-+QuantityBlock__ArrowMinus()
-+QuantityBlock__ArrowPlus()
-+QuantityBlock__InputNumber()
