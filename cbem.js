@@ -25,6 +25,21 @@ console.log(now.getHours() +":"+ (now.getMinutes()<10?'0':'') + now.getMinutes()
 
 
 try {
+    if ( !fs.existsSync(overrideLevel + blockName) ){
+        fs.mkdirSync(overrideLevel + blockName)
+    }
+} catch (err) {
+    console.error(err)
+}
+
+try {
+    if ( !fs.existsSync(overrideLevel + blockName + elementName) ){
+        fs.mkdirSync(overrideLevel + blockName + elementName)
+    }
+} catch (err) {
+    console.error(err)
+}
+try {
     if ( !fs.existsSync(overrideLevel + blockName + elementName + modName) ){
         fs.mkdirSync(overrideLevel + blockName + elementName + modName)
     }

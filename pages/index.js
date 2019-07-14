@@ -90,3 +90,8 @@ require('../Common.blocks/InputBlock/_PdTop/InputBlock_PdTop_5px.js');
 require('../Common.blocks/InputBlock/_Width/InputBlock_Width_150px.js');
 require('../Common.blocks/InputBlock/_Width/InputBlock_Width_265px.js');
 require('../Common.blocks/InputBlock/_Width/InputBlock_Width_266px.js');
+
+require('../Common.blocks/aB/__El/_mod/aB__El_mod_dsfdsf.js');
+require('../Common.blocks/aB/__El/_mod/aB__El_mod_dsfdsf.js');
+require('../Common.blocks/aB/__El/_mod/aB__El_mod_dsfdsf.js');
+require('../Common.blocks/aB/__El/aB__El.js');
