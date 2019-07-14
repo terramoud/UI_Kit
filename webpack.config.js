@@ -14,11 +14,6 @@ module.exports = {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
     },
-    resolveLoader: {
-        alias: {
-            'pug-to-bemdecl-loader': path.resolve('pugToBemdeclLoader.js')
-        },
-    },
     devtool: 'inline-source-map',
     mode: 'development',
     devServer: {
@@ -28,20 +23,6 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.BEMDECL$/,
-                use: [
-                    {
-                        // Передаем результат в bemdecl-to-fs-loader
-                        loader: 'bemdecl-to-fs-loader',
-                        // Указываем уровни переопределения и расширения технологий
-                        options: { levels: ['Common.blocks','Desktop.blocks','Mobile.blocks'], extensions: ['scss', 'js'] }
-                    },
-                    // Для начала передаем файл в html2bemdecl-loader
-                    { loader: 'html2bemdecl-loader' },
-                    { loader: "pug-html-loader" },
-                ]
-            },
-            {
                 test: /\.pug$/,
                 use: [
                     {
@@ -49,9 +30,6 @@ module.exports = {
                         options: {
                             pretty: true,
                         }
-                    },
-                    {
-                        loader: "pug-to-bemdecl-loader",
                     },
                 ]
             },

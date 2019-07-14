@@ -40,6 +40,7 @@ $(".InputBlock__Dropdown").multiselect({
 $(".InputBlock__Dropdown").each(function(index, el) {
   $(this).next().addClass( $(this).attr('class') );
 });
+
 $('.ui-multiselect-header').css('display', 'none');
 
 /** 

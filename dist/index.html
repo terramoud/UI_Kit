@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>UI Kit</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="HandheldFriendly" content="true">
     <meta name="MobileOptimazed" content="width">
@@ -135,7 +136,7 @@
               <div class="InputBlock__FieldDescription">default
               </div>
             </div>
-            <input class="InputBlock__InputField" type="text" placeholder="Email">
+            <input class="InputBlock__InputField InputBlock_Color_Dark25" type="text" placeholder="Email">
           </div>
           <div class="InputBlock">
             <div class="InputBlock__Wrapper">
@@ -144,7 +145,7 @@
               <div class="InputBlock__FieldDescription InputBlock_PdTop_3px">HOVER  /FOCUS
               </div>
             </div>
-            <input class="InputBlock__InputField InputBlock_BrColor_DrSh50" type="text" placeholder="This is pretty awesome">
+            <input class="InputBlock__InputField InputBlock_Color_Dark75" type="text" placeholder="This is pretty awesome">
           </div>
           <div class="InputBlock">
             <div class="InputBlock__Wrapper">
@@ -153,20 +154,89 @@
               <div class="InputBlock__FieldDescription InputBlock_PdTop_3px">default
               </div>
             </div>
-            <!--+InputBlock__SelectArrow()
-            +InputBlock__Select(class='InputBlock_PdTop_11px')
-            //i.material-icons &#xE87C;
-            -->
-            <!--select.InputBlock__InputField.InputBlock_ExpandMore.InputBlock_PdTop_11px-->
+            <div class="InputBlock__WrapperForSelectWithArrow"><i class="material-icons InputBlock__SelectArrow">expand_more</i>
+              <Select class="InputBlock__InputField InputBlock_Appearan_none InputBlock_PdTop_11px InputBlock_LetterSpacing_0px InputBlock_MrBot_19px InputBlock_Color_Dark75">
+                <option selected>Сколько гостей</option>
+                <option></option>
+                <option></option>
+              </Select>
+            </div>
           </div>
           <div class="InputBlock">
             <div class="InputBlock__Wrapper">
               <div class="InputBlock__FieldName">masked text field
               </div>
-              <div class="InputBlock__FieldDescription InputBlock_PdTop_4px">default
+              <div class="InputBlock__FieldDescription InputBlock_PdTop_2px">default
               </div>
             </div>
-            <input class="InputBlock__InputField" type="text" placeholder="This is pretty awesome">
+            <input class="InputBlock__InputField InputBlock_Color_Dark25 InputBlock_MrTop_5px InputBlock_MrBot_37px" type="text" placeholder="ДД.ММ.ГГГГ">
+          </div>
+          <div class="InputBlock__Wrapper">
+            <div class="InputBlock">
+              <div class="InputBlock__Wrapper">
+                <div class="InputBlock__FieldName">date dropdown
+                </div>
+              </div>
+              <div class="InputBlock__WrapperForSelectWithArrow"><i class="material-icons InputBlock__SelectArrow">expand_more</i>
+                <Select class="InputBlock__InputField InputBlock_Appearan_none InputBlock_LetterSpacing_0px InputBlock_Color_Dark75 InputBlock_Width_150px InputBlock_PdTop_11px">
+                  <option selected>ДД.ММ.ГГГГ</option>
+                  <option></option>
+                  <option></option>
+                </Select>
+              </div>
+            </div>
+            <div class="InputBlock">
+              <div class="InputBlock__Wrapper">
+                <div class="InputBlock__FieldName">date dropdown
+                </div>
+              </div>
+              <div class="InputBlock__WrapperForSelectWithArrow"><i class="material-icons InputBlock__SelectArrow">expand_more</i>
+                <Select class="InputBlock__InputField InputBlock_Appearan_none InputBlock_MrBot_19px InputBlock_Color_Dark75 InputBlock_Width_150px InputBlock_PdTop_11px InputBlock_MrBot_37px">
+                  <option selected>19.08.2019</option>
+                  <option></option>
+                  <option></option>
+                </Select>
+              </div>
+            </div>
+          </div>
+          <div class="InputBlock">
+            <div class="InputBlock__Wrapper">
+              <div class="InputBlock__FieldName">filter rate dropdown
+              </div>
+            </div>
+            <div class="InputBlock__WrapperForSelectWithArrow"><i class="material-icons InputBlock__SelectArrow">expand_more</i>
+              <Select class="InputBlock__InputField InputBlock_Width_266px InputBlock_Appearan_none InputBlock_PdTop_11px InputBlock_LetterSpacing_0px InputBlock_MrBot_39px InputBlock_Color_Dark75">
+                <option selected>19 авг - 23 авг</option>
+                <option></option>
+                <option></option>
+              </Select>
+            </div>
+          </div>
+          <div class="InputBlock">
+            <div class="InputBlock__Wrapper">
+              <div class="InputBlock__FieldName">subscription text field
+              </div>
+            </div>
+            <div class="InputBlock__WrapperForSelectWithArrow"><i class="material-icons InputBlock__SelectArrow">arrow_forward</i>
+              <Select class="InputBlock__InputField InputBlock_Width_266px InputBlock_Appearan_none InputBlock_PdTop_11px InputBlock_LetterSpacing_0px InputBlock_MrBot_97px InputBlock_Color_Dark75">
+                <option selected>Email</option>
+                <option></option>
+                <option></option>
+              </Select>
+            </div>
+          </div>
+          <div class="InputBlock">          
+            <div class="InputBlock__Wrapper InputBlock_Width_265px">
+              <div class="InputBlock__FieldName">dropdown
+              </div>
+              <div class="InputBlock__FieldDescription InputBlock_PdTop_3px">default
+              </div>
+            </div>
+            <select class="InputBlock__Dropdown InputBlock_Width_265px InputBlock_Appearan_none InputBlock_PdTop_11px InputBlock_LetterSpacing_0px InputBlock_MrBot_19px InputBlock_Color_Dark75" multiple="multiple" id="dropdownFacilities" name="dropdownFacilities" size="3">
+              <option selected value="bedrooms">спальни</option>
+              <option selected value="beds">кровати</option>
+              <option value="bathrooms">ванные комнаты</option>
+            </select>
           </div>
         </div>
         <div class="Wrapper">
