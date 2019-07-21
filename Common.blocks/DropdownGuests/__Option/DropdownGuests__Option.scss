@@ -1,44 +1,41 @@
-@media only screen  and (max-width: 576px) {
- .InputBlock__Wrapper {
+@media only screen and (max-width: 576px) {
+ .DropdownGuests__Option {
 
 }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
- .InputBlock__Wrapper {
+ .DropdownGuests__Option {
 
  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
- .InputBlock__Wrapper {
+ .DropdownGuests__Option {
 
  }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
- .InputBlock__Wrapper {
+ .DropdownGuests__Option {
 
  }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
- .InputBlock__Wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 4px
+ .DropdownGuests__Option {
+
  }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
- .InputBlock__Wrapper {
+ .DropdownGuests__Option {
 
  }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
- .InputBlock__Wrapper {
+ .DropdownGuests__Option {
 
  }
 }

@@ -1,16 +1,28 @@
+require('./index.pug');
 require('jquery');
 require('webpack-jquery-ui');
 require('webpack-jquery-ui/css');
 //require('webpack-jquery-ui/selectmenu');
-require('../Common.blocks/JqueryMultiselectPlugin/jquery.multiselect.css')
-require('../Common.blocks/JqueryMultiselectPlugin/jquery.multiselect.js')
-require('../Common.blocks/Base/Base.scss');
 require('../Common.blocks/Fonts/Fonts.scss');
+
+/*Library.blocks*/
+
+require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
+require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
+
+/*End Library.blocks*/
+
+
 require('./index.scss');
 
+/*Common.blocks*/
+
+require('../Common.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
+require('../Common.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
+
+require('../Common.blocks/Content/Content.js');
 require('../Common.blocks/Content/__WrapperForFormElements/Content__WrapperForFormElements.js');
 require('../Common.blocks/Content/__Wrapper/Content__Wrapper.js');
-require('../Common.blocks/Content/Content.js');
 
 require('../Common.blocks/Logo/Logo.js');
 require('../Common.blocks/LogoWrapper/LogoWrapper.js');
@@ -91,7 +103,26 @@ require('../Common.blocks/InputBlock/_Width/InputBlock_Width_150px.js');
 require('../Common.blocks/InputBlock/_Width/InputBlock_Width_265px.js');
 require('../Common.blocks/InputBlock/_Width/InputBlock_Width_266px.js');
 
-require('../Common.blocks/aB/__El/_mod/aB__El_mod_dsfdsf.js');
-require('../Common.blocks/aB/__El/_mod/aB__El_mod_dsfdsf.js');
-require('../Common.blocks/aB/__El/_mod/aB__El_mod_dsfdsf.js');
-require('../Common.blocks/aB/__El/aB__El.js');
+require('../Common.blocks/QuantityBlock/QuantityBlock.js');
+require('../Common.blocks/QuantityBlock/__IconMinus/QuantityBlock__IconMinus.js');
+require('../Common.blocks/QuantityBlock/__IconPlus/QuantityBlock__IconPlus.js');
+require('../Common.blocks/QuantityBlock/__IconPlus/QuantityBlock__IconPlus.js');
+require('../Common.blocks/QuantityBlock/__Num/QuantityBlock__Num.js');
+
+
+
+
+
+/*Desktop.blocks*/
+//require('../Desktop.blocks/JqueryMultiselectPlugin/jquery.multiselect.css')
+//require('../Desktop.blocks/JqueryMultiselectPlugin/jquery.multiselect.js')
+require('../Common.blocks/Wrapper/__FormElements/Wrapper__FormElements.js');
+require('../Common.blocks/Dropdown/Dropdown.js');
+require('../Common.blocks/Dropdown/__Option/Dropdown__Option.js');
+require('../Common.blocks/Wrapper/__MasketField/Wrapper__MasketField.js');
+require('../Common.blocks/Wrapper/__GuestsDropdown/Wrapper__GuestsDropdown.js');
+require('../Common.blocks/Wrapper/__DateDropdown/Wrapper__DateDropdown.js');
+require('../Common.blocks/Wrapper/__DateDropdown/Wrapper__DateDropdown.js');
+require('../Common.blocks/Wrapper/__FacilitiesDropdown/Wrapper__FacilitiesDropdown.js');
+require('../Common.blocks/DropdownGuests/DropdownGuests.js');
+require('../Common.blocks/DropdownGuests/__Option/DropdownGuests__Option.js');

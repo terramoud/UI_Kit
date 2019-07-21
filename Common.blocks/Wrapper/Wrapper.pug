@@ -1,4 +1,4 @@
-mixin Wrapper(content, cl)
-    div.Wrapper(class= cl) #{content}
+mixin Wrapper(content)
+    div.Wrapper&attributes(attributes) #{content}
         if block
             block
