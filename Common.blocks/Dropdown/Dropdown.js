@@ -75,7 +75,7 @@ $('.ui-multiselect-checkboxes input[type=checkbox]').each(function(index) {
 });
 
 /** 
-* This events are adding count of selected items in multiselect widget and in <option> tags 
+* This events are adding count of selected items in multiselect widget
 */
 $("label[for *= '" + dropdown.id + "'] .QuantityBlock__IconPlus").click(function(eventObject){ 
   var targetPlus = $(this).prev();
@@ -96,9 +96,39 @@ $("label[for *= '" + dropdown.id + "'] .QuantityBlock__IconPlus").click(function
   
   $('#' + widgetId[1] + '_ms span:last').text(modifiedText);
   targetPlus = widgetId = InputNameAttr = optionsContent = dropDownText =  regular = modifiedText = false;
-  console.log( targetPlus + "*" + widgetId + "*" + InputNameAttr + "*" + optionsContent + "*" + dropDownText + "*" + regular + "*" + modifiedText);
+  /**
+  * For backend developers:)
+  *
+  * <select name="dropdownFacilities" multiple='multiple'>
+  *   <option value="bedrooms"></option>
+  *   <option value="beds"></option>
+  *
+  * jQuery UI dropdown's inputs: for name attr adding prefix "multiselect_"
+  * <li>
+  *   <input type="checkbox" name="multiselect_dropdownFacilities" value="bedrooms">
+  *   <div class="QuantityBlock">
+  *     <input type="text" name="bedrooms" value="3">
+  *   </div>
+  * </li>
+  * <li>
+  *   <input type="checkbox" name="multiselect_dropdownFacilities" value="beds">
+  *   <div class="QuantityBlock">
+  *     <input type="text" name="beds" value="2">
+  *   </div>
+  * </li>
+  * 
+  * option's value == input's(type="checkbox") value == input's(type="text") attribute name
+  * 
+  * output:
+  *   multiselect_dropdownFacilities == ['bedrooms', 'beds']
+  *   bedrooms == "3"
+  *   beds == "2"
+  */
 });
 
+/** 
+* This events are adding count of selected items in multiselect widget 
+*/
 $("label[for *= '" + dropdown.id + "'] .QuantityBlock__IconMinus").click(function(eventObject){
   var targetMinus = $(this).next();
   if (targetMinus.val() > 0) {
@@ -116,6 +146,5 @@ $("label[for *= '" + dropdown.id + "'] .QuantityBlock__IconMinus").click(functio
     
     $('#' + widgetId[1] + '_ms span:last').text(modifiedText);
      targetMinus = widgetId = InputNameAttr = optionsContent = dropDownText =  regular = modifiedText = false;
-     console.log( targetMinus + "*" + widgetId + "*" + InputNameAttr + "*" + optionsContent + "*" + dropDownText + "*" + regular + "*" + modifiedText);
   }
 });

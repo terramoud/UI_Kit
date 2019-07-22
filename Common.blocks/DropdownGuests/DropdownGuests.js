@@ -61,7 +61,6 @@ $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').each(f
                  '</div>');
 });
 
-
 /** 
 * This passes to the attribute 'name' the value that was obtained from the widget menu <input> tags
 */
@@ -70,7 +69,7 @@ $('.ui-multiselect-checkboxes input[type=checkbox]').each(function(index) {
 });
 
 /** 
-* This events are adding count of selected items in multiselect widget and in <option> tags 
+* This events are adding count of selected items in multiselect widget
 */
 $("label[for *= '" + dropdownGuests.id + "'] .QuantityBlock__IconPlus").click(function(eventObject){ 
   var targetPlus = $(this).prev();
@@ -79,19 +78,29 @@ $("label[for *= '" + dropdownGuests.id + "'] .QuantityBlock__IconPlus").click(fu
   /** 
   * This is changes text in 'widget field' the by adding number of selected elements using a regular expression
   */
-  var widgetId = $(this).parent('.QuantityBlock').siblings('input').attr('id');
-  widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i);
+  var objectInput = $(this).parent('.QuantityBlock').siblings('input');
+  var widgetId = objectInput.attr('id');
 
-  var InputNameAttr = targetPlus.attr('name');
-  var optionsContent = $('#' + widgetId[1] + ' option[value='+InputNameAttr+']').text(); // getting the contents of the <option> tag by the value of the "name" attribute of clicked element
-  var dropDownText = $('#' + widgetId[1] + '_ms span:last').text();
+  /** 
+  * This is adding "checked" attribute for is passes "name" attribute for backend
+  */
+  if (objectInput.attr('checked') === 'checked') {
+    objectInput.removeAttr('checked');
+  } else {
+    objectInput.attr('checked', 'checked');
+  }
+
+  widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i); // defined select attr id by input attr id that located in dropdownmenu
   
-  var regular = new RegExp('\\d+ ' + optionsContent, 'i');
-  var modifiedText = dropDownText.replace( regular, targetPlus.val() + ' ' + optionsContent );
-  
-  $('#' + widgetId[1] + '_ms span:last').text(modifiedText);
-  targetPlus = widgetId = InputNameAttr = optionsContent = dropDownText =  regular = modifiedText = false;
-     console.log( targetPlus + "*" + widgetId + "*" + InputNameAttr + "*" + optionsContent + "*" + dropDownText + "*" + regular + "*" + modifiedText);
+  var commonSumInputs  = 0;
+
+  $(this).parents('ul').find('input[type="text"]').map(function(index, elem) {
+    commonSumInputs += +$(this).val();
+  })
+
+  $('#' + widgetId[1] + '_ms span:last').text(commonSumInputs + ' Гостей');
+  targetPlus = widgetId = commonSumInputs = modifiedText = false;
+
 });
 
 $("label[for *= '" + dropdownGuests.id + "'] .QuantityBlock__IconMinus").click(function(eventObject){
@@ -99,18 +108,27 @@ $("label[for *= '" + dropdownGuests.id + "'] .QuantityBlock__IconMinus").click(f
   if (targetMinus.val() > 0) {
     targetMinus.val( +targetMinus.val() - 1 );
 
-    var widgetId = $(this).parent('.QuantityBlock').siblings('input').attr('id');
-    widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i);
+    /** 
+    * This is changes text in 'widget field' the by adding number of selected elements using a regular expression
+    */
+    var objectInput = $(this).parent('.QuantityBlock').siblings('input');
+    var widgetId = objectInput.attr('id');
 
-    var InputNameAttr = targetMinus.attr('name');
-    var optionsContent = $('#' + widgetId[1] + ' option[value='+InputNameAttr+']').text(); // getting the contents of the <option> tag by the value of the "name" attribute of clicked element
-    var dropDownText = $('#' + widgetId[1] + '_ms span:last').text();
-    
-    var regular = new RegExp('\\d+ ' + optionsContent, 'i');
-    var modifiedText = dropDownText.replace( regular, targetMinus.val() + ' ' + optionsContent );
-    
-    $('#' + widgetId[1] + '_ms span:last').text(modifiedText);
-    targetMinus = widgetId = InputNameAttr = optionsContent = dropDownText =  regular = modifiedText = false;
-     console.log( targetMinus + "*" + widgetId + "*" + InputNameAttr + "*" + optionsContent + "*" + dropDownText + "*" + regular + "*" + modifiedText);
+    if (objectInput.attr('checked') === 'checked') {
+      objectInput.removeAttr('checked');
+    } else {
+      objectInput.attr('checked', 'checked');
+    }
+
+    widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i); // defined select attr id by input attr id that located in dropdownmenu
+  
+    var commonSumInputs  = 0;
+
+    $(this).parents('ul').find('input[type="text"]').map(function(index, elem) {
+      commonSumInputs += +$(this).val();
+    })
+
+    $('#' + widgetId[1] + '_ms span:last').text(commonSumInputs + ' Гостей');
+    targetMinus = widgetId = commonSumInputs = modifiedText = false;
   }
 });
