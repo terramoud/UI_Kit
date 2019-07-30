@@ -9,6 +9,7 @@ var dropdown = {
 * Includs widget multiselect 
 */
 $(dropdown.widgetClass).multiselect({
+  header: false,
   showCheckAll: false,
   buttonWidth: 'auto',
   noneSelectedText: ' ',

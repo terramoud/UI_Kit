@@ -1,3 +1,32 @@
+/**
+* For backend developers:)
+*
+* <select name="dropdownFacilities" multiple='multiple'>
+*   <option value="bedrooms"></option>
+*   <option value="beds"></option>
+*
+* jQuery UI dropdown's inputs: for name attr adding prefix "multiselect_"
+* <li>
+*   <input type="checkbox" name="multiselect_dropdownFacilities" value="bedrooms">
+*   <div class="QuantityBlock">
+*     <input type="text" name="bedrooms" value="3">
+*   </div>
+* </li>
+* <li>
+*   <input type="checkbox" name="multiselect_dropdownFacilities" value="beds">
+*   <div class="QuantityBlock">
+*     <input type="text" name="beds" value="2">
+*   </div>
+* </li>
+* 
+* option's value == input's(type="checkbox") value == input's(type="text") attribute name
+* 
+* output:
+*   multiselect_dropdownFacilities == ['bedrooms', 'beds']
+*   bedrooms == "3"
+*   beds == "2"
+*/
+
 /** 
 * Namespace
 */
@@ -10,22 +39,26 @@ var dropdownGuests = {
 * Includs widget multiselect 
 */
 var noneSelectedText = 'Сколько гостей';
+
 $(dropdownGuests.widgetClass).multiselect({
+  create: function(argument) {
+    /** 
+    * 
+    */
+    $(this).next().find('.ui-multiselect-open').prepend('<i class="material-icons">expand_more</i>').children('.ui-icon').remove();
+  },
   click: function(event, ui){ // чтобы при нажатии только на плюс и минус могли выбартьсЯ оттрибуты
-    //console.log("dfsfgdfg");
     return false; 
   },
-  showCheckAll: false,
   buttonWidth: 'auto',
   noneSelectedText: noneSelectedText,
   open: function(){
     $('.ui-multiselect-checkboxes').css('height', 'auto');
   },
   //classes: 'InputBlock_Color_Dark75 InputBlock_MrBot_19px InputBlock_LetterSpacing_0px InputBlock_PdTop_11px InputBlock_Appearan_none InputBlock_Width_265px Dropdown',
-  selectedList: 1,
+  //selectedList: 1,
   selectedText: function(numChecked, numTotal, checkedItems){
-    console.log(this.$inputs);
-    this.$button[0].children[0].children[0].outerHTML = '<i class="material-icons">expand_more</i>';
+
     var sumValInput = 0;
 
     this.$inputs.map(function() { 
@@ -43,9 +76,34 @@ $(dropdownGuests.widgetClass).multiselect({
 
     value = sumValInput + ' Гостей';
 
-    return value;
+    return value + "adsfasdf'akdjsf";
   },
+
+}).multiselect("getButton");
+
+
+/** 
+* 
+*/
+var header = $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').parents('.ui-multiselect-menu').children('.ui-multiselect-header').detach();
+$('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').parents('.ui-multiselect-menu').append(header);
+
+/** 
+* 
+*/
+$('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').parents('.ui-multiselect-menu').find('li.ui-multiselect-close').remove();
+
+/** 
+* 
+*/
+var replacedButton = $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header li:first').detach();
+$('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header .ui-helper-reset').append(replacedButton);
+
+/*создаем кнопку применить Удаление обработчиков ччобытий */
+$('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header li:last').html(function(indx, oldHtml) {
+  return '<button class="ui-multiselect-apply" type="submit" form="form1" value="Submit">Применить</button>'
 });
+
 
 /** 
 * This are adding styles for widget dropdown
@@ -53,7 +111,6 @@ $(dropdownGuests.widgetClass).multiselect({
 $(dropdownGuests.widgetClass).each(function(index, el) {
   $(this).next().addClass( $(this).attr('class') );
 });
-
 
 /** 
 * Creating custom buttons instead of default buttons in <input type="number"> 
@@ -68,13 +125,13 @@ $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').each(f
                 '<button class="QuantityBlock__IconPlus"> + </button>' +
                '</div>');
 
- /* var $elem = $(this).parent('li').data(  ); // оригинал элемента с закрепленным за ним массивом
-  var $clone = $(this).parent('li').clone() // создадим копию элемента
-    .data($elem);
-  var thisParentUl = $(this).parents('ul');
-  $(this).parent('li').remove();
-  thisParentUl.append($clone);
-*/
+   /* var $elem = $(this).parent('li').data(  ); // оригинал элемента с закрепленным за ним массивом
+    var $clone = $(this).parent('li').clone() // создадим копию элемента
+      .data($elem);
+    var thisParentUl = $(this).parents('ul');
+    $(this).parent('li').remove();
+    thisParentUl.append($clone);
+  */
 
 
 
@@ -86,6 +143,14 @@ $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '"]').each(f
 $('.ui-multiselect-checkboxes input[type=checkbox]').each(function(index) {
   $(this).siblings('.QuantityBlock').children('input').attr('name', $(this).val());
   $(this).siblings('.QuantityBlock').children('input').val('0'); // чтоьы не вылезало поле инпукта сбоку при клике
+});
+
+/** 
+* 
+*/
+$("label[for *= '" + dropdownGuests.id + "']").parents('.ui-multiselect-menu').find('.ui-multiselect-none').click(function(event) {
+  $('#' + dropdownGuests.id + '_ms span:last').text(noneSelectedText);
+  $('.QuantityBlock__Num').val(0);
 });
 
 /** 
@@ -112,7 +177,6 @@ $("label[for *= '" + dropdownGuests.id + "']").find(".QuantityBlock__IconPlus").
   */
 
   objectInput.prop('checked', 'checked');
-  console.log("+" + objectInput[0].checked );
   $('#' + widgetId[1] + '_ms span:last').text(commonSumInputs + ' Гостей');
 
 /*  if (commonSumInputs <= 0) {
@@ -120,40 +184,13 @@ $("label[for *= '" + dropdownGuests.id + "']").find(".QuantityBlock__IconPlus").
     console.log('remove all+ checked');
   } else {
     objectInput.prop('checked', 'checked');
-    console.log("+" + objectInput[0].checked );
+    console.log("+" + objectInput[0].checked );0
     $('#' + widgetId[1] + '_ms span:last').text(commonSumInputs + ' Гостей');
   }*/
 
   targetPlus = widgetId = commonSumInputs = modifiedText = false;
 
-  /**
-  * For backend developers:)
-  *
-  * <select name="dropdownFacilities" multiple='multiple'>
-  *   <option value="bedrooms"></option>
-  *   <option value="beds"></option>
-  *
-  * jQuery UI dropdown's inputs: for name attr adding prefix "multiselect_"
-  * <li>
-  *   <input type="checkbox" name="multiselect_dropdownFacilities" value="bedrooms">
-  *   <div class="QuantityBlock">
-  *     <input type="text" name="bedrooms" value="3">
-  *   </div>
-  * </li>
-  * <li>
-  *   <input type="checkbox" name="multiselect_dropdownFacilities" value="beds">
-  *   <div class="QuantityBlock">
-  *     <input type="text" name="beds" value="2">
-  *   </div>
-  * </li>
-  * 
-  * option's value == input's(type="checkbox") value == input's(type="text") attribute name
-  * 
-  * output:
-  *   multiselect_dropdownFacilities == ['bedrooms', 'beds']
-  *   bedrooms == "3"
-  *   beds == "2"
-  */
+
 });
 
 $("label[for *= '" + dropdownGuests.id + "']").find(".QuantityBlock__IconMinus").click(function(eventObject){
@@ -181,7 +218,9 @@ $("label[for *= '" + dropdownGuests.id + "']").find(".QuantityBlock__IconMinus")
       console.log('remove 1 checked');
       console.log( objectInput[0].checked );
     }
-
+    /** 
+    * 
+    */
     if (commonSumInputs <= 0) {
       $('.ui-multiselect-checkboxes input[type=checkbox]').prop('checked', false);
       console.log('remove all checked');
@@ -201,4 +240,5 @@ $("label[for *= '" + dropdownGuests.id + "']").find(".QuantityBlock__IconMinus")
 /*
 удалить логи
 написать коменты к коду
+arrow down
 */
