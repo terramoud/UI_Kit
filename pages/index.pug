@@ -105,6 +105,14 @@ html
             +Content()
                 +Content__WrapperForFormElements()
                     +Wrapper()
+                        +InputBlock()(class='Wrapper__GuestsDropdown')
+                            +InputBlock__Wrapper
+                                +InputBlock__FieldName('dropdown')
+                                +InputBlock__FieldDescription('default')(class='InputBlock_PdTop_3px')
+                            Select.DropdownGuests(multiple='multiple', id="DropdownGuests2", name='DropdownGuests', size='3')
+                                +DropdownGuests__Option('большие')(value='moreThanAdults')
+                                +DropdownGuests__Option('маленькие')(value='moreThanChildren')
+                                +DropdownGuests__Option('очсень маленькие')(value='moreThanBabies')
                         +InputBlock()(class='Wrapper__FormElements')
                             +InputBlock__Wrapper()
                                 +InputBlock__FieldName('text field')
@@ -119,7 +127,7 @@ html
                             +InputBlock__Wrapper
                                 +InputBlock__FieldName('dropdown')
                                 +InputBlock__FieldDescription('default')(class='InputBlock_PdTop_3px')
-                            Select.DropdownGuests(multiple='multiple', id="DropdownGuests", name='ddDropdownGuests', size='3')
+                            Select.DropdownGuests(multiple='multiple', id="DropdownGuests", name='DropdownGuests', size='3')
                                 +DropdownGuests__Option('взрослые')(value='adults')
                                 +DropdownGuests__Option('дети')(value='children')
                                 +DropdownGuests__Option('младенцы')(value='babies')
