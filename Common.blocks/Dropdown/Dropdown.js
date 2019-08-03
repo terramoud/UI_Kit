@@ -5,6 +5,8 @@ var dropdown = {
   widgetClass: '.Dropdown',
   id:  $('select.Dropdown').attr('id'),
 };
+
+
 /** 
 * Includs widget multiselect 
 */

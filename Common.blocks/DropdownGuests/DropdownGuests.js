@@ -93,7 +93,7 @@ $('select.DropdownGuests').each(function(index, el) {
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header li:last').html(function(indx, oldHtml) {
     return '<button class="ui-multiselect-apply" type="submit" form="form1" value="Submit">' + dropdownGuests.applyButton + '</button>'
   });
-
+  $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header span:last').text(dropdownGuests.clearButton);
 
   /** 
   * This are adding styles for widget dropdowns
@@ -166,9 +166,21 @@ $('select.DropdownGuests').each(function(index, el) {
     objectInput.prop('checked', 'checked');
 
     /** 
+    * This is changes the end of text in 'widget field'
+    */
+    var guests = commonSumInputs % 10;
+    var manyGuests = commonSumInputs % 100;
+    var widgeText = false;
+    if (!guests) widgeText = commonSumInputs + ' гостей';
+    if (guests == 1 && manyGuests < 11 || guests == 1 && manyGuests > 19) widgeText = commonSumInputs + ' гость';
+    if (guests > 1 && guests < 5 && manyGuests < 11 || guests > 1 && guests < 5 && manyGuests > 14) widgeText = commonSumInputs + ' гостя';
+    if (guests >= 5 && guests <= 9) widgeText = commonSumInputs + ' гостей'; 
+    if (manyGuests >= 11 && manyGuests <= 14) widgeText = commonSumInputs + ' гостей';
+
+    /** 
     * This is changes text in 'widget field'
     */
-    $('#' + widgetId[1] + '_ms span:last').text(commonSumInputs + ' Гостей');
+    $('#' + widgetId[1] + '_ms span:last').text(widgeText);
 
     targetPlus = widgetId = commonSumInputs = modifiedText = false;
   });
@@ -198,6 +210,17 @@ $('select.DropdownGuests').each(function(index, el) {
         objectInput.prop('checked', false);
       }
 
+      /** 
+      * This is changes the end of text in 'widget field'
+      */
+      var guests = commonSumInputs % 10;
+      var manyGuests = commonSumInputs % 100;
+      var widgeText = false;
+      if (!guests) widgeText = commonSumInputs + ' гостей';
+      if (guests == 1 && manyGuests < 11 || guests == 1 && manyGuests > 19) widgeText = commonSumInputs + ' гость';
+      if (guests > 1 && guests < 5 && manyGuests < 11 || guests > 1 && guests < 5 && manyGuests > 14) widgeText = commonSumInputs + ' гостя';
+      if (guests >= 5 && guests <= 9) widgeText = commonSumInputs + ' гостей'; 
+      if (manyGuests >= 11 && manyGuests <= 14) widgeText = commonSumInputs + ' гостей';
 
       if (commonSumInputs <= 0) {
 
@@ -217,7 +240,7 @@ $('select.DropdownGuests').each(function(index, el) {
         /** 
         * This is changes text in 'widget field'
         */
-        $('#' + widgetId[1] + '_ms span:last').text(commonSumInputs + ' Гостей');
+        $('#' + widgetId[1] + '_ms span:last').text(widgeText);
 
       }
 
@@ -226,4 +249,6 @@ $('select.DropdownGuests').each(function(index, el) {
   });
 
 });
-  // очистить применить нужно сделать
+
+
+
