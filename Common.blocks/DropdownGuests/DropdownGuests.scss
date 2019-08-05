@@ -60,8 +60,64 @@
      border-color: $DarkShade50;
     }
   }
+  .ui-multiselect-header {
+    background-color: white;
+    border: none;
+    padding: 17px 4px 3px 0;
+  }
+  .ui-multiselect-header .ui-helper-reset {
+    display: flex;
+    justify-content: space-between;
+    
+  }
   .ui-multiselect-none {
     visibility: hidden;
+  }
+  .ui-multiselect-header li {
+    margin: 0;
+  }
+  .ui-widget .ui-multiselect-apply {
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+    background-color: transparent;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .ui-icon-closethick {
+    display: none;
+    
+  }
+  .ui-multiselect-none {
+    font-family: "Montserrat-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $DarkShade50;
+  }
+  .ui-multiselect-checkboxes span {
+    order: -1;
+    font-family: "Montserrat-bold";
+    font-size: 12px;
+    line-height: 15px;;
+    text-transform: uppercase;
+    padding-top: 6px;
+  }
+  .ui-multiselect-checkboxes input {
+    padding: 0 0 8px 0;
+  }
+  .ui-multiselect-checkboxes {
+    padding: 0 0 0 1px;
   }
 }
 

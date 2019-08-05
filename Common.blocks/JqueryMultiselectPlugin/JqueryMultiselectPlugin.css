@@ -24,9 +24,9 @@
   width: auto;
 }
 
-.ui-multiselect-checkboxes {
+/* .ui-multiselect-checkboxes {
   padding: 0;
-}
+} */
 
 .ui-multiselect-checkboxes input[type=checkbox] {
   display: none;
@@ -51,14 +51,14 @@
   padding: 5px 0 0 0;
 }
 
-.ui-multiselect-checkboxes span {
+/* .ui-multiselect-checkboxes span {
   order: -1;
   font-family: "Montserrat-bold";
   font-size: 12px;
   line-height: 15px;;
   text-transform: uppercase;
   padding-top: 7px;
-}
+} */
 
 label.ui-corner-all.ui-state-hover {
   background: transparent;
@@ -67,11 +67,11 @@ label.ui-corner-all.ui-state-hover {
   padding: 0;
 }
 
-.ui-multiselect-checkboxes input {
+/* .ui-multiselect-checkboxes input {
   position: static;
   padding: 0 0 4px 0;
 
-}
+} */
 
 .ui-widget input {
   font-size: 12px;

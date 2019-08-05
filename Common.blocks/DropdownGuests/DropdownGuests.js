@@ -19,7 +19,7 @@
 *   </div>
 * </li>
 * 
-* option's value == input's(type="checkbox") value == input's(type="text") attribute name
+* option's value == input's(type="checkbox") value == input's(type="text") the attribute name
 * 
 * output:
 *   multiselect_dropdownFacilities == ['bedrooms', 'beds']
@@ -155,7 +155,10 @@ $('select.DropdownGuests').each(function(index, el) {
     var widgetId = objectInput.attr('id');
     var commonSumInputs  = 0;
     widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i); // defined select attr id by input attr id that located in dropdownmenu
-    
+          
+    /** 
+    * This is couting the common sum all guests for the this dropdown
+    */
     $("label[for *= '" + dropdownGuests.id + "-']").find('.QuantityBlock__Num').each(function(index, el) {
       commonSumInputs += +$(this).val();
     });
@@ -199,6 +202,9 @@ $('select.DropdownGuests').each(function(index, el) {
       var commonSumInputs  = 0;
       widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i); // defined select attr id by input attr id that located in dropdownmenu
       
+      /** 
+      * This is couting the common sum all guests for the this dropdown
+      */
       $("label[for *= '" + dropdownGuests.id + "-']").find('.QuantityBlock__Num').each(function(index, el) {
         commonSumInputs += +$(this).val();
       });

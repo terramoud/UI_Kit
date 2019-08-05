@@ -1,3 +1,33 @@
+/**
+* For backend developers:)
+*
+* <select name="dropdownFacilities" multiple='multiple'>
+*   <option value="bedrooms"></option>
+*   <option value="beds"></option>
+*
+* jQuery UI dropdown's inputs: for name attr adding prefix "multiselect_"
+* <li>
+*   <input type="checkbox" name="multiselect_dropdownFacilities" value="bedrooms">
+*   <div class="QuantityBlock">
+*     <input type="text" name="bedrooms" value="3">
+*   </div>
+* </li>
+* <li>
+*   <input type="checkbox" name="multiselect_dropdownFacilities" value="beds">
+*   <div class="QuantityBlock">
+*     <input type="text" name="beds" value="2">
+*   </div>
+* </li>
+* 
+* option's value == input's(type="checkbox") value == input's(type="text") the attribute name
+* 
+* output:
+*   multiselect_dropdownFacilities == ['bedrooms', 'beds']
+*   bedrooms == "3"
+*   beds == "2"
+*/
+
+
 /** 
 * Namespace
 */
@@ -15,13 +45,21 @@ $(dropdown.widgetClass).multiselect({
   showCheckAll: false,
   buttonWidth: 'auto',
   noneSelectedText: ' ',
+  create: function(argument) {
+
+    /** 
+    * it is creating the expand more arrow instead the default arrow
+    */
+    $(this).next().find('.ui-multiselect-open').prepend('<i class="material-icons">expand_more</i>').children('.ui-icon').remove();
+
+  },
+
   open: function(){
     $('.ui-multiselect-checkboxes').css('height', 'auto');
   },
-  //classes: 'InputBlock_Color_Dark75 InputBlock_MrBot_19px InputBlock_LetterSpacing_0px InputBlock_PdTop_11px InputBlock_Appearan_none InputBlock_Width_265px Dropdown',
   selectedList: 2,
+
 	selectedText: function(numChecked, numTotal, checkedItems){
-    this.$button[0].children[0].children[0].outerHTML = '<i class="material-icons">expand_more</i>'; 
     value = this.$inputs.filter(':checked').map(function() { 
       /** 
       * This adds the number of selected items before name of the this item in widget field
@@ -77,6 +115,7 @@ $('.ui-multiselect-checkboxes input[type=checkbox]').each(function(index) {
   $(this).siblings('.QuantityBlock').children('input').attr('name', $(this).val());
 });
 
+
 /** 
 * This events are adding count of selected items in multiselect widget
 */
@@ -94,40 +133,23 @@ $("label[for *= '" + dropdown.id + "'] .QuantityBlock__IconPlus").click(function
   var optionsContent = $('#' + widgetId[1] + ' option[value='+InputNameAttr+']').text(); // getting the contents of the <option> tag by the value of the "name" attribute of clicked element
   var dropDownText = $('#' + widgetId[1] + '_ms span:last').text();
   
+  /** 
+  * It is finding numbers untill the first space in the 'widget field' depending on what inputs is checked
+  */
   var regular = new RegExp('\\d+ ' + optionsContent, 'i');
+
+  /** 
+  * It is replaceing numbers untill the first space in the 'widget field on the number of selected elements
+  */
   var modifiedText = dropDownText.replace( regular, targetPlus.val() + ' ' + optionsContent );
-  
+
+  /** 
+  * This is changes text in 'widget field'
+  */
   $('#' + widgetId[1] + '_ms span:last').text(modifiedText);
   targetPlus = widgetId = InputNameAttr = optionsContent = dropDownText =  regular = modifiedText = false;
-  /**
-  * For backend developers:)
-  *
-  * <select name="dropdownFacilities" multiple='multiple'>
-  *   <option value="bedrooms"></option>
-  *   <option value="beds"></option>
-  *
-  * jQuery UI dropdown's inputs: for name attr adding prefix "multiselect_"
-  * <li>
-  *   <input type="checkbox" name="multiselect_dropdownFacilities" value="bedrooms">
-  *   <div class="QuantityBlock">
-  *     <input type="text" name="bedrooms" value="3">
-  *   </div>
-  * </li>
-  * <li>
-  *   <input type="checkbox" name="multiselect_dropdownFacilities" value="beds">
-  *   <div class="QuantityBlock">
-  *     <input type="text" name="beds" value="2">
-  *   </div>
-  * </li>
-  * 
-  * option's value == input's(type="checkbox") value == input's(type="text") attribute name
-  * 
-  * output:
-  *   multiselect_dropdownFacilities == ['bedrooms', 'beds']
-  *   bedrooms == "3"
-  *   beds == "2"
-  */
 });
+
 
 /** 
 * This events are adding count of selected items in multiselect widget 
@@ -137,6 +159,9 @@ $("label[for *= '" + dropdown.id + "'] .QuantityBlock__IconMinus").click(functio
   if (targetMinus.val() > 0) {
     targetMinus.val( +targetMinus.val() - 1 );
 
+    /** 
+    * This is changes text in 'widget field' the by adding number of selected elements using a regular expression
+    */
     var widgetId = $(this).parent('.QuantityBlock').siblings('input').attr('id');
     widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i);
 
