@@ -60,55 +60,57 @@
      border-color: $DarkShade50;
     }
   }
-  .QuantityBlock {
+
+
+  .ui-multiselect-open {
+    width: 19px;
+    position: relative;
+    bottom: 3px;
+  }
+
+  .ui-multiselect-menu {
+    padding: 0px 3px 5px 13px;
+  }
+
+  .ui-multiselect-checkboxes label {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    text-indent: 0px;
+    border: 0px solid transparent; 
   }
-  .QuantityBlock__IconPlus {
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid grey;
-    width: 30px;
+
+  .ui-multiselect-checkboxes li {
+    padding: 0;
+    margin: 0;
+    padding: 5px 0 0 0;
   }
-  .QuantityBlock__IconMinus {
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid grey;
-    width: 30px;
-  }
-  .QuantityBlock__Num {
-    width: 32px;
+
+  label.ui-corner-all.ui-state-hover {
     background: transparent;
-    border: none;
-    appearance: none;
-    -webkit-appearance: none;
-    text-align: center;
-    vertical-align: middle;
+    border: 0px solid transparent;
+    margin: 0;
+    padding: 0;
+  }
+
+    .ui-widget input {
     font-size: 12px;
     line-height: 15px;
     font-family: Montserrat-bold;
-    &:hover {
-      background: transparent;
-      border: none;
-      appearance: none;
-      -webkit-appearance: none;
-    }     
-    &:focus {
-      background: transparent;
-      border: none;
-      appearance: none;
-      -webkit-appearance: none;
-    }   
-    &:visited {
-      background: transparent;
-      border: none;
-      appearance: none;
-      -webkit-appearance: none;
-    } 
   }
-  .QuantityBlock__IconMinus_noActive {
-    border-color: $DarkShade25;
+
+  .ui-widget button {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: Montserrat-Regular;
   }
-  .ui-multiselect-header {
+
+    .ui-multiselect-header {
     background-color: white;
     border: none;
     padding: 17px 4px 3px 0;
@@ -136,8 +138,12 @@
     text-transform: uppercase;
     color: $colorApplyButtonGuestsDropdown;
     background-color: transparent;
+    outline: none;
     &:hover {
       cursor: pointer;
+    }
+    &:focus {
+      outline: none;
     }
   }
   .ui-icon-closethick {
@@ -163,10 +169,85 @@
   }
   .ui-multiselect-checkboxes input {
     padding: 0 0 8px 0;
+    outline: none;
   }
   .ui-multiselect-checkboxes {
     padding: 0 0 0 1px;
   }
+  /** 
+  * This adds "..." to the end of the string that locate in widget field
+  */
+  .ui-multiselect span:last-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: auto;
+  }
+
+  .ui-multiselect-checkboxes input[type=checkbox] {
+    display: none;
+  }
+  .DropdownGuests__QuantityBlock {
+    display: flex;
+  }
+  .DropdownGuests__QuantityIconMinus, .DropdownGuests__QuantityIconPlus {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: Montserrat-Regular;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid grey;
+    width: 30px;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+  } 
+  .DropdownGuests__QuantityNum {
+    width: 32px;
+    background: transparent;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Montserrat-bold;
+    outline: none;
+    &:hover {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      cursor: default;
+    }     
+    &:focus {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+    }   
+    &:visited {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+    } 
+  }
+  .DropdownGuests__QuantityIconMinus_noActive {
+    border-color: $DarkShade25;
+  }
+
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {

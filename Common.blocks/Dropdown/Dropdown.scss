@@ -23,7 +23,7 @@
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
- .Dropdown {
+  .Dropdown {
     display: block;
     appearance: none;
     -webkit-appearance: none;
@@ -59,6 +59,150 @@
     &:focus {
      border-color: $DarkShade50;
     }
+  }
+  .cursorPointer:hover {
+    cursor: pointer;
+  }
+
+  .ui-multiselect-open {
+    width: 19px;
+    position: relative;
+    bottom: 3px;
+  }
+
+  .ui-multiselect-menu {
+    padding: 0px 3px 5px 13px;
+  }
+
+  .ui-multiselect-checkboxes label {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    text-indent: 0px;
+    border: 0px solid transparent; 
+  }
+
+  .ui-multiselect-checkboxes li {
+    padding: 0;
+    margin: 0;
+    padding: 5px 0 0 0;
+  }
+
+  label.ui-corner-all.ui-state-hover {
+    background: transparent;
+    border: 0px solid transparent;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ui-widget input {
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Montserrat-bold;
+  }
+
+  .ui-widget button {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: Montserrat-Regular;
+  }
+  
+  .ui-multiselect-checkboxes span {
+    order: -1;
+    font-family: "Montserrat-bold";
+    font-size: 12px;
+    line-height: 15px;;
+    text-transform: uppercase;
+    padding-top: 6px;
+  }
+
+  .ui-multiselect-checkboxes input {
+    padding: 0 0 8px 0;
+    outline: none;
+  }
+  .ui-multiselect-checkboxes {
+    padding: 0 0 0 1px;
+  }
+
+  /** 
+  * This adds "..." to the end of the string that locate in widget field
+  */
+  .ui-multiselect span:last-child {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: auto;
+  }
+
+  .ui-multiselect-checkboxes input[type=checkbox] {
+    display: none;
+  }
+
+
+  .Dropdown__QuantityBlock {
+    display: flex;
+  }
+  .Dropdown__QuantityIconMinus, .Dropdown__QuantityIconPlus {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: Montserrat-Regular;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid grey;
+    width: 30px;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+    }
+  } 
+  .Dropdown__QuantityNum {
+    width: 32px;
+    background: transparent;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Montserrat-bold;
+    outline: none;
+    &:hover {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      cursor: default;
+    }     
+    &:focus {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+    }   
+    &:visited {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+    } 
+  }
+  .Dropdown__QuantityIconMinus_noActive {
+    border-color: $DarkShade25;
   }
 }
 
