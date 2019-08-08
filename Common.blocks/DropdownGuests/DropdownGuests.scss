@@ -51,7 +51,7 @@
     }
     &:before {
      border: none;
-     box-shadow: none
+     box-shadow: none;
     }
     &:hover {
      border-color: $DarkShade50;
@@ -59,6 +59,54 @@
     &:focus {
      border-color: $DarkShade50;
     }
+  }
+  .QuantityBlock {
+    display: flex;
+  }
+  .QuantityBlock__IconPlus {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid grey;
+    width: 30px;
+  }
+  .QuantityBlock__IconMinus {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid grey;
+    width: 30px;
+  }
+  .QuantityBlock__Num {
+    width: 32px;
+    background: transparent;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: Montserrat-bold;
+    &:hover {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }     
+    &:focus {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+    }   
+    &:visited {
+      background: transparent;
+      border: none;
+      appearance: none;
+      -webkit-appearance: none;
+    } 
+  }
+  .QuantityBlock__IconMinus_noActive {
+    border-color: $DarkShade25;
   }
   .ui-multiselect-header {
     background-color: white;
@@ -86,7 +134,7 @@
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
-    color: #BC9CFF;
+    color: $colorApplyButtonGuestsDropdown;
     background-color: transparent;
     &:hover {
       cursor: pointer;

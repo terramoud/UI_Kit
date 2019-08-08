@@ -26,6 +26,8 @@
 *   bedrooms == "3"
 *   beds == "2"
 */
+
+
 $('select.DropdownGuests').each(function(index, el) {
 
 
@@ -108,12 +110,12 @@ $('select.DropdownGuests').each(function(index, el) {
   */
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').each(function(index, el) {
     $(this).append(
-                      '<div class="QuantityBlock">' +
-                        '<button class="QuantityBlock__IconMinus"> - </button>' +
-                        '<input class="QuantityBlock__Num" type="text" placeholder="0" />' +
-                        '<button class="QuantityBlock__IconPlus"> + </button>' +
-                      '</div>'
-                    );
+                    '<div class="QuantityBlock">' +
+                      '<button class="QuantityBlock__IconMinus QuantityBlock__IconMinus_noActive"> - </button>' +
+                      '<input class="QuantityBlock__Num" type="text" placeholder="0" />' +
+                      '<button class="QuantityBlock__IconPlus"> + </button>' +
+                    '</div>'
+                  );
   });
 
 
@@ -133,6 +135,8 @@ $('select.DropdownGuests').each(function(index, el) {
     $('#' + dropdownGuests.id + '_ms span:last').text(dropdownGuests.noneSelectedText);
     $('label[for *= "' + dropdownGuests.id + '-"]').find('.QuantityBlock__Num').val(0);
     $(this).css('visibility', 'hidden');
+    $(this).parents('.ui-multiselect-header').siblings('.ui-multiselect-checkboxes').find('.QuantityBlock__IconMinus').addClass('QuantityBlock__IconMinus_noActive');
+    //$(this).parents('.ui-multiselect-header').siblings('.ui-multiselect-checkboxes').find('.QuantityBlock__IconMinus').css('border-color', 'rgba(31, 32, 65, 0.25)');
   });
 
 
@@ -142,11 +146,12 @@ $('select.DropdownGuests').each(function(index, el) {
   $("label[for *= '" + dropdownGuests.id + "-']").find(".QuantityBlock__IconPlus").click(function(eventObject){ 
     var targetPlus = $(this).prev();
     targetPlus.val( +targetPlus.val() + 1 ); //This adds the number of selected elements in the “value” attribute of the “input” tag.
-
+    
     /** 
     * It's restoring the clear button
     */
     $(this).parents('.ui-multiselect-menu').find('.ui-multiselect-none').css('visibility', 'inherit');
+    $(this).siblings('.QuantityBlock__IconMinus').removeClass('QuantityBlock__IconMinus_noActive');
 
     /** 
     * It's get the a unique identifier for every the dropdownGuests widget
@@ -214,6 +219,7 @@ $('select.DropdownGuests').each(function(index, el) {
       */
       if (targetMinus.val() <= 0) {
         objectInput.prop('checked', false);
+        $(this).addClass('QuantityBlock__IconMinus_noActive');
       }
 
       /** 
@@ -240,6 +246,7 @@ $('select.DropdownGuests').each(function(index, el) {
         * It's restoring the clear button
         */
         $(this).parents('.ui-multiselect-menu').find('.ui-multiselect-none').css('visibility', 'hidden');
+        $(this).addClass('QuantityBlock__IconMinus_noActive');
 
       } else {
 
