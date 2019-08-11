@@ -21,8 +21,8 @@ require('../Common.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
 require('../Common.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
 
 require('../Common.blocks/Content/Content.js');
-require('../Common.blocks/Content/__WrapperForFormElements/Content__WrapperForFormElements.js');
-require('../Common.blocks/Content/__Wrapper/Content__Wrapper.js');
+require('../Common.blocks/Content/-WrapperForFormElements/Content-WrapperForFormElements.js');
+require('../Common.blocks/Content/-Wrapper/Content-Wrapper.js');
 
 require('../Common.blocks/Logo/Logo.js');
 require('../Common.blocks/LogoWrapper/LogoWrapper.js');
@@ -32,9 +32,9 @@ require('../Common.blocks/Container/_BgColor/Container_BgColor_White.js');
 require('../Common.blocks/Container/_Height/Container_Height_1853px.js');
 require('../Common.blocks/Container/_MarBot/Container_MarBot_50px.js');
 
-require('../Common.blocks/FigureHtml5/__FigcaptionWrapper/FigureHtml5__FigcaptionWrapper.js');
-require('../Common.blocks/FigureHtml5/__Figcaption/FigureHtml5__Figcaption.js');
-require('../Common.blocks/FigureHtml5/__Image/FigureHtml5__Image.js');
+require('../Common.blocks/FigureHtml5/-FigcaptionWrapper/FigureHtml5-FigcaptionWrapper.js');
+require('../Common.blocks/FigureHtml5/-Figcaption/FigureHtml5-Figcaption.js');
+require('../Common.blocks/FigureHtml5/-Image/FigureHtml5-Image.js');
 require('../Common.blocks/FigureHtml5/FigureHtml5.js');
 require('../Common.blocks/FigureHtml5/_Bg/FigureHtml5_Bg_Dsh05.js');
 require('../Common.blocks/FigureHtml5/_Bg/FigureHtml5_Bg_Dsh100.js');
@@ -49,9 +49,9 @@ require('../Common.blocks/FigureHtml5/_PdB/FigureHtml5_PdB_20px.js');
 require('../Common.blocks/FigureHtml5/_PdTop/FigureHtml5_PdTop.js');
 require('../Common.blocks/FigureHtml5/_PdTop/FigureHtml5_PdTop_correct.js');
 
-require('../Common.blocks/ExampleText/__Wrapper/ExampleText__Wrapper.js');
-require('../Common.blocks/ExampleText/__Text/ExampleText__Text.js');
-require('../Common.blocks/ExampleText/__Header/ExampleText__Header.js');
+require('../Common.blocks/ExampleText/-Wrapper/ExampleText-Wrapper.js');
+require('../Common.blocks/ExampleText/-Text/ExampleText-Text.js');
+require('../Common.blocks/ExampleText/-Header/ExampleText-Header.js');
 require('../Common.blocks/ExampleText/ExampleText.js');
 require('../Common.blocks/ExampleText/_FontSize/ExampleText_FontSize_12px.js');
 require('../Common.blocks/ExampleText/_FontSize/ExampleText_FontSize_14px.js');
@@ -70,15 +70,15 @@ require('../Common.blocks/ExampleText/_PdR/ExampleText_PdR_34.js');
 require('../Common.blocks/ExampleText/_TextTransf/ExampleText_TextTransf_Upper.js');
 require('../Common.blocks/ExampleText/_Width/ExampleText_Width_316px.js');
 
-require('../Common.blocks/InputBlock/__Dropdown/InputBlock__Dropdown.js');
-require('../Common.blocks/InputBlock/__WrapperForSelectWithArrow/InputBlock__WrapperForSelectWithArrow.js');
-require('../Common.blocks/InputBlock/__SelectArrow/InputBlock__SelectArrow.js');
-require('../Common.blocks/InputBlock/__Option/InputBlock__Option.js');
-require('../Common.blocks/InputBlock/__Select/InputBlock__Select.js');
-require('../Common.blocks/InputBlock/__Wrapper/InputBlock__Wrapper.js');
-require('../Common.blocks/InputBlock/__FieldName/InputBlock__FieldName.js');
-require('../Common.blocks/InputBlock/__FieldDescription/InputBlock__FieldDescription.js');
-require('../Common.blocks/InputBlock/__InputField/InputBlock__InputField.js');
+require('../Common.blocks/InputBlock/-Dropdown/InputBlock-Dropdown.js');
+require('../Common.blocks/InputBlock/-WrapperForSelectWithArrow/InputBlock-WrapperForSelectWithArrow.js');
+require('../Common.blocks/InputBlock/-SelectArrow/InputBlock-SelectArrow.js');
+require('../Common.blocks/InputBlock/-Option/InputBlock-Option.js');
+require('../Common.blocks/InputBlock/-Select/InputBlock-Select.js');
+require('../Common.blocks/InputBlock/-Wrapper/InputBlock-Wrapper.js');
+require('../Common.blocks/InputBlock/-FieldName/InputBlock-FieldName.js');
+require('../Common.blocks/InputBlock/-FieldDescription/InputBlock-FieldDescription.js');
+require('../Common.blocks/InputBlock/-InputField/InputBlock-InputField.js');
 require('../Common.blocks/InputBlock/InputBlock.js');
 require('../Common.blocks/InputBlock/_Appearan/InputBlock_Appearan_none.js');
 require('../Common.blocks/InputBlock/_BrColor/InputBlock_BrColor_DrSh50.js');
@@ -103,16 +103,18 @@ require('../Common.blocks/InputBlock/_Width/InputBlock_Width_150px.js');
 require('../Common.blocks/InputBlock/_Width/InputBlock_Width_265px.js');
 require('../Common.blocks/InputBlock/_Width/InputBlock_Width_266px.js');
 
-require('../Common.blocks/Wrapper/__FormElements/Wrapper__FormElements.js');
+require('../Common.blocks/Wrapper/-FormElements/Wrapper-FormElements.js');
 
 require('../Common.blocks/Dropdown/Dropdown.js');
-require('../Common.blocks/Dropdown/__Option/Dropdown__Option.js');
+require('../Common.blocks/Dropdown/-Option/Dropdown-Option.js');
 
-require('../Common.blocks/Wrapper/__MasketField/Wrapper__MasketField.js');
-require('../Common.blocks/Wrapper/__GuestsDropdown/Wrapper__GuestsDropdown.js');
-require('../Common.blocks/Wrapper/__DateDropdown/Wrapper__DateDropdown.js');
-require('../Common.blocks/Wrapper/__DateDropdown/Wrapper__DateDropdown.js');
-require('../Common.blocks/Wrapper/__FacilitiesDropdown/Wrapper__FacilitiesDropdown.js');
+require('../Common.blocks/Wrapper/-MasketField/Wrapper-MasketField.js');
+require('../Common.blocks/Wrapper/-GuestsDropdown/Wrapper-GuestsDropdown.js');
+require('../Common.blocks/Wrapper/-DateDropdown/Wrapper-DateDropdown.js');
+require('../Common.blocks/Wrapper/-DateDropdown/Wrapper-DateDropdown.js');
+require('../Common.blocks/Wrapper/-FacilitiesDropdown/Wrapper-FacilitiesDropdown.js');
 
 require('../Common.blocks/DropdownGuests/DropdownGuests.js');
-require('../Common.blocks/DropdownGuests/__Option/DropdownGuests__Option.js');
+require('../Common.blocks/DropdownGuests/-Option/DropdownGuests-Option.js');
+
+

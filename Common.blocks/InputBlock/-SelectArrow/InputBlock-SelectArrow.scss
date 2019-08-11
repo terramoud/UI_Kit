@@ -1,0 +1,49 @@
+@media only screen  and (max-width: 576px) {
+ .InputBlock-SelectArrow {
+
+}
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+ .InputBlock-SelectArrow {
+
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+ .InputBlock-SelectArrow {
+
+ }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+ .InputBlock-SelectArrow {
+
+ }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+ .InputBlock-SelectArrow {
+  display: block;
+  position: relative;
+  width: 0px;
+  height: 0px;
+  float: right;
+  right: 34px;
+  top: 14px;
+  color: $DarkShade50;
+ }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+ .InputBlock-SelectArrow {
+
+ }
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+ .InputBlock-SelectArrow {
+
+ }
+}
+

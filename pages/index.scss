@@ -4,12 +4,12 @@
 
 /*Common.blocks*/
 
-@import '../Common.blocks/Base/Base.scss';
+@import '../Common.blocks/Base/Base';
 @import '../Common.blocks/Wrapper/Wrapper';
 @import '../Common.blocks/ColorSwatch/ColorSwatch';
 
-@import '../Common.blocks/Content/__WrapperForFormElements/Content__WrapperForFormElements';
-@import '../Common.blocks/Content/__Wrapper/Content__Wrapper';
+@import '../Common.blocks/Content/-WrapperForFormElements/Content-WrapperForFormElements';
+@import '../Common.blocks/Content/-Wrapper/Content-Wrapper';
 @import '../Common.blocks/Content/Content';
 
 @import '../Common.blocks/Logo/Logo';
@@ -20,9 +20,9 @@
 @import '../Common.blocks/Container/_Height/Container_Height_1853px';
 @import '../Common.blocks/Container/_MarBot/Container_MarBot_50px';
 
-@import '../Common.blocks/FigureHtml5/__FigcaptionWrapper/FigureHtml5__FigcaptionWrapper';
-@import '../Common.blocks/FigureHtml5/__Figcaption/FigureHtml5__Figcaption';
-@import '../Common.blocks/FigureHtml5/__Image/FigureHtml5__Image';
+@import '../Common.blocks/FigureHtml5/-FigcaptionWrapper/FigureHtml5-FigcaptionWrapper';
+@import '../Common.blocks/FigureHtml5/-Figcaption/FigureHtml5-Figcaption';
+@import '../Common.blocks/FigureHtml5/-Image/FigureHtml5-Image';
 @import '../Common.blocks/FigureHtml5/FigureHtml5';
 @import '../Common.blocks/FigureHtml5/_Bg/FigureHtml5_Bg_Dsh05';
 @import '../Common.blocks/FigureHtml5/_Bg/FigureHtml5_Bg_Dsh100';
@@ -37,9 +37,9 @@
 @import '../Common.blocks/FigureHtml5/_PdTop/FigureHtml5_PdTop';
 @import '../Common.blocks/FigureHtml5/_PdTop/FigureHtml5_PdTop_correct';
 
-@import '../Common.blocks/ExampleText/__Wrapper/ExampleText__Wrapper';
-@import '../Common.blocks/ExampleText/__Text/ExampleText__Text';
-@import '../Common.blocks/ExampleText/__Header/ExampleText__Header';
+@import '../Common.blocks/ExampleText/-Wrapper/ExampleText-Wrapper';
+@import '../Common.blocks/ExampleText/-Text/ExampleText-Text';
+@import '../Common.blocks/ExampleText/-Header/ExampleText-Header';
 @import '../Common.blocks/ExampleText/ExampleText';
 @import '../Common.blocks/ExampleText/_FontSize/ExampleText_FontSize_12px';
 @import '../Common.blocks/ExampleText/_FontSize/ExampleText_FontSize_14px';
@@ -59,15 +59,15 @@
 @import '../Common.blocks/ExampleText/_Width/ExampleText_Width_316px';
 
 @import '../Common.blocks/InputBlock/InputBlock';
-@import '../Common.blocks/InputBlock/__Dropdown/InputBlock__Dropdown';
-@import '../Common.blocks/InputBlock/__WrapperForSelectWithArrow/InputBlock__WrapperForSelectWithArrow';
-@import '../Common.blocks/InputBlock/__SelectArrow/InputBlock__SelectArrow';
-@import '../Common.blocks/InputBlock/__Option/InputBlock__Option';
-@import '../Common.blocks/InputBlock/__Select/InputBlock__Select';
-@import '../Common.blocks/InputBlock/__Wrapper/InputBlock__Wrapper';
-@import '../Common.blocks/InputBlock/__FieldName/InputBlock__FieldName';
-@import '../Common.blocks/InputBlock/__FieldDescription/InputBlock__FieldDescription';
-@import '../Common.blocks/InputBlock/__InputField/InputBlock__InputField';
+@import '../Common.blocks/InputBlock/-Dropdown/InputBlock-Dropdown';
+@import '../Common.blocks/InputBlock/-WrapperForSelectWithArrow/InputBlock-WrapperForSelectWithArrow';
+@import '../Common.blocks/InputBlock/-SelectArrow/InputBlock-SelectArrow';
+@import '../Common.blocks/InputBlock/-Option/InputBlock-Option';
+@import '../Common.blocks/InputBlock/-Select/InputBlock-Select';
+@import '../Common.blocks/InputBlock/-Wrapper/InputBlock-Wrapper';
+@import '../Common.blocks/InputBlock/-FieldName/InputBlock-FieldName';
+@import '../Common.blocks/InputBlock/-FieldDescription/InputBlock-FieldDescription';
+@import '../Common.blocks/InputBlock/-InputField/InputBlock-InputField';
 @import '../Common.blocks/InputBlock/_Appearan/InputBlock_Appearan_none';
 @import '../Common.blocks/InputBlock/_BrColor/InputBlock_BrColor_DrSh50';
 @import '../Common.blocks/InputBlock/_Color/InputBlock_Color_Dark25';
@@ -91,13 +91,13 @@
 @import '../Common.blocks/InputBlock/_Width/InputBlock_Width_265px';
 @import '../Common.blocks/InputBlock/_Width/InputBlock_Width_266px';
 
-@import '../Common.blocks/Wrapper/__FormElements/Wrapper__FormElements';
+@import '../Common.blocks/Wrapper/-FormElements/Wrapper-FormElements';
 @import '../Common.blocks/Dropdown/Dropdown';
-@import '../Common.blocks/Dropdown/__Option/Dropdown__Option';
-@import '../Common.blocks/Wrapper/__MasketField/Wrapper__MasketField';
-@import '../Common.blocks/Wrapper/__GuestsDropdown/Wrapper__GuestsDropdown';
-@import '../Common.blocks/Wrapper/__DateDropdown/Wrapper__DateDropdown';
-@import '../Common.blocks/Wrapper/__DateDropdown/Wrapper__DateDropdown';
-@import '../Common.blocks/Wrapper/__FacilitiesDropdown/Wrapper__FacilitiesDropdown';
+@import '../Common.blocks/Dropdown/-Option/Dropdown-Option';
+@import '../Common.blocks/Wrapper/-MasketField/Wrapper-MasketField';
+@import '../Common.blocks/Wrapper/-GuestsDropdown/Wrapper-GuestsDropdown';
+@import '../Common.blocks/Wrapper/-DateDropdown/Wrapper-DateDropdown';
+@import '../Common.blocks/Wrapper/-DateDropdown/Wrapper-DateDropdown';
+@import '../Common.blocks/Wrapper/-FacilitiesDropdown/Wrapper-FacilitiesDropdown';
 @import '../Common.blocks/DropdownGuests/DropdownGuests';
-@import '../Common.blocks/DropdownGuests/__Option/DropdownGuests__Option';
+@import '../Common.blocks/DropdownGuests/-Option/DropdownGuests-Option';

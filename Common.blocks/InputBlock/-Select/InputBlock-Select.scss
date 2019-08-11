@@ -1,0 +1,76 @@
+@media only screen  and (max-width: 576px) {
+ .InputBlock-Select {
+
+}
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+ .InputBlock-Select {
+
+ }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+ .InputBlock-Select {
+
+ }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+ .InputBlock-Select {
+
+ }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+ .InputBlock-Select {
+   appearance: none;
+   -webkit-appearance: none;
+   box-shadow: none;
+   border: none;
+   box-sizing: border-box;
+   border: 1px solid $DarkShade25;
+   border-radius: 4px;
+   width: 320px;
+   height: 44px;
+   padding: 14px;
+   margin-top: 4px;
+   margin-left: 1px;
+   font-family: Montserrat-Regular, sans-serif;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 18px;
+   margin-bottom: 17px;
+   letter-spacing: -0.2px;
+   color: $DarkShade75;
+   letter-spacing: 0px;
+   &:after {
+     border: none;
+     box-shadow: none;
+   }
+   &:before {
+     border: none;
+     box-shadow: none
+   }
+    &:hover {
+     border-color: $DarkShade50;
+    }
+    &:focus {
+     border-color: $DarkShade50;
+    }
+ }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+ .InputBlock-Select {
+
+ }
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+ .InputBlock-Select {
+
+ }
+}
+

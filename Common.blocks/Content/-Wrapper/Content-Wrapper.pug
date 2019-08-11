@@ -1,0 +1,4 @@
+mixin Content-Wrapper(content, cl)
+    div.Content-Wrapper(class= cl) #{content}
+        if block
+            block

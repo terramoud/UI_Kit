@@ -1,0 +1,51 @@
+@media only screen  and (max-width: 576px) {
+ .InputBlock-FieldName {
+
+}
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+ .InputBlock-FieldName {
+
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+ .InputBlock-FieldName {
+
+}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+ .InputBlock-FieldName {
+
+}
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+ .InputBlock-FieldName {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  padding-left: 1px;
+  padding-top: 4px;
+  /* identical to box height */
+  text-transform: uppercase;
+  color: $DarkShade100;
+ }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+ .InputBlock-FieldName {
+
+}
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+ .InputBlock-FieldName {
+
+}
+}
+

@@ -145,10 +145,10 @@
   }
 
 
-  .Dropdown__QuantityBlock {
+  .Dropdown-QuantityBlock {
     display: flex;
   }
-  .Dropdown__QuantityIconMinus, .Dropdown__QuantityIconPlus {
+  .Dropdown-QuantityIconMinus, .Dropdown-QuantityIconPlus {
     height: 30px;
     width: 30px;
     margin-bottom: 2px;
@@ -166,7 +166,7 @@
       cursor: pointer;
     }
   } 
-  .Dropdown__QuantityNum {
+  .Dropdown-QuantityNum {
     width: 32px;
     background: transparent;
     border: none;
@@ -201,7 +201,7 @@
       outline: none;
     } 
   }
-  .Dropdown__QuantityIconMinus_noActive {
+  .Dropdown-QuantityIconMinus_noActive {
     border-color: $DarkShade25;
   }
 }

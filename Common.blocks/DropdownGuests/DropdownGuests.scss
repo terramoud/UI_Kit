@@ -188,10 +188,10 @@
   .ui-multiselect-checkboxes input[type=checkbox] {
     display: none;
   }
-  .DropdownGuests__QuantityBlock {
+  .DropdownGuests-QuantityBlock {
     display: flex;
   }
-  .DropdownGuests__QuantityIconMinus, .DropdownGuests__QuantityIconPlus {
+  .DropdownGuests-QuantityIconMinus, .DropdownGuests-QuantityIconPlus {
     height: 30px;
     width: 30px;
     margin-bottom: 2px;
@@ -209,7 +209,7 @@
       cursor: pointer;
     }
   } 
-  .DropdownGuests__QuantityNum {
+  .DropdownGuests-QuantityNum {
     width: 32px;
     background: transparent;
     border: none;
@@ -244,7 +244,7 @@
       outline: none;
     } 
   }
-  .DropdownGuests__QuantityIconMinus_noActive {
+  .DropdownGuests-QuantityIconMinus_noActive {
     border-color: $DarkShade25;
   }
 
