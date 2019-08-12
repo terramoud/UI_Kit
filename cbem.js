@@ -71,14 +71,14 @@ fs.appendFile('pages/' + entryPoint + '.scss', dataStyle, 'utf8',
         console.log("scss appended.")
 });
 
-var scssData =  '@media only screen and (max-width: 576px) {\n .' + createFileName +' {\n\n}\n}\n\n' +
-                '@media only screen and (min-width: 577px) and (max-width: 767px) {\n .' + createFileName +' {\n\n }\n}\n\n' +
-                '@media only screen and (min-width: 768px) and (max-width: 1024px) {\n .' + createFileName +' {\n\n }\n}\n\n' +
-                '@media only screen and (min-width: 1025px) and (max-width: 1439px) {\n .' + createFileName +' {\n\n }\n}\n\n' +
-                '@media only screen and (min-width: 1440px) and (max-width: 1440px) {\n .' + createFileName +' {\n\n }\n}\n\n' +
-                '@media only screen and (min-width: 1441px) and (max-width: 1680px) {\n .' + createFileName +' {\n\n }\n}\n\n' +
-                '@media only screen and (min-width: 1681px) and (max-width: 1920px) {\n .' + createFileName +' {\n\n }\n}\n\n';
-                '@media only screen and (min-width: 1681px) and (max-width: 1920px) {\n .' + createFileName +' {\n\n }\n}\n\n';
+var scssData =  '@media only screen and (max-width: 576px) {\n  .' + createFileName + ' {\n\n  }\n}\n\n' +
+                '@media only screen and (min-width: 577px) and (max-width: 767px) {\n  .' + createFileName + ' {\n\n  }\n}\n\n' +
+                '@media only screen and (min-width: 768px) and (max-width: 1024px) {\n  .' + createFileName + ' {\n\n  }\n}\n\n' +
+                '@media only screen and (min-width: 1025px) and (max-width: 1439px) {\n  .' + createFileName + ' {\n\n  }\n}\n\n' +
+                '@media only screen and (min-width: 1440px) and (max-width: 1440px) {\n  .' + createFileName + ' {\n\n  }\n}\n\n' +
+                '@media only screen and (min-width: 1441px) and (max-width: 1680px) {\n  .' + createFileName + ' {\n\n  }\n}\n\n' +
+                '@media only screen and (min-width: 1681px) and (max-width: 1920px) {\n  .' + createFileName + ' {\n\n  }\n}\n\n';
+                '@media only screen and (min-width: 1681px) and (max-width: 1920px) {\n  .' + createFileName + ' {\n\n  }\n}\n\n';
 
 fs.writeFile( overrideLevel + fullPath + '.scss', scssData, function (err) {
     if (err) throw err;

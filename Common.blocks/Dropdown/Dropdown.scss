@@ -112,13 +112,13 @@
     font-family: Montserrat-Regular;
   }
   
-  .ui-multiselect-checkboxes span {
+  .ui-multiselect-checkboxes .cursorPointer {
     order: -1;
     font-family: "Montserrat-bold";
     font-size: 12px;
     line-height: 15px;;
     text-transform: uppercase;
-    padding-top: 6px;
+    padding-top: 7px;
   }
 
   .ui-multiselect-checkboxes input {
@@ -145,10 +145,10 @@
   }
 
 
-  .Dropdown-QuantityBlock {
+  .ui-multiselect-checkboxes .Dropdown-QuantityBlock {
     display: flex;
   }
-  .Dropdown-QuantityIconMinus, .Dropdown-QuantityIconPlus {
+  .ui-multiselect-checkboxes .Dropdown-QuantityIconMinus, .ui-multiselect-checkboxes .Dropdown-QuantityIconPlus {
     height: 30px;
     width: 30px;
     margin-bottom: 2px;
@@ -166,8 +166,9 @@
       cursor: pointer;
     }
   } 
-  .Dropdown-QuantityNum {
+  .ui-multiselect-checkboxes .Dropdown-QuantityNum {
     width: 32px;
+    padding: 0 0 6px 0;
     background: transparent;
     border: none;
     appearance: none;
@@ -201,7 +202,7 @@
       outline: none;
     } 
   }
-  .Dropdown-QuantityIconMinus_noActive {
+  .ui-multiselect-checkboxes .Dropdown-QuantityIconMinus_noActive {
     border-color: $DarkShade25;
   }
 }
