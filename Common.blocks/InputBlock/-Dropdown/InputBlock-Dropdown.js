@@ -8,7 +8,7 @@
 //   open: function(){
 //     $('.ui-multiselect-checkboxes').css('height', 'auto');
 //   },
-//   //classes: 'InputBlock_Color_Dark75 InputBlock_MrBot_19px InputBlock_LetterSpacing_0px InputBlock_PdTop_11px InputBlock_Appearan_none InputBlock_Width_265px InputBlock-Dropdown',
+//   //classes: 'InputBlock_color_dark75 InputBlock_mrBot_19px InputBlock_letterSpacing_0px InputBlock_pdTop_11px InputBlock_appearan_none InputBlock_width_265px InputBlock-Dropdown',
 //   selectedList: 2,
 // 	selectedText: function(numChecked, numTotal, checkedItems){
 //     this.$button[0].children[0].children[0].outerHTML = '<i class="material-icons">expand_more</i>'; 

@@ -118,3 +118,5 @@ require('../Common.blocks/DropdownGuests/DropdownGuests.js');
 require('../Common.blocks/DropdownGuests/-Option/DropdownGuests-Option.js');
 
 
+
+require('../Common.blocks/TestBlocks/_Mod/TestBlocks_Mod_val.js');

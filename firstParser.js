@@ -32,7 +32,7 @@ var walk = function(dir, done) {
 };
 
 
-walk('./Common.blocks', function(err, file) {
+walk('', function(err, file) {
     //console.log(file);
     file.forEach(function(arg) {
         var changedFile = String(arg.replace(/\\/gi, '/'));
@@ -41,7 +41,8 @@ walk('./Common.blocks', function(err, file) {
                 if (err) throw err;
                 //console.log(changedFile);
                 //console.log(data);
-                customData = String(data).replace(/_([a-zA-Z])/g, function(str, p1) {return p1.toLowerCase();};
+                customData = String(data).replace(/__/g, "-");
+                
                 fs.writeFile( changedFile, customData, function (err) {
                     if (err) throw err;
                     console.log(customData);
