@@ -8,13 +8,13 @@ for (let j = 0; j < process.argv.length; j++) {
 var entryPoint = (process.argv[2]);
 var createFileName = process.argv[3];
 var overrideLevel = ( /(Common\.blocks\b)|(Desktop\.blocks\b)|(Library\.blocks\b)/.test( process.argv[4] ) )? process.argv[4] + '/' : 'Common.blocks/';
-var blockName = createFileName.match(/^[^-_ ]+/i);
-var elementName = createFileName.match(/-[^-_ ]+/i);
-var modName = createFileName.match(/_[^_ ]+/i);
+var blockName = createFileName.match(/^[^_]+/i);
+var elementName = createFileName.match(/_{1,2}[^_ ]+/i);
+var modName = createFileName.match(/^[^_ ]+__[^_ ]+(_[^_ ]+)/i);
 
 blockName = ( !blockName )? '' : blockName[0] + '/';
 elementName = ( !elementName )? '' : elementName[0] + '/';
-modName = ( !modName )? '' : modName[0] + '/';
+modName = ( !modName )? '' : modName[1] + '/';
 fullPath = blockName + elementName + modName + createFileName;
 console.log('../' + overrideLevel + blockName + elementName + modName + createFileName);
 
