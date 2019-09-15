@@ -9,8 +9,8 @@ require('../Common.blocks/Fonts/Fonts.scss');
 
 require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
 require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
-require('../Library.blocks/AirDatapicker/AirDatapicker.css');
-require('../Library.blocks/AirDatapicker/AirDatapicker.js');
+require('../Library.blocks/AirDatepicker/AirDatepicker.css');
+require('../Library.blocks/AirDatepicker/AirDatepicker.js');
 
 /*End Library.blocks*/
 
@@ -18,9 +18,6 @@ require('../Library.blocks/AirDatapicker/AirDatapicker.js');
 require('./index.scss');
 
 /*Common.blocks*/
-
-require('../Common.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
-require('../Common.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
 
 require('../Common.blocks/Content/Content.js');
 require('../Common.blocks/Content/-WrapperForFormElements/Content-WrapperForFormElements.js');
@@ -124,3 +121,12 @@ require('../Common.blocks/InputBlock/_pdTop/InputBlock_pdTop_1px.js');
 require('../Common.blocks/AirDatapicker/AirDatapicker.js');
 require('../Common.blocks/DropdownDatepicker/DropdownDatepicker.js');
 require('../Common.blocks/DropdownDatepicker/-Icon/DropdownDatepicker-Icon.js');
+require('../Common.blocks/_Kit/_Kit.js');
+require('../Common.blocks/DropdownDatepicker/-Open/DropdownDatepicker-Open.js');
+require('../Common.blocks/DropdownDatepicker/-ArrivalDate/DropdownDatepicker-ArrivalDate.js');
+require('../Common.blocks/DropdownDatepicker/-DateOfDeparture/DropdownDatepicker-DateOfDeparture.js');
+require('../Common.blocks/DropdownDatepicker/-WrapperForDatepicker/DropdownDatepicker-WrapperForDatepicker.js');
+require('../Common.blocks/DropdownDatepicker/-SelectArrivalDate/DropdownDatepicker-SelectArrivalDate.js');
+require('../Common.blocks/DropdownDatepicker/-SelectDateOfDeparture/DropdownDatepicker-SelectDateOfDeparture.js');
+require('../Common.blocks/DropdownDatepicker/-ApplyButton/DropdownDatepicker-ApplyButton.js');
+require('../Common.blocks/DropdownDatepicker/-ResetButton/DropdownDatepicker-ResetButton.js');

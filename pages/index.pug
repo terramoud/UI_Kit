@@ -1,7 +1,15 @@
+include ../Common.blocks/DropdownDatepicker/-ResetButton/DropdownDatepicker-ResetButton.pug
+include ../Common.blocks/DropdownDatepicker/-ApplyButton/DropdownDatepicker-ApplyButton.pug
+include ../Common.blocks/DropdownDatepicker/-SelectDateOfDeparture/DropdownDatepicker-SelectDateOfDeparture.pug
+include ../Common.blocks/DropdownDatepicker/-SelectArrivalDate/DropdownDatepicker-SelectArrivalDate.pug
+include ../Common.blocks/DropdownDatepicker/-WrapperForDatepicker/DropdownDatepicker-WrapperForDatepicker.pug
+include ../Common.blocks/DropdownDatepicker/-DateOfDeparture/DropdownDatepicker-DateOfDeparture.pug
+include ../Common.blocks/DropdownDatepicker/-ArrivalDate/DropdownDatepicker-ArrivalDate.pug
+
+include ../Common.blocks/DropdownDatepicker/-Open/DropdownDatepicker-Open.pug
 include ../Common.blocks/DropdownDatepicker/-Icon/DropdownDatepicker-Icon.pug
 include ../Common.blocks/DropdownDatepicker/DropdownDatepicker.pug
 include ../Common.blocks/AirDatapicker/AirDatapicker.pug
-include ../Library.blocks/AirDatapicker/AirDatapicker.pug
 
 include ../Common.blocks/DropdownGuests/-Option/DropdownGuests-Option.pug
 include ../Common.blocks/DropdownGuests/DropdownGuests.pug
@@ -140,34 +148,55 @@ html
                             //-     Select.InputBlock-InputField.InputBlock_appearan_none.InputBlock_pdTop_11px.InputBlock_letterSpacing_0px.InputBlock_color_dark75
                             //-         +InputBlock-Option('Сколько гостей', 'selected')
                             //-         +InputBlock-Option()
-                            //-         +InputBlock-Option()               
+                            //-         +InputBlock-Option()
+                        +InputBlock()(class='Wrapper-DateDropdown')
+                            +InputBlock()
+                                +InputBlock-Wrapper()
+                                    +InputBlock-FieldName('date dropdown')
+                                +DropdownDatepicker()
+                                    +DropdownDatepicker-ArrivalDate(type='button')
+                                        +DropdownDatepicker-Open() ДД.ММ.ГГГГ
+                                        +DropdownDatepicker-Icon()
+                                            i.material-icons expand_more
+                                    +DropdownDatepicker-WrapperForDatepicker()
+                            +InputBlock()
+                                +InputBlock-Wrapper()
+                                    +InputBlock-FieldName('date dropdown')
+                                +DropdownDatepicker()
+                                    +DropdownDatepicker-DateOfDeparture(type='button')
+                                        +DropdownDatepicker-Open() 19.08.2019
+                                        +DropdownDatepicker-Icon()
+                                            i.material-icons expand_more
+                                    +DropdownDatepicker-WrapperForDatepicker()
                         +InputBlock()(class='Wrapper-MasketField')
                             +InputBlock-Wrapper()
                                 +InputBlock-FieldName('masked text field')
                                 +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_1px')
                             +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='ДД.ММ.ГГГГ')                        
-                        +Wrapper-DateDropdown()
+                        +InputBlock()(class='Wrapper-DateDropdown')
                             +InputBlock()
                                 +InputBlock-Wrapper()
                                     +InputBlock-FieldName('date dropdown')
-                                +InputBlock-WrapperForSelectWithArrow()
-                                    +InputBlock-SelectArrow('expand_more')
-                                    Select.InputBlock-InputField.InputBlock_appearan_none.InputBlock_letterSpacing_0px.InputBlock_color_dark75.InputBlock_width_150px.InputBlock_pdTop_11px
-                                        +InputBlock-Option('ДД.ММ.ГГГГ', 'selected')
-                                        +InputBlock-Option()
-                                        +InputBlock-Option()  
+                                +DropdownDatepicker()
+                                    +DropdownDatepicker-ArrivalDate(type='button')
+                                        +DropdownDatepicker-Open() ДД.ММ.ГГГГ
+                                        +DropdownDatepicker-Icon()
+                                            i.material-icons expand_more
+                                    +DropdownDatepicker-WrapperForDatepicker()
+                                        +DropdownDatepicker-ApplyButton()
                             +InputBlock()
                                 +InputBlock-Wrapper()
                                     +InputBlock-FieldName('date dropdown')
-                                +InputBlock-WrapperForSelectWithArrow()
-                                    +InputBlock-SelectArrow('expand_more')
-                                    Select.InputBlock-InputField.InputBlock_appearan_none.InputBlock_mrBot_19px.InputBlock_color_dark75.InputBlock_width_150px.InputBlock_pdTop_11px.InputBlock_mrBot_37px
-                                        +InputBlock-Option('19.08.2019', 'selected')
-                                        +InputBlock-Option()
-                                        +InputBlock-Option()
+                                +DropdownDatepicker()
+                                    +DropdownDatepicker-DateOfDeparture(type='button')
+                                        +DropdownDatepicker-Open() 19.08.2019
+                                        +DropdownDatepicker-Icon()
+                                            i.material-icons expand_more
+                                    +DropdownDatepicker-WrapperForDatepicker()
+                                        +DropdownDatepicker-ApplyButton()
                         +InputBlock()
                             +InputBlock-Wrapper()
-                                +InputBlock-FieldName('filter rate dropdown')
+                                +InputBlock-FieldName('filter date dropdown')
                             +InputBlock-WrapperForSelectWithArrow()
                                 +InputBlock-SelectArrow('expand_more')
                                 Select.InputBlock-InputField.InputBlock_width_266px.InputBlock_appearan_none.InputBlock_pdTop_11px.InputBlock_letterSpacing_0px.InputBlock_mrBot_39px.InputBlock_color_dark75
@@ -205,7 +234,5 @@ html
                             +Wrapper()
                         +Wrapper()
 
-+AirDatapicker()
-+DropdownDatepicker()
 
-+DropdownDatepicker-Icon()
+
