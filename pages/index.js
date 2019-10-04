@@ -118,7 +118,7 @@ require('../Common.blocks/DropdownGuests/-Option/DropdownGuests-Option.js');
 
 require('../Common.blocks/InputBlock/_pdTop/InputBlock_pdTop_1px.js');
 
-require('../Common.blocks/AirDatapicker/AirDatapicker.js');
+
 require('../Common.blocks/DropdownDatepicker/DropdownDatepicker.js');
 require('../Common.blocks/DropdownDatepicker/-Icon/DropdownDatepicker-Icon.js');
 require('../Common.blocks/_Kit/_Kit.js');
@@ -128,5 +128,8 @@ require('../Common.blocks/DropdownDatepicker/-DateOfDeparture/DropdownDatepicker
 require('../Common.blocks/DropdownDatepicker/-WrapperForDatepicker/DropdownDatepicker-WrapperForDatepicker.js');
 require('../Common.blocks/DropdownDatepicker/-SelectArrivalDate/DropdownDatepicker-SelectArrivalDate.js');
 require('../Common.blocks/DropdownDatepicker/-SelectDateOfDeparture/DropdownDatepicker-SelectDateOfDeparture.js');
-require('../Common.blocks/DropdownDatepicker/-ApplyButton/DropdownDatepicker-ApplyButton.js');
 require('../Common.blocks/DropdownDatepicker/-ResetButton/DropdownDatepicker-ResetButton.js');
+
+require('../Common.blocks/DropdownDatepicker/-WrapperForDropdown/DropdownDatepicker-WrapperForDropdown.js');
+require('../Common.blocks/DropdownDatepicker/-InputHidden/DropdownDatepicker-InputHidden.js');
+require('../Common.blocks/DropdownDatepicker/-AirDatepicker/DropdownDatepicker-AirDatepicker.js');

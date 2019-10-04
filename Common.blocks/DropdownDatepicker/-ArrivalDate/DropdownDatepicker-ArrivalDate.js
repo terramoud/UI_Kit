@@ -1,16 +1,14 @@
-var idDropdownDatepickerArrivalDate  = 0;
-
-$('button.DropdownDatepicker-ArrivalDate').each(function(index, el) {
+$('div.DropdownDatepicker-ArrivalDate').each(function(index, el) {
 
 
   /**
    * Namespace
    */
   var cloneThis = this;
-  $(cloneThis).attr('data-id', idDropdownDatepickerArrivalDate++);
+
   var DropdownDpArrivalDate = {
     applyButton: 'применить',
-    wrapperForDp: $(cloneThis).siblings('.DropdownDatepicker-WrapperForDatepicker'),
+    wrapperForDp: $(cloneThis).siblings(".DropdownDatepicker-AirDatepicker"),
   };
 
 
@@ -25,21 +23,6 @@ $('button.DropdownDatepicker-ArrivalDate').each(function(index, el) {
       DropdownDpArrivalDate.wrapperForDp.css('display','none');
     }
 
-  });
-
-
-  // Datepicker initialization
-  DropdownDpArrivalDate.wrapperForDp.datepicker({
-    range: true,
-    multipleDates: 2,
-    clearButton: true,
-    timepicker: false,
-    onSelect: function (formattedDate, date, inst) {
-      var arrayDate = formattedDate.split(","); // This creates an array from the string the selected of dates
-      $(cloneThis).data( {'arrivalDate': arrayDate[0], 'dateOfDeparture': arrayDate[arrayDate.length-1]} );
-      $(cloneThis).children('.DropdownDatepicker-Open').text( $(cloneThis).data('arrivalDate') ); // This writes the selected date to the dropdown
-      $('button.DropdownDatepicker-DateOfDeparture[data-id=' + $(cloneThis).attr('data-id') + ']').children('.DropdownDatepicker-Open').text( $(cloneThis).data('dateOfDeparture') );
-    }
   });
 
 });

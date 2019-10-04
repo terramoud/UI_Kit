@@ -1,16 +1,14 @@
-var idDropdownDatepickerDateOfDeparture  = 0;
-
-$('button.DropdownDatepicker-DateOfDeparture').each(function(index, el) {
+$('div.DropdownDatepicker-DateOfDeparture').each(function(index, el) {
 
   /**
    * Namespace
    */
   var cloneThis = this;
-  $(cloneThis).attr('data-id', idDropdownDatepickerDateOfDeparture++);
+
   var DropdownDpDateOfDeparture = {
     applyButton: 'применить',
-    arrivalDateElem: $('button.DropdownDatepicker-ArrivalDate[data-id=' + $(cloneThis).attr('data-id') + ']'),
-    wrapperForDp: $('button.DropdownDatepicker-ArrivalDate[data-id=' + $(cloneThis).attr('data-id') + ']').siblings('.DropdownDatepicker-WrapperForDatepicker'),
+    arrivalDateElem: $('div.DropdownDatepicker-ArrivalDate'),
+    wrapperForDp: $('div.DropdownDatepicker-ArrivalDate').siblings('.DropdownDatepicker-AirDatepicker'),
   };
 
   /**
@@ -25,6 +23,5 @@ $('button.DropdownDatepicker-DateOfDeparture').each(function(index, el) {
     }
 
   });
-
 
 });

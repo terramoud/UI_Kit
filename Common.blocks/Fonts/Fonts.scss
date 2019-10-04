@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Quicksand";
-  src: url('./Quicksand-Bold.ttf');
+  src: url('./Quicksand-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
 }
@@ -22,6 +22,20 @@
 @font-face {
   font-family: "Montserrat-Regular";
   src: url('./Montserrat-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('./OpenSans-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url('./OpenSans-Regular.ttf');
   font-style: normal;
   font-weight: 400;
 }

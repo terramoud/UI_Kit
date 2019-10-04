@@ -1,32 +1,32 @@
 @media only screen and (max-width: 576px) {
-  .DropdownDatepicker-WrapperForDatepicker {
+  .DropdownDatepicker-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .DropdownDatepicker-WrapperForDatepicker {
+  .DropdownDatepicker-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .DropdownDatepicker-WrapperForDatepicker {
+  .DropdownDatepicker-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .DropdownDatepicker-WrapperForDatepicker {
+  .DropdownDatepicker-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .DropdownDatepicker-WrapperForDatepicker {
+  .DropdownDatepicker-AirDatepicker {
     display: none;
     position: absolute;
-    top: 49.56px;
+    top: 92.56px;
     width: 320px;
     //height: 369px;
     z-index: 9999;
@@ -36,16 +36,37 @@
     box-shadow: 0px 10px 20px $DarkShade05;
     border-radius: 4px;
   }
+
+  .datepicker-inline .datepicker {
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+  }
+
+  .datepicker--nav-title {
+    font-family: Quicksand, 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    color: $DarkShade100;
+  }
+
+  .datepicker--nav {
+    height: 55px;
+    padding: 4px 15px 14px 15px;
+  }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .DropdownDatepicker-WrapperForDatepicker {
+  .DropdownDatepicker-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .DropdownDatepicker-WrapperForDatepicker {
+  .DropdownDatepicker-AirDatepicker {
 
   }
 }
