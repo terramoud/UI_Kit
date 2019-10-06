@@ -28,9 +28,16 @@ $('.DropdownDatepicker-AirDatepicker').each(function(index, el) {
       AirDatepicker.arrivalDate = arrayDate[0];
       AirDatepicker.dateOfDeparture = arrayDate[arrayDate.length - 1];
 
-      $(ThisAirDatepicker).siblings('.DropdownDatepicker-ArrivalDate').children('.DropdownDatepicker-Open').text(AirDatepicker.arrivalDate); // This writes the selected date to the dropdown
-      $(ThisAirDatepicker).parent('.DropdownDatepicker-WrapperForDropdown').next().find('.DropdownDatepicker-Open').text(AirDatepicker.dateOfDeparture);
-    },
-  });
+      if ( String(arrayDate) === '') {
+        $(ThisAirDatepicker).siblings('.DropdownDatepicker-ArrivalDate').children('.DropdownDatepicker-Open').text('ДД.ММ.ГГГГ'); // This writes the selected date to the dropdown
+        $(ThisAirDatepicker).parent('.DropdownDatepicker-WrapperForDropdown').next().find('.DropdownDatepicker-Open').text('ДД.ММ.ГГГГ');
+      } else {
+        $(ThisAirDatepicker).siblings('.DropdownDatepicker-ArrivalDate').children('.DropdownDatepicker-Open').text(AirDatepicker.arrivalDate); // This writes the selected date to the dropdown
+        $(ThisAirDatepicker).parent('.DropdownDatepicker-WrapperForDropdown').next().find('.DropdownDatepicker-Open').text(AirDatepicker.dateOfDeparture);
+      }
 
+     },
+
+  });
+  $(this).find('.datepicker--buttons').append('<button type="submit" class="datepicker--button" data-action="submit">Применить</button>')
 });

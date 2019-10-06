@@ -2,7 +2,6 @@ $ExampleText_fontSize_24px: 24px;
 $ExampleText_fontSize_19px: 19px;
 $ExampleText_fontSize_14px: 14px;
 $ExampleText_fontSize_12px: 12px;
-
 $DarkShade100: #1F2041;
 $DarkShade75: rgba(31, 32, 65, 0.75);
 $DarkShade50: rgba(31, 32, 65, 0.5);
@@ -11,4 +10,11 @@ $DarkShade05: rgba(31, 32, 65, 0.05);
 
 $background: #FFFFFF;
 $DatepickerArrowColor: #BC9CFF;
+$DatepickerArrowColorHover: darken($DatepickerArrowColor, 10%);
+$DatepickerGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$DatepickerGradientInRange: linear-gradient(180deg, rgba(188,156,255,.25) 0%, rgba(139,164,249,.25) 100%);
+$DatepickerGradientInRangeFocus: linear-gradient(180deg, darken(rgba(188,156,255,.25), 10%) 0%, darken(rgba(139,164,249,.25), 10%) 100%);
+$DatepickerGradientFocus: linear-gradient(180deg, darken(#BC9CFF, 10%) 0%, darken(#8BA4F9, 10%) 100%);
 $colorApplyButtonGuestsDropdown: #BC9CFF;
+$DatepickerGradientCurrentData: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+$DatepickerGradientCurrentDataFocus: linear-gradient(180deg, darken(#6FCF97, 10%) 0%, darken(#66D2EA, 10%) 100%);

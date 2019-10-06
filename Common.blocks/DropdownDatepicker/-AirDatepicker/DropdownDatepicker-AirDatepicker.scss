@@ -28,7 +28,7 @@
     position: absolute;
     top: 92.56px;
     width: 320px;
-    //height: 369px;
+    height: 369px;
     z-index: 9999;
     background: $background;
     border: 1px solid $DarkShade25;
@@ -57,6 +57,152 @@
     height: 55px;
     padding: 4px 15px 14px 15px;
   }
+
+  .datepicker--content {
+    padding: 3px 19px 3px 20px;
+  }
+
+  .datepicker--day-name {
+    color: $DatepickerArrowColor;
+    text-transform: none;
+    font-family: Montserrat-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .datepicker--button {
+    font-family: Montserrat-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $DarkShade50;
+    display: inline-block;
+    padding: 12px 15px;
+    height: auto;
+    &[data-action="submit"] {
+      border: none;
+      background: transparent;
+      padding: 12px 15px 12px 0;
+      text-align: right;
+      color: $DatepickerArrowColor;
+    }
+    &[data-action="submit"]:focus {
+      color: $DatepickerArrowColorHover;
+    }
+    &[data-action="submit"]:hover {
+      color: $DatepickerArrowColorHover;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:hover {
+      background: transparent;
+      outline: none;
+    }
+  }
+
+  .datepicker--cells {
+    padding-top: 10px;
+  }
+
+  .datepicker--nav-action {
+    color: $DatepickerArrowColor;
+  }
+
+  .datepicker--cell {
+    height: 40px;
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: $DarkShade50;
+    &.-selected-.-focus- {
+      background: $DatepickerGradientFocus;
+    }
+    &.-selected- {
+      background: $DatepickerGradient;
+      color: $background;
+      font-weight: bold;
+    }
+    &.-in-range- {
+      background: $DatepickerGradientInRange;
+      color: $DarkShade50;
+    }
+    &.-in-range-.-focus- {
+      background: $DatepickerGradientInRangeFocus;
+      color: $DarkShade50;
+    }
+    &.-range-from-, &.-range-to- {
+      border-radius: 22px;
+      border-width: 0;
+      background: $DatepickerGradient;
+      color: $background;
+      font-weight: bold;
+    }
+    &.-range-from-::after {
+      content: "";
+      position: absolute;
+      background: red;
+      width: 100%;
+      height: inherit;
+      background: $DatepickerGradient;
+      opacity: 0.25;
+      border-width: 0;
+      border-bottom-left-radius: 50%;
+      border-top-left-radius: 50%;
+    }
+    &.-range-to-::before, &.-range-to- -focus-::before {
+      content: "";
+      position: absolute;
+      background: red;
+      width: 100%;
+      height: inherit;
+      background: $DatepickerGradient;
+      opacity: 0.25;
+      border-width: 0;
+      border-bottom-right-radius: 50%;
+      border-top-right-radius: 50%;
+    }
+    &.-current- {
+      color: $background;
+      font-weight: bold;
+      background: $DatepickerGradientCurrentData;
+      border-radius: 50%;
+    }
+    &.-current-.-focus- {
+      background: $DatepickerGradientCurrentDataFocus;
+      color: $background;
+    }
+    &.-current-.-in-range- {
+       color: $background;
+       font-weight: bold;
+       background: $DatepickerGradientCurrentData;
+       border-radius: 50%;
+     }
+    &.-current-.-in-range-.-focus- {
+      background: $DatepickerGradientCurrentDataFocus;
+      color: $background;
+    }
+    &.-current-.-in-range-::before {
+      background: $DatepickerGradientInRange;
+      border-radius: 0;
+      content: "";
+      width: 100%;
+      height: inherit;
+      position: absolute;
+    }
+    &.-selected-.-current- {
+      background: $DatepickerGradient;
+    }
+  }
+
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
