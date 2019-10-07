@@ -26,12 +26,15 @@
  .InputBlock-SelectArrow {
   display: block;
   position: relative;
-  width: 0px;
-  height: 0px;
+  width: 25px;
+  height: 25px;
   float: right;
   right: 34px;
-  top: 14px;
-  color: $DarkShade50;
+  top: 11px;
+  background: $DatepickerGradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
  }
 }
 

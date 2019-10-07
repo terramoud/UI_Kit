@@ -1,3 +1,10 @@
+include ../Common.blocks/Wrapper/-FilterDateDropdown/Wrapper-FilterDateDropdown.pug
+include ../Common.blocks/FilterDateDropdown/-Dropdown/FilterDateDropdown-Dropdown.pug
+include ../Common.blocks/FilterDateDropdown/-Icon/FilterDateDropdown-Icon.pug
+include ../Common.blocks/FilterDateDropdown/-Open/FilterDateDropdown-Open.pug
+include ../Common.blocks/FilterDateDropdown/-InputHidden/FilterDateDropdown-InputHidden.pug
+include ../Common.blocks/FilterDateDropdown/-AirDatepicker/FilterDateDropdown-AirDatepicker.pug
+include ../Common.blocks/FilterDateDropdown/FilterDateDropdown.pug
 include ../Common.blocks/DropdownDatepicker/-AirDatepicker/DropdownDatepicker-AirDatepicker.pug
 include ../Common.blocks/DropdownDatepicker/-InputHidden/DropdownDatepicker-InputHidden.pug
 include ../Common.blocks/DropdownDatepicker/-WrapperForDropdown/DropdownDatepicker-WrapperForDropdown.pug
@@ -178,25 +185,16 @@ html
                                     +DropdownDatepicker-Open() 19.08.2019
                                     +DropdownDatepicker-Icon()
                                         i.material-icons expand_more
-
-                                    //+DropdownDatepicker-WrapperForDatepicker()
-                            //+InputBlock()
-                                +InputBlock-Wrapper()
-                                    +InputBlock-FieldName('date dropdown')
-                                +DropdownDatepicker()
-                                    +DropdownDatepicker-DateOfDeparture(type='button')
-                                        +DropdownDatepicker-Open() 19.08.2019
-                                        +DropdownDatepicker-Icon()
-                                            i.material-icons expand_more
-                        +InputBlock()
+                        +InputBlock(class='Wrapper-FilterDateDropdown')
                             +InputBlock-Wrapper()
                                 +InputBlock-FieldName('filter date dropdown')
-                            +InputBlock-WrapperForSelectWithArrow()
-                                +InputBlock-SelectArrow('expand_more')
-                                Select.InputBlock-InputField.InputBlock_width_266px.InputBlock_appearan_none.InputBlock_pdTop_11px.InputBlock_letterSpacing_0px.InputBlock_mrBot_39px.InputBlock_color_dark75
-                                    +InputBlock-Option('19 авг - 23 авг', 'selected')
-                                    +InputBlock-Option()
-                                    +InputBlock-Option() 
+                            +FilterDateDropdown()
+                                +FilterDateDropdown-Dropdown()
+                                    +FilterDateDropdown-InputHidden(type='hidden')
+                                    +FilterDateDropdown-Open() 19 авг - 23 авг
+                                    +FilterDateDropdown-Icon()
+                                        i.material-icons expand_more
+                                +FilterDateDropdown-AirDatepicker()
                         +InputBlock()
                             +InputBlock-Wrapper()
                                 +InputBlock-FieldName('subscription text field')
@@ -227,10 +225,6 @@ html
                             +Wrapper()
                             +Wrapper()
                         +Wrapper()
-
-
-
-
 
 
 

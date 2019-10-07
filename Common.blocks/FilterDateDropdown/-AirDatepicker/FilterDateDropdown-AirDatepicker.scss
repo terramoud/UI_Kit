@@ -1,32 +1,32 @@
 @media only screen and (max-width: 576px) {
-  .DropdownDatepicker-AirDatepicker {
+  .FilterDateDropdown-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .DropdownDatepicker-AirDatepicker {
+  .FilterDateDropdown-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .DropdownDatepicker-AirDatepicker {
+  .FilterDateDropdown-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .DropdownDatepicker-AirDatepicker {
+  .FilterDateDropdown-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .DropdownDatepicker-AirDatepicker {
+  .FilterDateDropdown-AirDatepicker {
     display: none;
     position: absolute;
-    top: 92.56px;
+    top: 51px;
     width: 320px;
     min-height: 369px;
     z-index: 9999;
@@ -54,11 +54,11 @@
 
     .datepicker--nav {
       height: 55px;
-      padding: 4px 15px 14px 15px;
+      padding: 3px 15px 14px 15px;
     }
 
     .datepicker--content {
-      padding: 3px 19px 3px 20px;
+      padding: 4px 19px 3px 20px;
     }
 
     .datepicker--day-name {
@@ -207,19 +207,16 @@
     }
 
   }
-
-
-
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .DropdownDatepicker-AirDatepicker {
+  .FilterDateDropdown-AirDatepicker {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .DropdownDatepicker-AirDatepicker {
+  .FilterDateDropdown-AirDatepicker {
 
   }
 }

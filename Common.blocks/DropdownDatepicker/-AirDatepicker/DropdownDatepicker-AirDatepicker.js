@@ -18,6 +18,7 @@ $('.DropdownDatepicker-AirDatepicker').each(function(index, el) {
     multipleDates: 2,
     clearButton: true,
     timepicker: false,
+    toggleSelected: false,
     prevHtml: '<i class="material-icons">arrow_back</i>',
     nextHtml: '<i class="material-icons">arrow_forward</i>',
     navTitles: {
@@ -33,7 +34,9 @@ $('.DropdownDatepicker-AirDatepicker').each(function(index, el) {
         $(ThisAirDatepicker).parent('.DropdownDatepicker-WrapperForDropdown').next().find('.DropdownDatepicker-Open').text('ДД.ММ.ГГГГ');
       } else {
         $(ThisAirDatepicker).siblings('.DropdownDatepicker-ArrivalDate').children('.DropdownDatepicker-Open').text(AirDatepicker.arrivalDate); // This writes the selected date to the dropdown
+        $(ThisAirDatepicker).siblings('.DropdownDatepicker-ArrivalDate').children('.DropdownDatepicker-InputHidden').val(AirDatepicker.arrivalDate);
         $(ThisAirDatepicker).parent('.DropdownDatepicker-WrapperForDropdown').next().find('.DropdownDatepicker-Open').text(AirDatepicker.dateOfDeparture);
+        $(ThisAirDatepicker).parent('.DropdownDatepicker-WrapperForDropdown').next().find('.DropdownDatepicker-InputHidden').val(AirDatepicker.dateOfDeparture);
       }
 
      },

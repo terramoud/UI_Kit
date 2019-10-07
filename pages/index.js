@@ -133,3 +133,10 @@ require('../Common.blocks/DropdownDatepicker/-ResetButton/DropdownDatepicker-Res
 require('../Common.blocks/DropdownDatepicker/-WrapperForDropdown/DropdownDatepicker-WrapperForDropdown.js');
 require('../Common.blocks/DropdownDatepicker/-InputHidden/DropdownDatepicker-InputHidden.js');
 require('../Common.blocks/DropdownDatepicker/-AirDatepicker/DropdownDatepicker-AirDatepicker.js');
+require('../Common.blocks/FilterDateDropdown/FilterDateDropdown.js');
+require('../Common.blocks/FilterDateDropdown/-AirDatepicker/FilterDateDropdown-AirDatepicker.js');
+require('../Common.blocks/FilterDateDropdown/-InputHidden/FilterDateDropdown-InputHidden.js');
+require('../Common.blocks/FilterDateDropdown/-Open/FilterDateDropdown-Open.js');
+require('../Common.blocks/FilterDateDropdown/-Icon/FilterDateDropdown-Icon.js');
+require('../Common.blocks/FilterDateDropdown/-Dropdown/FilterDateDropdown-Dropdown.js');
+require('../Common.blocks/Wrapper/-FilterDateDropdown/Wrapper-FilterDateDropdown.js');

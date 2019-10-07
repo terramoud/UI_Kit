@@ -41,6 +41,8 @@ $('select.DropdownGuests').each(function(index, el) {
     noneSelectedText: 'Сколько гостей',
     applyButton: 'применить',
     clearButton: 'очистить',
+    borderBottomLeftRadius: '',
+    borderBottomRightRadius: '',
   };
   
 
@@ -65,6 +67,18 @@ $('select.DropdownGuests').each(function(index, el) {
     noneSelectedText: dropdownGuests.noneSelectedText,
     open: function(){
       $('.ui-multiselect-checkboxes').css('height', 'auto');
+      dropdownGuests.borderBottomLeftRadius = $('.DropdownGuests').css('border-bottom-left-radius');
+      dropdownGuests.borderBottomRightRadius = $('.DropdownGuests').css('border-bottom-right-radius');
+      $('.DropdownGuests').css({
+        'border-bottom-left-radius': '0px',
+        'border-bottom-right-radius': '0px',
+      });
+    },
+    close: function(){
+      $('.DropdownGuests').css({
+        'border-bottom-left-radius': dropdownGuests.borderBottomLeftRadius,
+        'border-bottom-right-radius': dropdownGuests.borderBottomRightRadius,
+      });
     },
   });
 
