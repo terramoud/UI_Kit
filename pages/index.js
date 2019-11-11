@@ -140,3 +140,5 @@ require('../Common.blocks/FilterDateDropdown/-Open/FilterDateDropdown-Open.js');
 require('../Common.blocks/FilterDateDropdown/-Icon/FilterDateDropdown-Icon.js');
 require('../Common.blocks/FilterDateDropdown/-Dropdown/FilterDateDropdown-Dropdown.js');
 require('../Common.blocks/Wrapper/-FilterDateDropdown/Wrapper-FilterDateDropdown.js');
+require('../Common.blocks/InputBlock/-Form/InputBlock-Form.js');
+require('../Common.blocks/List/List.js');

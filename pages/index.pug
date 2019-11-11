@@ -1,3 +1,5 @@
+include ../Common.blocks/List/List.pug
+include ../Common.blocks/InputBlock/-Form/InputBlock-Form.pug
 include ../Common.blocks/Wrapper/-FilterDateDropdown/Wrapper-FilterDateDropdown.pug
 include ../Common.blocks/FilterDateDropdown/-Dropdown/FilterDateDropdown-Dropdown.pug
 include ../Common.blocks/FilterDateDropdown/-Icon/FilterDateDropdown-Icon.pug
@@ -125,46 +127,33 @@ html
             +Content()
                 +Content-WrapperForFormElements()
                     +Wrapper()
-                        //- +InputBlock()(class='Wrapper-GuestsDropdown')
-                        //-     +InputBlock-Wrapper
-                        //-         +InputBlock-FieldName('dropdown')
-                        //-         +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
-                        //-     Select.DropdownGuests(multiple='multiple', id="DropdownGuests2", name='DropdownGuests', size='3')
-                        //-         +DropdownGuests-Option('большие')(value='moreThanAdults')
-                        //-         +DropdownGuests-Option('маленькие')(value='moreThanChildren')
-                        //-         +DropdownGuests-Option('очсень маленькие')(value='moreThanBabies')
                         +InputBlock()(class='Wrapper-FormElements')
                             +InputBlock-Wrapper()
                                 +InputBlock-FieldName('text field')
                                 +InputBlock-FieldDescription('default')
-                            +InputBlock-InputField()(class='InputBlock_color_dark25', type='text', placeholder='Email')
+                            +InputBlock-Form()
+                                +InputBlock-InputField()(class='InputBlock_color_dark25', type='text', placeholder='Email')
                         +InputBlock()(class='Wrapper-FormElements')
                             +InputBlock-Wrapper()
                                 +InputBlock-FieldName('text field')
                                 +InputBlock-FieldDescription('HOVER / FOCUS')(class='InputBlock_pdTop_3px')
-                            +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='This is pretty awesome')
+                            +InputBlock-Form()
+                                +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='This is pretty awesome')
                         +InputBlock()(class='Wrapper-GuestsDropdown')
                             +InputBlock-Wrapper
                                 +InputBlock-FieldName('dropdown')
                                 +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
-                            Select.DropdownGuests(multiple='multiple', id="DropdownGuests", name='DropdownGuests', size='3')
-                                +DropdownGuests-Option('взрослые')(value='adults')
-                                +DropdownGuests-Option('дети')(value='children')
-                                +DropdownGuests-Option('младенцы')(value='babies')
-                            //- +InputBlock-WrapperForSelectWithArrow()
-                            //-     +InputBlock-SelectArrow('expand_more')
-                            //-     Select.InputBlock-InputField.InputBlock_appearan_none.InputBlock_pdTop_11px.InputBlock_letterSpacing_0px.InputBlock_color_dark75
-                            //-         +InputBlock-Option('Сколько гостей', 'selected')
-                            //-         +InputBlock-Option()
-                            //-         +InputBlock-Option()
+                            +InputBlock-Form()
+                                Select.DropdownGuests(multiple='multiple', id="DropdownGuests", name='DropdownGuests', size='3')
+                                    +DropdownGuests-Option('взрослые')(value='adults')
+                                    +DropdownGuests-Option('дети')(value='children')
+                                    +DropdownGuests-Option('младенцы')(value='babies')
                         +InputBlock()(class='Wrapper-MasketField')
                             +InputBlock-Wrapper()
                                 +InputBlock-FieldName('masked text field')
                                 +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_1px')
-                            +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='ДД.ММ.ГГГГ')
-                        //+Wrapper-DateDropdown()
-                            +InputBlock-Wrapper()
-                                +InputBlock-FieldName('date dropdown')
+                            +InputBlock-Form()
+                                +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='ДД.ММ.ГГГГ')
                         +DropdownDatepicker()(class='Wrapper-DateDropdown')
                             +DropdownDatepicker-WrapperForDropdown()
                                 +InputBlock()
@@ -198,12 +187,10 @@ html
                         +InputBlock()
                             +InputBlock-Wrapper()
                                 +InputBlock-FieldName('subscription text field')
-                            +InputBlock-WrapperForSelectWithArrow()
-                                +InputBlock-SelectArrow('arrow_forward')
-                                Select.InputBlock-InputField.InputBlock_width_266px.InputBlock_appearan_none.InputBlock_pdTop_11px.InputBlock_letterSpacing_0px.InputBlock_mrBot_97px.InputBlock_color_dark75
-                                    +InputBlock-Option('Email', 'selected')
-                                    +InputBlock-Option()
-                                    +InputBlock-Option()
+                            +InputBlock-Form()
+                                +InputBlock-WrapperForSelectWithArrow()
+                                    +InputBlock-SelectArrow('arrow_forward')
+                                    +InputBlock-InputField(type='text' placeholder='Email')(class='InputBlock_width_266px InputBlock_appearan_none InputBlock_pdTop_11px InputBlock_letterSpacing_0px InputBlock_mrBot_97px InputBlock_color_dark75')
                         +InputBlock()(class='Wrapper-FacilitiesDropdown')           
                             +InputBlock-Wrapper(class='InputBlock_width_265px')
                                 +InputBlock-FieldName('dropdown')
@@ -228,3 +215,6 @@ html
 
 
 
+
+
++List()

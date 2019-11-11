@@ -33,7 +33,7 @@ const options = {
     contentBase: './dist',
     hot: true,
     /*host: 'localhost'*/
-    host: ipAdress, //for externally use
+    host: ipAdress, // for externally use
     port: 5000,
     /*open: true,*/
 };
