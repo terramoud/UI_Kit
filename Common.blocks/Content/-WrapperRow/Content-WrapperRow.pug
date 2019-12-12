@@ -1,0 +1,4 @@
+mixin Content-WrapperRow(content)
+    div.Content-WrapperRow&attributes(attributes) #{content}
+        if block
+            block

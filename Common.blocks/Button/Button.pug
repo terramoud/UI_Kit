@@ -1,2 +1,4 @@
-button.Button.Button_backgroundColor
-
+mixin Button(content)
+    div.Button&attributes(attributes) #{content}
+        if block
+            block
