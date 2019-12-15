@@ -186,3 +186,24 @@ require('../Common.blocks/TitleBlock/-H6/TitleBlock-H6.js');
 require('../Common.blocks/ButtonsBlock/-WrapperForSamples/ButtonsBlock-WrapperForSamples.js');
 require('../Common.blocks/Button/Button.js');
 require('../Common.blocks/PayButton/PayButton.js');
+require('../Common.blocks/PaginationBlock/PaginationBlock.js');
+require('../Common.blocks/BulletList/BulletList.js');
+require('../Common.blocks/CommentBlock/CommentBlock.js');
+require('../Common.blocks/LikeButtonBlock/LikeButtonBlock.js');
+require('../Common.blocks/CommentBlock/-WrapperLikeAndDescription/CommentBlock-WrapperLikeAndDescription.js');
+require('../Common.blocks/CommentBlock/-WrapperLike/CommentBlock-WrapperLike.js');
+require('../Common.blocks/CommentBlock/-WrapperDescription/CommentBlock-WrapperDescription.js');
+require('../Common.blocks/CommentBlock/-Photo/CommentBlock-Photo.js');
+
+
+
+jQuery( document ).ready(function() {
+  let event = new Event("click");
+  dropdownFacilitiesExpanded_ms.dispatchEvent(event);
+  jQuery(window).scroll(function (event) {
+    jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(1)').css('display', 'block');
+  });
+});
+
+require('../Common.blocks/Wrapper/-ExpandableCheckboxListOpen/Wrapper-ExpandableCheckboxListOpen.js');
+require('../Common.blocks/InputForButtonsAndInputs/-Checkbox/InputForButtonsAndInputs-Checkbox.js');

@@ -25,6 +25,9 @@
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
   .List-Item {
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-top: 6px;
   }
 }
 

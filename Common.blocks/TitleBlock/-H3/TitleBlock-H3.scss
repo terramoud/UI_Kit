@@ -24,7 +24,15 @@
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
   .TitleBlock-H3 {
-
+    font-family: Montserrat-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-transform: uppercase;
+    /* Dark 100% */
+    color: $DarkShade100;
   }
 }
 

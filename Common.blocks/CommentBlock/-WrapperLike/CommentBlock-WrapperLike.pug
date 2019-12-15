@@ -1,0 +1,4 @@
+mixin CommentBlock-WrapperLike(content)
+    div.CommentBlock-WrapperLike&attributes(attributes) #{content}
+        if block
+            block

@@ -1,2 +1,5 @@
 mixin InputForButtonsAndInputs(content)
-    input.InputForButtonsAndInputs&attributes(attributes)
+    label.InputForButtonsAndInputs&attributes(attributes) #{content}
+        if block
+            block
+

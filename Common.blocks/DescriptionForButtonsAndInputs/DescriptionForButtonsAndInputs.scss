@@ -24,7 +24,14 @@
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
   .DescriptionForButtonsAndInputs {
-
+    padding-left: 10px;
+    font-family: Montserrat-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* Dark 50% */
+    color: $DarkShade50;
   }
 }
 
