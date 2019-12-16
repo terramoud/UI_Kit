@@ -207,3 +207,7 @@ jQuery( document ).ready(function() {
 
 require('../Common.blocks/Wrapper/-ExpandableCheckboxListOpen/Wrapper-ExpandableCheckboxListOpen.js');
 require('../Common.blocks/InputForButtonsAndInputs/-Checkbox/InputForButtonsAndInputs-Checkbox.js');
+
+require('../Common.blocks/FigureDescriptionBlock/-Header/FigureDescriptionBlock-Header.js');
+require('../Common.blocks/FigureDescriptionBlock/-Hr/FigureDescriptionBlock-Hr.js');
+require('../Common.blocks/Wrapper/-DescriptionBlockFacilities/Wrapper-DescriptionBlockFacilities.js');

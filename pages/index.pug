@@ -1,3 +1,6 @@
+include ../Common.blocks/Wrapper/-DescriptionBlockFacilities/Wrapper-DescriptionBlockFacilities.pug
+include ../Common.blocks/FigureDescriptionBlock/-Hr/FigureDescriptionBlock-Hr.pug
+include ../Common.blocks/FigureDescriptionBlock/-Header/FigureDescriptionBlock-Header.pug
 include ../Common.blocks/InputForButtonsAndInputs/-Checkbox/InputForButtonsAndInputs-Checkbox.pug
 include ../Common.blocks/Wrapper/-ExpandableCheckboxListOpen/Wrapper-ExpandableCheckboxListOpen.pug
 include ../Common.blocks/CommentBlock/-WrapperDescription/CommentBlock-WrapperDescription.pug
@@ -343,16 +346,20 @@ html
                                     +ImageForButtonsAndInputs()
                                         i.material-icons insert_emoticon
                                     +FigureDescriptionBlock-Figcaption()
-                                        +TitleForButtonsAndInputs() Комфорт
+                                        +FigureDescriptionBlock-Header()
+                                            +TitleForButtonsAndInputs() Комфорт
                                         +DescriptionForButtonsAndInputs() Шумопоглощающие стены
-                        +Wrapper-DescriptionBlock()
+                                +FigureDescriptionBlock-Hr()
+                        +Wrapper-DescriptionBlockFacilities()
                             +FigureDescriptionBlock()
                                 +FigureDescriptionBlock-Wrapper()
                                     +ImageForButtonsAndInputs()
                                         i.material-icons location_city
                                     +FigureDescriptionBlock-Figcaption()
-                                        +TitleForButtonsAndInputs() Удобство
+                                        +FigureDescriptionBlock-Header()
+                                            +TitleForButtonsAndInputs() Удобство
                                         +DescriptionForButtonsAndInputs() Окно в каждой из спален
+                                +FigureDescriptionBlock-Hr()
                     +Wrapper.Content-RightWrapper()
                         +Wrapper.Content-WrapperRow()
                             +Wrapper()
@@ -493,3 +500,6 @@ html
 
 
 //+Wrapper-CheckboxButtons()
+
+
+

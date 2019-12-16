@@ -24,7 +24,13 @@
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
   .TitleForButtonsAndInputs {
-
+    font-family: Montserrat-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    /* Dark 75% */
+    color: $DarkShade75;
   }
 }
 
