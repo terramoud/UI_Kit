@@ -1,3 +1,9 @@
+include ../Common.blocks/Wrapper/-LikeButton/Wrapper-LikeButton.pug
+include ../Common.blocks/Wrapper/-Toggle/Wrapper-Toggle.pug
+include ../Common.blocks/Toggle/-Wrapper/Toggle-Wrapper.pug
+include ../Common.blocks/ToggleButton/-Label/ToggleButton-Label.pug
+include ../Common.blocks/ToggleButton/-Button/ToggleButton-Button.pug
+include ../Common.blocks/ToggleButton/ToggleButton.pug
 include ../Common.blocks/Wrapper/-RadioButtons/Wrapper-RadioButtons.pug
 include ../Common.blocks/RadioButtons/-Label/RadioButtons-Label.pug
 include ../Common.blocks/RadioButtons/-RadioButton/RadioButtons-RadioButton.pug
@@ -398,17 +404,17 @@ html
                                         +RadioButtons-Wrapper()
                                             +RadioButtons-RadioButton(type="radio" name="gender" value="women")
                                             +RadioButtons-Label() Женщина
-                                +Toggle()
+                                +Wrapper-Toggle()
                                     +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3() Toggle
-                                    +List.CheckboxList-List()
-                                        +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
-                                            +DescriptionForButtonsAndInputs() Получать спецпредложения
-                                        +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
-                                            +DescriptionForButtonsAndInputs() Получать спецпредложения
-                                +LikeButtonBlock()
+                                        +TitleBlock-H3(style="margin-bottom: 16px") Toggle
+                                    +Toggle-Wrapper()
+                                        +ToggleButton()
+                                            +ToggleButton-Button(type="checkbox" id="toggleOn")
+                                            +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
+                                    +ToggleButton()
+                                        +ToggleButton-Button(type="checkbox")
+                                        +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
+                                +Wrapper-LikeButton()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3() like button
                                     +List.CheckboxList-List()
@@ -510,13 +516,6 @@ html
                                         +DescriptionForButtonsAndInputs() Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 
 
-
 //+Wrapper-CheckboxButtons()
-
-
-
-
-
-
 
 

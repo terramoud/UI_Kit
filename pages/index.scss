@@ -1,7 +1,6 @@
 /*Library.blocks*/
 
 
-
 /*Common.blocks*/
 
 @import '../Common.blocks/Base/Base';
@@ -198,3 +197,10 @@
 @import '../Common.blocks/RadioButtons/-RadioButton/RadioButtons-RadioButton';
 @import '../Common.blocks/RadioButtons/-Label/RadioButtons-Label';
 @import '../Common.blocks/Wrapper/-RadioButtons/Wrapper-RadioButtons';
+@import '../Common.blocks/ToggleButton/ToggleButton';
+@import '../Common.blocks/ToggleButton/-Button/ToggleButton-Button';
+@import '../Common.blocks/ToggleButton/-Label/ToggleButton-Label';
+
+@import '../Common.blocks/Toggle/-Wrapper/Toggle-Wrapper';
+@import '../Common.blocks/Wrapper/-Toggle/Wrapper-Toggle';
+@import '../Common.blocks/Wrapper/-LikeButton/Wrapper-LikeButton';

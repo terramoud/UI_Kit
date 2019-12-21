@@ -5,12 +5,15 @@ require('webpack-jquery-ui/css');
 //require('webpack-jquery-ui/selectmenu');
 require('../Common.blocks/Fonts/Fonts.scss');
 
+
 /*Library.blocks*/
 
 require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
 require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
 require('../Library.blocks/AirDatepicker/AirDatepicker.css');
 require('../Library.blocks/AirDatepicker/AirDatepicker.js');
+require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/css/jquery.mswitch.css');
+require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/js/jquery.mswitch.js');
 
 /*End Library.blocks*/
 
@@ -194,17 +197,6 @@ require('../Common.blocks/CommentBlock/-WrapperLikeAndDescription/CommentBlock-W
 require('../Common.blocks/CommentBlock/-WrapperLike/CommentBlock-WrapperLike.js');
 require('../Common.blocks/CommentBlock/-WrapperDescription/CommentBlock-WrapperDescription.js');
 require('../Common.blocks/CommentBlock/-Photo/CommentBlock-Photo.js');
-
-
-
-jQuery( document ).ready(function() {
-  let event = new Event("click");
-  dropdownFacilitiesExpanded_ms.dispatchEvent(event);
-  jQuery(window).scroll(function (event) {
-    jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(1)').css('display', 'block');
-  });
-});
-
 require('../Common.blocks/Wrapper/-ExpandableCheckboxListOpen/Wrapper-ExpandableCheckboxListOpen.js');
 require('../Common.blocks/InputForButtonsAndInputs/-Checkbox/InputForButtonsAndInputs-Checkbox.js');
 
@@ -224,3 +216,23 @@ require('../Common.blocks/RadioButtons/-Wrapper/RadioButtons-Wrapper.js');
 require('../Common.blocks/RadioButtons/-RadioButton/RadioButtons-RadioButton.js');
 require('../Common.blocks/RadioButtons/-Label/RadioButtons-Label.js');
 require('../Common.blocks/Wrapper/-RadioButtons/Wrapper-RadioButtons.js');
+require('../Common.blocks/ToggleButton/ToggleButton.js');
+require('../Common.blocks/ToggleButton/-Button/ToggleButton-Button.js');
+require('../Common.blocks/ToggleButton/-Label/ToggleButton-Label.js');
+
+require('../Common.blocks/Toggle/-Wrapper/Toggle-Wrapper.js');
+require('../Common.blocks/Wrapper/-Toggle/Wrapper-Toggle.js');
+require('../Common.blocks/Wrapper/-LikeButton/Wrapper-LikeButton.js');
+
+
+
+jQuery( document ).ready(function() {
+  let event = new Event("click");
+  dropdownFacilitiesExpanded_ms.dispatchEvent(event);
+  $( "#toggleOn" ).trigger( "click" );
+
+  jQuery(window).scroll(function (event) {
+    jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(1)').css('display', 'block');
+  });
+});
+

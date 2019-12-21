@@ -1,0 +1,65 @@
+@media only screen and (max-width: 576px) {
+  .ToggleButton-Button {
+
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .ToggleButton-Button {
+
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .ToggleButton-Button {
+
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  .ToggleButton-Button {
+
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+  .ToggleButton-Button {
+    //-webkit-appearance: none;
+  }
+  .m_switch {
+    width: 40px;
+    height: 20px;
+    background: $background;
+    /* Primary Color */
+    border: 1px solid $DatepickerArrowColor;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  .m_switch_element {
+    background: $DatepickerGradient;
+    border-radius: 10px;
+    width: 12px;
+    height: 12px;
+    top: 3px;
+    left: 3px;
+  }
+  .m_switch_checked {
+    left: 61% !important;
+  }
+  .m_switch_color {
+    background: $background !important;
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+  .ToggleButton-Button {
+
+  }
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+  .ToggleButton-Button {
+
+  }
+}
+
