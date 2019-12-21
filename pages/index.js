@@ -211,3 +211,16 @@ require('../Common.blocks/InputForButtonsAndInputs/-Checkbox/InputForButtonsAndI
 require('../Common.blocks/FigureDescriptionBlock/-Header/FigureDescriptionBlock-Header.js');
 require('../Common.blocks/FigureDescriptionBlock/-Hr/FigureDescriptionBlock-Hr.js');
 require('../Common.blocks/Wrapper/-DescriptionBlockFacilities/Wrapper-DescriptionBlockFacilities.js');
+require('../Common.blocks/CheckboxList/-List/CheckboxList-List.js');
+require('../Common.blocks/CheckboxList/-Header/CheckboxList-Header.js');
+require('../Common.blocks/CheckboxList/CheckboxList.js');
+require('../Common.blocks/TitleBlock/-H3/_withoutMarginTop/TitleBlock-H3_withoutMarginTop.js');
+require('../Common.blocks/TitleBlock/-H3/_withoutMarginTop/TitleBlock-H3_withoutMarginTop_4px.js');
+require('../Common.blocks/TitleBlock/-H3/_withoutMarginBottom/TitleBlock-H3_withoutMarginBottom_10px.js');
+require('../Common.blocks/CheckboxList/_BottomIndent/CheckboxList_BottomIndent_30px.js');
+require('../Common.blocks/InputForButtonsAndInputs/-Radio/InputForButtonsAndInputs-Radio.js');
+require('../Common.blocks/RadioButton/RadioButton.js');
+require('../Common.blocks/RadioButtons/-Wrapper/RadioButtons-Wrapper.js');
+require('../Common.blocks/RadioButtons/-RadioButton/RadioButtons-RadioButton.js');
+require('../Common.blocks/RadioButtons/-Label/RadioButtons-Label.js');
+require('../Common.blocks/Wrapper/-RadioButtons/Wrapper-RadioButtons.js');

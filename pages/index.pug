@@ -1,3 +1,12 @@
+include ../Common.blocks/Wrapper/-RadioButtons/Wrapper-RadioButtons.pug
+include ../Common.blocks/RadioButtons/-Label/RadioButtons-Label.pug
+include ../Common.blocks/RadioButtons/-RadioButton/RadioButtons-RadioButton.pug
+include ../Common.blocks/RadioButtons/-Wrapper/RadioButtons-Wrapper.pug
+include ../Common.blocks/RadioButton/RadioButton.pug
+include ../Common.blocks/InputForButtonsAndInputs/-Radio/InputForButtonsAndInputs-Radio.pug
+include ../Common.blocks/CheckboxList/CheckboxList.pug
+include ../Common.blocks/CheckboxList/-Header/CheckboxList-Header.pug
+include ../Common.blocks/CheckboxList/-List/CheckboxList-List.pug
 include ../Common.blocks/Wrapper/-DescriptionBlockFacilities/Wrapper-DescriptionBlockFacilities.pug
 include ../Common.blocks/FigureDescriptionBlock/-Hr/FigureDescriptionBlock-Hr.pug
 include ../Common.blocks/FigureDescriptionBlock/-Header/FigureDescriptionBlock-Header.pug
@@ -363,33 +372,36 @@ html
                     +Wrapper.Content-RightWrapper()
                         +Wrapper.Content-WrapperRow()
                             +Wrapper()
-                                +ExpandableCheckboxList()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
-                                        +TitleBlock-H3() Checkbox Buttons
-                                    +List.ExpandableCheckboxList-List()
+                                +CheckboxList.CheckboxList_BottomIndent_30px()
+                                    +TitleBlock.CheckboxList-Header()
+                                        +TitleBlock-H3.TitleBlock-H3_withoutMarginTop_4px.TitleBlock-H3_withoutMarginBottom_10px() Checkbox Buttons
+                                    +List.CheckboxList-List()
                                         +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
                                             +DescriptionForButtonsAndInputs() Можно курить
                                         +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
                                             +DescriptionForButtonsAndInputs() Можно с питомцами
                                         +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
                                             +DescriptionForButtonsAndInputs() Можно пригласить гостей (до 10 человек)
-                                +RadioButtons()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
+                                +Wrapper-RadioButtons()
+                                    +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3() Radio Buttons
-                                    +List.ExpandableCheckboxList-List()
-                                        +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
-                                            +DescriptionForButtonsAndInputs() Мужчина
-                                        +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
-                                            +DescriptionForButtonsAndInputs() Женщина
+                                    +RadioButtons()
+                                        +RadioButtons-Wrapper()
+                                            +RadioButtons-RadioButton(type="radio" name="gender" value="men" checked class="customRadioButton")
+                                            +RadioButtons-Label() Мужчина
+                                        +RadioButtons-Wrapper()
+                                            +RadioButtons-RadioButton(type="radio" name="gender" value="women")
+                                            +RadioButtons-Label() Женщина
                                 +Toggle()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
+                                    +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3() Toggle
-                                    +List.ExpandableCheckboxList-List()
+                                    +List.CheckboxList-List()
                                         +List-Item()
                                             +InputForButtonsAndInputs(type="checkbox")
                                             +DescriptionForButtonsAndInputs() Получать спецпредложения
@@ -397,18 +409,18 @@ html
                                             +InputForButtonsAndInputs(type="checkbox")
                                             +DescriptionForButtonsAndInputs() Получать спецпредложения
                                 +LikeButtonBlock()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
+                                    +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3() like button
-                                    +List.ExpandableCheckboxList-List()
+                                    +List.CheckboxList-List()
                                         +List-Item()
                                             +LikeButton()
                                             +LikeButton()
                                         +List-Item()
                                             +LikeButton()
                                 +RateButton()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
+                                    +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3() rate button
-                                    +List.ExpandableCheckboxList-List()
+                                    +List.CheckboxList-List()
                                         +List-Item()
                                             //+InputForButtonsAndInputs(type="checkbox")
                                         +List-Item()
@@ -500,6 +512,11 @@ html
 
 
 //+Wrapper-CheckboxButtons()
+
+
+
+
+
 
 
 

@@ -24,7 +24,8 @@
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
   .RadioButtons {
-
+    display: flex;
+    flex-direction: row;
   }
 }
 
