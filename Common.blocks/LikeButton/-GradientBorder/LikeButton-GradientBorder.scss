@@ -1,50 +1,46 @@
 @media only screen and (max-width: 576px) {
-  .LikeButton-Label {
+  .LikeButton-GradientBorder {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .LikeButton-Label {
+  .LikeButton-GradientBorder {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .LikeButton-Label {
+  .LikeButton-GradientBorder {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .LikeButton-Label {
+  .LikeButton-GradientBorder {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .LikeButton-Label {
-    display: flex;
-    flex-direction: row;
-    //justify-content: center;
-    align-items: center;
-    background: $background;
-    box-sizing: border-box;
+  .LikeButton-GradientBorder {
+    width: 40px;
+    height: 20px;
+    padding: 1px;
+    background: $DarkShade25;
     border-radius: 10px;
-    width: 38px;
-    height: 18px;
-    padding-left: 5px;
+    box-sizing: border-box;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .LikeButton-Label {
+  .LikeButton-GradientBorder {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .LikeButton-Label {
+  .LikeButton-GradientBorder {
 
   }
 }

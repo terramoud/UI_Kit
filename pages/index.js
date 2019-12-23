@@ -249,3 +249,7 @@ require('../Common.blocks/LikeButton/-Icon/_active/LikeButton-Icon_active.js');
 
 require('../Common.blocks/LikeButton/-NumberLikes/_active/LikeButton-NumberLikes_active.js');
 require('../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.js');
+require('../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.js');
+require('../Common.blocks/LikeButton/-Label/_active/LikeButton-Label_active.js');
+require('../Common.blocks/LikeButton/-GradientBorder/LikeButton-GradientBorder.js');
+require('../Common.blocks/LikeButton/-GradientBorder/_active/LikeButton-GradientBorder_active.js');

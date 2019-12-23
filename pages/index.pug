@@ -1,3 +1,5 @@
+include ../Common.blocks/LikeButton/-GradientBorder/LikeButton-GradientBorder.pug
+include ../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.pug
 include ../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.pug
 include ../Common.blocks/LikeButton/-NumberLikes/LikeButton-NumberLikes.pug
 include ../Common.blocks/LikeButton/-Icon/LikeButton-Icon.pug
@@ -428,15 +430,17 @@ html
                                     +Wrapper-LikeButtonWrapper()
                                         +Wrapper-LikeButtonWrapperFirst()
                                             +LikeButton()
+                                                +LikeButton-GradientBorder()
+                                                    +LikeButton-Label()
+                                                        +LikeButton-Button(type="hidden")
+                                                        +LikeButton-Icon() favorite_border
+                                                        +LikeButton-NumberLikes() 2
+                                        +LikeButton()
+                                            +LikeButton-GradientBorder.LikeButton-GradientBorder_active()
                                                 +LikeButton-Label()
                                                     +LikeButton-Button(type="hidden")
-                                                    +LikeButton-Icon() favorite_border
-                                                    +LikeButton-NumberLikes() 2
-                                        +LikeButton()
-                                            +LikeButton-Label()
-                                                +LikeButton-Button(type="hidden")
-                                                +LikeButton-Icon.LikeButton-Icon_active() favorite
-                                                +LikeButton-NumberLikes.LikeButton-NumberLikes_active() 12
+                                                    +LikeButton-Icon.LikeButton-Icon_active() favorite
+                                                    +LikeButton-NumberLikes.LikeButton-NumberLikes_active() 12
                                 +RateButton()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3() rate button
@@ -531,5 +535,4 @@ html
 
 
 //+Wrapper-CheckboxButtons()
-
 
