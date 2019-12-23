@@ -1,0 +1,62 @@
+@media only screen and (max-width: 576px) {
+  .RadioButtons-RadioButton_active {
+
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .RadioButtons-RadioButton_active {
+
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .RadioButtons-RadioButton_active {
+
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  .RadioButtons-RadioButton_active {
+
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+  .RadioButtons-RadioButton_active {
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      left: -1px;
+      top: -1px;
+      border-radius: 50%;
+      box-sizing: border-box;
+      position: absolute;
+      border: 1px solid $DatepickerArrowColor;
+    }
+    &:after {
+      content: '';
+      border-radius: 50%;
+      position: absolute;
+      background: $DatepickerGradient;
+      width: 12px;
+      height: 12px;
+      left: 3px;
+      top: 3px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+  .RadioButtons-RadioButton_active {
+
+  }
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+  .RadioButtons-RadioButton_active {
+
+  }
+}
+

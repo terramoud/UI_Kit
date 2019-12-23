@@ -1,41 +1,48 @@
 @media only screen and (max-width: 576px) {
-  .Wrapper-LikeButton {
+  .LikeButton-Icon {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .Wrapper-LikeButton {
+  .LikeButton-Icon {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .Wrapper-LikeButton {
+  .LikeButton-Icon {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .Wrapper-LikeButton {
+  .LikeButton-Icon {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .Wrapper-LikeButton {
-    margin-bottom: 28px;
+  .LikeButton-Icon {
+    font-size: 10px;
+    line-height: 9px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* Primary Color */
+    color: $DarkShade25;
+    padding-right: 7px;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .Wrapper-LikeButton {
+  .LikeButton-Icon {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .Wrapper-LikeButton {
+  .LikeButton-Icon {
 
   }
 }

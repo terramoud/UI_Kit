@@ -1,3 +1,11 @@
+include ../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.pug
+include ../Common.blocks/LikeButton/-NumberLikes/LikeButton-NumberLikes.pug
+include ../Common.blocks/LikeButton/-Icon/LikeButton-Icon.pug
+include ../Common.blocks/Wrapper/-LikeButtonWrapper/Wrapper-LikeButtonWrapper.pug
+include ../Common.blocks/Wrapper/-ToggleWrapper/Wrapper-ToggleWrapper.pug
+include ../Common.blocks/LikeButton/-Label/LikeButton-Label.pug
+include ../Common.blocks/LikeButton/-Button/LikeButton-Button.pug
+include ../Common.blocks/LikeButton/LikeButton.pug
 include ../Common.blocks/Wrapper/-LikeButton/Wrapper-LikeButton.pug
 include ../Common.blocks/Wrapper/-Toggle/Wrapper-Toggle.pug
 include ../Common.blocks/Toggle/-Wrapper/Toggle-Wrapper.pug
@@ -399,7 +407,7 @@ html
                                         +TitleBlock-H3() Radio Buttons
                                     +RadioButtons()
                                         +RadioButtons-Wrapper()
-                                            +RadioButtons-RadioButton(type="radio" name="gender" value="men" checked class="customRadioButton")
+                                            +RadioButtons-RadioButton(type="radio" name="gender" value="men" checked class="RadioButtons-RadioButton_active")
                                             +RadioButtons-Label() Мужчина
                                         +RadioButtons-Wrapper()
                                             +RadioButtons-RadioButton(type="radio" name="gender" value="women")
@@ -407,7 +415,7 @@ html
                                 +Wrapper-Toggle()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3(style="margin-bottom: 16px") Toggle
-                                    +Toggle-Wrapper()
+                                    +Wrapper-ToggleWrapper()
                                         +ToggleButton()
                                             +ToggleButton-Button(type="checkbox" id="toggleOn")
                                             +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
@@ -416,13 +424,19 @@ html
                                         +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
                                 +Wrapper-LikeButton()
                                     +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3() like button
-                                    +List.CheckboxList-List()
-                                        +List-Item()
+                                        +TitleBlock-H3(style="margin-bottom: 16px") like button
+                                    +Wrapper-LikeButtonWrapper()
+                                        +Wrapper-LikeButtonWrapperFirst()
                                             +LikeButton()
-                                            +LikeButton()
-                                        +List-Item()
-                                            +LikeButton()
+                                                +LikeButton-Label()
+                                                    +LikeButton-Button(type="hidden")
+                                                    +LikeButton-Icon() favorite_border
+                                                    +LikeButton-NumberLikes() 2
+                                        +LikeButton()
+                                            +LikeButton-Label()
+                                                +LikeButton-Button(type="hidden")
+                                                +LikeButton-Icon.LikeButton-Icon_active() favorite
+                                                +LikeButton-NumberLikes.LikeButton-NumberLikes_active() 12
                                 +RateButton()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3() rate button

@@ -236,3 +236,16 @@ jQuery( document ).ready(function() {
   });
 });
 
+
+require('../Common.blocks/LikeButton/LikeButton.js');
+require('../Common.blocks/LikeButton/-Button/LikeButton-Button.js');
+require('../Common.blocks/LikeButton/-Label/LikeButton-Label.js');
+require('../Common.blocks/Wrapper/-ToggleWrapper/Wrapper-ToggleWrapper.js');
+require('../Common.blocks/Wrapper/-LikeButtonWrapper/Wrapper-LikeButtonWrapper.js');
+require('../Common.blocks/LikeButton/-Icon/LikeButton-Icon.js');
+require('../Common.blocks/LikeButton/-NumberLikes/LikeButton-NumberLikes.js');
+require('../Common.blocks/RadioButtons/-RadioButton/_active/RadioButtons-RadioButton_active.js');
+require('../Common.blocks/LikeButton/-Icon/_active/LikeButton-Icon_active.js');
+
+require('../Common.blocks/LikeButton/-NumberLikes/_active/LikeButton-NumberLikes_active.js');
+require('../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.js');
