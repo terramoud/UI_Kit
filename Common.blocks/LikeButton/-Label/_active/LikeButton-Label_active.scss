@@ -24,32 +24,6 @@
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
   .LikeButton-Label_active {
-    position: relative;
-/*    border: none;
-    background: $DatepickerGradient;
-
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding-box;
-    background-clip: padding-box;*/
-    //-webkit-text-fill-color: transparent;
-/*    &:after {
-      content: "";
-      position: absolute;
-      background: $background;
-      left: 0;
-      top: 0;
-      width: 40px;
-      height: 20px;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding-box;
-      background-clip: padding-box;
-      -webkit-text-fill-color: transparent;
-      border-radius: 10px;
-    }*/
-    &:before {
-      content: "";
-      position: absolute;
-    }
 
   }
 }
