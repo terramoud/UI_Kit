@@ -237,6 +237,7 @@ jQuery( document ).ready(function() {
 });
 
 
+
 require('../Common.blocks/LikeButton/LikeButton.js');
 require('../Common.blocks/LikeButton/-Button/LikeButton-Button.js');
 require('../Common.blocks/LikeButton/-Label/LikeButton-Label.js');
@@ -247,9 +248,17 @@ require('../Common.blocks/LikeButton/-NumberLikes/LikeButton-NumberLikes.js');
 require('../Common.blocks/RadioButtons/-RadioButton/_active/RadioButtons-RadioButton_active.js');
 require('../Common.blocks/LikeButton/-Icon/_active/LikeButton-Icon_active.js');
 
+
 require('../Common.blocks/LikeButton/-NumberLikes/_active/LikeButton-NumberLikes_active.js');
 require('../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.js');
 require('../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.js');
 require('../Common.blocks/LikeButton/-Label/_active/LikeButton-Label_active.js');
 require('../Common.blocks/LikeButton/-GradientBorder/LikeButton-GradientBorder.js');
 require('../Common.blocks/LikeButton/-GradientBorder/_active/LikeButton-GradientBorder_active.js');
+require('../Common.blocks/Wrapper/-RateButton/Wrapper-RateButton.js');
+require('../Common.blocks/RateButton/-Star/RateButton-Star.js');
+require('../Common.blocks/RateButton/-StarIcon/RateButton-StarIcon.js');
+
+require('../Common.blocks/RateButton/-StarIcon/_active/RateButton-StarIcon_active.js');
+require('../Common.blocks/RateButton/-Star/_active/RateButton-Star_active.js');
+require('../Common.blocks/RateButton/-InputHidden/RateButton-InputHidden.js');

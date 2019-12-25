@@ -1,3 +1,7 @@
+include ../Common.blocks/RateButton/-InputHidden/RateButton-InputHidden.pug
+include ../Common.blocks/RateButton/-StarIcon/RateButton-StarIcon.pug
+include ../Common.blocks/RateButton/-Star/RateButton-Star.pug
+include ../Common.blocks/Wrapper/-RateButton/Wrapper-RateButton.pug
 include ../Common.blocks/LikeButton/-GradientBorder/LikeButton-GradientBorder.pug
 include ../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.pug
 include ../Common.blocks/Wrapper/-LikeButtonWrapperFirst/Wrapper-LikeButtonWrapperFirst.pug
@@ -441,14 +445,14 @@ html
                                                     +LikeButton-Button(type="hidden")
                                                     +LikeButton-Icon.LikeButton-Icon_active() favorite
                                                     +LikeButton-NumberLikes.LikeButton-NumberLikes_active() 12
-                                +RateButton()
+                                +Wrapper-RateButton()
                                     +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3() rate button
-                                    +List.CheckboxList-List()
-                                        +List-Item()
-                                            //+InputForButtonsAndInputs(type="checkbox")
-                                        +List-Item()
-                                            //+InputForButtonsAndInputs(type="checkbox")
+                                        +TitleBlock-H3(style="margin-bottom: 16px") rate button
+                                    +RateButton()
+                                        +RateButton-InputHidden(type="hidden" name="rating" value="0")
+                                        each val, index in ['1', '2', '3', '4', '5']
+                                            +RateButton-Star(data-id=val)
+                                                +RateButton-StarIcon(data-id=val) star_border
                                 +Wrapper-FirstDropdownGuests()
                                     +InputBlock()(class='')
                                         +InputBlock-Wrapper
@@ -535,4 +539,8 @@ html
 
 
 //+Wrapper-CheckboxButtons()
+
+
+
+
 

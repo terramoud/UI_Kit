@@ -1,44 +1,44 @@
 @media only screen and (max-width: 576px) {
-  .RateButton {
+  .RateButton-Star_active {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .RateButton {
+  .RateButton-Star_active {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .RateButton {
+  .RateButton-Star_active {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .RateButton {
+  .RateButton-Star_active {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .RateButton {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
+  .RateButton-Star_active {
+    background: $DatepickerGradient;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .RateButton {
+  .RateButton-Star_active {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .RateButton {
+  .RateButton-Star_active {
 
   }
 }
