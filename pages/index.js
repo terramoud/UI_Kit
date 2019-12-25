@@ -230,7 +230,8 @@ jQuery( document ).ready(function() {
   let event = new Event("click");
   dropdownFacilitiesExpanded_ms.dispatchEvent(event);
   $( "#toggleOn" ).trigger( "click" );
-
+  $( ".RateButton:first .RateButton-Star[data-id=4]" ).trigger( "click" );
+  $( ".RateButton:last .RateButton-Star[data-id=5]" ).trigger( "click" );
   jQuery(window).scroll(function (event) {
     jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(1)').css('display', 'block');
   });
@@ -262,3 +263,5 @@ require('../Common.blocks/RateButton/-StarIcon/RateButton-StarIcon.js');
 require('../Common.blocks/RateButton/-StarIcon/_active/RateButton-StarIcon_active.js');
 require('../Common.blocks/RateButton/-Star/_active/RateButton-Star_active.js');
 require('../Common.blocks/RateButton/-InputHidden/RateButton-InputHidden.js');
+require('../Common.blocks/Wrapper/-RateButtonWrapper/Wrapper-RateButtonWrapper.js');
+require('../Common.blocks/Wrapper/-RateButtonSeparator/Wrapper-RateButtonSeparator.js');

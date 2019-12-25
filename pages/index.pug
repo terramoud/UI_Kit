@@ -1,3 +1,5 @@
+include ../Common.blocks/Wrapper/-RateButtonSeparator/Wrapper-RateButtonSeparator.pug
+include ../Common.blocks/Wrapper/-RateButtonWrapper/Wrapper-RateButtonWrapper.pug
 include ../Common.blocks/RateButton/-InputHidden/RateButton-InputHidden.pug
 include ../Common.blocks/RateButton/-StarIcon/RateButton-StarIcon.pug
 include ../Common.blocks/RateButton/-Star/RateButton-Star.pug
@@ -448,11 +450,18 @@ html
                                 +Wrapper-RateButton()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3(style="margin-bottom: 16px") rate button
-                                    +RateButton()
-                                        +RateButton-InputHidden(type="hidden" name="rating" value="0")
-                                        each val, index in ['1', '2', '3', '4', '5']
-                                            +RateButton-Star(data-id=val)
-                                                +RateButton-StarIcon(data-id=val) star_border
+                                    +Wrapper-RateButtonWrapper()
+                                        +Wrapper-RateButtonSeparator()
+                                            +RateButton()
+                                                +RateButton-InputHidden(type="hidden" name="rating" value="0")
+                                                each val, index in ['1', '2', '3', '4', '5']
+                                                    +RateButton-Star(data-id=val)
+                                                        +RateButton-StarIcon(data-id=val) star_border
+                                        +RateButton()
+                                            +RateButton-InputHidden(type="hidden" name="rating" value="0")
+                                            each val, index in ['1', '2', '3', '4', '5']
+                                                +RateButton-Star(data-id=val)
+                                                    +RateButton-StarIcon(data-id=val) star_border
                                 +Wrapper-FirstDropdownGuests()
                                     +InputBlock()(class='')
                                         +InputBlock-Wrapper
@@ -539,8 +548,3 @@ html
 
 
 //+Wrapper-CheckboxButtons()
-
-
-
-
-
