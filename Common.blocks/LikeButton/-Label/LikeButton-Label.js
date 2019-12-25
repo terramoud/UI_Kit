@@ -9,6 +9,7 @@ jQuery('.LikeButton-Label').each(function () {
       let numLikes = Number(jQuery(this).find('.LikeButton-NumberLikes').text());
       if (typeof numLikes === 'number') if (numLikes > 0) jQuery(this).find('.LikeButton-NumberLikes').text(numLikes - 1);
       jQuery(this).find('.LikeButton-NumberLikes').removeClass('LikeButton-NumberLikes_active');
+      jQuery(this).find('.LikeButton-Button').attr('value', numLikes);
 
     } else {
       jQuery(this).parent('.LikeButton-GradientBorder').addClass('LikeButton-GradientBorder_active');
@@ -18,6 +19,7 @@ jQuery('.LikeButton-Label').each(function () {
       let numLikes = Number(jQuery(this).find('.LikeButton-NumberLikes').text());
       jQuery(this).find('.LikeButton-NumberLikes').text(+numLikes + 1);
       jQuery(this).find('.LikeButton-NumberLikes').addClass('LikeButton-NumberLikes_active');
+      jQuery(this).find('.LikeButton-Button').attr('value', numLikes);
     }
   });
 });
