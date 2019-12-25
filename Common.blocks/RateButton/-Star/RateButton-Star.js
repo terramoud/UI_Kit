@@ -23,8 +23,8 @@ jQuery('.RateButton-Star').click(function (event) {
   }
 
   let inputVal = +jQuery(this).attr('data-id');
-  jQuery(this).find('.RateButton-InputHidden').attr('value', inputVal); // This will be adding the count of chosen of rating's stars
-
+  jQuery(this).siblings('.RateButton-InputHidden').attr('value', inputVal); // This will be adding the count of chosen of rating's stars
+  console.log(jQuery(this).siblings('.RateButton-InputHidden').attr('value'));
   for (let i = 1; i <= 5; i++) {
     /**
      * This will be have remembered the status of all rating's stars,
