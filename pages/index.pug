@@ -1,3 +1,10 @@
+include ../Common.blocks/RichCheckboxButtons/-Description/RichCheckboxButtons-Description.pug
+include ../Common.blocks/RichCheckboxButtons/-Title/RichCheckboxButtons-Title.pug
+include ../Common.blocks/RichCheckboxButtons/-Item/RichCheckboxButtons-Item.pug
+include ../Common.blocks/Wrapper/-Footer/Wrapper-Footer.pug
+include ../Common.blocks/RichCheckboxButtons/-List/RichCheckboxButtons-List.pug
+include ../Common.blocks/RichCheckboxButtons/-Header/RichCheckboxButtons-Header.pug
+include ../Common.blocks/Wrapper/-SecondDropdownGuests/Wrapper-SecondDropdownGuests.pug
 include ../Common.blocks/Wrapper/-RateButtonSeparator/Wrapper-RateButtonSeparator.pug
 include ../Common.blocks/Wrapper/-RateButtonWrapper/Wrapper-RateButtonWrapper.pug
 include ../Common.blocks/RateButton/-InputHidden/RateButton-InputHidden.pug
@@ -397,7 +404,7 @@ html
                                 +CheckboxList.CheckboxList_BottomIndent_30px()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3.TitleBlock-H3_withoutMarginTop_4px.TitleBlock-H3_withoutMarginBottom_10px() Checkbox Buttons
-                                    +List.CheckboxList-List()
+                                    +List()
                                         +List-Item()
                                             +InputForButtonsAndInputs()
                                                 +InputForButtonsAndInputs-Checkbox(type="checkbox")
@@ -462,7 +469,7 @@ html
                                             each val, index in ['1', '2', '3', '4', '5']
                                                 +RateButton-Star(data-id=val)
                                                     +RateButton-StarIcon(data-id=val) star_border
-                                +Wrapper-FirstDropdownGuests()
+                                +Wrapper-SecondDropdownGuests()
                                     +InputBlock()(class='')
                                         +InputBlock-Wrapper
                                             +InputBlock-FieldName('dropdown')
@@ -472,21 +479,22 @@ html
                                                 +DropdownGuests-Option('взрослые')(value='adults')
                                                 +DropdownGuests-Option('дети')(value='children')
                                                 +DropdownGuests-Option('младенцы')(value='babies')
-                                //+RichCheckboxButtons()
-                                +ExpandableCheckboxList()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
-                                        +TitleBlock-H3() rich checkbox buttons
-                                    +List.ExpandableCheckboxList-List()
-                                        +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
+                                +RichCheckboxButtons()
+                                    +TitleBlock.RichCheckboxButtons-Header()
+                                        +TitleBlock-H3(style="margin-bottom: 16px") rich checkbox buttons
+                                    +List
+                                        +List-Item.RichCheckboxButtons-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
                                             +List-WrapperForDescription()
-                                                +TitleForButtonsAndInputs() Широкий коридор
-                                                +DescriptionForButtonsAndInputs() Ширина коридоров в номере не менее 91 см.
-                                        +List-Item()
-                                            +InputForButtonsAndInputs(type="checkbox")
+                                                +TitleForButtonsAndInputs.RichCheckboxButtons-Title() Широкий коридор
+                                                +DescriptionForButtonsAndInputs.RichCheckboxButtons-Description() Ширина коридоров в номере не менее 91 см.
+                                        +List-Item.RichCheckboxButtons-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
                                             +List-WrapperForDescription()
-                                                +TitleForButtonsAndInputs() Помощник для инвалидов
-                                                +DescriptionForButtonsAndInputs() На 1 этаже вас встретит специалист и проводит до номера.
+                                                +TitleForButtonsAndInputs.RichCheckboxButtons-Title() Помощник для инвалидов
+                                                +DescriptionForButtonsAndInputs.RichCheckboxButtons-Description() На 1 этаже вас встретит специалист и проводит до номера.
                             +Wrapper.Content-RightColumn()
                                 +RangeSliderBlock()
                                     +TitleBlock.ExpandableCheckboxList-Header()
@@ -531,20 +539,27 @@ html
                                             +DescriptionForButtonsAndInputs() Без вечеринок и мероприятий
                                         +List-Item()
                                             +DescriptionForButtonsAndInputs() Время прибытия — после 13:00, а выезд до 12:00
-                        +Wrapper()
-                            +CommentBlock()
-                                +FigureDescriptionBlock()
-                                    +FigureDescriptionBlock-Wrapper()
-                                        +ImageForButtonsAndInputs()
-                                            i.material-icons insert_emoticon
-                                        +FigureDescriptionBlock-Figcaption()
-                                            +TitleForButtonsAndInputs() Мурад Сарафанов
-                                            +DescriptionForButtonsAndInputs() 5 дней назад
-                                +CommentBlock-WrapperLikeAndDescription()
-                                    +CommentBlock-WrapperLike()
-                                        +LikeButton()
-                                    +CommentBlock-WrapperDescription()
-                                        +DescriptionForButtonsAndInputs() Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                        +Wrapper
+                            +Wrapper-Footer()
+                                +CommentBlock()
+                                    +FigureDescriptionBlock()
+                                        +FigureDescriptionBlock-Wrapper()
+                                            +ImageForButtonsAndInputs()
+                                                i.material-icons insert_emoticon
+                                            +FigureDescriptionBlock-Figcaption()
+                                                +TitleForButtonsAndInputs() Мурад Сарафанов
+                                                +DescriptionForButtonsAndInputs() 5 дней назад
+                                    +CommentBlock-WrapperLikeAndDescription()
+                                        +CommentBlock-WrapperLike()
+                                            +LikeButton()
+                                        +CommentBlock-WrapperDescription()
+                                            +DescriptionForButtonsAndInputs() Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 
 
 //+Wrapper-CheckboxButtons()
+
+
+
+
+
+

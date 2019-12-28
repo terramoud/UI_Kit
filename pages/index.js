@@ -230,10 +230,18 @@ jQuery( document ).ready(function() {
   let event = new Event("click");
   dropdownFacilitiesExpanded_ms.dispatchEvent(event);
   $( "#toggleOn" ).trigger( "click" );
+  $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-0").siblings('.Dropdown-QuantityBlock').children('.Dropdown-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-0").siblings('.Dropdown-QuantityBlock').children('.Dropdown-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-1").siblings('.Dropdown-QuantityBlock').children('.Dropdown-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-1").siblings('.Dropdown-QuantityBlock').children('.Dropdown-QuantityIconPlus').trigger( "click" );
+  setTimeout(() => {$( "#DropdownGuests2_ms" ).trigger( "click" )}, 500);
   $( ".RateButton:first .RateButton-Star[data-id=4]" ).trigger( "click" );
   $( ".RateButton:last .RateButton-Star[data-id=5]" ).trigger( "click" );
   jQuery(window).scroll(function (event) {
     jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(1)').css('display', 'block');
+  });
+  jQuery(window).scroll(function (event) {
+    jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(3)').css('display', 'block');
   });
 });
 
@@ -265,3 +273,12 @@ require('../Common.blocks/RateButton/-Star/_active/RateButton-Star_active.js');
 require('../Common.blocks/RateButton/-InputHidden/RateButton-InputHidden.js');
 require('../Common.blocks/Wrapper/-RateButtonWrapper/Wrapper-RateButtonWrapper.js');
 require('../Common.blocks/Wrapper/-RateButtonSeparator/Wrapper-RateButtonSeparator.js');
+
+require('../Common.blocks/Wrapper/-SecondDropdownGuests/Wrapper-SecondDropdownGuests.js');
+require('../Common.blocks/RichCheckboxButtons/-Header/RichCheckboxButtons-Header.js');
+require('../Common.blocks/RichCheckboxButtons/-List/RichCheckboxButtons-List.js');
+require('../Common.blocks/Wrapper/-Footer/Wrapper-Footer.js');
+require('../Common.blocks/RichCheckboxButtons/-Item/RichCheckboxButtons-Item.js');
+
+require('../Common.blocks/RichCheckboxButtons/-Title/RichCheckboxButtons-Title.js');
+require('../Common.blocks/RichCheckboxButtons/-Description/RichCheckboxButtons-Description.js');
