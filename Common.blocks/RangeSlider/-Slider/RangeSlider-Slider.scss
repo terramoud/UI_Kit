@@ -1,0 +1,65 @@
+@media only screen and (max-width: 576px) {
+  .RangeSlider-Slider {
+
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .RangeSlider-Slider {
+
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .RangeSlider-Slider {
+
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  .RangeSlider-Slider {
+
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+  .RangeSlider-Slider {
+    width: 266px;
+    height: 6px;
+    background: $background;
+    box-sizing: border-box;
+    border-radius: 3px;
+    &.ui-widget.ui-widget-content {
+      border: 1px solid $DarkShade25;
+    }
+    & span[tabindex] {
+      width: 12px;
+      height: 12px;
+      background: $DatepickerGradientCurrentData;
+      border: 2px solid $background;
+      border-radius: 10px;
+      top: -6px;
+      &:focus {
+        outline: none;
+      }
+    }
+    & div {
+      background: $DatepickerGradientCurrentData;
+      border-radius: 3px;
+      //height: 6px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+  .RangeSlider-Slider {
+
+  }
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+  .RangeSlider-Slider {
+
+  }
+}
+

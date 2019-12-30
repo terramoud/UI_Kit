@@ -1,3 +1,8 @@
+include ../Common.blocks/RangeSlider/-Wrapper/RangeSlider-Wrapper.pug
+include ../Common.blocks/RangeSlider/-Title/RangeSlider-Title.pug
+include ../Common.blocks/RangeSlider/-Range/RangeSlider-Range.pug
+include ../Common.blocks/RangeSlider/-Slider/RangeSlider-Slider.pug
+include ../Common.blocks/Wrapper/-RangeSlider/Wrapper-RangeSlider.pug
 include ../Common.blocks/RichCheckboxButtons/-Description/RichCheckboxButtons-Description.pug
 include ../Common.blocks/RichCheckboxButtons/-Title/RichCheckboxButtons-Title.pug
 include ../Common.blocks/RichCheckboxButtons/-Item/RichCheckboxButtons-Item.pug
@@ -496,12 +501,15 @@ html
                                                 +TitleForButtonsAndInputs.RichCheckboxButtons-Title() Помощник для инвалидов
                                                 +DescriptionForButtonsAndInputs.RichCheckboxButtons-Description() На 1 этаже вас встретит специалист и проводит до номера.
                             +Wrapper.Content-RightColumn()
-                                +RangeSliderBlock()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
-                                        +TitleBlock-H3() range slider
-                                        +TitleBlock-H6() 5 000₽ - 10 000₽
-
+                                //+RangeSliderBlock()
+                                +Wrapper-RangeSlider()
                                     +RangeSlider()
+                                        +RangeSlider-Wrapper()
+                                            +RangeSlider-Title()
+                                                +TitleBlock()
+                                                    +TitleBlock-H3(style="margin-bottom: 16px; margin-top: 0px;" ) Range Slider
+                                            +RangeSlider-Range(type="text" data-amount="" readonly )
+                                        +RangeSlider-Slider()
                                 +ButtonsBlock()
                                     +TitleBlock.ExpandableCheckboxList-Header()
                                         +TitleBlock-H3() buttons
@@ -557,7 +565,6 @@ html
 
 
 //+Wrapper-CheckboxButtons()
-
 
 
 

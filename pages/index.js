@@ -282,3 +282,9 @@ require('../Common.blocks/RichCheckboxButtons/-Item/RichCheckboxButtons-Item.js'
 
 require('../Common.blocks/RichCheckboxButtons/-Title/RichCheckboxButtons-Title.js');
 require('../Common.blocks/RichCheckboxButtons/-Description/RichCheckboxButtons-Description.js');
+
+require('../Common.blocks/Wrapper/-RangeSlider/Wrapper-RangeSlider.js');
+require('../Common.blocks/RangeSlider/-Slider/RangeSlider-Slider.js');
+require('../Common.blocks/RangeSlider/-Range/RangeSlider-Range.js');
+require('../Common.blocks/RangeSlider/-Title/RangeSlider-Title.js');
+require('../Common.blocks/RangeSlider/-Wrapper/RangeSlider-Wrapper.js');

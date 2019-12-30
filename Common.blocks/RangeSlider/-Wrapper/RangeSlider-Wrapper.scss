@@ -1,41 +1,44 @@
 @media only screen and (max-width: 576px) {
-  .Content-RightColumn {
+  .RangeSlider-Wrapper {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .Content-RightColumn {
+  .RangeSlider-Wrapper {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .Content-RightColumn {
+  .RangeSlider-Wrapper {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .Content-RightColumn {
+  .RangeSlider-Wrapper {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .Content-RightColumn {
-    margin-left: 73px;
+  .RangeSlider-Wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 6px;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .Content-RightColumn {
+  .RangeSlider-Wrapper {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .Content-RightColumn {
+  .RangeSlider-Wrapper {
 
   }
 }

@@ -1,41 +1,52 @@
 @media only screen and (max-width: 576px) {
-  .Content-RightColumn {
+  .RangeSlider-Range {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .Content-RightColumn {
+  .RangeSlider-Range {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .Content-RightColumn {
+  .RangeSlider-Range {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .Content-RightColumn {
+  .RangeSlider-Range {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .Content-RightColumn {
-    margin-left: 73px;
+  .RangeSlider-Range {
+    font-family: Montserrat-regular, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $DarkShade50;
+    border: none;
+    display: block;
+    width: 50%;
+    height: 15px;
+    margin: 0;
+    padding: 3px 0 0 0;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .Content-RightColumn {
+  .RangeSlider-Range {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .Content-RightColumn {
+  .RangeSlider-Range {
 
   }
 }
