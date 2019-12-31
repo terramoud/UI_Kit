@@ -1,41 +1,48 @@
 @media only screen and (max-width: 576px) {
-  .Button {
+  .PayButton-Arrow {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .Button {
+  .PayButton-Arrow {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .Button {
+  .PayButton-Arrow {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .Button {
+  .PayButton-Arrow {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .Button {
-    border-radius: 22px;
+  .PayButton-Arrow {
+    color: $background;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    right: 10px;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .Button {
+  .PayButton-Arrow {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .Button {
+  .PayButton-Arrow {
 
   }
 }

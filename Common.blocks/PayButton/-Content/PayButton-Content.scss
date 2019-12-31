@@ -1,41 +1,51 @@
 @media only screen and (max-width: 576px) {
-  .Button {
+  .PayButton-Content {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .Button {
+  .PayButton-Content {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .Button {
+  .PayButton-Content {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .Button {
+  .PayButton-Content {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .Button {
+  .PayButton-Content {
+    width: 320px;
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    background: $DatepickerGradient;
+    justify-content: center;
+    align-items: center;
+    padding: 0 35px;
     border-radius: 22px;
+    position: relative;
+    box-sizing: border-box;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .Button {
+  .PayButton-Content {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .Button {
+  .PayButton-Content {
 
   }
 }

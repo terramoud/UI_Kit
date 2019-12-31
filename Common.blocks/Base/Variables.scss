@@ -13,6 +13,7 @@ $background: #FFFFFF;
 $DatepickerArrowColor: #BC9CFF;
 $DatepickerArrowColorHover: darken($DatepickerArrowColor, 10%);
 $DatepickerGradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$DatepickerGradientOpacity: linear-gradient(180deg, lighten(#BC9CFF, 10%) 0%, lighten(#8BA4F9, 10%) 100%);
 $DatepickerGradientInRange: linear-gradient(180deg, rgba(188,156,255,.25) 0%, rgba(139,164,249,.25) 100%);
 $DatepickerGradientInRangeFocus: linear-gradient(180deg, darken(rgba(188,156,255,.25), 10%) 0%, darken(rgba(139,164,249,.25), 10%) 100%);
 $DatepickerGradientFocus: linear-gradient(180deg, darken(#BC9CFF, 10%) 0%, darken(#8BA4F9, 10%) 100%);

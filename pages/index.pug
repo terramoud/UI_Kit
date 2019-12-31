@@ -1,3 +1,13 @@
+include ../Common.blocks/PayButton/-Arrow/PayButton-Arrow.pug
+include ../Common.blocks/PayButton/-Text/PayButton-Text.pug
+include ../Common.blocks/PayButton/-Content/PayButton-Content.pug
+include ../Common.blocks/ButtonsBlock/-WrapperForLeftButton/ButtonsBlock-WrapperForLeftButton.pug
+include ../Common.blocks/GradientButton/-Btn/GradientButton-Btn.pug
+include ../Common.blocks/GradientButton/GradientButton.pug
+include ../Common.blocks/Button/-GhostBtn/Button-GhostBtn.pug
+include ../Common.blocks/Button/-Btn/Button-Btn.pug
+include ../Common.blocks/Button/-Content/Button-Content.pug
+include ../Common.blocks/Wrapper/-Buttons/Wrapper-Buttons.pug
 include ../Common.blocks/RangeSlider/-Wrapper/RangeSlider-Wrapper.pug
 include ../Common.blocks/RangeSlider/-Title/RangeSlider-Title.pug
 include ../Common.blocks/RangeSlider/-Range/RangeSlider-Range.pug
@@ -507,23 +517,41 @@ html
                                         +RangeSlider-Wrapper()
                                             +RangeSlider-Title()
                                                 +TitleBlock()
-                                                    +TitleBlock-H3(style="margin-bottom: 16px; margin-top: 0px;" ) Range Slider
+                                                    +TitleBlock-H3(style="margin-bottom: 16px; margin-top: 0px;") Range Slider
                                             +RangeSlider-Range(type="text" data-amount="" readonly )
                                         +RangeSlider-Slider()
-                                +ButtonsBlock()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
-                                        +TitleBlock-H3() buttons
-                                    +ButtonsBlock-WrapperForSamples()
-                                        +Button()
-                                        +Button()
-                                    +ButtonsBlock-WrapperForSamples()
-                                        +Button()
-                                        +Button()
-                                    +ButtonsBlock-WrapperForSamples()
-                                        +Button()
-                                        +Button()
-                                    +ButtonsBlock-WrapperForSamples()
-                                        +PayButton()
+                                //
+                                +Wrapper-Buttons()
+                                    +ButtonsBlock()
+                                        +TitleBlock()
+                                            +TitleBlock-H3(style="margin-bottom: 15px; margin-top: 0px;") buttons
+                                        +ButtonsBlock-WrapperForSamples()
+                                            +ButtonsBlock-WrapperForLeftButton()
+                                                +Button()
+                                                    +Button-Btn() click me
+                                            +Button()
+                                                +Button-Btn.Button-Btn_active() click me
+                                        +ButtonsBlock-WrapperForSamples()
+                                            +ButtonsBlock-WrapperForLeftButton()
+                                                +Button()
+                                                    +Button-Content()
+                                                        +GradientButton()
+                                                            +GradientButton-Btn() click me
+                                            +Button()
+                                                +Button-Content.Button-Content_active()
+                                                    +GradientButton()
+                                                        +GradientButton-Btn() click me
+                                        +ButtonsBlock-WrapperForSamples()
+                                            +ButtonsBlock-WrapperForLeftButton()
+                                                +Button()
+                                                    +Button-GhostBtn() click me
+                                            +Button()
+                                                +Button-GhostBtn.Button-GhostBtn_active() click me
+                                        +ButtonsBlock-WrapperForSamples()
+                                            +PayButton()
+                                                +PayButton-Content()
+                                                    +PayButton-Text() перейти к оплате
+                                                    +PayButton-Arrow() arrow_forward
                                 +PaginationBlock()
                                     +TitleBlock.ExpandableCheckboxList-Header()
                                         +TitleBlock-H3() pagination
@@ -565,8 +593,3 @@ html
 
 
 //+Wrapper-CheckboxButtons()
-
-
-
-
-

@@ -1,41 +1,57 @@
 @media only screen and (max-width: 576px) {
-  .Button {
+  .Button-Btn {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .Button {
+  .Button-Btn {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .Button {
+  .Button-Btn {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .Button {
+  .Button-Btn {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .Button {
+  .Button-Btn {
+    width: auto;
+    height: 44px;
+    background: $DatepickerGradient;
     border-radius: 22px;
+    font-family: Montserrat-bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $background;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 19px;
+    border: none;
+    outline: none;
+    cursor: pointer;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .Button {
+  .Button-Btn {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .Button {
+  .Button-Btn {
 
   }
 }
