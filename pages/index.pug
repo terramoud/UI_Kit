@@ -1,3 +1,12 @@
+include ../Common.blocks/Pagination/-Dots/Pagination-Dots.pug
+include ../Common.blocks/Pagination/-PrevNextPage/Pagination-PrevNextPage.pug
+include ../Common.blocks/Wrapper/-PaginationTitle/Wrapper-PaginationTitle.pug
+include ../Common.blocks/Pagination/-List/Pagination-List.pug
+include ../Common.blocks/Pagination/-Page/Pagination-Page.pug
+include ../Common.blocks/Pagination/-LinkPage/Pagination-LinkPage.pug
+include ../Common.blocks/Pagination/-AmountObjsOnPage/Pagination-AmountObjsOnPage.pug
+include ../Common.blocks/Pagination/Pagination.pug
+include ../Common.blocks/Wrapper/-Pagination/Wrapper-Pagination.pug
 include ../Common.blocks/PayButton/-Arrow/PayButton-Arrow.pug
 include ../Common.blocks/PayButton/-Text/PayButton-Text.pug
 include ../Common.blocks/PayButton/-Content/PayButton-Content.pug
@@ -62,7 +71,6 @@ include ../Common.blocks/CommentBlock/-WrapperLikeAndDescription/CommentBlock-Wr
 include ../Common.blocks/LikeButtonBlock/LikeButtonBlock.pug
 include ../Common.blocks/CommentBlock/CommentBlock.pug
 include ../Common.blocks/BulletList/BulletList.pug
-include ../Common.blocks/PaginationBlock/PaginationBlock.pug
 include ../Common.blocks/PayButton/PayButton.pug
 include ../Common.blocks/Button/Button.pug
 include ../Common.blocks/ButtonsBlock/-WrapperForSamples/ButtonsBlock-WrapperForSamples.pug
@@ -552,9 +560,28 @@ html
                                                 +PayButton-Content()
                                                     +PayButton-Text() перейти к оплате
                                                     +PayButton-Arrow() arrow_forward
-                                +PaginationBlock()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
-                                        +TitleBlock-H3() pagination
+                                //+PaginationBlock()
+                                +Wrapper-Pagination()
+                                    +Wrapper-PaginationTitle()
+                                        +TitleBlock.ExpandableCheckboxList-Header()
+                                            +TitleBlock-H3() pagination
+                                    +Pagination()
+                                        +Pagination-List()
+                                            +Pagination-Page(style="display: none;")
+                                                +Pagination-PrevNextPage('#', 'arrow_back')
+                                            +Pagination-Page()
+                                                +Pagination-LinkPage('#')(class="Pagination-LinkPage_active") 1
+                                            +Pagination-Page()
+                                                +Pagination-LinkPage('#') 2
+                                            +Pagination-Page()
+                                                +Pagination-LinkPage('#') 3
+                                            +Pagination-Page()
+                                                +Pagination-Dots() ...
+                                            +Pagination-Page()
+                                                +Pagination-LinkPage('#') 15
+                                            +Pagination-Page()
+                                                +Pagination-PrevNextPage('#', 'arrow_forward')
+                                        +Pagination-AmountObjsOnPage() 1 – 12 из 100+ вариантов аренды
                                 +Wrapper-FirstDropdownGuests()
                                     +InputBlock()(class='')
                                         +InputBlock-Wrapper
@@ -593,3 +620,4 @@ html
 
 
 //+Wrapper-CheckboxButtons()
+

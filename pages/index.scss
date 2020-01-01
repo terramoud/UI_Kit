@@ -4,6 +4,7 @@
 /*Common.blocks*/
 
 @import '../Common.blocks/Base/Base';
+@import '../Common.blocks/Base/Mixins';
 @import '../Common.blocks/Wrapper/Wrapper';
 @import '../Common.blocks/ColorSwatch/ColorSwatch';
 
@@ -170,7 +171,6 @@
 @import '../Common.blocks/ButtonsBlock/-WrapperForSamples/ButtonsBlock-WrapperForSamples';
 @import '../Common.blocks/Button/Button';
 @import '../Common.blocks/PayButton/PayButton';
-@import '../Common.blocks/PaginationBlock/PaginationBlock';
 @import '../Common.blocks/BulletList/BulletList';
 @import '../Common.blocks/CommentBlock/CommentBlock';
 @import '../Common.blocks/LikeButtonBlock/LikeButtonBlock';
@@ -261,3 +261,13 @@
 @import '../Common.blocks/PayButton/-Text/PayButton-Text';
 @import '../Common.blocks/PayButton/-Arrow/PayButton-Arrow';
 @import '../Common.blocks/PayButton/-Content/_active/PayButton-Content_active';
+@import '../Common.blocks/Wrapper/-Pagination/Wrapper-Pagination';
+@import '../Common.blocks/Pagination/Pagination';
+@import '../Common.blocks/Pagination/-LinkPage/Pagination-LinkPage';
+@import '../Common.blocks/Pagination/-Page/Pagination-Page';
+@import '../Common.blocks/Pagination/-LinkPage/_active/Pagination-LinkPage_active';
+@import '../Common.blocks/Pagination/-List/Pagination-List';
+@import '../Common.blocks/Wrapper/-PaginationTitle/Wrapper-PaginationTitle';
+@import '../Common.blocks/Pagination/-PrevNextPage/Pagination-PrevNextPage';
+@import '../Common.blocks/Pagination/-Dots/Pagination-Dots';
+@import '../Common.blocks/Pagination/-AmountObjsOnPage/Pagination-AmountObjsOnPage';

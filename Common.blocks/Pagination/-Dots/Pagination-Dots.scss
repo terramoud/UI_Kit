@@ -1,0 +1,54 @@
+@media only screen and (max-width: 576px) {
+  .Pagination-Dots {
+
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .Pagination-Dots {
+
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .Pagination-Dots {
+
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  .Pagination-Dots {
+
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+  .Pagination-Dots {
+    width: 40px;
+    height: 40px;
+    font-family: Montserrat-regular;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $DarkShade50;
+    position: relative;
+    &:hover {
+      color: $DarkShade100;
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+  .Pagination-Dots {
+
+  }
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+  .Pagination-Dots {
+
+  }
+}
+

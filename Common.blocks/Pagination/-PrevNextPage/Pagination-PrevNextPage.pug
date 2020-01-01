@@ -1,0 +1,5 @@
+mixin Pagination-PrevNextPage(href, content)
+    a.Pagination-PrevNextPage(href=href)&attributes(attributes)
+        i.material-icons #{content}
+            if block
+                block
