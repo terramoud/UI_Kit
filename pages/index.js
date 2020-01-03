@@ -232,14 +232,20 @@ jQuery( document ).ready(function() {
   $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-0").siblings('.Dropdown-QuantityBlock').children('.Dropdown-QuantityIconPlus').trigger( "click" );
   $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-1").siblings('.Dropdown-QuantityBlock').children('.Dropdown-QuantityIconPlus').trigger( "click" );
   $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-1").siblings('.Dropdown-QuantityBlock').children('.Dropdown-QuantityIconPlus').trigger( "click" );
+
+  $( "#ui-multiselect-4-DropdownGuests3-option-0").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-4-DropdownGuests3-option-0").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-4-DropdownGuests3-option-1").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
+
+
   setTimeout(() => {$( "#DropdownGuests2_ms" ).trigger( "click" )}, 500);
+  setTimeout(() => {$( "#DropdownGuests3_ms" ).trigger( "click" )}, 500);
   $( ".RateButton:first .RateButton-Star[data-id=4]" ).trigger( "click" );
   $( ".RateButton:last .RateButton-Star[data-id=5]" ).trigger( "click" );
   jQuery(window).scroll(function (event) {
     jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(1)').css('display', 'block');
-  });
-  jQuery(window).scroll(function (event) {
     jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(3)').css('display', 'block');
+    jQuery('.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all:eq(4)').css('display', 'block');
   });
 });
 
@@ -316,3 +322,5 @@ require('../Common.blocks/Pagination/-List/Pagination-List.js');
 require('../Common.blocks/Wrapper/-PaginationTitle/Wrapper-PaginationTitle.js');
 require('../Common.blocks/Pagination/-PrevNextPage/Pagination-PrevNextPage.js');
 require('../Common.blocks/Pagination/-Dots/Pagination-Dots.js');
+
+require('../Common.blocks/Wrapper/-ThirdDropdownGuests/Wrapper-ThirdDropdownGuests.js');

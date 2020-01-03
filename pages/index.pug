@@ -1,3 +1,4 @@
+include ../Common.blocks/Wrapper/-ThirdDropdownGuests/Wrapper-ThirdDropdownGuests.pug
 include ../Common.blocks/Pagination/-Dots/Pagination-Dots.pug
 include ../Common.blocks/Pagination/-PrevNextPage/Pagination-PrevNextPage.pug
 include ../Common.blocks/Wrapper/-PaginationTitle/Wrapper-PaginationTitle.pug
@@ -544,7 +545,8 @@ html
                                                 +Button()
                                                     +Button-Content()
                                                         +GradientButton()
-                                                            +GradientButton-Btn() click me
+                                                            +GradientButton-Btn()
+                                                                span click me
                                             +Button()
                                                 +Button-Content.Button-Content_active()
                                                     +GradientButton()
@@ -582,8 +584,8 @@ html
                                             +Pagination-Page()
                                                 +Pagination-PrevNextPage('#', 'arrow_forward')
                                         +Pagination-AmountObjsOnPage() 1 – 12 из 100+ вариантов аренды
-                                +Wrapper-FirstDropdownGuests()
-                                    +InputBlock()(class='')
+                                +Wrapper-ThirdDropdownGuests()
+                                    +InputBlock()
                                         +InputBlock-Wrapper
                                             +InputBlock-FieldName('dropdown')
                                             +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
@@ -594,8 +596,8 @@ html
                                                 +DropdownGuests-Option('младенцы')(value='babies')
                                 +BulletList()
                                     +TitleBlock.ExpandableCheckboxList-Header()
-                                        +TitleBlock-H3() Checkbox Buttons
-                                    +List.ExpandableCheckboxList-List()
+                                        +TitleBlock-H3() Bullet List
+                                    +List
                                         +List-Item()
                                             +DescriptionForButtonsAndInputs() Нельзя с питомцами
                                         +List-Item()
@@ -619,5 +621,14 @@ html
                                             +DescriptionForButtonsAndInputs() Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 
 
-//+Wrapper-CheckboxButtons()
+//+Wrapper-CheckboxButtons
+// миксин для одинаковых шрифтов
+// один блок для всех describe
+// один блок для всех заголовков
+// один блок для bullet list
+// каждый list разный потому что задает разное размещение блоков
+// js только в блоке
+// коммент
+// провырить форм тег и як использууться на макеты блоки
+// рефакторинг
 
