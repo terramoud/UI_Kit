@@ -1,16 +1,27 @@
 @font-face {
   font-family: "Quicksand";
-  src: url('./Quicksand-Bold.ttf') format('truetype');
+  src: url('./Quicksand-Bold.eot'); /* IE9 Compat Modes */
+  src: url('./Quicksand-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./Quicksand-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./Quicksand-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./Quicksand-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./Quicksand-Bold.svg#Quicksand') format('svg'); /* Legacy iOS */
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 @font-face {
-  font-family: "Quicksand-regular";
-  src: url('./Quicksand-regular.ttf');
+  font-family: "Quicksand";
+    src: url('./Quicksand-Regular.eot'); /* IE9 Compat Modes */
+    src: url('./Quicksand-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./Quicksand-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./Quicksand-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('./Quicksand-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./Quicksand-Regular.svg#Quicksand') format('svg'); /* Legacy iOS */
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
 }
+
 
 @font-face {
   font-family: "Montserrat-Bold";

@@ -1,46 +1,44 @@
-.Container {
-  width: 100%;
-  height: 900px;
-}
-
 @media only screen and (max-width: 576px) {
-  .Container {
+  .ColorExample {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .Container {
+  .ColorExample {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .Container {
+  .ColorExample {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .Container {
+  .ColorExample {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .Container {
-
+  .ColorExample {
+    height: 70px;
+    width: 70px;
+    border-radius: 6px;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .Container {
+  .ColorExample {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .Container {
+  .ColorExample {
 
   }
 }
+

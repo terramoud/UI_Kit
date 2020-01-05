@@ -2,10 +2,10 @@ body {
   margin: 0;
   box-sizing: border-box;
   overflow: overlay;
-  background-color: #E5E5E5;
+  background-color: $bodyColor;
 }
 
-fieldset {
+/*fieldset {
 	border: 0;
 }
 
@@ -36,7 +36,7 @@ button {
   outline: none;
   border: none;
   background: none;
-}
+}*/
 /*
 h3 {
   margin: 0;

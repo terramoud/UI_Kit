@@ -1,4 +1,4 @@
-mixin Container(content, cl)
-    div.Container(class= cl) #{content}
+mixin Container(content)
+    div.Container&attributes(attributes) #{content}
         if block
             block

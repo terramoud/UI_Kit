@@ -324,3 +324,16 @@ require('../Common.blocks/Pagination/-PrevNextPage/Pagination-PrevNextPage.js');
 require('../Common.blocks/Pagination/-Dots/Pagination-Dots.js');
 
 require('../Common.blocks/Wrapper/-ThirdDropdownGuests/Wrapper-ThirdDropdownGuests.js');
+
+require('../Common.blocks/Content/-WrapperForColorsAndType/Content-WrapperForColorsAndType.js');
+require('../Common.blocks/Container/-Layout/Container-Layout.js');
+require('../Common.blocks/WidgetTitle/WidgetTitle.js');
+require('../Common.blocks/UIKitMarkup/UIKitMarkup.js');
+require('../Common.blocks/ColorsAndType/ColorsAndType.js');
+require('../Common.blocks/ColorsAndType/-Wrapper/ColorsAndType-Wrapper.js');
+require('../Common.blocks/ColorsExamples/ColorsExamples.js');
+require('../Common.blocks/ColorExample/ColorExample.js');
+
+require('../Common.blocks/ColorsExamples/-Description/ColorsExamples-Description.js');
+require('../Common.blocks/ColorExample/_darkShade100/ColorExample_darkShade100.js');
+require('../Common.blocks/TitleInsideWidget/TitleInsideWidget.js');

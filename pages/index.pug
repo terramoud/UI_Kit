@@ -1,3 +1,13 @@
+include ../Common.blocks/TitleInsideWidget/TitleInsideWidget.pug
+include ../Common.blocks/ColorsExamples/-Description/ColorsExamples-Description.pug
+include ../Common.blocks/ColorExample/ColorExample.pug
+include ../Common.blocks/ColorsExamples/ColorsExamples.pug
+include ../Common.blocks/ColorsAndType/-Wrapper/ColorsAndType-Wrapper.pug
+include ../Common.blocks/ColorsAndType/ColorsAndType.pug
+include ../Common.blocks/UIKitMarkup/UIKitMarkup.pug
+include ../Common.blocks/WidgetTitle/WidgetTitle.pug
+include ../Common.blocks/Container/-Layout/Container-Layout.pug
+include ../Common.blocks/Content/-WrapperForColorsAndType/Content-WrapperForColorsAndType.pug
 include ../Common.blocks/Wrapper/-ThirdDropdownGuests/Wrapper-ThirdDropdownGuests.pug
 include ../Common.blocks/Pagination/-Dots/Pagination-Dots.pug
 include ../Common.blocks/Pagination/-PrevNextPage/Pagination-PrevNextPage.pug
@@ -185,440 +195,440 @@ html
 
 
     body
-        +Container('', 'Container_bgColor_white Container_marBot_50px')
-            +LogoWrapper()
-                +Logo()
-            +Content('', 'Content-Wrapper')
-                +Wrapper()
-                    +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                        +FigureHtml5-Image('', 'FigureHtml5_bg_dsh100')
-                        +FigureHtml5-FigcaptionWrapper()
-                            +FigureHtml5-Figcaption('Dark Shade 100%')
-                            +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                    +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                        +FigureHtml5-Image('', 'FigureHtml5_bg_dsh75')
-                        +FigureHtml5-FigcaptionWrapper()
-                            +FigureHtml5-Figcaption('Dark Shade 75%')
-                            +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                    +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                        +FigureHtml5-Image('', 'FigureHtml5_bg_dsh50')
-                        +FigureHtml5-FigcaptionWrapper()
-                            +FigureHtml5-Figcaption('Dark Shade 50%')
-                            +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                    +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                        +FigureHtml5-Image('', 'FigureHtml5_bg_dsh25')
-                        +FigureHtml5-FigcaptionWrapper()
-                            +FigureHtml5-Figcaption('Dark Shade 25%')
-                            +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                    +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                        +FigureHtml5-Image('', 'FigureHtml5_bg_dsh05')
-                        +FigureHtml5-FigcaptionWrapper('', 'FigureHtml5_pdTop_correct')
-                            +FigureHtml5-Figcaption('Dark Shade 5%')
-                            +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                    +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                        +FigureHtml5-Image('', 'FigureHtml5_bg_purple')
-                        +FigureHtml5-FigcaptionWrapper('', 'FigureHtml5_pdTop_correct')
-                            +FigureHtml5-Figcaption('Purple')
-                            +FigureHtml5-Figcaption('#BC9CFF', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                    +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                        +FigureHtml5-Image('', 'FigureHtml5_bg_green')
-                        +FigureHtml5-FigcaptionWrapper()
-                            +FigureHtml5-Figcaption('Green')
-                            +FigureHtml5-Figcaption('#6FCF97', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                +Wrapper()
-                    +ExampleText()
-                        +ExampleText-Header('H1', 'ExampleText_fontSize_24px ExampleText_lineH_29')
-                        +ExampleText-Text('This one is the sub-section or widget title', 'ExampleText_fontStyle_h1')
-                    +ExampleText()
-                        +ExampleText-Header('H2', 'ExampleText_fontSize_19px ExampleText_lineH_23')
-                        +ExampleText-Text('Next one is the item title inside widgets', 'ExampleText_fontStyle_h2')
-                    +ExampleText()
-                        +ExampleText-Header('H3', 'ExampleText_fontSize_12px ExampleText_textTransf_upper ExampleText_lineH_15')
-                        +ExampleText-Text('This is a label or CTA text', 'ExampleText_fontStyle_h3 ExampleText_pdBot_correct')
-                    +ExampleText()
-                        +ExampleText-Header('Body', 'ExampleText_fontSize_14px ExampleText_lineH_24')
-                        +ExampleText-Text('This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'ExampleText_fontStyle_body ExampleText_pdR_34 ExampleText_width_316px')
-        +Container('', 'Container_bgColor_white Container_marBot_50px Container_height_1853px')
-            +LogoWrapper()
-                +Logo()
-            +Content()
-                +Content-WrapperForFormElements()
-                    +Wrapper()
-                        +InputBlock()(class='Wrapper-FormElements')
-                            +InputBlock-Wrapper()
-                                +InputBlock-FieldName('text field')
-                                +InputBlock-FieldDescription('default')
-                            +InputBlock-Form()
-                                +InputBlock-InputField()(class='InputBlock_color_dark25', type='text', placeholder='Email')
-                        +InputBlock()(class='Wrapper-FormElements')
-                            +InputBlock-Wrapper()
-                                +InputBlock-FieldName('text field')
-                                +InputBlock-FieldDescription('HOVER / FOCUS')(class='InputBlock_pdTop_3px')
-                            +InputBlock-Form()
-                                +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='This is pretty awesome')
-                        +InputBlock()(class='Wrapper-GuestsDropdown')
-                            +InputBlock-Wrapper
-                                +InputBlock-FieldName('dropdown')
-                                +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
-                            +InputBlock-Form()
-                                Select.DropdownGuests(multiple='multiple', id="DropdownGuests", name='DropdownGuests', size='3')
-                                    +DropdownGuests-Option('взрослые')(value='adults')
-                                    +DropdownGuests-Option('дети')(value='children')
-                                    +DropdownGuests-Option('младенцы')(value='babies')
-                        +InputBlock()(class='Wrapper-MasketField')
-                            +InputBlock-Wrapper()
-                                +InputBlock-FieldName('masked text field')
-                                +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_1px')
-                            +InputBlock-Form()
-                                +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='ДД.ММ.ГГГГ')
-                        +DropdownDatepicker()(class='Wrapper-DateDropdown')
-                            +DropdownDatepicker-WrapperForDropdown()
-                                +InputBlock()
-                                    +InputBlock-Wrapper
-                                        +InputBlock-FieldName('date dropdown')
-                                +DropdownDatepicker-ArrivalDate()
-                                    +DropdownDatepicker-InputHidden(type="hidden")
-                                    +DropdownDatepicker-Open() ДД.ММ.ГГГГ
-                                    +DropdownDatepicker-Icon()
-                                        i.material-icons expand_more
-                                +DropdownDatepicker-AirDatepicker()
-                            +DropdownDatepicker-WrapperForDropdown()
-                                +InputBlock()
-                                    +InputBlock-Wrapper
-                                        +InputBlock-FieldName('date dropdown')
-                                +DropdownDatepicker-DateOfDeparture()
-                                    +DropdownDatepicker-InputHidden(type="hidden")
-                                    +DropdownDatepicker-Open() 19.08.2019
-                                    +DropdownDatepicker-Icon()
-                                        i.material-icons expand_more
-                        +InputBlock(class='Wrapper-FilterDateDropdown')
-                            +InputBlock-Wrapper()
-                                +InputBlock-FieldName('filter date dropdown')
-                            +FilterDateDropdown()
-                                +FilterDateDropdown-Dropdown()
-                                    +FilterDateDropdown-InputHidden(type='hidden')
-                                    +FilterDateDropdown-Open() 19 авг - 23 авг
-                                    +FilterDateDropdown-Icon()
-                                        i.material-icons expand_more
-                                +FilterDateDropdown-AirDatepicker()
-                        +InputBlock()
-                            +InputBlock-Wrapper()
-                                +InputBlock-FieldName('subscription text field')
-                            +InputBlock-Form()
-                                +InputBlock-WrapperForSelectWithArrow()
-                                    +InputBlock-SelectArrow('arrow_forward')
-                                    +InputBlock-InputField(type='text' placeholder='Email' class='InputBlock_width_266px InputBlock_appearan_none InputBlock_pdTop_11px InputBlock_letterSpacing_0px InputBlock_mrBot_97px InputBlock_color_dark75')
-                        +InputBlock()(class='Wrapper-FacilitiesDropdown')
-                            +InputBlock-Wrapper(class='InputBlock_width_265px')
-                                +InputBlock-FieldName('dropdown')
-                                +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
-                            select.Dropdown(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3')
-                                +Dropdown-Option('спальни', 'selected')(value='bedrooms')
-                                +Dropdown-Option('кровати', 'selected')(value='beds')
-                                +Dropdown-Option('комнаты')(value='bathrooms')
-                        +InputBlock()(class='Wrapper-FacilitiesDropdown')
-                            +InputBlock-Wrapper(class='InputBlock_width_265px')
-                                +InputBlock-FieldName('dropdown')
-                                +InputBlock-FieldDescription('expanded')(class='InputBlock_pdTop_3px')
-                            select.Dropdown(multiple='multiple', id="dropdownFacilitiesExpanded", name='dropdownFacilities', size='3')
-                                +Dropdown-Option('спальни', 'selected')(value='bedrooms')
-                                +Dropdown-Option('кровати', 'selected')(value='beds')
-                                +Dropdown-Option('ванные комнаты')(value='bathrooms')
-                        +Wrapper-ExpandableCheckboxList()
-                            +ExpandableCheckboxList()
-                                +TitleBlock.ExpandableCheckboxList-Header()
-                                    +TitleBlock-H3() expandable checkbox list
-                                    +TitleBlock-Icon()
-                                        i.material-icons expand_more
-                                +List.ExpandableCheckboxList-List()
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Завтрак
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Письменный стол
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Стул для кормления
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Кроватка
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Телевизор
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Шампунь
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Телевизор
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Шампунь
-                        +Wrapper-ExpandableCheckboxListOpen()
-                            +ExpandableCheckboxList()
-                                +TitleBlock.ExpandableCheckboxList-Header()
-                                    +TitleBlock-H3() expandable checkbox list
-                                    +TitleBlock-Icon()
-                                        i.material-icons expand_more
-                                +List.ExpandableCheckboxList-List(style="display: block;")
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Завтрак
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                        +DescriptionForButtonsAndInputs() Письменный стол
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                        +DescriptionForButtonsAndInputs() Стул для кормления
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                        +DescriptionForButtonsAndInputs() Кроватка
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" )
-                                        +DescriptionForButtonsAndInputs() Телевизор
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" )
-                                        +DescriptionForButtonsAndInputs() Шампунь
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" )
-                                        +DescriptionForButtonsAndInputs() Телевизор
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" )
-                                        +DescriptionForButtonsAndInputs() Шампунь
-                        +Wrapper-DescriptionBlock()
-                            +FigureDescriptionBlock()
-                                +FigureDescriptionBlock-Wrapper()
-                                    +ImageForButtonsAndInputs()
-                                        i.material-icons insert_emoticon
-                                    +FigureDescriptionBlock-Figcaption()
-                                        +FigureDescriptionBlock-Header()
-                                            +TitleForButtonsAndInputs() Комфорт
-                                        +DescriptionForButtonsAndInputs() Шумопоглощающие стены
-                                +FigureDescriptionBlock-Hr()
-                        +Wrapper-DescriptionBlockFacilities()
-                            +FigureDescriptionBlock()
-                                +FigureDescriptionBlock-Wrapper()
-                                    +ImageForButtonsAndInputs()
-                                        i.material-icons location_city
-                                    +FigureDescriptionBlock-Figcaption()
-                                        +FigureDescriptionBlock-Header()
-                                            +TitleForButtonsAndInputs() Удобство
-                                        +DescriptionForButtonsAndInputs() Окно в каждой из спален
-                                +FigureDescriptionBlock-Hr()
-                    +Wrapper.Content-RightWrapper()
-                        +Wrapper.Content-WrapperRow()
-                            +Wrapper()
-                                +CheckboxList.CheckboxList_BottomIndent_30px()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3.TitleBlock-H3_withoutMarginTop_4px.TitleBlock-H3_withoutMarginBottom_10px() Checkbox Buttons
-                                    +List()
+        +Container
+            +Container-Layout()
+                +Logo
+                +ColorsAndType
+                    +ColorsAndType-Wrapper
+                        +ColorsExamples
+                            +ColorExample.ColorExample_darkShade100
+                            +ColorsExamples-Description
+                                +TitleInsideWidget Dark Shade 100%
+                                +TitleInsideWidget #1F2041
+                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
+                            +FigureHtml5-Image('', 'FigureHtml5_bg_dsh75')
+                            +FigureHtml5-FigcaptionWrapper()
+                                +FigureHtml5-Figcaption('Dark Shade 75%')
+                                +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
+                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
+                            +FigureHtml5-Image('', 'FigureHtml5_bg_dsh50')
+                            +FigureHtml5-FigcaptionWrapper()
+                                +FigureHtml5-Figcaption('Dark Shade 50%')
+                                +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
+                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
+                            +FigureHtml5-Image('', 'FigureHtml5_bg_dsh25')
+                            +FigureHtml5-FigcaptionWrapper()
+                                +FigureHtml5-Figcaption('Dark Shade 25%')
+                                +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
+                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
+                            +FigureHtml5-Image('', 'FigureHtml5_bg_dsh05')
+                            +FigureHtml5-FigcaptionWrapper('', 'FigureHtml5_pdTop_correct')
+                                +FigureHtml5-Figcaption('Dark Shade 5%')
+                                +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
+                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
+                            +FigureHtml5-Image('', 'FigureHtml5_bg_purple')
+                            +FigureHtml5-FigcaptionWrapper('', 'FigureHtml5_pdTop_correct')
+                                +FigureHtml5-Figcaption('Purple')
+                                +FigureHtml5-Figcaption('#BC9CFF', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
+                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
+                            +FigureHtml5-Image('', 'FigureHtml5_bg_green')
+                            +FigureHtml5-FigcaptionWrapper()
+                                +FigureHtml5-Figcaption('Green')
+                                +FigureHtml5-Figcaption('#6FCF97', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
+                    +ColorsAndType-Wrapper
+                        +ExampleText()
+                            +ExampleText-Header('H1', 'ExampleText_fontSize_24px ExampleText_lineH_29')
+                            +ExampleText-Text('This one is the sub-section or widget title', 'ExampleText_fontStyle_h1')
+                        +ExampleText()
+                            +ExampleText-Header('H2', 'ExampleText_fontSize_19px ExampleText_lineH_23')
+                            +ExampleText-Text('Next one is the item title inside widgets', 'ExampleText_fontStyle_h2')
+                        +ExampleText()
+                            +ExampleText-Header('H3', 'ExampleText_fontSize_12px ExampleText_textTransf_upper ExampleText_lineH_15')
+                            +ExampleText-Text('This is a label or CTA text', 'ExampleText_fontStyle_h3 ExampleText_pdBot_correct')
+                        +ExampleText()
+                            +ExampleText-Header('Body', 'ExampleText_fontSize_14px ExampleText_lineH_24')
+                            +ExampleText-Text('This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'ExampleText_fontStyle_body ExampleText_pdR_34 ExampleText_width_316px')
+            +Container-Layout()
+                +Logo
+                //+ColorsAndType
+                +Content()
+                    +Content-WrapperForFormElements()
+                        +Wrapper()
+                            +InputBlock()(class='Wrapper-FormElements')
+                                +InputBlock-Wrapper()
+                                    +InputBlock-FieldName('text field')
+                                    +InputBlock-FieldDescription('default')
+                                +InputBlock-Form()
+                                    +InputBlock-InputField()(class='InputBlock_color_dark25', type='text', placeholder='Email')
+                            +InputBlock()(class='Wrapper-FormElements')
+                                +InputBlock-Wrapper()
+                                    +InputBlock-FieldName('text field')
+                                    +InputBlock-FieldDescription('HOVER / FOCUS')(class='InputBlock_pdTop_3px')
+                                +InputBlock-Form()
+                                    +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='This is pretty awesome')
+                            +InputBlock()(class='Wrapper-GuestsDropdown')
+                                +InputBlock-Wrapper
+                                    +InputBlock-FieldName('dropdown')
+                                    +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
+                                +InputBlock-Form()
+                                    Select.DropdownGuests(multiple='multiple', id="DropdownGuests", name='DropdownGuests', size='3')
+                                        +DropdownGuests-Option('взрослые')(value='adults')
+                                        +DropdownGuests-Option('дети')(value='children')
+                                        +DropdownGuests-Option('младенцы')(value='babies')
+                            +InputBlock()(class='Wrapper-MasketField')
+                                +InputBlock-Wrapper()
+                                    +InputBlock-FieldName('masked text field')
+                                    +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_1px')
+                                +InputBlock-Form()
+                                    +InputBlock-InputField()(class='InputBlock_color_dark75', type='text', placeholder='ДД.ММ.ГГГГ')
+                            +DropdownDatepicker()(class='Wrapper-DateDropdown')
+                                +DropdownDatepicker-WrapperForDropdown()
+                                    +InputBlock()
+                                        +InputBlock-Wrapper
+                                            +InputBlock-FieldName('date dropdown')
+                                    +DropdownDatepicker-ArrivalDate()
+                                        +DropdownDatepicker-InputHidden(type="hidden")
+                                        +DropdownDatepicker-Open() ДД.ММ.ГГГГ
+                                        +DropdownDatepicker-Icon()
+                                            i.material-icons expand_more
+                                    +DropdownDatepicker-AirDatepicker()
+                                +DropdownDatepicker-WrapperForDropdown()
+                                    +InputBlock()
+                                        +InputBlock-Wrapper
+                                            +InputBlock-FieldName('date dropdown')
+                                    +DropdownDatepicker-DateOfDeparture()
+                                        +DropdownDatepicker-InputHidden(type="hidden")
+                                        +DropdownDatepicker-Open() 19.08.2019
+                                        +DropdownDatepicker-Icon()
+                                            i.material-icons expand_more
+                            +InputBlock(class='Wrapper-FilterDateDropdown')
+                                +InputBlock-Wrapper()
+                                    +InputBlock-FieldName('filter date dropdown')
+                                +FilterDateDropdown()
+                                    +FilterDateDropdown-Dropdown()
+                                        +FilterDateDropdown-InputHidden(type='hidden')
+                                        +FilterDateDropdown-Open() 19 авг - 23 авг
+                                        +FilterDateDropdown-Icon()
+                                            i.material-icons expand_more
+                                    +FilterDateDropdown-AirDatepicker()
+                            +InputBlock()
+                                +InputBlock-Wrapper()
+                                    +InputBlock-FieldName('subscription text field')
+                                +InputBlock-Form()
+                                    +InputBlock-WrapperForSelectWithArrow()
+                                        +InputBlock-SelectArrow('arrow_forward')
+                                        +InputBlock-InputField(type='text' placeholder='Email' class='InputBlock_width_266px InputBlock_appearan_none InputBlock_pdTop_11px InputBlock_letterSpacing_0px InputBlock_mrBot_97px InputBlock_color_dark75')
+                            +InputBlock()(class='Wrapper-FacilitiesDropdown')
+                                +InputBlock-Wrapper(class='InputBlock_width_265px')
+                                    +InputBlock-FieldName('dropdown')
+                                    +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
+                                select.Dropdown(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3')
+                                    +Dropdown-Option('спальни', 'selected')(value='bedrooms')
+                                    +Dropdown-Option('кровати', 'selected')(value='beds')
+                                    +Dropdown-Option('комнаты')(value='bathrooms')
+                            +InputBlock()(class='Wrapper-FacilitiesDropdown')
+                                +InputBlock-Wrapper(class='InputBlock_width_265px')
+                                    +InputBlock-FieldName('dropdown')
+                                    +InputBlock-FieldDescription('expanded')(class='InputBlock_pdTop_3px')
+                                select.Dropdown(multiple='multiple', id="dropdownFacilitiesExpanded", name='dropdownFacilities', size='3')
+                                    +Dropdown-Option('спальни', 'selected')(value='bedrooms')
+                                    +Dropdown-Option('кровати', 'selected')(value='beds')
+                                    +Dropdown-Option('ванные комнаты')(value='bathrooms')
+                            +Wrapper-ExpandableCheckboxList()
+                                +ExpandableCheckboxList()
+                                    +TitleBlock.ExpandableCheckboxList-Header()
+                                        +TitleBlock-H3() expandable checkbox list
+                                        +TitleBlock-Icon()
+                                            i.material-icons expand_more
+                                    +List.ExpandableCheckboxList-List()
                                         +List-Item()
                                             +InputForButtonsAndInputs()
                                                 +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                            +DescriptionForButtonsAndInputs() Можно курить
+                                            +DescriptionForButtonsAndInputs() Завтрак
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                            +DescriptionForButtonsAndInputs() Письменный стол
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                            +DescriptionForButtonsAndInputs() Стул для кормления
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                            +DescriptionForButtonsAndInputs() Кроватка
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                            +DescriptionForButtonsAndInputs() Телевизор
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                            +DescriptionForButtonsAndInputs() Шампунь
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                            +DescriptionForButtonsAndInputs() Телевизор
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                            +DescriptionForButtonsAndInputs() Шампунь
+                            +Wrapper-ExpandableCheckboxListOpen()
+                                +ExpandableCheckboxList()
+                                    +TitleBlock.ExpandableCheckboxList-Header()
+                                        +TitleBlock-H3() expandable checkbox list
+                                        +TitleBlock-Icon()
+                                            i.material-icons expand_more
+                                    +List.ExpandableCheckboxList-List(style="display: block;")
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                            +DescriptionForButtonsAndInputs() Завтрак
                                         +List-Item()
                                             +InputForButtonsAndInputs()
                                                 +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                            +DescriptionForButtonsAndInputs() Можно с питомцами
+                                            +DescriptionForButtonsAndInputs() Письменный стол
                                         +List-Item()
                                             +InputForButtonsAndInputs()
                                                 +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                            +DescriptionForButtonsAndInputs() Можно пригласить гостей (до 10 человек)
-                                +Wrapper-RadioButtons()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3() Radio Buttons
-                                    +RadioButtons()
-                                        +RadioButtons-Wrapper()
-                                            +RadioButtons-RadioButton(type="radio" name="gender" value="men" checked class="RadioButtons-RadioButton_active")
-                                            +RadioButtons-Label() Мужчина
-                                        +RadioButtons-Wrapper()
-                                            +RadioButtons-RadioButton(type="radio" name="gender" value="women")
-                                            +RadioButtons-Label() Женщина
-                                +Wrapper-Toggle()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3(style="margin-bottom: 16px") Toggle
-                                    +Wrapper-ToggleWrapper()
+                                            +DescriptionForButtonsAndInputs() Стул для кормления
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
+                                            +DescriptionForButtonsAndInputs() Кроватка
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" )
+                                            +DescriptionForButtonsAndInputs() Телевизор
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" )
+                                            +DescriptionForButtonsAndInputs() Шампунь
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" )
+                                            +DescriptionForButtonsAndInputs() Телевизор
+                                        +List-Item()
+                                            +InputForButtonsAndInputs()
+                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" )
+                                            +DescriptionForButtonsAndInputs() Шампунь
+                            +Wrapper-DescriptionBlock()
+                                +FigureDescriptionBlock()
+                                    +FigureDescriptionBlock-Wrapper()
+                                        +ImageForButtonsAndInputs()
+                                            i.material-icons insert_emoticon
+                                        +FigureDescriptionBlock-Figcaption()
+                                            +FigureDescriptionBlock-Header()
+                                                +TitleForButtonsAndInputs() Комфорт
+                                            +DescriptionForButtonsAndInputs() Шумопоглощающие стены
+                                    +FigureDescriptionBlock-Hr()
+                            +Wrapper-DescriptionBlockFacilities()
+                                +FigureDescriptionBlock()
+                                    +FigureDescriptionBlock-Wrapper()
+                                        +ImageForButtonsAndInputs()
+                                            i.material-icons location_city
+                                        +FigureDescriptionBlock-Figcaption()
+                                            +FigureDescriptionBlock-Header()
+                                                +TitleForButtonsAndInputs() Удобство
+                                            +DescriptionForButtonsAndInputs() Окно в каждой из спален
+                                    +FigureDescriptionBlock-Hr()
+                        +Wrapper.Content-RightWrapper()
+                            +Wrapper.Content-WrapperRow()
+                                +Wrapper()
+                                    +CheckboxList.CheckboxList_BottomIndent_30px()
+                                        +TitleBlock.CheckboxList-Header()
+                                            +TitleBlock-H3.TitleBlock-H3_withoutMarginTop_4px.TitleBlock-H3_withoutMarginBottom_10px() Checkbox Buttons
+                                        +List()
+                                            +List-Item()
+                                                +InputForButtonsAndInputs()
+                                                    +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                                +DescriptionForButtonsAndInputs() Можно курить
+                                            +List-Item()
+                                                +InputForButtonsAndInputs()
+                                                    +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
+                                                +DescriptionForButtonsAndInputs() Можно с питомцами
+                                            +List-Item()
+                                                +InputForButtonsAndInputs()
+                                                    +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
+                                                +DescriptionForButtonsAndInputs() Можно пригласить гостей (до 10 человек)
+                                    +Wrapper-RadioButtons()
+                                        +TitleBlock.CheckboxList-Header()
+                                            +TitleBlock-H3() Radio Buttons
+                                        +RadioButtons()
+                                            +RadioButtons-Wrapper()
+                                                +RadioButtons-RadioButton(type="radio" name="gender" value="men" checked class="RadioButtons-RadioButton_active")
+                                                +RadioButtons-Label() Мужчина
+                                            +RadioButtons-Wrapper()
+                                                +RadioButtons-RadioButton(type="radio" name="gender" value="women")
+                                                +RadioButtons-Label() Женщина
+                                    +Wrapper-Toggle()
+                                        +TitleBlock.CheckboxList-Header()
+                                            +TitleBlock-H3(style="margin-bottom: 16px") Toggle
+                                        +Wrapper-ToggleWrapper()
+                                            +ToggleButton()
+                                                +ToggleButton-Button(type="checkbox" id="toggleOn")
+                                                +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
                                         +ToggleButton()
-                                            +ToggleButton-Button(type="checkbox" id="toggleOn")
+                                            +ToggleButton-Button(type="checkbox")
                                             +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
-                                    +ToggleButton()
-                                        +ToggleButton-Button(type="checkbox")
-                                        +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
-                                +Wrapper-LikeButton()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3(style="margin-bottom: 16px") like button
-                                    +Wrapper-LikeButtonWrapper()
-                                        +Wrapper-LikeButtonWrapperFirst()
+                                    +Wrapper-LikeButton()
+                                        +TitleBlock.CheckboxList-Header()
+                                            +TitleBlock-H3(style="margin-bottom: 16px") like button
+                                        +Wrapper-LikeButtonWrapper()
+                                            +Wrapper-LikeButtonWrapperFirst()
+                                                +LikeButton()
+                                                    +LikeButton-GradientBorder()
+                                                        +LikeButton-Label()
+                                                            +LikeButton-Button(type="hidden" name="likes")
+                                                            +LikeButton-Icon() favorite_border
+                                                            +LikeButton-NumberLikes() 2
                                             +LikeButton()
-                                                +LikeButton-GradientBorder()
+                                                +LikeButton-GradientBorder.LikeButton-GradientBorder_active()
                                                     +LikeButton-Label()
                                                         +LikeButton-Button(type="hidden" name="likes")
-                                                        +LikeButton-Icon() favorite_border
-                                                        +LikeButton-NumberLikes() 2
-                                        +LikeButton()
-                                            +LikeButton-GradientBorder.LikeButton-GradientBorder_active()
-                                                +LikeButton-Label()
-                                                    +LikeButton-Button(type="hidden" name="likes")
-                                                    +LikeButton-Icon.LikeButton-Icon_active() favorite
-                                                    +LikeButton-NumberLikes.LikeButton-NumberLikes_active() 12
-                                +Wrapper-RateButton()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3(style="margin-bottom: 16px") rate button
-                                    +Wrapper-RateButtonWrapper()
-                                        +Wrapper-RateButtonSeparator()
+                                                        +LikeButton-Icon.LikeButton-Icon_active() favorite
+                                                        +LikeButton-NumberLikes.LikeButton-NumberLikes_active() 12
+                                    +Wrapper-RateButton()
+                                        +TitleBlock.CheckboxList-Header()
+                                            +TitleBlock-H3(style="margin-bottom: 16px") rate button
+                                        +Wrapper-RateButtonWrapper()
+                                            +Wrapper-RateButtonSeparator()
+                                                +RateButton()
+                                                    +RateButton-InputHidden(type="hidden" name="rating" value="0")
+                                                    each val, index in ['1', '2', '3', '4', '5']
+                                                        +RateButton-Star(data-id=val)
+                                                            +RateButton-StarIcon(data-id=val) star_border
                                             +RateButton()
                                                 +RateButton-InputHidden(type="hidden" name="rating" value="0")
                                                 each val, index in ['1', '2', '3', '4', '5']
                                                     +RateButton-Star(data-id=val)
                                                         +RateButton-StarIcon(data-id=val) star_border
-                                        +RateButton()
-                                            +RateButton-InputHidden(type="hidden" name="rating" value="0")
-                                            each val, index in ['1', '2', '3', '4', '5']
-                                                +RateButton-Star(data-id=val)
-                                                    +RateButton-StarIcon(data-id=val) star_border
-                                +Wrapper-SecondDropdownGuests()
-                                    +InputBlock()(class='')
-                                        +InputBlock-Wrapper
-                                            +InputBlock-FieldName('dropdown')
-                                            +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
-                                        +InputBlock-Form()
-                                            Select.DropdownGuests(multiple='multiple', id="DropdownGuests2", name='DropdownGuests', size='3')
-                                                +DropdownGuests-Option('взрослые')(value='adults')
-                                                +DropdownGuests-Option('дети')(value='children')
-                                                +DropdownGuests-Option('младенцы')(value='babies')
-                                +RichCheckboxButtons()
-                                    +TitleBlock.RichCheckboxButtons-Header()
-                                        +TitleBlock-H3(style="margin-bottom: 16px") rich checkbox buttons
-                                    +List
-                                        +List-Item.RichCheckboxButtons-Item()
-                                            +InputForButtonsAndInputs()
-                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                            +List-WrapperForDescription()
-                                                +TitleForButtonsAndInputs.RichCheckboxButtons-Title() Широкий коридор
-                                                +DescriptionForButtonsAndInputs.RichCheckboxButtons-Description() Ширина коридоров в номере не менее 91 см.
-                                        +List-Item.RichCheckboxButtons-Item()
-                                            +InputForButtonsAndInputs()
-                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                            +List-WrapperForDescription()
-                                                +TitleForButtonsAndInputs.RichCheckboxButtons-Title() Помощник для инвалидов
-                                                +DescriptionForButtonsAndInputs.RichCheckboxButtons-Description() На 1 этаже вас встретит специалист и проводит до номера.
-                            +Wrapper.Content-RightColumn()
-                                //+RangeSliderBlock()
-                                +Wrapper-RangeSlider()
-                                    +RangeSlider()
-                                        +RangeSlider-Wrapper()
-                                            +RangeSlider-Title()
-                                                +TitleBlock()
-                                                    +TitleBlock-H3(style="margin-bottom: 16px; margin-top: 0px;") Range Slider
-                                            +RangeSlider-Range(type="text" data-amount="" readonly )
-                                        +RangeSlider-Slider()
-                                //
-                                +Wrapper-Buttons()
-                                    +ButtonsBlock()
-                                        +TitleBlock()
-                                            +TitleBlock-H3(style="margin-bottom: 15px; margin-top: 0px;") buttons
-                                        +ButtonsBlock-WrapperForSamples()
-                                            +ButtonsBlock-WrapperForLeftButton()
+                                    +Wrapper-SecondDropdownGuests()
+                                        +InputBlock()(class='')
+                                            +InputBlock-Wrapper
+                                                +InputBlock-FieldName('dropdown')
+                                                +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
+                                            +InputBlock-Form()
+                                                Select.DropdownGuests(multiple='multiple', id="DropdownGuests2", name='DropdownGuests', size='3')
+                                                    +DropdownGuests-Option('взрослые')(value='adults')
+                                                    +DropdownGuests-Option('дети')(value='children')
+                                                    +DropdownGuests-Option('младенцы')(value='babies')
+                                    +RichCheckboxButtons()
+                                        +TitleBlock.RichCheckboxButtons-Header()
+                                            +TitleBlock-H3(style="margin-bottom: 16px") rich checkbox buttons
+                                        +List
+                                            +List-Item.RichCheckboxButtons-Item()
+                                                +InputForButtonsAndInputs()
+                                                    +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                                +List-WrapperForDescription()
+                                                    +TitleForButtonsAndInputs.RichCheckboxButtons-Title() Широкий коридор
+                                                    +DescriptionForButtonsAndInputs.RichCheckboxButtons-Description() Ширина коридоров в номере не менее 91 см.
+                                            +List-Item.RichCheckboxButtons-Item()
+                                                +InputForButtonsAndInputs()
+                                                    +InputForButtonsAndInputs-Checkbox(type="checkbox")
+                                                +List-WrapperForDescription()
+                                                    +TitleForButtonsAndInputs.RichCheckboxButtons-Title() Помощник для инвалидов
+                                                    +DescriptionForButtonsAndInputs.RichCheckboxButtons-Description() На 1 этаже вас встретит специалист и проводит до номера.
+                                +Wrapper.Content-RightColumn()
+                                    //+RangeSliderBlock()
+                                    +Wrapper-RangeSlider()
+                                        +RangeSlider()
+                                            +RangeSlider-Wrapper()
+                                                +RangeSlider-Title()
+                                                    +TitleBlock()
+                                                        +TitleBlock-H3(style="margin-bottom: 16px; margin-top: 0px;") Range Slider
+                                                +RangeSlider-Range(type="text" data-amount="" readonly )
+                                            +RangeSlider-Slider()
+                                    //
+                                    +Wrapper-Buttons()
+                                        +ButtonsBlock()
+                                            +TitleBlock()
+                                                +TitleBlock-H3(style="margin-bottom: 15px; margin-top: 0px;") buttons
+                                            +ButtonsBlock-WrapperForSamples()
+                                                +ButtonsBlock-WrapperForLeftButton()
+                                                    +Button()
+                                                        +Button-Btn() click me
                                                 +Button()
-                                                    +Button-Btn() click me
-                                            +Button()
-                                                +Button-Btn.Button-Btn_active() click me
-                                        +ButtonsBlock-WrapperForSamples()
-                                            +ButtonsBlock-WrapperForLeftButton()
+                                                    +Button-Btn.Button-Btn_active() click me
+                                            +ButtonsBlock-WrapperForSamples()
+                                                +ButtonsBlock-WrapperForLeftButton()
+                                                    +Button()
+                                                        +Button-Content()
+                                                            +GradientButton()
+                                                                +GradientButton-Btn()
+                                                                    span click me
                                                 +Button()
-                                                    +Button-Content()
+                                                    +Button-Content.Button-Content_active()
                                                         +GradientButton()
-                                                            +GradientButton-Btn()
-                                                                span click me
-                                            +Button()
-                                                +Button-Content.Button-Content_active()
-                                                    +GradientButton()
-                                                        +GradientButton-Btn() click me
-                                        +ButtonsBlock-WrapperForSamples()
-                                            +ButtonsBlock-WrapperForLeftButton()
+                                                            +GradientButton-Btn() click me
+                                            +ButtonsBlock-WrapperForSamples()
+                                                +ButtonsBlock-WrapperForLeftButton()
+                                                    +Button()
+                                                        +Button-GhostBtn() click me
                                                 +Button()
-                                                    +Button-GhostBtn() click me
-                                            +Button()
-                                                +Button-GhostBtn.Button-GhostBtn_active() click me
-                                        +ButtonsBlock-WrapperForSamples()
-                                            +PayButton()
-                                                +PayButton-Content()
-                                                    +PayButton-Text() перейти к оплате
-                                                    +PayButton-Arrow() arrow_forward
-                                //+PaginationBlock()
-                                +Wrapper-Pagination()
-                                    +Wrapper-PaginationTitle()
+                                                    +Button-GhostBtn.Button-GhostBtn_active() click me
+                                            +ButtonsBlock-WrapperForSamples()
+                                                +PayButton()
+                                                    +PayButton-Content()
+                                                        +PayButton-Text() перейти к оплате
+                                                        +PayButton-Arrow() arrow_forward
+                                    //+PaginationBlock()
+                                    +Wrapper-Pagination()
+                                        +Wrapper-PaginationTitle()
+                                            +TitleBlock.ExpandableCheckboxList-Header()
+                                                +TitleBlock-H3() pagination
+                                        +Pagination()
+                                            +Pagination-List()
+                                                +Pagination-Page(style="display: none;")
+                                                    +Pagination-PrevNextPage('#', 'arrow_back')
+                                                +Pagination-Page()
+                                                    +Pagination-LinkPage('#')(class="Pagination-LinkPage_active") 1
+                                                +Pagination-Page()
+                                                    +Pagination-LinkPage('#') 2
+                                                +Pagination-Page()
+                                                    +Pagination-LinkPage('#') 3
+                                                +Pagination-Page()
+                                                    +Pagination-Dots() ...
+                                                +Pagination-Page()
+                                                    +Pagination-LinkPage('#') 15
+                                                +Pagination-Page()
+                                                    +Pagination-PrevNextPage('#', 'arrow_forward')
+                                            +Pagination-AmountObjsOnPage() 1 – 12 из 100+ вариантов аренды
+                                    +Wrapper-ThirdDropdownGuests()
+                                        +InputBlock()
+                                            +InputBlock-Wrapper
+                                                +InputBlock-FieldName('dropdown')
+                                                +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
+                                            +InputBlock-Form()
+                                                Select.DropdownGuests(multiple='multiple', id="DropdownGuests3", name='DropdownGuests', size='3')
+                                                    +DropdownGuests-Option('взрослые')(value='adults')
+                                                    +DropdownGuests-Option('дети')(value='children')
+                                                    +DropdownGuests-Option('младенцы')(value='babies')
+                                    +BulletList()
                                         +TitleBlock.ExpandableCheckboxList-Header()
-                                            +TitleBlock-H3() pagination
-                                    +Pagination()
-                                        +Pagination-List()
-                                            +Pagination-Page(style="display: none;")
-                                                +Pagination-PrevNextPage('#', 'arrow_back')
-                                            +Pagination-Page()
-                                                +Pagination-LinkPage('#')(class="Pagination-LinkPage_active") 1
-                                            +Pagination-Page()
-                                                +Pagination-LinkPage('#') 2
-                                            +Pagination-Page()
-                                                +Pagination-LinkPage('#') 3
-                                            +Pagination-Page()
-                                                +Pagination-Dots() ...
-                                            +Pagination-Page()
-                                                +Pagination-LinkPage('#') 15
-                                            +Pagination-Page()
-                                                +Pagination-PrevNextPage('#', 'arrow_forward')
-                                        +Pagination-AmountObjsOnPage() 1 – 12 из 100+ вариантов аренды
-                                +Wrapper-ThirdDropdownGuests()
-                                    +InputBlock()
-                                        +InputBlock-Wrapper
-                                            +InputBlock-FieldName('dropdown')
-                                            +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
-                                        +InputBlock-Form()
-                                            Select.DropdownGuests(multiple='multiple', id="DropdownGuests3", name='DropdownGuests', size='3')
-                                                +DropdownGuests-Option('взрослые')(value='adults')
-                                                +DropdownGuests-Option('дети')(value='children')
-                                                +DropdownGuests-Option('младенцы')(value='babies')
-                                +BulletList()
-                                    +TitleBlock.ExpandableCheckboxList-Header()
-                                        +TitleBlock-H3() Bullet List
-                                    +List
-                                        +List-Item()
-                                            +DescriptionForButtonsAndInputs() Нельзя с питомцами
-                                        +List-Item()
-                                            +DescriptionForButtonsAndInputs() Без вечеринок и мероприятий
-                                        +List-Item()
-                                            +DescriptionForButtonsAndInputs() Время прибытия — после 13:00, а выезд до 12:00
-                        +Wrapper
-                            +Wrapper-Footer()
-                                +CommentBlock()
-                                    +FigureDescriptionBlock()
-                                        +FigureDescriptionBlock-Wrapper()
-                                            +ImageForButtonsAndInputs()
-                                                i.material-icons insert_emoticon
-                                            +FigureDescriptionBlock-Figcaption()
-                                                +TitleForButtonsAndInputs() Мурад Сарафанов
-                                                +DescriptionForButtonsAndInputs() 5 дней назад
-                                    +CommentBlock-WrapperLikeAndDescription()
-                                        +CommentBlock-WrapperLike()
-                                            +LikeButton()
-                                        +CommentBlock-WrapperDescription()
-                                            +DescriptionForButtonsAndInputs() Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+                                            +TitleBlock-H3() Bullet List
+                                        +List
+                                            +List-Item()
+                                                +DescriptionForButtonsAndInputs() Нельзя с питомцами
+                                            +List-Item()
+                                                +DescriptionForButtonsAndInputs() Без вечеринок и мероприятий
+                                            +List-Item()
+                                                +DescriptionForButtonsAndInputs() Время прибытия — после 13:00, а выезд до 12:00
+                            +Wrapper
+                                +Wrapper-Footer()
+                                    +CommentBlock()
+                                        +FigureDescriptionBlock()
+                                            +FigureDescriptionBlock-Wrapper()
+                                                +ImageForButtonsAndInputs()
+                                                    i.material-icons insert_emoticon
+                                                +FigureDescriptionBlock-Figcaption()
+                                                    +TitleForButtonsAndInputs() Мурад Сарафанов
+                                                    +DescriptionForButtonsAndInputs() 5 дней назад
+                                        +CommentBlock-WrapperLikeAndDescription()
+                                            +CommentBlock-WrapperLike()
+                                                +LikeButton()
+                                            +CommentBlock-WrapperDescription()
+                                                +DescriptionForButtonsAndInputs() Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
 
 
 //+Wrapper-CheckboxButtons
@@ -631,4 +641,10 @@ html
 // коммент
 // провырить форм тег и як использууться на макеты блоки
 // рефакторинг
+
+
+
+
++UIKitMarkup()
++ColorsAndType()
 
