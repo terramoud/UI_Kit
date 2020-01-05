@@ -22,6 +22,7 @@
   font-weight: normal;
 }
 
+
 @font-face {
   font-family: "Open Sans";
   src: url('./OpenSans/OpenSans-Bold.eot'); /* IE9 Compat Modes */
@@ -51,10 +52,10 @@
   font-family: "Montserrat";
   src: url('./Montserrat/Montserrat-Bold.eot'); /* IE9 Compat Modes */
   src: url('./Montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('./Montserrat/Montserrat-Bold.woff2') format('woff2'), /* Super Modern Browsers */
-  url('./Montserrat/Montserrat-Bold.woff') format('woff'), /* Pretty Modern Browsers */
-  url('./Montserrat/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('./Montserrat/Montserrat-Bold.svg#Montserrat') format('svg'); /* Legacy iOS */
+       url('./Montserrat/Montserrat-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./Montserrat/Montserrat-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./Montserrat/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./Montserrat/Montserrat-Bold.svg#Montserrat') format('svg'); /* Legacy iOS */
   font-style: normal;
   font-weight: bold;
 }
@@ -63,43 +64,31 @@
   font-family: "Montserrat";
   src: url('./Montserrat/Montserrat-Regular.eot'); /* IE9 Compat Modes */
   src: url('./Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('./Montserrat/Montserrat-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('./Montserrat/Montserrat-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-  url('./Montserrat/Montserrat-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('./Montserrat/Montserrat-Regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+       url('./Montserrat/Montserrat-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./Montserrat/Montserrat-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./Montserrat/Montserrat-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./Montserrat/Montserrat-Regular.svg#Montserrat') format('svg'); /* Legacy iOS */
   font-style: normal;
   font-weight: normal;
 }
 
 
 @font-face {
-  font-family: "Montserrat-Bold";
-  src: url('./Montserrat-Bold.ttf');
+  font-family: "Material Icons";
   font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Montserrat-Regular";
-  src: url('./Montserrat-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./MaterialIcons-Regular.eot); /* For IE6-8 */
+  font-weight: normal;
+  src: url('./MaterialIcons/MaterialIcons-Regular.eot'); /* IE9 Compat Modes */
   src: local('Material Icons'),
-  local('MaterialIcons-Regular'),
-  url(./MaterialIcons-Regular.woff2) format('woff2'),
-  url(./MaterialIcons-Regular.woff) format('woff'),
-  url(./MaterialIcons-Regular.ttf) format('truetype');
+       local('MaterialIcons-Regular'),
+       url('./MaterialIcons/MaterialIcons-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./MaterialIcons/MaterialIcons-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./MaterialIcons/MaterialIcons-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./MaterialIcons/MaterialIcons-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./MaterialIcons/MaterialIcons-Regular.svg#Material Icons') format('svg'); /* Legacy iOS */
 }
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;  /* Preferred icon size */
