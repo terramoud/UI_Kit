@@ -1,4 +1,4 @@
-mixin ExampleText-Header(content, cl)
-    div.ExampleText-Header(class= cl) #{content}
+mixin ExampleText-Header(content)
+    div.ExampleText-Header&attributes(attributes) #{content}
         if block
             block

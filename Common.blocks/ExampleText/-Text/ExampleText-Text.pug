@@ -1,4 +1,4 @@
-mixin ExampleText-Text(content, cl)
-    div.ExampleText-Text(class= cl) #{content}
+mixin ExampleText-Text(content)
+    div.ExampleText-Text&attributes(attributes) #{content}
         if block
             block

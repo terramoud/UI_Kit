@@ -19,11 +19,35 @@
   }
 }
 
+@mixin WidgetTitle {
+  font-family: Quicksand, 'Open Sans';
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: $DarkShade100;
+}
 
 @mixin TitleInsideWidget {
-  font-family: Quicksand;
+  font-family: Quicksand, 'Open Sans';
   font-weight: bold;
   font-size: 19px;
   line-height: 24px;
   color: $DarkShade100;
+}
+
+@mixin LabelText {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $DarkShade100;
+}
+
+@mixin BodyText {
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $DarkShade75;
 }

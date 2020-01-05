@@ -1,4 +1,4 @@
-mixin ExampleText-Wrapper(content, cl)
-    div.ExampleText-Wrapper(class= cl) #{content}
+mixin ExampleText-Wrapper(content)
+    div.ExampleText-Wrapper&attributes(attributes) #{content}
         if block
             block

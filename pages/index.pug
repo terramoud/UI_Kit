@@ -1,3 +1,6 @@
+include ../Common.blocks/BodyText/BodyText.pug
+include ../Common.blocks/LabelText/LabelText.pug
+include ../Common.blocks/ColorExample/-ColorName/ColorExample-ColorName.pug
 include ../Common.blocks/TitleInsideWidget/TitleInsideWidget.pug
 include ../Common.blocks/ColorsExamples/-Description/ColorsExamples-Description.pug
 include ../Common.blocks/ColorExample/ColorExample.pug
@@ -196,59 +199,59 @@ html
 
     body
         +Container
-            +Container-Layout()
+            +Container-Layout
                 +Logo
                 +ColorsAndType
                     +ColorsAndType-Wrapper
                         +ColorsExamples
-                            +ColorExample.ColorExample_darkShade100
+                            +ColorExample.ColorExample_darkened_100
                             +ColorsExamples-Description
                                 +TitleInsideWidget Dark Shade 100%
-                                +TitleInsideWidget #1F2041
-                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                            +FigureHtml5-Image('', 'FigureHtml5_bg_dsh75')
-                            +FigureHtml5-FigcaptionWrapper()
-                                +FigureHtml5-Figcaption('Dark Shade 75%')
-                                +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                            +FigureHtml5-Image('', 'FigureHtml5_bg_dsh50')
-                            +FigureHtml5-FigcaptionWrapper()
-                                +FigureHtml5-Figcaption('Dark Shade 50%')
-                                +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                            +FigureHtml5-Image('', 'FigureHtml5_bg_dsh25')
-                            +FigureHtml5-FigcaptionWrapper()
-                                +FigureHtml5-Figcaption('Dark Shade 25%')
-                                +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                            +FigureHtml5-Image('', 'FigureHtml5_bg_dsh05')
-                            +FigureHtml5-FigcaptionWrapper('', 'FigureHtml5_pdTop_correct')
-                                +FigureHtml5-Figcaption('Dark Shade 5%')
-                                +FigureHtml5-Figcaption('#1F2041', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                            +FigureHtml5-Image('', 'FigureHtml5_bg_purple')
-                            +FigureHtml5-FigcaptionWrapper('', 'FigureHtml5_pdTop_correct')
-                                +FigureHtml5-Figcaption('Purple')
-                                +FigureHtml5-Figcaption('#BC9CFF', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
-                        +FigureHtml5('', 'FigureHtml5_pdB_20px')
-                            +FigureHtml5-Image('', 'FigureHtml5_bg_green')
-                            +FigureHtml5-FigcaptionWrapper()
-                                +FigureHtml5-Figcaption('Green')
-                                +FigureHtml5-Figcaption('#6FCF97', 'FigureHtml5_fw_400 FigureHtml5_ff_quicksandRegular')
+                                +TitleInsideWidget.TitleInsideWidget_text_regular.ColorExample-ColorName #1F2041
+                        +ColorsExamples
+                            +ColorExample.ColorExample_darkened_75
+                            +ColorsExamples-Description
+                                +TitleInsideWidget Dark Shade 75%
+                                +TitleInsideWidget.TitleInsideWidget_text_regular.ColorExample-ColorName #1F2041
+                        +ColorsExamples
+                            +ColorExample.ColorExample_darkened_50
+                            +ColorsExamples-Description
+                                +TitleInsideWidget Dark Shade 50%
+                                +TitleInsideWidget.TitleInsideWidget_text_regular.ColorExample-ColorName #1F2041
+                        +ColorsExamples
+                            +ColorExample.ColorExample_darkened_25
+                            +ColorsExamples-Description
+                                +TitleInsideWidget Dark Shade 25%
+                                +TitleInsideWidget.TitleInsideWidget_text_regular.ColorExample-ColorName #1F2041
+                        +ColorsExamples
+                            +ColorExample.ColorExample_darkened_05
+                            +ColorsExamples-Description
+                                +TitleInsideWidget Dark Shade 5%
+                                +TitleInsideWidget.TitleInsideWidget_text_regular.ColorExample-ColorName #1F2041
+                        +ColorsExamples
+                            +ColorExample.ColorExample_purple
+                            +ColorsExamples-Description
+                                +TitleInsideWidget Purple
+                                +TitleInsideWidget.TitleInsideWidget_text_regular.ColorExample-ColorName #BC9CFF
+                        +ColorsExamples
+                            +ColorExample.ColorExample_green
+                            +ColorsExamples-Description
+                                +TitleInsideWidget Green
+                                +TitleInsideWidget.TitleInsideWidget_text_regular.ColorExample-ColorName #6FCF97
                     +ColorsAndType-Wrapper
-                        +ExampleText()
-                            +ExampleText-Header('H1', 'ExampleText_fontSize_24px ExampleText_lineH_29')
-                            +ExampleText-Text('This one is the sub-section or widget title', 'ExampleText_fontStyle_h1')
-                        +ExampleText()
-                            +ExampleText-Header('H2', 'ExampleText_fontSize_19px ExampleText_lineH_23')
-                            +ExampleText-Text('Next one is the item title inside widgets', 'ExampleText_fontStyle_h2')
-                        +ExampleText()
-                            +ExampleText-Header('H3', 'ExampleText_fontSize_12px ExampleText_textTransf_upper ExampleText_lineH_15')
-                            +ExampleText-Text('This is a label or CTA text', 'ExampleText_fontStyle_h3 ExampleText_pdBot_correct')
-                        +ExampleText()
-                            +ExampleText-Header('Body', 'ExampleText_fontSize_14px ExampleText_lineH_24')
-                            +ExampleText-Text('This is the body text which is used for most of the design, like paragraphs, lists, etc.', 'ExampleText_fontStyle_body ExampleText_pdR_34 ExampleText_width_316px')
-            +Container-Layout()
+                        +ExampleText
+                            +BodyText.BodyText_darkened_25.ExampleText-Header.ExampleText-Header_fontSize_h1 H1
+                            +WidgetTitle.ExampleText-Text This one is the sub-section or widget title
+                        +ExampleText
+                            +BodyText.BodyText_darkened_25.ExampleText-Header.ExampleText-Header_fontSize_h2 H2
+                            +TitleInsideWidget.ExampleText-Text Next one is the item title inside widgets
+                        +ExampleText
+                            +LabelText.LabelText_darkened_25.LabelText_text_regular.ExampleText-Header H3
+                            +LabelText.ExampleText-Text This is a label or CTA text
+                        +ExampleText.ExampleText_direction_top
+                            +BodyText.BodyText_darkened_25.ExampleText-Header Body
+                            +BodyText.ExampleText-Text.ExampleText-Text_text_wrapping This is the body text which is used for most of the design, like paragraphs, lists, etc.
+            +Container-Layout
                 +Logo
                 //+ColorsAndType
                 +Content()
@@ -641,10 +644,4 @@ html
 // коммент
 // провырить форм тег и як использууться на макеты блоки
 // рефакторинг
-
-
-
-
-+UIKitMarkup()
-+ColorsAndType()
 
