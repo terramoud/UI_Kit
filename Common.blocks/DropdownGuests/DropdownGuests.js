@@ -18,9 +18,9 @@
 *     <input type="text" name="beds" value="2">
 *   </div>
 * </li>
-* 
+*
 * option's value == input's(type="checkbox") value == input's(type="text") the attribute name
-* 
+*
 * output:
 *   multiselect_dropdownFacilities == ['bedrooms', 'beds']
 *   bedrooms == "3"
@@ -31,7 +31,7 @@
 $('select.DropdownGuests').each(function(index, el) {
 
 
-  /** 
+  /**
   * Namespace
   */
   var cloneThis = this;
@@ -44,15 +44,15 @@ $('select.DropdownGuests').each(function(index, el) {
     borderBottomLeftRadius: '',
     borderBottomRightRadius: '',
   };
-  
 
-  /** 
-  * Includs widget multiselect 
+
+  /**
+  * Includes widget multiselect
   */
   $('#' + dropdownGuests.id).multiselect({
     create: function(argument) {
 
-      /** 
+      /**
       * it is creating the expand more arrow instead the default arrow
       */
       $(this).next().find('.ui-multiselect-open').prepend('<i class="material-icons">expand_more</i>').children('.ui-icon').remove();
@@ -60,7 +60,7 @@ $('select.DropdownGuests').each(function(index, el) {
     },
 
     click: function(event, ui){ // it is deleting the click handler for the widget, now we can will be creating the custom handler
-      return false; 
+      return false;
     },
 
     buttonWidth: 'auto',
@@ -72,38 +72,41 @@ $('select.DropdownGuests').each(function(index, el) {
       $('.DropdownGuests').css({
         'border-bottom-left-radius': '0px',
         'border-bottom-right-radius': '0px',
+        'border-color': 'rgba(31, 32, 65, 0.5',
       });
     },
     close: function(){
       $('.DropdownGuests').css({
         'border-bottom-left-radius': dropdownGuests.borderBottomLeftRadius,
         'border-bottom-right-radius': dropdownGuests.borderBottomRightRadius,
+        'border-color': 'rgba(31, 32, 65, 0.25',
       });
     },
   });
 
 
-  /** 
+  /**
   * it is swapping multiselect header
   */
   var header = $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').children('.ui-multiselect-header').detach();
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').append(header);
 
 
-  /** 
+  /**
   * it is removing unnecessary items from the header
   */
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').find('li.ui-multiselect-close').remove();
+  $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').closest('.ui-multiselect-menu').attr('data-dropdown-guests', '');
 
 
-  /** 
-  * it swapps default buttons   
+  /**
+  * it swapps default buttons
   */
   var replacedButton = $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header li:first').detach();
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header .ui-helper-reset').append(replacedButton);
 
 
-  /** 
+  /**
   *  it is creating the apply button instead the default button and this delete the handlers of events
   */
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header li:last').html(function(indx, oldHtml) {
@@ -111,7 +114,7 @@ $('select.DropdownGuests').each(function(index, el) {
   });
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').parents('.ui-multiselect-menu').find('.ui-multiselect-header span:last').text(dropdownGuests.clearButton);
 
-  /** 
+  /**
   * This are adding styles for widget dropdowns
   */
   $('#' + dropdownGuests.id).each(function(index, el) {
@@ -119,8 +122,8 @@ $('select.DropdownGuests').each(function(index, el) {
   });
 
 
-  /** 
-  * Creating custom buttons instead of default buttons in <input type="text"> 
+  /**
+  * Creating custom buttons instead of default buttons in <input type="text">
   */
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').each(function(index, el) {
     $(this).append(
@@ -133,7 +136,7 @@ $('select.DropdownGuests').each(function(index, el) {
   });
 
 
-  /** 
+  /**
   * This passes to the attribute 'name' the value that was obtained from the widget menu <input> tags
   */
   $('.ui-multiselect-checkboxes label[for *= "' + dropdownGuests.id + '-"]').find('input[type=checkbox]').each(function(index) {
@@ -142,7 +145,7 @@ $('select.DropdownGuests').each(function(index, el) {
   });
 
 
-  /** 
+  /**
   * This adds additional handlers for the click event. This changes the text of the widget to text when nothing is selected and resets the value of the input field.
   */
   $("label[for *= '" + dropdownGuests.id + "-']").parents('.ui-multiselect-menu').find('.ui-multiselect-none').click(function(event) {
@@ -154,40 +157,40 @@ $('select.DropdownGuests').each(function(index, el) {
   });
 
 
-  /** 
+  /**
   * This events are adding count of selected items in multiselect widget
   */
-  $("label[for *= '" + dropdownGuests.id + "-']").find(".DropdownGuests-QuantityIconPlus").click(function(eventObject){ 
+  $("label[for *= '" + dropdownGuests.id + "-']").find(".DropdownGuests-QuantityIconPlus").click(function(eventObject){
     var targetPlus = $(this).prev();
     targetPlus.val( +targetPlus.val() + 1 ); //This adds the number of selected elements in the “value” attribute of the “input” tag.
-    
-    /** 
+
+    /**
     * It's restoring the clear button
     */
     $(this).parents('.ui-multiselect-menu').find('.ui-multiselect-none').css('visibility', 'inherit');
     $(this).siblings('.DropdownGuests-QuantityIconMinus').removeClass('DropdownGuests-QuantityIconMinus_noActive');
 
-    /** 
+    /**
     * It's get the a unique identifier for every the dropdownGuests widget
     */
     var objectInput = $(this).parent('.DropdownGuests-QuantityBlock').siblings('input');
     var widgetId = objectInput.attr('id');
     var commonSumInputs  = 0;
     widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i); // defined select attr id by input attr id that located in dropdownmenu
-          
-    /** 
+
+    /**
     * This is couting the common sum all guests for the this dropdown
     */
     $("label[for *= '" + dropdownGuests.id + "-']").find('.DropdownGuests-QuantityNum').each(function(index, el) {
       commonSumInputs += +$(this).val();
     });
 
-    /** 
+    /**
     * This is adding "checked" attribute for is passes "name" attribute for backend
     */
     objectInput.prop('checked', 'checked');
 
-    /** 
+    /**
     * This is changes the end of text in 'widget field'
     */
     var guests = commonSumInputs % 10;
@@ -196,10 +199,10 @@ $('select.DropdownGuests').each(function(index, el) {
     if (!guests) widgeText = commonSumInputs + ' гостей';
     if (guests == 1 && manyGuests < 11 || guests == 1 && manyGuests > 19) widgeText = commonSumInputs + ' гость';
     if (guests > 1 && guests < 5 && manyGuests < 11 || guests > 1 && guests < 5 && manyGuests > 14) widgeText = commonSumInputs + ' гостя';
-    if (guests >= 5 && guests <= 9) widgeText = commonSumInputs + ' гостей'; 
+    if (guests >= 5 && guests <= 9) widgeText = commonSumInputs + ' гостей';
     if (manyGuests >= 11 && manyGuests <= 14) widgeText = commonSumInputs + ' гостей';
 
-    /** 
+    /**
     * This is changes text in 'widget field'
     */
     $('#' + widgetId[1] + '_ms span:last').text(widgeText);
@@ -213,22 +216,22 @@ $('select.DropdownGuests').each(function(index, el) {
     if (targetMinus.val() > 0) {
       targetMinus.val( +targetMinus.val() - 1 );
 
-      /** 
+      /**
       * It's get the a unique identifier for every the dropdownGuests widget
       */
       var objectInput = $(this).parent('.DropdownGuests-QuantityBlock').siblings('input');
       var widgetId = objectInput.attr('id');
       var commonSumInputs  = 0;
       widgetId = widgetId.match(/^[^-]+-[^-]+-[^-]+-([^-]+)/i); // defined select attr id by input attr id that located in dropdownmenu
-      
-      /** 
+
+      /**
       * This is couting the common sum all guests for the this dropdown
       */
       $("label[for *= '" + dropdownGuests.id + "-']").find('.DropdownGuests-QuantityNum').each(function(index, el) {
         commonSumInputs += +$(this).val();
       });
 
-      /** 
+      /**
       * This is adding "checked" attribute for is passes "name" attribute for backend
       */
       if (targetMinus.val() <= 0) {
@@ -236,7 +239,7 @@ $('select.DropdownGuests').each(function(index, el) {
         $(this).addClass('DropdownGuests-QuantityIconMinus_noActive');
       }
 
-      /** 
+      /**
       * This is changes the end of text in 'widget field'
       */
       var guests = commonSumInputs % 10;
@@ -245,18 +248,18 @@ $('select.DropdownGuests').each(function(index, el) {
       if (!guests) widgeText = commonSumInputs + ' гостей';
       if (guests == 1 && manyGuests < 11 || guests == 1 && manyGuests > 19) widgeText = commonSumInputs + ' гость';
       if (guests > 1 && guests < 5 && manyGuests < 11 || guests > 1 && guests < 5 && manyGuests > 14) widgeText = commonSumInputs + ' гостя';
-      if (guests >= 5 && guests <= 9) widgeText = commonSumInputs + ' гостей'; 
+      if (guests >= 5 && guests <= 9) widgeText = commonSumInputs + ' гостей';
       if (manyGuests >= 11 && manyGuests <= 14) widgeText = commonSumInputs + ' гостей';
 
       if (commonSumInputs <= 0) {
 
-        /** 
-        * This changes the text of the widget to text when nothing is selected and resets the value of the input field. 
+        /**
+        * This changes the text of the widget to text when nothing is selected and resets the value of the input field.
         */
         $('.ui-multiselect-checkboxes input[type=checkbox]').prop('checked', false);
         $('#' + widgetId[1] + '_ms span:last').text(dropdownGuests.noneSelectedText);
 
-        /** 
+        /**
         * It's restoring the clear button
         */
         $(this).parents('.ui-multiselect-menu').find('.ui-multiselect-none').css('visibility', 'hidden');
@@ -264,7 +267,7 @@ $('select.DropdownGuests').each(function(index, el) {
 
       } else {
 
-        /** 
+        /**
         * This is changes text in 'widget field'
         */
         $('#' + widgetId[1] + '_ms span:last').text(widgeText);

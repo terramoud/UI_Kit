@@ -23,42 +23,35 @@
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
- .DropdownGuests {
+  .DropdownGuests {
+    @include BodyText;
+    line-height: 18px;
     display: block;
     appearance: none;
     -webkit-appearance: none;
     box-shadow: none;
     border: none;
+    outline: none;
     box-sizing: border-box;
     border: 1px solid $DarkShade25;
     border-radius: 4px;
-    width: 100%;
+    width: 320px;
     height: 44px;
-    padding: 12px 14px;
-    font-family: Montserrat-Regular, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    padding: 11px 14px;
     letter-spacing: 0;
-    background-color: transparent;
-    color: $DarkShade75;
+    background: $background;
     &:after {
-     border: none;
-     box-shadow: none;
+      border: none;
+      box-shadow: none;
     }
     &:before {
-     border: none;
-     box-shadow: none;
-    }
-    &:hover {
-     border-color: $DarkShade50;
+      border: none;
+      box-shadow: none;
     }
     &:focus {
-     border-color: $DarkShade50;
+      outline: none;
     }
   }
-
 
   .ui-multiselect-open {
     position: relative;
@@ -66,186 +59,174 @@
     color: $DarkShade50;
   }
 
-  .ui-multiselect-menu {
-    padding: 0px 3px 5px 13px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
+  [data-dropdown-guests].ui-multiselect-menu {
+     box-shadow: 0px 10px 20px $DarkShade05;
+     border: 1px solid $DarkShade50;
+     border-top-width: 0;
+     padding: 0px 3px 5px 13px;
+     border-radius: 4px;
+     border-top-left-radius: 0;
+     border-top-right-radius: 0;
 
-  .ui-multiselect-checkboxes label {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    text-indent: 0px;
-    border: 0px solid transparent; 
-  }
+    .ui-multiselect-checkboxes label {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+      text-indent: 0px;
+      border: 0px solid transparent;
+    }
 
-  .ui-multiselect-checkboxes li {
-    padding: 0;
-    margin: 0;
-    padding: 5px 0 0 0;
-  }
+    .ui-multiselect-checkboxes li {
+      padding: 0;
+      margin: 0;
+      padding: 5px 0 0 0;
+    }
 
-  label.ui-corner-all.ui-state-hover {
-    background: transparent;
-    border: 0px solid transparent;
-    margin: 0;
-    padding: 0;
-  }
-
-    .ui-widget input {
-    font-size: 12px;
-    line-height: 15px;
-    font-family: Montserrat-bold;
-  }
-
-  .ui-widget button {
-    font-size: 18px;
-    line-height: 22px;
-    font-family: Montserrat-Regular;
-  }
+    label.ui-corner-all.ui-state-hover {
+      background: transparent;
+      border: 0px solid transparent;
+      margin: 0;
+      padding: 0;
+    }
 
     .ui-multiselect-header {
-    background-color: white;
-    border: none;
-    padding: 17px 4px 3px 0;
-  }
-  .ui-multiselect-header .ui-helper-reset {
-    display: flex;
-    justify-content: space-between;
-    
-  }
-  .ui-multiselect-none {
-    visibility: hidden;
-  }
-  .ui-multiselect-header li {
-    margin: 0;
-  }
-  .ui-widget .ui-multiselect-apply {
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-family: "Montserrat-Bold";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $colorApplyButtonGuestsDropdown;
-    background-color: transparent;
-    outline: none;
-    &:hover {
-      cursor: pointer;
+      background-color: white;
+      border: none;
+      padding: 17px 4px 3px 0;
     }
-    &:focus {
-      outline: none;
+    .ui-multiselect-header .ui-helper-reset {
+      display: flex;
+      justify-content: space-between;
     }
-  }
-  .ui-icon-closethick {
-    display: none;
-    
-  }
-  .ui-multiselect-none {
-    font-family: "Montserrat-Bold";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
-    color: $DarkShade50;
-  }
-  .ui-multiselect-checkboxes span {
-    order: -1;
-    font-family: "Montserrat-bold";
-    font-size: 12px;
-    line-height: 15px;;
-    text-transform: uppercase;
-    padding-top: 6px;
-  }
-  .ui-multiselect-checkboxes input {
-    padding: 0 0 8px 0;
-    outline: none;
-  }
-  .ui-multiselect-checkboxes {
-    padding: 0 0 0 1px;
-  }
-  /** 
-  * This adds "..." to the end of the string that locate in widget field
-  */
-  .ui-multiselect span:last-child {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    width: auto;
-  }
 
-  .ui-multiselect-checkboxes input[type=checkbox] {
-    display: none;
-  }
-  .DropdownGuests-QuantityBlock {
-    display: flex;
-  }
-  .DropdownGuests-QuantityIconMinus, .DropdownGuests-QuantityIconPlus {
-    height: 30px;
-    width: 30px;
-    margin-bottom: 2px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 18px;
-    line-height: 22px;
-    font-family: Montserrat-Regular;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 1px solid grey;
-    width: 30px;
-    outline: none;
-    &:hover {
-      cursor: pointer;
+    .ui-multiselect-header a.ui-multiselect-none {
+      visibility: hidden;
+      text-decoration: none;
     }
-  } 
-  .DropdownGuests-QuantityNum {
-    width: 32px;
-    background: transparent;
-    border: none;
-    appearance: none;
-    -webkit-appearance: none;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 12px;
-    line-height: 15px;
-    font-family: Montserrat-bold;
-    outline: none;
-    &:hover {
+
+    .ui-multiselect-header a.ui-multiselect-none span{
+      text-decoration: none;
+    }
+
+    .ui-multiselect-header li {
+      margin: 0;
+    }
+
+    .ui-multiselect-header .ui-multiselect-none {
+      @include LabelText;
+      color: $DarkShade50;
+    }
+
+    & .ui-multiselect-apply {
+      border: none;
+      padding: 0;
+      margin: 0;
+      @include LabelText;
+      color: $colorApplyButtonGuestsDropdown;
+      background-color: transparent;
+      outline: none;
+      &:hover {
+      cursor: pointer;
+      }
+      &:focus {
+      outline: none;
+      }
+    }
+    .ui-icon-closethick {
+      display: none;
+    }
+
+    .ui-multiselect-checkboxes span {
+      order: -1;
+      @include LabelText;
+      padding-top: 6px;
+    }
+    .ui-multiselect-checkboxes input {
+      padding: 0 0 8px 0;
+      outline: none;
+    }
+    .ui-multiselect-checkboxes {
+      padding: 0 0 0 1px;
+    }
+    /**
+    * This adds "..." to the end of the string that locate in widget field
+    */
+    .ui-multiselect span:last-child {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      width: auto;
+    }
+
+    .ui-multiselect-checkboxes input[type=checkbox] {
+      display: none;
+    }
+    .DropdownGuests-QuantityBlock {
+      display: flex;
+    }
+    .DropdownGuests-QuantityIconMinus, .DropdownGuests-QuantityIconPlus {
+      height: 30px;
+      width: 30px;
+      margin-bottom: 2px;
+      text-align: center;
+      vertical-align: middle;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $DarkShade25;
+      outline: none;
+      color: $DarkShade25;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .DropdownGuests-QuantityNum {
+      width: 32px;
       background: transparent;
       border: none;
       appearance: none;
       -webkit-appearance: none;
+      text-align: center;
+      vertical-align: middle;
+      @include LabelText;
       outline: none;
-      cursor: default;
-    }     
-    &:focus {
-      background: transparent;
-      border: none;
-      appearance: none;
-      -webkit-appearance: none;
-      outline: none;
-    }   
-    &:visited {
-      background: transparent;
-      border: none;
-      appearance: none;
-      -webkit-appearance: none;
-      outline: none;
-    } 
-  }
-  .DropdownGuests-QuantityIconMinus_noActive {
-    border-color: $DarkShade25;
+      &:hover {
+        background: transparent;
+        border: none;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: default;
+      }
+      &:focus {
+        background: transparent;
+        border: none;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+      }
+      &:visited {
+        background: transparent;
+        border: none;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+      }
+    }
+    .DropdownGuests-QuantityIconMinus_noActive {
+      border-color: $DarkShade05;
+      color: $DarkShade05;
+    }
   }
 
 }

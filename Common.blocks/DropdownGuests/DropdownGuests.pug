@@ -1,2 +1,7 @@
-mixin DropdownGuests(content)
-    select.DropdownGuests&attributes(attributes) #{content}
+mixin DropdownGuests()
+    select.DropdownGuests&attributes(attributes)
+        - var numOptions = attributes['data-option-content'].length ? attributes['data-option-content'].length : 0
+        - var value = attributes['data-option-value']
+        - var content = attributes['data-option-content']
+        - for (var x = 0; x < numOptions; x++)
+            option(value=value[x])= content[x]

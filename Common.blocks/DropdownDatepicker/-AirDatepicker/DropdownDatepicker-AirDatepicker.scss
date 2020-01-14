@@ -62,13 +62,9 @@
     }
 
     .datepicker--day-name {
+      @include LabelText;
       color: $DatepickerArrowColor;
       text-transform: none;
-      font-family: Montserrat-Bold;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
       align-items: center;
       text-align: center;
     }
@@ -120,12 +116,13 @@
     }
 
     .datepicker--cell {
+      @include LabelText;
       height: 40px;
-      font-family: Montserrat-Regular;
-      font-style: normal;
       font-weight: normal;
-      font-size: 12px;
       color: $DarkShade50;
+      &.-other-month- {
+        color: $DarkShade25;
+      }
       &.-selected-.-focus- {
         background: $DatepickerGradientFocus;
       }

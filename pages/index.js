@@ -2,9 +2,9 @@ require('./index.pug');
 require('jquery');
 require('webpack-jquery-ui');
 require('webpack-jquery-ui/css');
+require('inputmask/dist/jquery.inputmask');
 //require('webpack-jquery-ui/selectmenu');
 require('../Common.blocks/Fonts/Fonts.scss');
-
 
 /*Library.blocks*/
 
@@ -16,7 +16,6 @@ require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/css/jquery.mswitch.c
 require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/js/jquery.mswitch.js');
 
 /*End Library.blocks*/
-
 
 require('./index.scss');
 
@@ -363,3 +362,23 @@ require('../Common.blocks/LabelText/_text/LabelText_text_regular.js');
 require('../Common.blocks/LabelText/_darkened/LabelText_darkened_25.js');
 require('../Common.blocks/ExampleText/-Text/_text/ExampleText-Text_text_wrapping.js');
 require('../Common.blocks/ExampleText/_direction/ExampleText_direction_top.js');
+require('../Common.blocks/Container/-Layout/_size/Container-Layout_size_formElementsLayout.js');
+require('../Common.blocks/FormElements/FormElements.js');
+require('../Common.blocks/FormElements/-Wrapper/FormElements-Wrapper.js');
+require('../Common.blocks/InputField/InputField.js');
+require('../Common.blocks/InputField/_active/InputField_active.js');
+
+require('../Common.blocks/FieldOfSignIn/FieldOfSignIn.js');
+require('../Common.blocks/FieldOfSignIn/-Header/FieldOfSignIn-Header.js');
+require('../Common.blocks/LabelText/_darkened/LabelText_darkened_50.js');
+require('../Common.blocks/FormElements/-CorrectiveWrapper/FormElements-CorrectiveWrapper.js');
+require('../Common.blocks/FormElementsDescrSt/FormElementsDescrSt.js');
+require('../Common.blocks/FormElements/-TxField/FormElements-TxField.js');
+require('../Common.blocks/FormElements/-TxField/_indentB/FormElements-TxField_indentB_20px.js');
+require('../Common.blocks/FormElements/-TxField/_indentB/FormElements-TxField_indentB_40px.js');
+
+require('../Common.blocks/FormElements/-Datepicker/FormElements-Datepicker.js');
+require('../Common.blocks/FormElements/-Dropdown/FormElements-Dropdown.js');
+require('../Common.blocks/FormElements/-DropdownGuests/FormElements-DropdownGuests.js');
+require('../Common.blocks/FormElements/-TxField/_indentB/FormElements-TxField_indentB_20px.js');
+require('../Common.blocks/DropdownDatepicker/-Header/DropdownDatepicker-Header.js');
