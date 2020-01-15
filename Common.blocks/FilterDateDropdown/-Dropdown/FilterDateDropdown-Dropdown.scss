@@ -26,6 +26,7 @@
   .FilterDateDropdown-Dropdown {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     appearance: none;
     -webkit-appearance: none;
     box-shadow: none;
@@ -35,8 +36,7 @@
     border-radius: 4px;
     width: 266px;
     height: 44px;
-    padding: 10px 9px 12px 14px;
-    margin-top: 1px;
+    padding: 0px 9px 0px 14px;
     font-family: Montserrat-Regular, sans-serif;
     font-style: normal;
     font-weight: normal;

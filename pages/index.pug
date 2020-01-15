@@ -1,3 +1,11 @@
+include ../Common.blocks/FormElements/-SubscrTxField/FormElements-SubscrTxField.pug
+include ../Common.blocks/SubscrTxField/-Icon/SubscrTxField-Icon.pug
+include ../Common.blocks/SubscrTxField/-InputField/SubscrTxField-InputField.pug
+include ../Common.blocks/SubscrTxField/SubscrTxField.pug
+include ../Common.blocks/FormElSubscrTxField/FormElSubscrTxField.pug
+include ../Common.blocks/InputField/-Icon/InputField-Icon.pug
+include ../Common.blocks/InputField/-Arrow/InputField-Arrow.pug
+include ../Common.blocks/FormElements/-FilterDateDropdown/FormElements-FilterDateDropdown.pug
 include ../Common.blocks/DropdownDatepicker/-Header/DropdownDatepicker-Header.pug
 include ../Common.blocks/FormElements/-DropdownGuests/FormElements-DropdownGuests.pug
 include ../Common.blocks/FormElements/-Dropdown/FormElements-Dropdown.pug
@@ -292,42 +300,41 @@ html
                                     +LabelText.LabelText_darkened_50.LabelText_text_regular default
                                 +InputField(type='text' data-type="date" placeholder='ДД.ММ.ГГГГ')
                             +DropdownDatepicker.FormElements-Datepicker
-                                +DropdownDatepicker-WrapperForDropdown()
+                                +DropdownDatepicker-WrapperForDropdown
                                     +LabelText.DropdownDatepicker-Header date dropdown
-                                    +DropdownDatepicker-ArrivalDate()
+                                    +DropdownDatepicker-ArrivalDate
                                         +DropdownDatepicker-InputHidden(type="hidden")
-                                        +DropdownDatepicker-Open() ДД.ММ.ГГГГ
-                                        +DropdownDatepicker-Icon()
+                                        +DropdownDatepicker-Open ДД.ММ.ГГГГ
+                                        +DropdownDatepicker-Icon
                                             i.material-icons expand_more
-                                    +DropdownDatepicker-AirDatepicker()
-                                +DropdownDatepicker-WrapperForDropdown()
+                                    +DropdownDatepicker-AirDatepicker
+                                +DropdownDatepicker-WrapperForDropdown
                                     +LabelText.DropdownDatepicker-Header date dropdown
-                                    +DropdownDatepicker-DateOfDeparture()
+                                    +DropdownDatepicker-DateOfDeparture
                                         +DropdownDatepicker-InputHidden(type="hidden")
-                                        +DropdownDatepicker-Open() 19.08.2019
-                                        +DropdownDatepicker-Icon()
+                                        +DropdownDatepicker-Open 19.08.2019
+                                        +DropdownDatepicker-Icon
                                             i.material-icons expand_more
-                            +InputBlock(class='Wrapper-FilterDateDropdown')
-                                +InputBlock-Wrapper()
-                                    +InputBlock-FieldName('filter date dropdown')
-                                +FilterDateDropdown()
-                                    +FilterDateDropdown-Dropdown()
+                            +FieldOfSignIn.FormElements-FilterDateDropdown
+                                +FieldOfSignIn-Header
+                                    +LabelText filter date dropdown
+                                +FilterDateDropdown
+                                    +FilterDateDropdown-Dropdown
                                         +FilterDateDropdown-InputHidden(type='hidden')
-                                        +FilterDateDropdown-Open() 19 авг - 23 авг
-                                        +FilterDateDropdown-Icon()
+                                        +FilterDateDropdown-Open 19 авг - 23 авг
+                                        +FilterDateDropdown-Icon
                                             i.material-icons expand_more
                                     +FilterDateDropdown-AirDatepicker()
-                        +InputBlock()
-                            +InputBlock-Wrapper()
-                                +InputBlock-FieldName('subscription text field')
-                            +InputBlock-Form()
-                                +InputBlock-WrapperForSelectWithArrow()
-                                    +InputBlock-SelectArrow('arrow_forward')
-                                    +InputBlock-InputField(type='text' placeholder='Email' class='InputBlock_width_266px InputBlock_appearan_none InputBlock_pdTop_11px InputBlock_letterSpacing_0px InputBlock_mrBot_97px InputBlock_color_dark75')
-                        +InputBlock()(class='Wrapper-FacilitiesDropdown')
-                            +InputBlock-Wrapper(class='InputBlock_width_265px')
-                                +InputBlock-FieldName('dropdown')
-                                +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
+                        +FieldOfSignIn.FormElements-SubscrTxField
+                            +FieldOfSignIn-Header
+                                +LabelText subscription text field
+                            +SubscrTxField.FormElSubscrTxField
+                                +SubscrTxField-InputField(type='text' placeholder='Email')
+                                +SubscrTxField-Icon('arrow_forward')
+                        +FieldOfSignIn()(class='Wrapper-FacilitiesDropdown')
+                            +FieldOfSignIn-Header(class='InputBlock_width_265px')
+                                +LabelText dropdown
+                                +LabelText.LabelText_darkened_50.LabelText_text_regular default
                             select.Dropdown(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3')
                                 +Dropdown-Option('спальни', 'selected')(value='bedrooms')
                                 +Dropdown-Option('кровати', 'selected')(value='beds')
@@ -650,10 +657,27 @@ html
 
 
 
-+FormElements-Datepicker()
+//+FormElements-Datepicker()
+//
+//+FormElements-Dropdown()
+//
+//+FormElements-DropdownGuests()
+//
+//+DropdownDatepicker-Header()
+//
+//+FormElements-FilterDateDropdown()
 
-+FormElements-Dropdown()
 
-+FormElements-DropdownGuests()
 
-+DropdownDatepicker-Header()
+
++InputField-Icon()
+
++FormElSubscrTxField()
+
++SubscrTxField()
+
++SubscrTxField-InputField()
+
++SubscrTxField-Icon()
+
++FormElements-SubscrTxField()

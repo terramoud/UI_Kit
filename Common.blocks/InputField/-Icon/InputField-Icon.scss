@@ -1,41 +1,52 @@
 @media only screen and (max-width: 576px) {
-  .FilterDateDropdown-Icon {
+  .InputField-Icon {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .FilterDateDropdown-Icon {
+  .InputField-Icon {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .FilterDateDropdown-Icon {
+  .InputField-Icon {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .FilterDateDropdown-Icon {
+  .InputField-Icon {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .FilterDateDropdown-Icon {
-    cursor: pointer;
+  .InputField-Icon {
+    position: absolute;
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    text-align: center;
+    background: $DatepickerGradient;
+    left: 2px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .FilterDateDropdown-Icon {
+  .InputField-Icon {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .FilterDateDropdown-Icon {
+  .InputField-Icon {
 
   }
 }

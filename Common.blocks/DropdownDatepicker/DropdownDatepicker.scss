@@ -25,6 +25,10 @@
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
   .DropdownDatepicker {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
   }
 }
 

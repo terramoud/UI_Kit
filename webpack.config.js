@@ -12,9 +12,8 @@ module.exports = {
     app: path.resolve(__dirname, "pages", "index.js"),
   },
   output: {
-    filename: '[hash].[name].js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
   },
   devtool: 'inline-source-map',
   mode: 'development',
@@ -42,7 +41,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               hmr: true,
-              /*reloadAll: true,*/
+              // reloadAll: false,
             },
           },
           /*"style-loader", // creates style nodes from JS strings*/
@@ -67,7 +66,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               hmr: true,
-              /*reloadAll: true,*/
+              // reloadAll: false,
             },
           },
           {
@@ -105,8 +104,6 @@ module.exports = {
       template: './pages/index.pug',
       inject: 'body',
       defer: ['app'],
-      cache: true,
-      hash: true,
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
@@ -121,7 +118,7 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({}),
     ],
     moduleIds: 'hashed',
-    runtimeChunk: 'single',
+    //runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: {
         vendor: {
