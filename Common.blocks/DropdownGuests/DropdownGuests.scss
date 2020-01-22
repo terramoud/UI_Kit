@@ -51,14 +51,15 @@
     &:focus {
       outline: none;
     }
+    .ui-multiselect-open {
+      position: relative;
+      bottom: 3px;
+      color: $DarkShade50;
+      cursor: pointer;
+    }
   }
 
-  .ui-multiselect-open {
-    position: relative;
-    bottom: 3px;
-    color: $DarkShade50;
-    cursor: pointer;
-  }
+
 
   [data-dropdown-guests].ui-multiselect-menu {
      box-shadow: 0px 10px 20px $DarkShade05;

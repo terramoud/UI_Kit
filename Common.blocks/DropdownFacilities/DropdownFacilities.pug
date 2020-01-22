@@ -1,0 +1,8 @@
+mixin DropdownFacilities()
+    select.DropdownFacilities&attributes(attributes)
+         - var numOptions = attributes['data-option-content'].length ? attributes['data-option-content'].length : 0
+         - var value = attributes['data-option-value']
+         - var content = attributes['data-option-content']
+         - var declension = attributes['data-option-declension']
+         - for (var x = 0; x < numOptions; x++)
+             option(value=value[x] data-option-declension=declension[x])= content[x]

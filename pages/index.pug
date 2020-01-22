@@ -1,3 +1,4 @@
+include ../Common.blocks/FormElements/-DropdownFacilities/FormElements-DropdownFacilities.pug
 include ../Common.blocks/FormElements/-SubscrTxField/FormElements-SubscrTxField.pug
 include ../Common.blocks/SubscrTxField/-Icon/SubscrTxField-Icon.pug
 include ../Common.blocks/SubscrTxField/-InputField/SubscrTxField-InputField.pug
@@ -171,14 +172,12 @@ include ../Common.blocks/DropdownDatepicker/-Open/DropdownDatepicker-Open.pug
 include ../Common.blocks/DropdownDatepicker/-Icon/DropdownDatepicker-Icon.pug
 include ../Common.blocks/DropdownDatepicker/DropdownDatepicker.pug
 
-include ../Common.blocks/DropdownGuests/-Option/DropdownGuests-Option.pug
 include ../Common.blocks/DropdownGuests/DropdownGuests.pug
 include ../Common.blocks/Wrapper/-FacilitiesDropdown/Wrapper-FacilitiesDropdown.pug
 include ../Common.blocks/Wrapper/-DateDropdown/Wrapper-DateDropdown.pug
 include ../Common.blocks/Wrapper/-GuestsDropdown/Wrapper-GuestsDropdown.pug
 include ../Common.blocks/Wrapper/-MasketField/Wrapper-MasketField.pug
-include ../Common.blocks/Dropdown/-Option/Dropdown-Option.pug
-include ../Common.blocks/Dropdown/Dropdown.pug
+include ../Common.blocks/DropdownFacilities/DropdownFacilities.pug
 include ../Common.blocks/Wrapper/-FormElements/Wrapper-FormElements.pug
 include ../Common.blocks/InputBlock/-Dropdown/InputBlock-Dropdown.pug
 include ../Common.blocks/InputBlock/-WrapperForSelectWithArrow/InputBlock-WrapperForSelectWithArrow.pug
@@ -214,7 +213,7 @@ html
         meta(charset='utf-8')
         meta(name='viewport' content='width=device-width, initial-scale=1')
         meta(name='HandheldFriendly' content='true')
-        meta(name='MobileOptimazed' content='width')
+        meta(name='MobileOptimized' content='width')
 
 
     body
@@ -331,15 +330,17 @@ html
                             +SubscrTxField.FormElSubscrTxField
                                 +SubscrTxField-InputField(type='text' placeholder='Email')
                                 +SubscrTxField-Icon('arrow_forward')
-                        +FieldOfSignIn()(class='Wrapper-FacilitiesDropdown')
+                        +FieldOfSignIn.FormElements-DropdownFacilities
                             +FieldOfSignIn-Header(class='InputBlock_width_265px')
                                 +LabelText dropdown
                                 +LabelText.LabelText_darkened_50.LabelText_text_regular default
-                            select.Dropdown(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3')
-                                +Dropdown-Option('спальни', 'selected')(value='bedrooms')
-                                +Dropdown-Option('кровати', 'selected')(value='beds')
-                                +Dropdown-Option('комнаты')(value='bathrooms')
-                        +InputBlock()(class='Wrapper-FacilitiesDropdown')
+                            +DropdownFacilities(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'],['кроватей', 'кровать', 'кровати'],['ванных комнат', 'ванная комната', 'ванные комнаты']])
+                        +FieldOfSignIn.FormElements-DropdownFacilities_expanded
+                            +FieldOfSignIn-Header(class='InputBlock_width_265px')
+                                +LabelText dropdown
+                                +LabelText.LabelText_darkened_50.LabelText_text_regular expanded
+                            +DropdownFacilities(multiple='multiple', id="dropdownFacilitiesExpanded", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']])
+                        //+InputBlock()(class='Wrapper-FacilitiesDropdown')
                             +InputBlock-Wrapper(class='InputBlock_width_265px')
                                 +InputBlock-FieldName('dropdown')
                                 +InputBlock-FieldDescription('expanded')(class='InputBlock_pdTop_3px')
@@ -522,7 +523,7 @@ html
                                             +InputBlock-FieldName('dropdown')
                                             +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
                                         +InputBlock-Form()
-                                            Select.DropdownGuests(multiple='multiple', id="DropdownGuests2", name='DropdownGuests', size='3')
+                                            //Select.DropdownGuests(multiple='multiple', id="DropdownGuests2", name='DropdownGuests', size='3')
                                                 +DropdownGuests-Option('взрослые')(value='adults')
                                                 +DropdownGuests-Option('дети')(value='children')
                                                 +DropdownGuests-Option('младенцы')(value='babies')
@@ -613,7 +614,7 @@ html
                                             +InputBlock-FieldName('dropdown')
                                             +InputBlock-FieldDescription('default')(class='InputBlock_pdTop_3px')
                                         +InputBlock-Form()
-                                            Select.DropdownGuests(multiple='multiple', id="DropdownGuests3", name='DropdownGuests', size='3')
+                                            //Select.DropdownGuests(multiple='multiple', id="DropdownGuests3", name='DropdownGuests', size='3')
                                                 +DropdownGuests-Option('взрослые')(value='adults')
                                                 +DropdownGuests-Option('дети')(value='children')
                                                 +DropdownGuests-Option('младенцы')(value='babies')
@@ -655,29 +656,3 @@ html
 // провырить форм тег и як использууться на макеты блоки
 // рефакторинг
 
-
-
-//+FormElements-Datepicker()
-//
-//+FormElements-Dropdown()
-//
-//+FormElements-DropdownGuests()
-//
-//+DropdownDatepicker-Header()
-//
-//+FormElements-FilterDateDropdown()
-
-
-
-
-+InputField-Icon()
-
-+FormElSubscrTxField()
-
-+SubscrTxField()
-
-+SubscrTxField-InputField()
-
-+SubscrTxField-Icon()
-
-+FormElements-SubscrTxField()

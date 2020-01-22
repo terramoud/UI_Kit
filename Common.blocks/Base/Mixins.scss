@@ -73,3 +73,9 @@
   color: $DarkShade75;
   margin: 0;
 }
+
+@mixin textCentering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
