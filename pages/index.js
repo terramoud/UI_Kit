@@ -224,20 +224,20 @@ jQuery( document ).ready(function() {
   let event = new Event("click");
   // dropdownFacilitiesExpanded_ms.dispatchEvent(event);
   $( "#toggleOn" ).trigger( "click" );
-  // jQuery('#dropdownFacilitiesExpanded_ms').trigger('click');
-  // $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-0").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
-  // $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-0").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
-  // $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-1").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
-  // $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-1").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
-  //
-  // $( "#ui-multiselect-0-dropdownFacilities-option-0").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
-  // $( "#ui-multiselect-0-dropdownFacilities-option-0").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
-  // $( "#ui-multiselect-0-dropdownFacilities-option-1").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
-  // $( "#ui-multiselect-0-dropdownFacilities-option-1").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
+  jQuery('#dropdownFacilitiesExpanded_ms').trigger('click');
+  $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-0").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-0").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-1").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-1-dropdownFacilitiesExpanded-option-1").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
 
-  // $( "#ui-multiselect-4-DropdownGuests3-option-0").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
-  // $( "#ui-multiselect-4-DropdownGuests3-option-0").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
-  // $( "#ui-multiselect-4-DropdownGuests3-option-1").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-0-dropdownFacilities-option-0").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-0-dropdownFacilities-option-0").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-0-dropdownFacilities-option-1").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-0-dropdownFacilities-option-1").siblings('.DropdownFacilities-QuantityBlock').children('.DropdownFacilities-QuantityIconPlus').trigger( "click" );
+
+  $( "#ui-multiselect-4-DropdownGuests3-option-0").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-4-DropdownGuests3-option-0").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
+  $( "#ui-multiselect-4-DropdownGuests3-option-1").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
   //
   //
   // setTimeout(() => {$( "#DropdownGuests2_ms" ).trigger( "click" )}, 500);

@@ -34,6 +34,7 @@
     border: none;
     box-sizing: border-box;
     border: 1px solid $DarkShade25;
+    box-shadow: 0px 10px 20px $DarkShade05;
     border-radius: 4px;
     width: 266px;
     height: 44px;
@@ -48,7 +49,6 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     color: $DarkShade75;
-    box-shadow: 0px 10px 20px $DarkShade05;
     &:after {
       border: none;
       box-shadow: none;
@@ -64,6 +64,10 @@
       outline: none;
       border-color: $DarkShade50;
     }
+    &.ui-state-active {
+      border-color: $DarkShade50;
+    }
+
     /**
     * This adds "..." to the end of the string that locate in widget field
     */
@@ -84,21 +88,18 @@
 
   }
 
-
   [data-dropdown-facilities].ui-multiselect-menu {
     box-sizing: border-box;
     border-top-width: 0;
-    padding: 0px 3px 5px 13px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    padding: 1px 6px 5px 13px;
 
+    &.ui-widget.ui-widget-content {
+      border: 1px solid $DarkShade50;
+      border-radius: 2px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
     & .ui-multiselect-checkboxes label {
-      //
-      //display: -webkit-flex;
-      //display: -moz-flex;
-      //display: -ms-flex;
-      //display: -o-flex;
-      //display: flex;
       @include textCentering;
       justify-content: space-between;
       padding: 0;
@@ -109,6 +110,8 @@
 
     & .ui-multiselect-checkboxes span {
       @include LabelText;
+      padding-bottom: 4px;
+      padding-top: 0;
     }
 
     & .ui-multiselect-checkboxes li {
@@ -117,53 +120,40 @@
       padding: 5px 0 0 0;
     }
 
-    label.ui-corner-all.ui-state-hover {
+    & label.ui-corner-all.ui-state-hover {
       background: transparent;
       border: 0px solid transparent;
       margin: 0;
       padding: 0;
     }
 
-    .ui-widget input {
+    & .ui-widget input {
       font-size: 12px;
       line-height: 15px;
       font-family: Montserrat-bold;
     }
 
-    .ui-widget button {
+    & .ui-widget button {
       font-size: 18px;
       line-height: 22px;
       font-family: Montserrat-Regular;
     }
 
-    .ui-multiselect-checkboxes .cursorPointer {
-      order: -1;
-      font-family: "Montserrat-bold";
-      font-size: 12px;
-      line-height: 15px;;
-      text-transform: uppercase;
-      padding-top: 7px;
-    }
-
-    .ui-multiselect-checkboxes input {
+    & .ui-multiselect-checkboxes input {
       padding: 0 0 8px 0;
       outline: none;
     }
-    .ui-multiselect-checkboxes {
+    & .ui-multiselect-checkboxes {
       padding: 0 0 0 1px;
     }
 
-
-
-    .ui-multiselect-checkboxes input[type=checkbox] {
+    & .ui-multiselect-checkboxes input[type=checkbox] {
       display: none;
     }
-
-
-    .ui-multiselect-checkboxes .DropdownFacilities-QuantityBlock {
+    & .ui-multiselect-checkboxes .DropdownFacilities-QuantityBlock {
       display: flex;
     }
-    .ui-multiselect-checkboxes .DropdownFacilities-QuantityIconMinus, .ui-multiselect-checkboxes .DropdownFacilities-QuantityIconPlus {
+    & .ui-multiselect-checkboxes .DropdownFacilities-QuantityIconMinus, .ui-multiselect-checkboxes .DropdownFacilities-QuantityIconPlus {
       @include textCentering;
       height: 30px;
       width: 30px;
@@ -181,7 +171,7 @@
       outline: none;
       cursor: pointer;
     }
-    .ui-multiselect-checkboxes .DropdownFacilities-QuantityNum {
+    & .ui-multiselect-checkboxes .DropdownFacilities-QuantityNum {
       @include LabelText;
       width: 32px;
       padding: 0 0 6px 0;
@@ -215,7 +205,7 @@
         outline: none;
       }
     }
-    .ui-multiselect-checkboxes .DropdownFacilities-QuantityIconMinus_noActive {
+    & .ui-multiselect-checkboxes .DropdownFacilities-QuantityIconMinus_noActive {
       border-color: $DarkShade05;
     }
 

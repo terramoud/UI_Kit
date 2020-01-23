@@ -173,11 +173,11 @@ jQuery('select.DropdownFacilities').each(function () {
     /**
      * It is finding numbers until the first space in the 'widget field' depending on what inputs is checked
      */
-    var regular = new RegExp('\\d+ ' + optionsContent.substr(0, optionsContent.length-4) + '[^\\d\\s\.\,]*', 'i');
-    // var regularArray = [];
-    // for (let i = 0; i < optionsDeclension.length; i++) {
-    //   regularArray[i] = new RegExp('\\d+ ' + optionsDeclension[i], 'i');
-    // }
+    //var regular = new RegExp('\\d+ ' + optionsContent.substr(0, optionsContent.length-4) + '[^\\d\\s\.\,]*', 'i');
+    var regularArray = [];
+    for (let i = 0; i < optionsDeclension.length; i++) {
+      regularArray[i] = new RegExp('\\d+ ' + optionsDeclension[i], 'i');
+    }
     let modifiedText = '';
     let numFacilities = 0;
     jQuery("label[data-id=" + dropdownFacilities.id + "] .DropdownFacilities-QuantityNum").each(function () {
@@ -192,6 +192,10 @@ jQuery('select.DropdownFacilities').each(function () {
     if (dropDownText === 'Выберите удобства') {
       modifiedText = targetPlus.val() + ' ' + optionsContent;
     } else {
+      let regular = regularArray[0];
+      for (let i = 0; i < regularArray.length; i++) {
+        if (dropDownText.match(regularArray[i]) !== null) regular = regularArray[i];
+      }
       if (dropDownText.search(regular) === -1) {
         if (numFacilities <= 2) {
           modifiedText = `${dropDownText}, ${targetPlus.val()} ${optionsContent}...`;
@@ -199,6 +203,10 @@ jQuery('select.DropdownFacilities').each(function () {
           modifiedText = dropDownText;
         }
       } else {
+        let regular = false;
+        for (let i = 0; i < regularArray.length; i++) {
+          if (dropDownText.match(regularArray[i]) !== null) regular = regularArray[i];
+        }
         /**
          * It is replacing numbers until the first space in the 'widget field' on the number of selected elements
          */
