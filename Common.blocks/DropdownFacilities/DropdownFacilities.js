@@ -102,7 +102,6 @@ jQuery('select.DropdownFacilities').each(function () {
         'border-top-right-radius': '4px',
         'border-bottom-left-radius': '0px',
         'border-bottom-right-radius': '0px',
-
       });
     },
 

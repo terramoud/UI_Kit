@@ -23,7 +23,6 @@ require('./index.scss');
 
 require('../Common.blocks/Content/Content.js');
 require('../Common.blocks/Content/-WrapperForFormElements/Content-WrapperForFormElements.js');
-require('../Common.blocks/Content/-Wrapper/Content-Wrapper.js');
 
 require('../Common.blocks/Logo/Logo.js');
 
@@ -31,23 +30,6 @@ require('../Common.blocks/Container/Container.js');
 require('../Common.blocks/Container/_bgColor/Container_bgColor_white.js');
 require('../Common.blocks/Container/_height/Container_height_1853px.js');
 require('../Common.blocks/Container/_marBot/Container_marBot_50px.js');
-
-require('../Common.blocks/FigureHtml5/-FigcaptionWrapper/FigureHtml5-FigcaptionWrapper.js');
-require('../Common.blocks/FigureHtml5/-Figcaption/FigureHtml5-Figcaption.js');
-require('../Common.blocks/FigureHtml5/-Image/FigureHtml5-Image.js');
-require('../Common.blocks/FigureHtml5/FigureHtml5.js');
-require('../Common.blocks/FigureHtml5/_bg/FigureHtml5_bg_dsh05.js');
-require('../Common.blocks/FigureHtml5/_bg/FigureHtml5_bg_dsh100.js');
-require('../Common.blocks/FigureHtml5/_bg/FigureHtml5_bg_dsh25.js');
-require('../Common.blocks/FigureHtml5/_bg/FigureHtml5_bg_dsh50.js');
-require('../Common.blocks/FigureHtml5/_bg/FigureHtml5_bg_dsh75.js');
-require('../Common.blocks/FigureHtml5/_bg/FigureHtml5_bg_green.js');
-require('../Common.blocks/FigureHtml5/_bg/FigureHtml5_bg_purple.js');
-require('../Common.blocks/FigureHtml5/_ff/FigureHtml5_ff_quicksandRegular.js');
-require('../Common.blocks/FigureHtml5/_marginTop/FigureHtml5_marginTop.js');
-require('../Common.blocks/FigureHtml5/_pdB/FigureHtml5_pdB_20px.js');
-require('../Common.blocks/FigureHtml5/_pdTop/FigureHtml5_pdTop.js');
-require('../Common.blocks/FigureHtml5/_pdTop/FigureHtml5_pdTop_correct.js');
 
 require('../Common.blocks/ExampleText/-Wrapper/ExampleText-Wrapper.js');
 require('../Common.blocks/ExampleText/-Text/ExampleText-Text.js');
