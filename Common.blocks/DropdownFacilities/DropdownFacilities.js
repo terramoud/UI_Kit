@@ -59,6 +59,51 @@ jQuery('select.DropdownFacilities').each(function () {
 
     open: function(){
       $('.ui-multiselect-checkboxes').css('height', 'auto');
+      let widgetBtn = document.getElementById($(this).next().attr('id'));
+      let widgetBtnDOMRect = widgetBtn.getBoundingClientRect();
+      let widgetMenu = document.querySelector('[data-ui-multiselect-menu-id=' + dropdownFacilities.id + ']');
+      let widgetMenuDOMRect = widgetMenu.getBoundingClientRect();
+      if (widgetBtnDOMRect.top > widgetMenuDOMRect.top) {
+        jQuery('[data-ui-multiselect-menu-id=' + dropdownFacilities.id + ']').css({
+          'border-top-left-radius': '4px',
+          'border-top-right-radius': '4px',
+          'border-bottom-left-radius': '0px',
+          'border-bottom-right-radius': '0px',
+          'border-top-width': '1px',
+          'border-bottom-width': '0px',
+        });
+        jQuery(this).next().css({
+          'border-top-left-radius': '0px',
+          'border-top-right-radius': '0px',
+          'border-bottom-left-radius': '4px',
+          'border-bottom-right-radius': '4px',
+        });
+      } else {
+        jQuery('[data-ui-multiselect-menu-id=' + dropdownFacilities.id + ']').css({
+          'border-top-left-radius': '0px',
+          'border-top-right-radius': '0px',
+          'border-bottom-left-radius': '4px',
+          'border-bottom-right-radius': '4px',
+          'border-top-width': '0px',
+          'border-bottom-width': '1px',
+        });
+        jQuery(this).next().css({
+          'border-top-left-radius': '4px',
+          'border-top-right-radius': '4px',
+          'border-bottom-left-radius': '0px',
+          'border-bottom-right-radius': '0px',
+        });
+      }
+    },
+
+    close: function(){
+      jQuery(this).next().css({
+        'border-top-left-radius': '4px',
+        'border-top-right-radius': '4px',
+        'border-bottom-left-radius': '0px',
+        'border-bottom-right-radius': '0px',
+
+      });
     },
 
     click: function(event, ui){
@@ -120,6 +165,7 @@ jQuery('select.DropdownFacilities').each(function () {
    */
   jQuery("label[for *= '" + dropdownFacilities.id + "']").attr('data-id', dropdownFacilities.id);
   jQuery("label[data-id=" + dropdownFacilities.id + "]").closest('.ui-multiselect-menu').attr('data-dropdown-facilities', '');
+  jQuery("label[data-id=" + dropdownFacilities.id + "]").closest('.ui-multiselect-menu').attr('data-ui-multiselect-menu-id', dropdownFacilities.id);
 
   /**
    * This passes to the attribute 'name' the value that was obtained from the widget menu <input> tags

@@ -26,7 +26,6 @@ require('../Common.blocks/Content/-WrapperForFormElements/Content-WrapperForForm
 require('../Common.blocks/Content/-Wrapper/Content-Wrapper.js');
 
 require('../Common.blocks/Logo/Logo.js');
-require('../Common.blocks/LogoWrapper/LogoWrapper.js');
 
 require('../Common.blocks/Container/Container.js');
 require('../Common.blocks/Container/_bgColor/Container_bgColor_white.js');

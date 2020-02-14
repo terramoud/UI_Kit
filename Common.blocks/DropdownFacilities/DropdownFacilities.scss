@@ -85,7 +85,6 @@
       height: 42px;
       bottom: 0px;
     }
-
   }
 
   [data-dropdown-facilities].ui-multiselect-menu {
@@ -95,9 +94,11 @@
 
     &.ui-widget.ui-widget-content {
       border: 1px solid $DarkShade50;
-      border-radius: 2px;
+      box-shadow: 0px 10px 20px $DarkShade05;
+      border-radius: 4px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      border-top-width: 0;
     }
     & .ui-multiselect-checkboxes label {
       @include textCentering;
