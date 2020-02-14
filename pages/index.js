@@ -380,3 +380,5 @@ require('../Common.blocks/SubscrTxField/-InputField/_active/SubscrTxField-InputF
 
 require('../Common.blocks/FormElements/-DropdownFacilities/FormElements-DropdownFacilities.js');
 require('../Common.blocks/FormElements/-DropdownFacilities/_expanded/FormElements-DropdownFacilities_expanded.js');
+
+require('../Common.blocks/FieldOfSignIn/_widthFacilities/FieldOfSignIn_widthFacilities.js');
