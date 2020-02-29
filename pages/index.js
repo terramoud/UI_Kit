@@ -5,6 +5,7 @@ require('webpack-jquery-ui/css');
 require('inputmask/dist/jquery.inputmask');
 //require('webpack-jquery-ui/selectmenu');
 require('../Common.blocks/Fonts/Fonts.scss');
+require('../Common.blocks/Fonts/font-awesome-4.7.0/scss/font-awesome.scss');
 
 /*Library.blocks*/
 
