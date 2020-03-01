@@ -221,7 +221,11 @@ jQuery( document ).ready(function() {
   $( "#ui-multiselect-4-DropdownGuests3-option-0").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
   $( "#ui-multiselect-4-DropdownGuests3-option-1").siblings('.DropdownGuests-QuantityBlock').children('.DropdownGuests-QuantityIconPlus').trigger( "click" );
   //
-  //
+  //ExpandableCheckboxList
+  jQuery('#ExpandableCheckboxList').trigger('click');
+  jQuery('#ExpandableCheckboxList').siblings('.CheckboxList-ExpandableCnt').find('.Checkbox').eq(1).trigger('click');
+  jQuery('#ExpandableCheckboxList').siblings('.CheckboxList-ExpandableCnt').find('.Checkbox').eq(2).trigger('click');
+  jQuery('#ExpandableCheckboxList').siblings('.CheckboxList-ExpandableCnt').find('.Checkbox').eq(3).trigger('click');
   // setTimeout(() => {$( "#DropdownGuests2_ms" ).trigger( "click" )}, 500);
   // setTimeout(() => {$( "#DropdownGuests3_ms" ).trigger( "click" )}, 500);
   // $( ".RateButton:first .RateButton-Star[data-id=4]" ).trigger( "click" );
@@ -383,3 +387,18 @@ require('../Common.blocks/FormElements/-DropdownFacilities/FormElements-Dropdown
 require('../Common.blocks/FormElements/-DropdownFacilities/_expanded/FormElements-DropdownFacilities_expanded.js');
 
 require('../Common.blocks/FieldOfSignIn/_widthFacilities/FieldOfSignIn_widthFacilities.js');
+
+require('../Common.blocks/FormElements/-ExpandableCheckboxListRollUp/FormElements-ExpandableCheckboxListRollUp.js');
+require('../Common.blocks/CheckboxList/CheckboxList.js');
+require('../Common.blocks/CheckboxList/-Header/CheckboxList-Header.js');
+require('../Common.blocks/CheckboxList/-Icon/CheckboxList-Icon.js');
+require('../Common.blocks/CheckboxList/-ExpandableCnt/CheckboxList-ExpandableCnt.js');
+require('../Common.blocks/CheckboxList/-ExpandableCnt/_active/CheckboxList-ExpandableCnt_active.js');
+require('../Common.blocks/Checkbox/Checkbox.js');
+require('../Common.blocks/Checkbox/_active/Checkbox_active.js');
+require('../Common.blocks/List/-Text/List-Text.js');
+
+require('../Common.blocks/RoomDetails/RoomDetails.js');
+require('../Common.blocks/RoomDetails/-Icon/RoomDetails-Icon.js');
+require('../Common.blocks/ListItemDescr/ListItemDescr.js');
+require('../Common.blocks/ListItemDescr/-Header/ListItemDescr-Header.js');

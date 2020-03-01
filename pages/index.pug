@@ -1,3 +1,14 @@
+include ../Common.blocks/ListItemDescr/-Header/ListItemDescr-Header.pug
+include ../Common.blocks/ListItemDescr/ListItemDescr.pug
+include ../Common.blocks/RoomDetails/-Icon/RoomDetails-Icon.pug
+include ../Common.blocks/RoomDetails/RoomDetails.pug
+include ../Common.blocks/List/-Text/List-Text.pug
+include ../Common.blocks/Checkbox/Checkbox.pug
+include ../Common.blocks/CheckboxList/-ExpandableCnt/CheckboxList-ExpandableCnt.pug
+include ../Common.blocks/CheckboxList/-Icon/CheckboxList-Icon.pug
+include ../Common.blocks/CheckboxList/-Header/CheckboxList-Header.pug
+include ../Common.blocks/CheckboxList/CheckboxList.pug
+include ../Common.blocks/FormElements/-ExpandableCheckboxListRollUp/FormElements-ExpandableCheckboxListRollUp.pug
 include ../Common.blocks/FormElements/-DropdownFacilities/FormElements-DropdownFacilities.pug
 include ../Common.blocks/FormElements/-SubscrTxField/FormElements-SubscrTxField.pug
 include ../Common.blocks/SubscrTxField/-Icon/SubscrTxField-Icon.pug
@@ -326,91 +337,86 @@ html
                                 +LabelText dropdown
                                 +LabelText.LabelText_darkened_50.LabelText_text_regular default
                             +DropdownFacilities(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'],['кроватей', 'кровать', 'кровати'],['ванных комнат', 'ванная комната', 'ванные комнаты']])
-                        +FieldOfSignIn.FieldOfSignIn_widthFacilities.FormElements-Dropdow_expanded
+                        +FieldOfSignIn.FieldOfSignIn_widthFacilities.FormElements-DropdownFacilities_expanded
                             +FieldOfSignIn-Header
                                 +LabelText dropdown
                                 +LabelText.LabelText_darkened_50.LabelText_text_regular expanded
                             +DropdownFacilities(multiple='multiple', id="dropdownFacilitiesExpanded", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']])
 
-                        +Wrapper-ExpandableCheckboxList()
-                            +ExpandableCheckboxList()
-                                +TitleBlock.ExpandableCheckboxList-Header()
-                                    +TitleBlock-H3() expandable checkbox list
-                                    +TitleBlock-Icon()
-                                        i.material-icons expand_more
-                                +List.ExpandableCheckboxList-List()
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Завтрак
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Письменный стол
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Стул для кормления
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Кроватка
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Телевизор
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Шампунь
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Телевизор
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Шампунь
-                        +Wrapper-ExpandableCheckboxListOpen()
-                            +ExpandableCheckboxList()
-                                +TitleBlock.ExpandableCheckboxList-Header()
-                                    +TitleBlock-H3() expandable checkbox list
-                                    +TitleBlock-Icon()
-                                        i.material-icons expand_more
-                                +List.ExpandableCheckboxList-List(style="display: block;")
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                        +DescriptionForButtonsAndInputs() Завтрак
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                        +DescriptionForButtonsAndInputs() Письменный стол
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                        +DescriptionForButtonsAndInputs() Стул для кормления
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                        +DescriptionForButtonsAndInputs() Кроватка
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" )
-                                        +DescriptionForButtonsAndInputs() Телевизор
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" )
-                                        +DescriptionForButtonsAndInputs() Шампунь
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" )
-                                        +DescriptionForButtonsAndInputs() Телевизор
-                                    +List-Item()
-                                        +InputForButtonsAndInputs()
-                                            +InputForButtonsAndInputs-Checkbox(type="checkbox" )
-                                        +DescriptionForButtonsAndInputs() Шампунь
-                        +Wrapper-DescriptionBlock()
+                        // expandable checkbox list roll up
+                        +CheckboxList.FormElements-ExpandableCheckboxListRollUp
+                            +CheckboxList-Header.CheckboxList-Header_expandable
+                                +LabelText expandable checkbox list
+                                +CheckboxList-Icon
+                                    i.material-icons expand_more
+                            +CheckboxList-ExpandableCnt
+                                +List
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Завтрак
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Письменный стол
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Стул для кормления
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Кроватка
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Телевизор
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Шампунь
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Телевизор
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Шампунь
+
+                        // expandable checkbox list
+                        +CheckboxList.FormElements-ExpandableCheckboxListRollUp
+                            +CheckboxList-Header.CheckboxList-Header_expandable(id='ExpandableCheckboxList')
+                                +LabelText expandable checkbox list
+                                +CheckboxList-Icon
+                                    i.material-icons expand_more
+                            +CheckboxList-ExpandableCnt
+                                +List
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Завтрак
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Письменный стол
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Стул для кормления
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Кроватка
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Телевизор
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Шампунь
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Телевизор
+                                    +List-Item
+                                        +Checkbox(type="checkbox")
+                                        p.BodyText.List-Text Шампунь
+                        // Room details
+                        +List
+                            +List-Item
+                                +RoomDetails
+                                    i.material-icons.RoomDetails-Icon insert_emoticon
+                                    +ListItemDescr
+                                        BodyText.BodyText_bold.ListItemDescr-Header Комфорт
+                                        BodyText Шумопоглощающие стены
+                        //+Wrapper-DescriptionBlock()
                             +FigureDescriptionBlock()
                                 +FigureDescriptionBlock-Wrapper()
                                     +ImageForButtonsAndInputs()
@@ -639,3 +645,11 @@ html
 // провырить форм тег и як использууться на макеты блоки
 // рефакторинг
 
+
+
++RoomDetails()
+
++RoomDetails-Icon()
++ListItemDescr()
+
++ListItemDescr-Header()

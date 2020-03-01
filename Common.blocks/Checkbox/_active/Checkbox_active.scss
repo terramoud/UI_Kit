@@ -1,0 +1,65 @@
+@media only screen and (max-width: 576px) {
+  .Checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .Checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .Checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px) {
+  .Checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1440px) {
+  .Checkbox_active {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 8px;
+      /* Primary Gradient */
+      background: $DatepickerGradient;
+      transform: rotate(45deg);
+      left: 6px;
+      top: 3px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 8px;
+      /* Primary Gradient */
+      background: $background;
+      transform: rotate(45deg);
+      left: 6px;
+      top: 0px;
+      border-top-left-radius: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1441px) and (max-width: 1680px) {
+  .Checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 1681px) and (max-width: 1920px) {
+  .Checkbox_active {
+
+  }
+}
+
