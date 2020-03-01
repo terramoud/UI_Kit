@@ -24,7 +24,16 @@
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
   .RoomDetails-Icon {
-
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: $DatepickerGradient;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 48px;
+    line-height: 41px;
   }
 }
 

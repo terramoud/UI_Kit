@@ -402,3 +402,6 @@ require('../Common.blocks/RoomDetails/RoomDetails.js');
 require('../Common.blocks/RoomDetails/-Icon/RoomDetails-Icon.js');
 require('../Common.blocks/ListItemDescr/ListItemDescr.js');
 require('../Common.blocks/ListItemDescr/-Header/ListItemDescr-Header.js');
+require('../Common.blocks/BodyText/_bold/BodyText_bold.js');
+require('../Common.blocks/FormElements/-ExpandableCheckboxList/FormElements-ExpandableCheckboxList.js');
+require('../Common.blocks/RoomDetails/-Text/RoomDetails-Text.js');

@@ -1,3 +1,5 @@
+include ../Common.blocks/RoomDetails/-Text/RoomDetails-Text.pug
+include ../Common.blocks/FormElements/-ExpandableCheckboxList/FormElements-ExpandableCheckboxList.pug
 include ../Common.blocks/ListItemDescr/-Header/ListItemDescr-Header.pug
 include ../Common.blocks/ListItemDescr/ListItemDescr.pug
 include ../Common.blocks/RoomDetails/-Icon/RoomDetails-Icon.pug
@@ -377,7 +379,7 @@ html
                                         p.BodyText.List-Text Шампунь
 
                         // expandable checkbox list
-                        +CheckboxList.FormElements-ExpandableCheckboxListRollUp
+                        +CheckboxList.FormElements-ExpandableCheckboxList
                             +CheckboxList-Header.CheckboxList-Header_expandable(id='ExpandableCheckboxList')
                                 +LabelText expandable checkbox list
                                 +CheckboxList-Icon
@@ -409,13 +411,16 @@ html
                                         +Checkbox(type="checkbox")
                                         p.BodyText.List-Text Шампунь
                         // Room details
-                        +List
-                            +List-Item
-                                +RoomDetails
-                                    i.material-icons.RoomDetails-Icon insert_emoticon
-                                    +ListItemDescr
-                                        BodyText.BodyText_bold.ListItemDescr-Header Комфорт
-                                        BodyText Шумопоглощающие стены
+                        +RoomDetails
+                            i.material-icons.RoomDetails-Icon insert_emoticon
+                            +ListItemDescr.RoomDetails-Text
+                                +BodyText.BodyText_bold Комфорт
+                                +BodyText Шумопоглощающие стены
+                        +RoomDetails
+                            i.material-icons.RoomDetails-Icon location_city
+                            +ListItemDescr.RoomDetails-Text
+                                +BodyText.BodyText_bold Удобство
+                                +BodyText Окно в каждой из спален
                         //+Wrapper-DescriptionBlock()
                             +FigureDescriptionBlock()
                                 +FigureDescriptionBlock-Wrapper()
@@ -427,7 +432,7 @@ html
                                         +DescriptionForButtonsAndInputs() Шумопоглощающие стены
                                 +FigureDescriptionBlock-Hr()
                                 //div.HR.FigureDescriptionBlock-Separator
-                        +Wrapper-DescriptionBlockFacilities()
+                        //+Wrapper-DescriptionBlockFacilities()
                             +FigureDescriptionBlock()
                                 +FigureDescriptionBlock-Wrapper()
                                     +ImageForButtonsAndInputs()
@@ -653,3 +658,6 @@ html
 +ListItemDescr()
 
 +ListItemDescr-Header()
+
++FormElements-ExpandableCheckboxList()
++RoomDetails-Text()
