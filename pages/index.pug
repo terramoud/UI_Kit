@@ -1,3 +1,9 @@
+include ../Common.blocks/FormElements/-CheckboxButtons/FormElements-CheckboxButtons.pug
+include ../Common.blocks/FormElements/-LeftColumn/FormElements-LeftColumn.pug
+include ../Common.blocks/FormElements/-RigthColumn/FormElements-RigthColumn.pug
+include ../Common.blocks/FormElements/-RigthWrapperForComment/FormElements-RigthWrapperForComment.pug
+include ../Common.blocks/FormElements/-RigthWrapperForButtons/FormElements-RigthWrapperForButtons.pug
+include ../Common.blocks/FormElements/-RigthWrapper/FormElements-RigthWrapper.pug
 include ../Common.blocks/RoomDetails/-Text/RoomDetails-Text.pug
 include ../Common.blocks/FormElements/-ExpandableCheckboxList/FormElements-ExpandableCheckboxList.pug
 include ../Common.blocks/ListItemDescr/-Header/ListItemDescr-Header.pug
@@ -355,28 +361,28 @@ html
                                 +List
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Завтрак
+                                        +BodyText.List-Text Завтрак
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Письменный стол
+                                        +BodyText.List-Text Письменный стол
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Стул для кормления
+                                        +BodyText.List-Text Стул для кормления
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Кроватка
+                                        +BodyText.List-Text Кроватка
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Телевизор
+                                        +BodyText.List-Text Телевизор
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Шампунь
+                                        +BodyText.List-Text Шампунь
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Телевизор
+                                        +BodyText.List-Text Телевизор
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Шампунь
+                                        +BodyText.List-Text Шампунь
 
                         // expandable checkbox list
                         +CheckboxList.FormElements-ExpandableCheckboxList
@@ -388,28 +394,28 @@ html
                                 +List
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Завтрак
+                                        +BodyText.List-Text Завтрак
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Письменный стол
+                                        +BodyText.List-Text Письменный стол
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Стул для кормления
+                                        +BodyText.List-Text Стул для кормления
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Кроватка
+                                        +BodyText.List-Text Кроватка
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Телевизор
+                                        +BodyText.List-Text Телевизор
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Шампунь
+                                        +BodyText.List-Text Шампунь
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Телевизор
+                                        +BodyText.List-Text Телевизор
                                     +List-Item
                                         +Checkbox(type="checkbox")
-                                        p.BodyText.List-Text Шампунь
+                                        +BodyText.List-Text Шампунь
                         // Room details
                         +RoomDetails
                             i.material-icons.RoomDetails-Icon insert_emoticon
@@ -421,31 +427,24 @@ html
                             +ListItemDescr.RoomDetails-Text
                                 +BodyText.BodyText_bold Удобство
                                 +BodyText Окно в каждой из спален
-                        //+Wrapper-DescriptionBlock()
-                            +FigureDescriptionBlock()
-                                +FigureDescriptionBlock-Wrapper()
-                                    +ImageForButtonsAndInputs()
-                                        i.material-icons insert_emoticon
-                                    +FigureDescriptionBlock-Figcaption()
-                                        +FigureDescriptionBlock-Header()
-                                            +TitleForButtonsAndInputs() Комфорт
-                                        +DescriptionForButtonsAndInputs() Шумопоглощающие стены
-                                +FigureDescriptionBlock-Hr()
-                                //div.HR.FigureDescriptionBlock-Separator
-                        //+Wrapper-DescriptionBlockFacilities()
-                            +FigureDescriptionBlock()
-                                +FigureDescriptionBlock-Wrapper()
-                                    +ImageForButtonsAndInputs()
-                                        i.material-icons location_city
-                                    +FigureDescriptionBlock-Figcaption()
-                                        +FigureDescriptionBlock-Header()
-                                            +TitleForButtonsAndInputs() Удобство
-                                        +DescriptionForButtonsAndInputs() Окно в каждой из спален
-                                +FigureDescriptionBlock-Hr()
-                    +FormElements-Wrapper.Content-RightWrapper()
-                        +Wrapper.Content-WrapperRow()
-                            +Wrapper()
-                                +CheckboxList.CheckboxList_BottomIndent_30px()
+                    +FormElements-RigthWrapper
+                        +FormElements-RigthWrapperForButtons
+                            +FormElements-LeftColumn
+                                // Checkbox Buttons
+                                +CheckboxList.FormElements-CheckboxButtons
+                                    +CheckboxList-Header.CheckboxList-Header_theme_checkboxButtons
+                                        +LabelText Checkbox Buttons
+                                    +List
+                                        +List-Item
+                                            +Checkbox(type="checkbox")
+                                            +BodyText.List-Text Можно курить
+                                        +List-Item
+                                            +Checkbox(type="checkbox")
+                                            +BodyText.List-Text Можно с питомцами
+                                        +List-Item
+                                            +Checkbox(type="checkbox")
+                                            +BodyText.List-Text Можно пригласить гостей (до 10 человек)
+                                //+CheckboxList.CheckboxList_BottomIndent_30px()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3.TitleBlock-H3_withoutMarginTop_4px.TitleBlock-H3_withoutMarginBottom_10px() Checkbox Buttons
                                     +List()
@@ -539,7 +538,7 @@ html
                                             +List-WrapperForDescription()
                                                 +TitleForButtonsAndInputs.RichCheckboxButtons-Title() Помощник для инвалидов
                                                 +DescriptionForButtonsAndInputs.RichCheckboxButtons-Description() На 1 этаже вас встретит специалист и проводит до номера.
-                            +Wrapper.Content-RightColumn()
+                            +FormElements-RigthColumn
                                 //+RangeSliderBlock()
                                 +Wrapper-RangeSlider()
                                     +RangeSlider()
@@ -622,7 +621,8 @@ html
                                             +DescriptionForButtonsAndInputs() Без вечеринок и мероприятий
                                         +List-Item()
                                             +DescriptionForButtonsAndInputs() Время прибытия — после 13:00, а выезд до 12:00
-                        +Wrapper
+
+                        +FormElements-RigthWrapperForComment
                             +Wrapper-Footer()
                                 +CommentBlock()
                                     +FigureDescriptionBlock()
@@ -651,13 +651,12 @@ html
 // рефакторинг
 
 
++FormElements-RigthWrapperForButtons()
 
-+RoomDetails()
++FormElements-RigthWrapperForComment()
 
-+RoomDetails-Icon()
-+ListItemDescr()
++FormElements-RigthColumn()
 
-+ListItemDescr-Header()
++FormElements-LeftColumn()
 
-+FormElements-ExpandableCheckboxList()
-+RoomDetails-Text()
++FormElements-CheckboxButtons()
