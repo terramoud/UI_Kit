@@ -427,3 +427,8 @@ require('../Common.blocks/ToggleBlock/ToggleBlock.js');
 require('../Common.blocks/ToggleButton/ToggleButton.js');
 require('../Common.blocks/ToggleBlock/-Descr/ToggleBlock-Descr.js');
 require('../Common.blocks/FormElements/-ToggleSecond/FormElements-ToggleSecond.js');
+require('../Common.blocks/FormElements/-LikeButtons/FormElements-LikeButtons.js');
+require('../Common.blocks/FormElements/-LikeBtnsWrapper/FormElements-LikeBtnsWrapper.js');
+require('../Common.blocks/FormElements/-LikeBtnSeparator/FormElements-LikeBtnSeparator.js');
+require('../Common.blocks/FormElements/-ToggleSeparator/FormElements-ToggleSeparator.js');
+require('../Common.blocks/FormElements/-LikeButtonsTitle/FormElements-LikeButtonsTitle.js');

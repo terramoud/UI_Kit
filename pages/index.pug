@@ -1,3 +1,8 @@
+include ../Common.blocks/FormElements/-LikeButtonsTitle/FormElements-LikeButtonsTitle.pug
+include ../Common.blocks/FormElements/-ToggleSeparator/FormElements-ToggleSeparator.pug
+include ../Common.blocks/FormElements/-LikeBtnSeparator/FormElements-LikeBtnSeparator.pug
+include ../Common.blocks/FormElements/-LikeBtnsWrapper/FormElements-LikeBtnsWrapper.pug
+include ../Common.blocks/FormElements/-LikeButtons/FormElements-LikeButtons.pug
 include ../Common.blocks/FormElements/-ToggleSecond/FormElements-ToggleSecond.pug
 include ../Common.blocks/ToggleBlock/-Descr/ToggleBlock-Descr.pug
 include ../Common.blocks/ToggleButton/ToggleButton.pug
@@ -469,24 +474,31 @@ html
                                 // Toggle
                                 +FormElements-Toggle
                                     +LabelText.FormElements-ToggleTitle Toggle
-                                    +ToggleBlock.FormElements-ToggleSecond
+                                    +ToggleBlock.FormElements-ToggleSeparator
                                         +ToggleButton(type="checkbox" id="toggleOn")
                                         +BodyText.ToggleBlock-Descr Получать спецпредложения
                                     +ToggleBlock
                                         +ToggleButton(type="checkbox")
                                         +BodyText.ToggleBlock-Descr Получать спецпредложения
 
-                                //+Wrapper-Toggle()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3(style="margin-bottom: 16px") Toggle
-                                    +Wrapper-ToggleWrapper()
-                                        +ToggleButton()
-                                            +ToggleButton-Button(type="checkbox" id="toggleOn")
-                                            +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
-                                    +ToggleButton()
-                                        +ToggleButton-Button(type="checkbox")
-                                        +DescriptionForButtonsAndInputs.ToggleButton-Label() Получать спецпредложения
-                                +Wrapper-LikeButton()
+                                //Like button
+                                +FormElements-LikeButtons
+                                    +LabelText.FormElements-LikeButtonsTitle like button
+                                    +FormElements-LikeBtnsWrapper
+                                        +LikeButton.FormElements-LikeBtnSeparator
+                                            +LikeButton-GradientBorder
+                                                +LikeButton-Label
+                                                    +LikeButton-Button(type="hidden" name="likes")
+                                                    +LikeButton-Icon favorite_border
+                                                    +LikeButton-NumberLikes 2
+                                        +LikeButton
+                                            +LikeButton-GradientBorder.LikeButton-GradientBorder_active
+                                                +LikeButton-Label
+                                                    +LikeButton-Button(type="hidden" name="likes")
+                                                    +LikeButton-Icon.LikeButton-Icon_active favorite
+                                                    +LikeButton-NumberLikes.LikeButton-NumberLikes_active 12
+
+                                //+Wrapper-LikeButton()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3(style="margin-bottom: 16px") like button
                                     +Wrapper-LikeButtonWrapper()
@@ -657,3 +669,12 @@ html
 // рефакторинг
 
 +FormElements-ToggleSecond()
+
++FormElements-LikeButtons()
+
++FormElements-LikeBtnsWrapper()
++FormElements-LikeBtnSeparator()
+
++FormElements-ToggleSeparator()
+
++FormElements-LikeButtonsTitle()

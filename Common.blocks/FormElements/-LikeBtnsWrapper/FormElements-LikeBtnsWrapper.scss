@@ -1,41 +1,42 @@
 @media only screen and (max-width: 576px) {
-  .FormElements-Toggle {
+  .FormElements-LikeBtnsWrapper {
 
   }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 767px) {
-  .FormElements-Toggle {
+  .FormElements-LikeBtnsWrapper {
 
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .FormElements-Toggle {
+  .FormElements-LikeBtnsWrapper {
 
   }
 }
 
 @media only screen and (min-width: 1025px) and (max-width: 1439px) {
-  .FormElements-Toggle {
+  .FormElements-LikeBtnsWrapper {
 
   }
 }
 
 @media only screen and (min-width: 1440px) and (max-width: 1440px) {
-  .FormElements-Toggle {
-    margin-bottom: 45px;
+  .FormElements-LikeBtnsWrapper {
+    display: flex;
+    align-items: center;
   }
 }
 
 @media only screen and (min-width: 1441px) and (max-width: 1680px) {
-  .FormElements-Toggle {
+  .FormElements-LikeBtnsWrapper {
 
   }
 }
 
 @media only screen and (min-width: 1681px) and (max-width: 1920px) {
-  .FormElements-Toggle {
+  .FormElements-LikeBtnsWrapper {
 
   }
 }
