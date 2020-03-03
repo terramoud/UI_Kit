@@ -226,6 +226,11 @@ jQuery( document ).ready(function() {
   jQuery('#ExpandableCheckboxList').siblings('.CheckboxList-ExpandableCnt').find('.Checkbox').eq(1).trigger('click');
   jQuery('#ExpandableCheckboxList').siblings('.CheckboxList-ExpandableCnt').find('.Checkbox').eq(2).trigger('click');
   jQuery('#ExpandableCheckboxList').siblings('.CheckboxList-ExpandableCnt').find('.Checkbox').eq(3).trigger('click');
+
+  //CheckboxButtons
+  jQuery('#CheckboxButtons').find('.Checkbox').eq(1).trigger('click');
+  jQuery('#CheckboxButtons').find('.Checkbox').eq(2).trigger('click');
+
   // setTimeout(() => {$( "#DropdownGuests2_ms" ).trigger( "click" )}, 500);
   // setTimeout(() => {$( "#DropdownGuests3_ms" ).trigger( "click" )}, 500);
   // $( ".RateButton:first .RateButton-Star[data-id=4]" ).trigger( "click" );
@@ -412,3 +417,6 @@ require('../Common.blocks/FormElements/-RigthColumn/FormElements-RigthColumn.js'
 require('../Common.blocks/FormElements/-LeftColumn/FormElements-LeftColumn.js');
 require('../Common.blocks/CheckboxList/-Header/_theme/CheckboxList-Header_theme_checkboxButtons.js');
 require('../Common.blocks/FormElements/-CheckboxButtons/FormElements-CheckboxButtons.js');
+require('../Common.blocks/FormElements/-RadioButtons/FormElements-RadioButtons.js');
+require('../Common.blocks/FormElements/-RadioButtonsTitle/FormElements-RadioButtonsTitle.js');
+require('../Common.blocks/FormElements/-RadioButtonsTitle/FormElements-RadioButtonsTitle.js');

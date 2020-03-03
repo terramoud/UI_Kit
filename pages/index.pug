@@ -1,3 +1,6 @@
+include ../Common.blocks/FormElements/-RadioButtonsTitle/FormElements-RadioButtonsTitle.pug
+include ../Common.blocks/FormElements/-RadioButtonsTitle/FormElements-RadioButtonsTitle.pug
+include ../Common.blocks/FormElements/-RadioButtons/FormElements-RadioButtons.pug
 include ../Common.blocks/FormElements/-CheckboxButtons/FormElements-CheckboxButtons.pug
 include ../Common.blocks/FormElements/-LeftColumn/FormElements-LeftColumn.pug
 include ../Common.blocks/FormElements/-RigthColumn/FormElements-RigthColumn.pug
@@ -430,8 +433,9 @@ html
                     +FormElements-RigthWrapper
                         +FormElements-RigthWrapperForButtons
                             +FormElements-LeftColumn
+
                                 // Checkbox Buttons
-                                +CheckboxList.FormElements-CheckboxButtons
+                                +CheckboxList.FormElements-CheckboxButtons(id='CheckboxButtons')
                                     +CheckboxList-Header.CheckboxList-Header_theme_checkboxButtons
                                         +LabelText Checkbox Buttons
                                     +List
@@ -444,26 +448,21 @@ html
                                         +List-Item
                                             +Checkbox(type="checkbox")
                                             +BodyText.List-Text Можно пригласить гостей (до 10 человек)
-                                //+CheckboxList.CheckboxList_BottomIndent_30px()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3.TitleBlock-H3_withoutMarginTop_4px.TitleBlock-H3_withoutMarginBottom_10px() Checkbox Buttons
-                                    +List()
-                                        +List-Item()
-                                            +InputForButtonsAndInputs()
-                                                +InputForButtonsAndInputs-Checkbox(type="checkbox")
-                                            +DescriptionForButtonsAndInputs() Можно курить
-                                        +List-Item()
-                                            +InputForButtonsAndInputs()
-                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                            +DescriptionForButtonsAndInputs() Можно с питомцами
-                                        +List-Item()
-                                            +InputForButtonsAndInputs()
-                                                +InputForButtonsAndInputs-Checkbox(type="checkbox" checked class="checkArrow")
-                                            +DescriptionForButtonsAndInputs() Можно пригласить гостей (до 10 человек)
-                                +Wrapper-RadioButtons()
-                                    +TitleBlock.CheckboxList-Header()
+
+                                +FormElements-RadioButtons
+                                    +LabelText.FormElements-RadioButtonsTitle Radio Buttons
+                                    // Radio Buttons
+                                    +RadioButtons
+                                        +RadioButtons-Wrapper
+                                            +RadioButtons-RadioButton.RadioButtons-RadioButton_active(type="radio" name="gender" value="men" checked)
+                                            +BodyText.RadioButtons-Label Мужчина
+                                        +RadioButtons-Wrapper
+                                            +RadioButtons-RadioButton(type="radio" name="gender" value="women")
+                                            +BodyText.RadioButtons-Label Женщина
+
+                                    //+TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3() Radio Buttons
-                                    +RadioButtons()
+                                    //+RadioButtons()
                                         +RadioButtons-Wrapper()
                                             +RadioButtons-RadioButton(type="radio" name="gender" value="men" checked class="RadioButtons-RadioButton_active")
                                             +RadioButtons-Label() Мужчина
@@ -650,13 +649,4 @@ html
 // провырить форм тег и як использууться на макеты блоки
 // рефакторинг
 
-
-+FormElements-RigthWrapperForButtons()
-
-+FormElements-RigthWrapperForComment()
-
-+FormElements-RigthColumn()
-
-+FormElements-LeftColumn()
-
-+FormElements-CheckboxButtons()
++FormElements-RadioButtonsTitle()
