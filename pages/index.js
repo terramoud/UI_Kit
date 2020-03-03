@@ -420,3 +420,10 @@ require('../Common.blocks/FormElements/-CheckboxButtons/FormElements-CheckboxBut
 require('../Common.blocks/FormElements/-RadioButtons/FormElements-RadioButtons.js');
 require('../Common.blocks/FormElements/-RadioButtonsTitle/FormElements-RadioButtonsTitle.js');
 require('../Common.blocks/FormElements/-RadioButtonsTitle/FormElements-RadioButtonsTitle.js');
+
+require('../Common.blocks/FormElements/-Toggle/FormElements-Toggle.js');
+require('../Common.blocks/FormElements/-ToggleTitle/FormElements-ToggleTitle.js');
+require('../Common.blocks/ToggleBlock/ToggleBlock.js');
+require('../Common.blocks/ToggleButton/ToggleButton.js');
+require('../Common.blocks/ToggleBlock/-Descr/ToggleBlock-Descr.js');
+require('../Common.blocks/FormElements/-ToggleSecond/FormElements-ToggleSecond.js');

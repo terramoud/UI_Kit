@@ -1,3 +1,9 @@
+include ../Common.blocks/FormElements/-ToggleSecond/FormElements-ToggleSecond.pug
+include ../Common.blocks/ToggleBlock/-Descr/ToggleBlock-Descr.pug
+include ../Common.blocks/ToggleButton/ToggleButton.pug
+include ../Common.blocks/ToggleBlock/ToggleBlock.pug
+include ../Common.blocks/FormElements/-ToggleTitle/FormElements-ToggleTitle.pug
+include ../Common.blocks/FormElements/-Toggle/FormElements-Toggle.pug
 include ../Common.blocks/FormElements/-RadioButtonsTitle/FormElements-RadioButtonsTitle.pug
 include ../Common.blocks/FormElements/-RadioButtonsTitle/FormElements-RadioButtonsTitle.pug
 include ../Common.blocks/FormElements/-RadioButtons/FormElements-RadioButtons.pug
@@ -460,16 +466,17 @@ html
                                             +RadioButtons-RadioButton(type="radio" name="gender" value="women")
                                             +BodyText.RadioButtons-Label Женщина
 
-                                    //+TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3() Radio Buttons
-                                    //+RadioButtons()
-                                        +RadioButtons-Wrapper()
-                                            +RadioButtons-RadioButton(type="radio" name="gender" value="men" checked class="RadioButtons-RadioButton_active")
-                                            +RadioButtons-Label() Мужчина
-                                        +RadioButtons-Wrapper()
-                                            +RadioButtons-RadioButton(type="radio" name="gender" value="women")
-                                            +RadioButtons-Label() Женщина
-                                +Wrapper-Toggle()
+                                // Toggle
+                                +FormElements-Toggle
+                                    +LabelText.FormElements-ToggleTitle Toggle
+                                    +ToggleBlock.FormElements-ToggleSecond
+                                        +ToggleButton(type="checkbox" id="toggleOn")
+                                        +BodyText.ToggleBlock-Descr Получать спецпредложения
+                                    +ToggleBlock
+                                        +ToggleButton(type="checkbox")
+                                        +BodyText.ToggleBlock-Descr Получать спецпредложения
+
+                                //+Wrapper-Toggle()
                                     +TitleBlock.CheckboxList-Header()
                                         +TitleBlock-H3(style="margin-bottom: 16px") Toggle
                                     +Wrapper-ToggleWrapper()
@@ -649,4 +656,4 @@ html
 // провырить форм тег и як использууться на макеты блоки
 // рефакторинг
 
-+FormElements-RadioButtonsTitle()
++FormElements-ToggleSecond()
