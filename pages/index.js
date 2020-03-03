@@ -231,6 +231,10 @@ jQuery( document ).ready(function() {
   jQuery('#CheckboxButtons').find('.Checkbox').eq(1).trigger('click');
   jQuery('#CheckboxButtons').find('.Checkbox').eq(2).trigger('click');
 
+  //Rate buttons
+  jQuery('#rateButton').find('[data-id=4]').trigger('click');
+  jQuery('#rigthRateButton').find('[data-id=5]').trigger('click');
+
   // setTimeout(() => {$( "#DropdownGuests2_ms" ).trigger( "click" )}, 500);
   // setTimeout(() => {$( "#DropdownGuests3_ms" ).trigger( "click" )}, 500);
   // $( ".RateButton:first .RateButton-Star[data-id=4]" ).trigger( "click" );
@@ -432,3 +436,10 @@ require('../Common.blocks/FormElements/-LikeBtnsWrapper/FormElements-LikeBtnsWra
 require('../Common.blocks/FormElements/-LikeBtnSeparator/FormElements-LikeBtnSeparator.js');
 require('../Common.blocks/FormElements/-ToggleSeparator/FormElements-ToggleSeparator.js');
 require('../Common.blocks/FormElements/-LikeButtonsTitle/FormElements-LikeButtonsTitle.js');
+require('../Common.blocks/FormElements/-RateButtons/FormElements-RateButtons.js');
+require('../Common.blocks/FormElements/-RateButtonsTitle/FormElements-RateButtonsTitle.js');
+require('../Common.blocks/FormElements/-RateButtonWrapper/FormElements-RateButtonWrapper.js');
+require('../Common.blocks/FormElements/-RateButtons/FormElements-RateButtons.js');
+require('../Common.blocks/FormElements/-RateButtonsSeparator/FormElements-RateButtonsSeparator.js');
+
+require('../Common.blocks/RateButton/-ListStars/RateButton-ListStars.js');

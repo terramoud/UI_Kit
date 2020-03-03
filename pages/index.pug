@@ -1,3 +1,9 @@
+include ../Common.blocks/RateButton/-ListStars/RateButton-ListStars.pug
+include ../Common.blocks/FormElements/-RateButtonsSeparator/FormElements-RateButtonsSeparator.pug
+include ../Common.blocks/FormElements/-RateButtons/FormElements-RateButtons.pug
+include ../Common.blocks/FormElements/-RateButtonWrapper/FormElements-RateButtonWrapper.pug
+include ../Common.blocks/FormElements/-RateButtonsTitle/FormElements-RateButtonsTitle.pug
+include ../Common.blocks/FormElements/-RateButtons/FormElements-RateButtons.pug
 include ../Common.blocks/FormElements/-LikeButtonsTitle/FormElements-LikeButtonsTitle.pug
 include ../Common.blocks/FormElements/-ToggleSeparator/FormElements-ToggleSeparator.pug
 include ../Common.blocks/FormElements/-LikeBtnSeparator/FormElements-LikeBtnSeparator.pug
@@ -365,7 +371,7 @@ html
                                 +LabelText.LabelText_darkened_50.LabelText_text_regular expanded
                             +DropdownFacilities(multiple='multiple', id="dropdownFacilitiesExpanded", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']])
 
-                        // expandable checkbox list roll up
+                        // Expandable checkbox list roll up
                         +CheckboxList.FormElements-ExpandableCheckboxListRollUp
                             +CheckboxList-Header.CheckboxList-Header_expandable
                                 +LabelText expandable checkbox list
@@ -398,7 +404,7 @@ html
                                         +Checkbox(type="checkbox")
                                         +BodyText.List-Text Шампунь
 
-                        // expandable checkbox list
+                        // Expandable checkbox list
                         +CheckboxList.FormElements-ExpandableCheckboxList
                             +CheckboxList-Header.CheckboxList-Header_expandable(id='ExpandableCheckboxList')
                                 +LabelText expandable checkbox list
@@ -430,6 +436,7 @@ html
                                     +List-Item
                                         +Checkbox(type="checkbox")
                                         +BodyText.List-Text Шампунь
+
                         // Room details
                         +RoomDetails
                             i.material-icons.RoomDetails-Icon insert_emoticon
@@ -460,9 +467,9 @@ html
                                             +Checkbox(type="checkbox")
                                             +BodyText.List-Text Можно пригласить гостей (до 10 человек)
 
+                                // Radio Buttons
                                 +FormElements-RadioButtons
                                     +LabelText.FormElements-RadioButtonsTitle Radio Buttons
-                                    // Radio Buttons
                                     +RadioButtons
                                         +RadioButtons-Wrapper
                                             +RadioButtons-RadioButton.RadioButtons-RadioButton_active(type="radio" name="gender" value="men" checked)
@@ -498,38 +505,23 @@ html
                                                     +LikeButton-Icon.LikeButton-Icon_active favorite
                                                     +LikeButton-NumberLikes.LikeButton-NumberLikes_active 12
 
-                                //+Wrapper-LikeButton()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3(style="margin-bottom: 16px") like button
-                                    +Wrapper-LikeButtonWrapper()
-                                        +Wrapper-LikeButtonWrapperFirst()
-                                            +LikeButton()
-                                                +LikeButton-GradientBorder()
-                                                    +LikeButton-Label()
-                                                        +LikeButton-Button(type="hidden" name="likes")
-                                                        +LikeButton-Icon() favorite_border
-                                                        +LikeButton-NumberLikes() 2
-                                        +LikeButton()
-                                            +LikeButton-GradientBorder.LikeButton-GradientBorder_active()
-                                                +LikeButton-Label()
-                                                    +LikeButton-Button(type="hidden" name="likes")
-                                                    +LikeButton-Icon.LikeButton-Icon_active() favorite
-                                                    +LikeButton-NumberLikes.LikeButton-NumberLikes_active() 12
-                                +Wrapper-RateButton()
-                                    +TitleBlock.CheckboxList-Header()
-                                        +TitleBlock-H3(style="margin-bottom: 16px") rate button
-                                    +Wrapper-RateButtonWrapper()
-                                        +Wrapper-RateButtonSeparator()
-                                            +RateButton()
-                                                +RateButton-InputHidden(type="hidden" name="rating" value="0")
+                                // Rate buttons
+                                +FormElements-RateButtons
+                                    +LabelText.FormElements-RateButtonsTitle rate button
+                                    +FormElements-RateButtonWrapper
+                                        +RateButton.FormElements-RateButtonsSeparator(id="rateButton")
+                                            +RateButton-InputHidden(type="hidden" name="rating" value="0")
+                                            +RateButton-ListStars
                                                 each val, index in ['1', '2', '3', '4', '5']
                                                     +RateButton-Star(data-id=val)
                                                         +RateButton-StarIcon(data-id=val) star_border
-                                        +RateButton()
+                                        +RateButton(id="rigthRateButton")
                                             +RateButton-InputHidden(type="hidden" name="rating" value="0")
-                                            each val, index in ['1', '2', '3', '4', '5']
-                                                +RateButton-Star(data-id=val)
-                                                    +RateButton-StarIcon(data-id=val) star_border
+                                            +RateButton-ListStars
+                                                each val, index in ['1', '2', '3', '4', '5']
+                                                    +RateButton-Star(data-id=val)
+                                                        +RateButton-StarIcon(data-id=val) star_border
+
                                 +Wrapper-SecondDropdownGuests()
                                     +InputBlock()(class='')
                                         +InputBlock-Wrapper
@@ -668,13 +660,3 @@ html
 // провырить форм тег и як использууться на макеты блоки
 // рефакторинг
 
-+FormElements-ToggleSecond()
-
-+FormElements-LikeButtons()
-
-+FormElements-LikeBtnsWrapper()
-+FormElements-LikeBtnSeparator()
-
-+FormElements-ToggleSeparator()
-
-+FormElements-LikeButtonsTitle()
