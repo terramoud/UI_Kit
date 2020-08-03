@@ -1,50 +1,51 @@
-.body-text {
+.label-text {
   font-family: Montserrat;
-  font-weight: normal;
-  font-size: .875rem;
-  line-height: 1.714em;
-  color: $DarkShade75;
+  font-weight: bold;
+  font-size: .75rem;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  color: $DarkShade100;
   margin: 0;
 }
 
 @media only screen and (min-width: 321px) {
-  .body-text {
+  .label-text {
 
   }
 }
 
 @media only screen and (min-width: 576px) {
-  .body-text {
+  .label-text {
 
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .body-text {
+  .label-text {
 
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .body-text {
+  .label-text {
 
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .body-text {
+  .label-text {
 
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .body-text {
+  .label-text {
 
   }
 }
 
 @media only screen and (min-width: 1681px) {
-  .body-text {
+  .label-text {
 
   }
 }

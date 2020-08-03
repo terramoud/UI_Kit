@@ -455,3 +455,4 @@ require('../Common.blocks/html/html.js');
 require('../Common.blocks/html/html.js');
 require('../Common.blocks/html/html.js');
 require('../Common.blocks/html/html.js');
+require('../Common.blocks/label-text/label-text.js');
