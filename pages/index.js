@@ -443,3 +443,15 @@ require('../Common.blocks/FormElements/-RateButtons/FormElements-RateButtons.js'
 require('../Common.blocks/FormElements/-RateButtonsSeparator/FormElements-RateButtonsSeparator.js');
 
 require('../Common.blocks/RateButton/-ListStars/RateButton-ListStars.js');
+
+require('../Common.blocks/block-name/__elem-name/mod-name_mod-val/block-name__elem-name_mod-name_mod-val.js');
+require('../Common.blocks/block-name2/__elem-name/_mod-name_mod-val/block-name2__elem-name_mod-name_mod-val.js');
+require('../Common.blocks/block-name2/__elem-name/_mod-name/block-name2__elem-name_mod-name_mod-val2.js');
+require('../Common.blocks/block-name2/__elem-name/_mod-name2/block-name2__elem-name_mod-name2_mod-val2.js');
+require('../Common.blocks/block-name2/__elem-name/_mod-name/block-name2__elem-name_mod-name_green-greyed.js');
+require('../Common.blocks/html/html.js');
+require('../Common.blocks/body-text/body-text.js');
+require('../Common.blocks/html/html.js');
+require('../Common.blocks/html/html.js');
+require('../Common.blocks/html/html.js');
+require('../Common.blocks/html/html.js');

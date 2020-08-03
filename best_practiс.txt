@@ -1,0 +1,6 @@
+1) Примеры текста для тегов h1 h2 h3 body This one is the sub-section or widget title
+2) +header({theme: 'transparent', font: 'light'}) вместо <header class="header header_theme_transparent header_font_light"/>
+3) в компонент подключаются другие блоки а в index.pug подключаеться уже только компонент
+4) блоки имеют свои елементы которые подключены в блоке
+5) в index.pug должен быть только "переиспользуемый" компонент Dropdown а он содержит уже елементы для позиционирования
+в которых БЭМ блоки а в них елементы

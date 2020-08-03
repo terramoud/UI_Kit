@@ -1,0 +1,4 @@
+mixin html(content)
+    div.html&attributes(attributes) #{content}
+        if block
+            block
