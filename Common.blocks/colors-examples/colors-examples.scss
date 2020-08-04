@@ -1,0 +1,72 @@
+.colors-examples {
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-top: 63px;
+  padding-right: 2%;
+  width: auto;
+}
+
+@media only screen and (min-width: 321px) {
+  .colors-examples {
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-top: 63px;
+    padding-right: 2%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .colors-examples {
+
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .colors-examples {
+
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .colors-examples {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-top: 63px;
+    padding-right: 5%;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .colors-examples {
+
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .colors-examples {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 150px;
+    padding-top: 63px;
+    padding-right: 177px;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 1681px) {
+  .colors-examples {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-top: 63px;
+    padding-right: 15%;
+    width: auto;
+  }
+}
+

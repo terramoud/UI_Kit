@@ -25,7 +25,7 @@ require('./index.scss');
 // require('../Common.blocks/Content/Content.js');
 // require('../Common.blocks/Content/-WrapperForFormElements/Content-WrapperForFormElements.js');
 //
-// require('../Common.blocks/Logo/Logo.js');
+// require('../Common.blocks/logo/logo.js');
 //
 // require('../Common.blocks/container/container.js');
 // require('../Common.blocks/container/_bgColor/Container_bgColor_white.js');
@@ -448,3 +448,7 @@ require('./index.scss');
 // require('../Common.blocks/widget-title/widget-title.js');
 // require('../Common.blocks/main-title/main-title.js');
 // require('../Common.blocks/container/container.js');
+
+require('../Common.blocks/container/__layout/container__layout.js');
+require('../Common.blocks/logo/logo.js');
+require('../Common.blocks/colors-examples/colors-examples.js');

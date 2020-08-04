@@ -13,7 +13,7 @@
 //@import '../Common.blocks/Content/Content';
 //@import '../Common.blocks/Content/Content';
 //
-//@import '../Common.blocks/Logo/Logo';
+//@import '../Common.blocks/logo/logo';
 //
 //@import '../Common.blocks/container/container';
 //@import '../Common.blocks/container/_bgColor/Container_bgColor_white';
@@ -380,3 +380,6 @@
 //@import '../Common.blocks/widget-title/widget-title';
 //@import '../Common.blocks/main-title/main-title';
 @import '../Common.blocks/container/container';
+@import '../Common.blocks/container/__layout/container__layout';
+@import '../Common.blocks/logo/logo';
+@import '../Common.blocks/colors-examples/colors-examples';

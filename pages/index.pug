@@ -1,3 +1,6 @@
+include ../Common.blocks/colors-examples/colors-examples.pug
+include ../Common.blocks/logo/logo
+include ../Common.blocks/container/__layout/container__layout.pug
 include ../Common.blocks/container/container.pug
 include ../Common.blocks/main-title/main-title.pug
 include ../Common.blocks/widget-title/widget-title.pug
@@ -18,6 +21,9 @@ html
 
     body
         +container
+            +container__layout()
+                +logo()
+                +colors-examples()
             //
             //+container-Layout
             //    +Logo
@@ -431,3 +437,5 @@ html
 // провырить форм тег и як использууться на макеты блоки
 // рефакторинг
 //У меня есть миксин в котором я пишу любое число (можно и не целое) и оно создает соответственно нужное количество звезд
+
+
