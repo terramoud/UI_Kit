@@ -1,0 +1,8 @@
+mixin container__layout-examples(args)
+    -let modifierNames = '';
+    -if (args === undefined) args = '';
+        each val, key in args
+            -modifierNames += 'container__layout_' + key + '__' + val
+    div.container__layout-examples&attributes(attributes)(class=modifierNames)
+        if block
+            block
