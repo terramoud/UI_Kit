@@ -454,7 +454,4 @@ require('./index.scss');
 // require('../Common.blocks/colors-examples/colors-examples.js');
 
 require('../Common.blocks/container/container.js');
-require('../Common.blocks/container/__layout/container__layout.js');
-require('../Common.blocks/container/__layout/_theme/container__layout_theme_colors-fonts.js');
-
-require('../Common.blocks/container/__layout-logo/container__layout-logo.js');
+require('../Common.blocks/uikit-logo/uikit-logo.js');
