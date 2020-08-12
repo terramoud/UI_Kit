@@ -53,7 +53,7 @@ module.exports = {
               sourceMap: true,
               // Or array of paths
               resources: [
-                './Common.blocks/body/variables.scss',
+                './Common.blocks/base/variables.scss',
               ]
             }
           }

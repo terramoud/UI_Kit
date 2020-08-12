@@ -3,7 +3,7 @@
 
 /*Common.blocks*/
 
-@import '../Common.blocks/base/base';
+//@import '../Common.blocks/base/base';
 //@import '../Common.blocks/body/Mixins'; deleted
 
 //@import '../Common.blocks/Wrapper/Wrapper';
@@ -379,7 +379,13 @@
 //@import '../Common.blocks/label-text/label-text';
 //@import '../Common.blocks/widget-title/widget-title';
 //@import '../Common.blocks/main-title/main-title';
+//@import '../Common.blocks/container/container';
+//@import '../Common.blocks/container/__layout/container__layout';
+//@import '../Common.blocks/logo/logo';
+//@import '../Common.blocks/colors-examples/colors-examples';
+
+
 @import '../Common.blocks/container/container';
 @import '../Common.blocks/container/__layout/container__layout';
-@import '../Common.blocks/logo/logo';
-@import '../Common.blocks/colors-examples/colors-examples';
+@import '../Common.blocks/container/__layout/_theme/container__layout_theme_colors-fonts';
+@import '../Common.blocks/container/__layout-logo/container__layout-logo';

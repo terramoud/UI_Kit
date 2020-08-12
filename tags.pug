@@ -1,0 +1,1007 @@
+body
+    +container
+
+        // Colors & Type
+        +container__layout({theme: 'colors-fonts'})
+
+            +container__layout-logo
+                +uikit-logo
+
+            +container__layout-examples
+
+                +container__layout-colors
+
+                    +color-example
+                        +color-example__image
+                        +color-example__description
+                            +medium-title Dark Shade 100%
+                            +medium-title({text: 'uppercase', font: 'normal'}) #1F2041
+                            //...
+
+                +container__layout-fonts
+
+                    +font-example
+                        +font-example_tag-name
+                            +body-text({font: 'large', color: 'dark-shade25'}) H1
+                        +font-example_name
+                            +widget-title This one is the sub-section or widget title
+
+                    +font-example
+                        +font-example_tag-name
+                            +body-text({font: 'medium', color: 'dark-shade25'}) H2
+                        +font-example_name
+                            +medium-title Next one is the item title inside widgets
+
+                    +font-example
+                        +font-example_tag-name
+                            +label-text({font: 'light', color: 'dark-shade25'}) H3
+                        +font-example_name
+                            +label-text This is a label or CTA text
+
+                    +font-example
+                        +font-example_tag-name
+                            +body-text({color: 'dark-shade25'}) Body
+                        +font-example_name
+                            +body-text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+
+        // Form Elements
+        +container__layout({theme: 'form-elements'})
+
+            +container__layout-logo
+                +uikit-logo
+
+            +form-elements
+                +form-elements__left-col
+                    +form-elements__corrective-wrapper
+
+                        +form-elements__component-wrapper({theme: 'text-field'})
+                            +text-field
+                                +text-field__header
+                                    +label-text text field
+                                    +label-text({color: 'dark-shade50', font: 'light', text: 'uppercase'}) default
+                                +text-field__input
+                                    +input(type='text', placeholder='Email')
+
+                        +form-elements__component-wrapper
+                            +text-field
+                                +text-field__header
+                                    +label-text text field
+                                    +label-text({color: 'dark-shade50', font: 'light', text: 'uppercase'}) Hover / Focus
+                                +text-field__input
+                                    +input(type='text', placeholder='This is pretty awesome')
+
+                        +form-elements__component-wrapper
+                            +text-field
+                                +text-field__header
+                                    +label-text dropdown
+                                    +label-text({color: 'dark-shade50', font: 'light', text: 'uppercase'}) default
+                                +dropdown-guests
+
+                        +form-elements__component-wrapper
+                            +text-field
+                                +text-field__header
+                                    +label-text masked text field
+                                    +label-text({color: 'dark-shade50', font: 'light', text: 'uppercase'}) default
+                                +text-field__input
+                                    +input(type='date', placeholder='ДД.ММ.ГГГГ')
+
+                        +form-elements__component-wrapper({theme: 'datepicker'})
+                            +dropdown-datepicker
+                                +dropdown-datepicker__wrapper-dropdown
+                                    +dropdown-datepicker__header
+                                        +label-text date dropdown
+                                    +dropdown-datepicker___arrival-date
+                                        +dropdown-datepicker__input-hidden(type="hidden")
+                                        +dropdown-datepicker__open ДД.ММ.ГГГГ
+                                        +dropdown-datepicker__icon
+                                            i.material-icons expand_more
+                                    +dropdown-datepicker__air-datepicker
+                                +dropdown-datepicker__wrapper-dropdown
+                                    +label-text.dropdown-datepicker__Header date dropdown
+                                    +dropdown-datepicker__date-departure
+                                        +dropdown-datepicker__input-hidden(type="hidden")
+                                        +dropdown-datepicker__open 19.08.2019
+                                        +dropdown-datepicker__icon
+                                            i.material-icons expand_more
+
+                        +form-elements__component-wrapper({theme: 'filter-datepicker'})
+                            +filter-datepicker
+                                +text-field
+                                    +text-field__header
+                                        +label-text filter date dropdown
+                                +text-field__input
+                                    +filter-datepicker__dropdown
+                                        +filter-datepicker__input-hidden(type='hidden')
+                                        +filter-datepicker__open 19 авг - 23 авг
+                                        +filter-datepicker__icon
+                                            i.material-icons expand_more
+                                    +filter-datepicker__air-datepicker()
+
+                    +form-elements__component-wrapper({theme: 'subscr-field'})
+                        +text-field
+                            +text-field__header
+                                +label-text subscription text field
+                            +text-field__input
+                                +subscr-field
+                                    +subscr-field__input-field(type='text' placeholder='Email')
+                                    +subscr-field__icon('arrow_forward')
+
+                    +form-elements__component-wrapper({theme: 'dropdown-facilities'})
+                        +DropdownFacilities(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'],['кроватей', 'кровать', 'кровати'],['ванных комнат', 'ванная комната', 'ванные комнаты']])
+
+                    +form-elements__component-wrapper({theme: 'facilities-expanded'})
+                        +DropdownFacilities(multiple='multiple', id="dropdownFacilitiesExpanded", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']])
+
+                    +form-elements__component-wrapper({theme: 'expandable-list'})
+                        +checkbox-list
+                            +checkbox-list__header({theme: 'expandable'})
+                                +label-text expandable checkbox list
+                                +checkbox-list__icon
+                                    i.material-icons expand_more
+                            +checkbox-list__expandable
+                                +list
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Завтрак
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Письменный стол
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Стул для кормления
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Кроватка
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Телевизор
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Шампунь
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Телевизор
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Шампунь
+
+                    // Expandable checkbox list
+                    +form-elements__component-wrapper({theme: 'expandable-list'})
+                        +checkbox-list
+                            +checkbox-list__header({theme: 'expandable-list'})(id='cxpandablecheckbox-list')
+                                +label-text expandable checkbox list
+                                +checkbox-list__icon
+                                    i.material-icons expand_more
+                            +checkbox-list__expandable
+                                +list
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Завтрак
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Письменный стол
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Стул для кормления
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Кроватка
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Телевизор
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Шампунь
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Телевизор
+                                    +list__item
+                                        +checkbox(type="checkbox")
+                                        +list__content
+                                            +body-text Шампунь
+
+                    // Room details
+                    +form-elements__component-wrapper({theme: 'room-details'})
+                        +room-details
+                            +room-details__icon
+                                i.material-icons insert_emoticon
+                            +room-details__text
+                                    +body-text.body-text_bold Комфорт
+                                    +body-text Шумопоглощающие стены
+                        +room-details
+                            +room-details__icon
+                                i.material-icons insert_emoticon
+                            +room-details__text
+                                    +body-text.body-text_bold Удобство
+                                    +body-text Окно в каждой из спален
+
+
+                +form-elements__big-col
+                    +form-elements__columns-wrapper
+
+                        +form-elements__middle-col
+
+                            // Checkbox Buttons
+                            +form-elements__component-wrapper({theme: 'checkbox-buttons'})
+                                +checkbox-list(id='checkboxButtons')
+                                    +checkbox-list__header.checkbox-list-Header_theme_checkboxButtons
+                                        +label-text checkbox Buttons
+                                    +list
+                                        +list__item
+                                            +checkbox(type="checkbox")
+                                            +list__content
+                                                +body-text Можно курить
+                                        +list__item
+                                            +checkbox(type="checkbox")
+                                            +list__content
+                                                +body-text Можно с питомцами
+                                        +list__item
+                                            +checkbox(type="checkbox")
+                                            +list__content
+                                                +body-text Можно пригласить гостей (до 10 человек)
+
+                            // Radio Buttons
+                            +form-elements__component-wrapper({theme: 'radio-buttons'})
+                                +form-elements__component-title({theme: 'radio-buttons'})
+                                    +label-text Radio Buttons
+                                +radio-buttons
+                                    +radio-buttons__wrapper
+                                        +radio-buttons__radioButton({button: 'active'})(type="radio" name="gender" value="men" checked)
+                                        +radio-buttons__label
+                                            +body-text Мужчина
+                                    +radio-buttons-Wrapper
+                                        +radio-buttons-RadioButton(type="radio" name="gender" value="women")
+                                        +radio-buttons__label
+                                            +body-text Женщина
+
+                            // Toggle
+                            +form-elements__component-wrapper({theme: 'toggle'})
+                                +form-elements__component-title({theme: 'toggle'})
+                                    +label-text Toggle
+                                +form-elements__toggle-separator
+                                    +toggle-block
+                                        +toggle-button(type="checkbox" id="toggleOn")
+                                        +toggle-block__descr
+                                            +body-text Получать спецпредложения
+                                +toggle-block
+                                    +toggle-button(type="checkbox")
+                                    +toggle-block__descr
+                                        +body-text Получать спецпредложения
+
+                            //Like button
+                            +form-elements__component-wrapper({theme: 'like-button'})
+                                +form-elements__component-title({theme: 'like-button'})
+                                    +label-text button
+                                +form-elements__like-button
+                                    +form-elements__like-separator
+                                        +like-button
+                                            +like-button__gradient-border
+                                                +like-button__label
+                                                    +like-button__button(type="hidden" name="likes")
+                                                    +like-button__icon favorite_border
+                                                    +like-button__number-likes 2
+                                    +like-button
+                                        +like-button__gradient-border.like-button__gradient-border_active
+                                            +like-button__label
+                                                +like-button__button(type="hidden" name="likes")
+                                                +like-button__icon.like-button-Icon_active favorite
+                                                +like-button__number-likes.like-button__number-likes_active 12
+
+                            // Rate buttons
+                            +form-elements__component-wrapper({theme: 'rate-buttons'})
+                                +form-elements__component-title({theme: 'rate-buttons'})
+                                    +label-text button
+                                +form-elements__ratebutton-wrapper
+                                    +form-elements__rate-separator
+                                        +rate-button(id="rateButton")
+                                            +rate-button__input-hidden(type="hidden" name="rating" value="0")
+                                            +rate-button__list-stars
+                                                each val, index in ['1', '2', '3', '4', '5']
+                                                    +rate-button__star(data-id=val)
+                                                        +rate-button__star-icon(data-id=val) star_border
+                                    +rate-button(id="rigthrate-button")
+                                        +rate-button__input-hidden(type="hidden" name="rating" value="0")
+                                        +rate-button__list-stars
+                                            each val, index in ['1', '2', '3', '4', '5']
+                                                +rate-button__star(data-id=val)
+                                                    +rate-button__star-icon(data-id=val) star_border
+
+                            // SecondDropdownGuests
+                            +form-elements__component-wrapper({theme: 'second-dropdown-guests'})
+                                +text-field
+                                    +text-field__header
+                                        +label-text dropdown
+                                        +label-text({color: 'dark-shade50', font: 'light', text: 'uppercase'}) default
+                                    +dropdown-guests
+
+                            // rich-checkbox
+                           +form-elements__component-wrapper({theme: 'rich-checkbox'})
+                                +rich-checkbox()
+                                    +rich-checkbox__header()
+                                        +label-text(style="margin-bottom: 16px") rich checkbox buttons
+                                    +rich-checkbox__list-wrapper()
+                                        +list
+                                            +list__item
+                                                +checkbox(type="checkbox")
+                                                +list__content
+                                                    +body-text({font: 'bold'}) Широкий коридор
+                                                    +list__addon-content
+                                                        +label-text Ширина коридоров в номере не менее 91 см.
+                                            +list__item
+                                                +checkbox(type="checkbox")
+                                                +list__content
+                                                    +body-text({font: 'bold'}) Помощник для инвалидов
+                                                    +list__addon-content
+                                                        +label-text На 1 этаже вас встретит специалист и проводит до номера.
+
+
+
+                        +form-elements__rigth-col
+
+                            // range-slider
+                            +form-elements__component-wrapper({theme: 'range-slider'})
+                                +range-slider()
+                                    +range-slider__wrapper()
+                                        +range-slider__title()
+                                            +label-text Range Slider
+                                        +range-slider__range(type="text" data-amount="" readonly )
+                                    +range-slider__slider()
+
+                            // buttons
+                            +form-elements__component-wrapper({theme: 'buttons'})
+                                +form-elements__component-title({theme: 'buttons'})
+                                    +label-text buttons
+                                +buttons-block
+                                    +buttons-block__wrapper
+                                        +buttons-block__left-button()
+                                            +button
+                                                +button-text
+                                                    +label-text click me
+                                        +button({state: 'active'})
+                                            +button-text
+                                                +label-text click me
+                                    +buttons-block__wrapper
+                                        +buttons-block__left-button()
+                                            +button({theme: "gradient"})
+                                                +button__content
+                                                    +label-text click me
+                                            +button({state: 'active', theme: "gradient"})
+                                                +button__content
+                                                    +label-text click me
+                                    +buttons-block__wrapper
+                                        +buttons-block__left-button()
+                                            +button({theme: 'ghost-btn'})
+                                                +label-text click me
+                                        +button({theme: 'ghost-btn', state: 'active'})
+                                            +label-text click me
+                                    +buttons-block__wrapper
+                                        +button({theme: 'pay-button'})
+                                            +label-text перейти к оплате
+                                            +button__arrow arrow_forward
+
+                            // paginationBlock
+                            +form-elements__component-wrapper({theme: 'pagination'})
+                                +form-elements__component-title({theme: 'pagination'})
+                                    +label-text pagination
+                                +pagination()
+                                    +pagination__list()
+                                        +pagination__page(style="display: none;")
+                                            +pagination__prev-page('#', 'arrow_back')
+                                        +pagination__page()
+                                            +pagination__link-page('#')(class="pagination__link-page_active") 1
+                                        +pagination__page()
+                                            +pagination__link-page('#') 2
+                                        +pagination__page()
+                                            +pagination__link-page('#') 3
+                                        +pagination__page()
+                                            +pagination__dots() ...
+                                        +pagination__page()
+                                            +pagination__link-page('#') 15
+                                        +pagination__page()
+                                            +pagination__next-page('#', 'arrow_forward')
+                                    +pagination__amount-items() 1 – 12 из 100+ вариантов аренды
+
+                            // ThirdDropdownGuests
+                            +form-elements__component-wrapper({theme: 'third-dropdown-guests'})
+                               +text-field
+                                   +text-field__header
+                                       +label-text dropdown
+                                       +label-text({color: 'dark-shade50', font: 'light', text: 'uppercase'}) default
+                                   +dropdown-guests
+
+
+                            // bullet-list
+                            +form-elements__component-wrapper({theme: 'third-dropdown-guests'})
+                                +bullet-list()
+                                    +bullet-list__header({theme: 'expandable'})
+                                        +label-text bullet list
+                                    +list({theme: 'bulet-list'})
+                                        +list__item({theme: 'bulet-list'})
+                                            +body-text Нельзя с питомцами
+                                        +list__item({theme: 'bulet-list'})
+                                            +body-text Без вечеринок и мероприятий
+                                        +list__item({theme: 'bulet-list'})
+                                            +body-text Время прибытия — после 13:00, а выезд до 12:00
+
+                    +form-elements__comment-wrapper
+                        // comment
+                        +form-elements__component-wrapper({theme: 'comment'})
+                            +comment
+                                +comment__author-block
+                                    +comment__img-wrapper
+                                        +comment__img
+                                    +comment__author-descr
+                                        +comment__author
+                                            +body-text({font: 'bold'}) Мурад Сарафанов
+                                        +comment__time
+                                            +body-text 5 дней назад
+                                +comment__comment-block
+                                    +comment__like-wrapper
+                                        +like-button
+                                            +like-button__gradient-border.like-button__gradient-border_active
+                                                +like-button__label
+                                                    +like-button__button(type="hidden" name="likes")
+                                                    +like-button__icon.like-button-Icon_active favorite
+                                                    +like-button__number-likes.like-button__number-likes_active 12
+                                    +comment__descr-wrapper
+                                        +body-text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+        // Cards
+        +container__layout({theme: 'cards'})
+
+
+            +container__layout-logo
+                +uikit-logo
+
+            +cards
+                +cards__col-left
+
+                    // choose room card
+                    +cards__component-wrapper({theme: 'choose-room'})
+                        +choose-room
+                            +choose-room__header
+                                +widget-title Найдём номера под ваши пожелания
+                            +choose-room__datepicker-wrapper
+                                +dropdown-datepicker
+                                    +dropdown-datepicker__wrapper-dropdown
+                                        +dropdown-datepicker__header
+                                            +label-text date dropdown
+                                        +dropdown-datepicker___arrival-date
+                                            +dropdown-datepicker__input-hidden(type="hidden")
+                                            +dropdown-datepicker__open ДД.ММ.ГГГГ
+                                            +dropdown-datepicker__icon
+                                                i.material-icons expand_more
+                                        +dropdown-datepicker__air-datepicker
+                                    +dropdown-datepicker__wrapper-dropdown
+                                        +label-text.dropdown-datepicker__Header date dropdown
+                                        +dropdown-datepicker__date-departure
+                                            +dropdown-datepicker__input-hidden(type="hidden")
+                                            +dropdown-datepicker__open 19.08.2019
+                                            +dropdown-datepicker__icon
+                                                i.material-icons expand_more
+                            +choose-room__guests-wrapper
+                                +text-field
+                                    +text-field__header
+                                        +label-text гости
+                                    +dropdown-guests
+                            +choose-room__get-room
+                                +button({theme: 'pay-button'})
+                                    +label-text подобрать номер
+                                    +button__arrow arrow_forward
+
+                    // registration card
+                    +cards__component-wrapper({theme: 'registration-card'})
+                        +reg-card
+                            +reg-card__header
+                                +widget-title Регистрация аккаунта
+                            +reg-card__user-data
+                                +reg-card__user-name
+                                    +input(type='text', placeholder='имя')
+                                +reg-card__user-soname
+                                    +input(type='text', placeholder='фамилия')
+                            +reg-card__gender
+                                +radio-buttons
+                                    +radio-buttons__wrapper
+                                        +radio-buttons__radioButton({button: 'active'})(type="radio" name="gender" value="men" checked)
+                                        +radio-buttons__label
+                                            +body-text Мужчина
+                                    +radio-buttons__wrapper
+                                        +radio-buttons-RadioButton(type="radio" name="gender" value="women")
+                                        +radio-buttons__label
+                                            +body-text Женщина
+                            +reg-card__birthday
+                                +text-field
+                                    +text-field__header
+                                        +label-text дата рождения
+                                    +input(type='date', placeholder='ДД.ММ.ГГГГ')
+                            +reg-card__auth-data
+                                +text-field
+                                    +text-field__header
+                                        +label-text данные для входа в сервис
+                                    +text-field__input
+                                        +input(type='text', placeholder='Email')
+                                    +input(type='password', placeholder='Пароль')
+                            +reg-card__special-offer
+                                +toggle-block
+                                    +toggle-button(type="checkbox" id="toggleOn")
+                                    +toggle-block__descr
+                                        +body-text Получать спецпредложения
+                            +reg-card__register-button
+                                +button({theme: 'pay-button'})
+                                    +label-text перейти к оплате
+                                    +button__arrow arrow_forward
+                            +reg-card__sign-in
+                                +body-text Уже есть аккаунт на Toxin
+                                +button({theme: "gradient"})
+                                    +button__content
+                                        +label-text войти
+
+
+                +cards__col-middle
+
+                    // reserve card
+                    +cards__component-wrapper({theme: 'reverse-card'})
+                        +reserve-card
+                            +reserve-card__header
+                                +reserve-card__room-descr
+                                    +reserve-card__room-number
+                                        +medium-title({font: 'bold'}) № 888
+                                    +reserve-card__room-properties
+                                        +label-text({color: 'purple'}) люкс
+                                +reserve-card__daily-payment
+                                    +body-text 9 990₽
+                                    +body-text в сутки
+                        +reserve-card__datepicker-wrapper
+                            +dropdown-datepicker
+                                +dropdown-datepicker__wrapper-dropdown
+                                    +dropdown-datepicker__header
+                                        +label-text date dropdown
+                                    +dropdown-datepicker___arrival-date
+                                        +dropdown-datepicker__input-hidden(type="hidden")
+                                        +dropdown-datepicker__open ДД.ММ.ГГГГ
+                                        +dropdown-datepicker__icon
+                                            i.material-icons expand_more
+                                    +dropdown-datepicker__air-datepicker
+                                +dropdown-datepicker__wrapper-dropdown
+                                    +label-text.dropdown-datepicker__Header date dropdown
+                                    +dropdown-datepicker__date-departure
+                                        +dropdown-datepicker__input-hidden(type="hidden")
+                                        +dropdown-datepicker__open 19.08.2019
+                                        +dropdown-datepicker__icon
+                                            i.material-icons expand_more
+                        +reserve-card__guests-wrapper
+                            +text-field
+                                +text-field__header
+                                    +label-text гости
+                                +dropdown-guests
+
+                        +reserve-card__payment
+                            +reserve-card__days
+                                +body-text 9 990₽ х 4 суток
+                            +reserve-card__sum
+                                +body-text 39 960₽
+
+                        +reserve-card__service-charge
+                            +reserve-card__service
+                                +body-text Сбор за услуги: скидка 2 179₽
+                                +reserve-card__info-help i
+                            +reserve-card__service-price
+                                +body-text 0₽
+
+                        +reserve-card__additional-service
+                            +reserve-card__service
+                                +body-text Сбор за дополнительные услуги
+                                +reserve-card__info-help i
+                            +reserve-card__additional-price
+                                +body-text 300₽
+
+                        +reserve-card__total-price
+                            +reserve-card__total
+                                +medium-title Итого
+                            +reserve-card__full-price
+                                +medium-title 38 081₽
+                        +reserve-card__reverse-button
+                            +button({theme: 'pay-button'})
+                                +label-text забронировать
+                                +button__arrow arrow_forward
+
+
+                // Sing in
+                +cards__component-wrapper({theme: 'sign-in'})
+                    +sign-in
+                        +sign-in__header
+                            +widget-title Войти
+                        +sign-in__auth-data
+                            +sign-in__email
+                                +input(type='text', placeholder='Email')
+                            +sign-in__password
+                                +input(type='password', placeholder='Пароль')
+                        +sign-in__login-button
+                            +button({theme: 'pay-button'})
+                                +label-text войти
+                                +button__arrow arrow_forward
+                        +sign-in__registration-block
+                            +sign-in__question
+                                +body-text Нет аккаунта на Toxin?
+                            +sign-in__button-create
+                                +button({theme: "gradient"})
+                                    +button__content
+                                        +label-text создать
+
+
+
+                +cards__col-right
+
+                    // datepicker
+                    +cards__component-wrapper({theme: 'datepicker'})
+                        +datepicker
+
+                    // room card
+                    +cards__component-wrapper({theme: 'room-card'})
+                        +room-card
+                            +room-card__photos-slider
+                            +room-card__header
+                                +room-card__room-descr
+                                    +room-card__room-number
+                                        +medium-title({font: 'bold'}) № 888
+                                    +room-card__room-properties
+                                        +label-text({color: 'purple'}) люкс
+                                +room-card__daily-payment
+                                    +body-text({font: 'bold'}) 9 990₽
+                                    +body-text в сутки
+                            +room-card__reviews
+                                +room-card__rating
+                                    +rate-button(id="rateButton")
+                                        +rate-button__input-hidden(type="hidden" name="rating" value="0")
+                                        +rate-button__list-stars
+                                            each val, index in ['1', '2', '3', '4', '5']
+                                                +rate-button__star(data-id=val)
+                                                    +rate-button__star-icon(data-id=val) star_border
+                                +room-card__review
+                                    +body-text({font: 'bold'}) 145
+                                    +body-text Отзывов
+
+
+
+                    // second room card
+                    +cards__component-wrapper({theme: 'second-room-card'})
+                        +room-card
+                            +room-card__photos-slider
+                            +room-card__header
+                                +room-card__room-descr
+                                    +room-card__room-number
+                                        +medium-title({font: 'bold'}) № 840
+                                +room-card__daily-payment
+                                    +body-text({font: 'bold'}) 9 990₽
+                                    +body-text в сутки
+                            +room-card__reviews
+                                +room-card__rating
+                                    +rate-button(id="rateButton")
+                                        +rate-button__input-hidden(type="hidden" name="rating" value="0")
+                                        +rate-button__list-stars
+                                            each val, index in ['1', '2', '3', '4', '5']
+                                                +rate-button__star(data-id=val)
+                                                    +rate-button__star-icon(data-id=val) star_border
+                                +room-card__review
+                                    +body-text({font: 'bold'}) 65
+                                    +body-text Отзывов
+
+
+        // Headers & Footers
+        +container__layout({theme: 'headers-footers'})
+
+            +container__layout-logo
+                +uikit-logo
+
+            +headers-footers
+
+                // first header
+                +headers-footers__header-wrapper
+                    +header
+                        +header__logo
+                            +logo
+                                +logo__img
+                                +logo__text
+                        +header__nav-menu
+                            +nav-menu
+                                +nav-menu__item
+                                    +nav-menu__item-link
+                                        +body-text О нас
+                                +nav-menu__item
+                                    // dropdown-menu block
+                                    +dropdown-menu
+                                        +dropdown-menu__header
+                                            +dropdown-menu__title
+                                                +body-text Услуги
+                                            +dropdown-menu__icon
+                                        +dropdown-menu__list
+                                            +dropdown-menu__item
+                                                +dropdown-menu__link
+                                                    +body-text готовый завтрак
+                                            +dropdown-menu__item
+                                                +dropdown-menu__link
+                                                    +body-text безналичный расчет
+                                +nav-menu__item
+                                    +nav-menu__item-link
+                                        +body-text Вакансии
+                                +nav-menu__item
+                                    +nav-menu__item-link
+                                        +body-text Новости
+                                +nav-menu__item
+                                    // dropdown-menu block
+                                    +dropdown-menu
+                                        +dropdown-menu__header
+                                            +dropdown-menu__title
+                                                +body-text Соглашения
+                                            +dropdown-menu__icon
+                                        +dropdown-menu__list
+                                            +dropdown-menu__item
+                                                +dropdown-menu__link
+                                                    +body-text готовый завтрак
+                                            +dropdown-menu__item
+                                                +dropdown-menu__link
+                                                    +body-text безналичный расчет
+                        +header__login-wrapper
+                            +header__sign-btn
+                                +button({theme: "gradient"})
+                                    +button__content
+                                        +button-text
+                                            +label-text войти
+                            +header__reg-btn
+                                +button
+                                    +button-text
+                                        +label-text зарегистрироваться
+
+                // second header
+                +headers-footers__header-logged
+                    +header
+                        +header__logo
+                            +logo
+                                +logo__img
+                                +logo__text
+                        +header__nav-menu
+                            +nav-menu
+                                +nav-menu__item
+                                    +nav-menu__item-link
+                                        +body-text О нас
+                                +nav-menu__item
+                                    // dropdown-menu block
+                                    +dropdown-menu
+                                        +dropdown-menu__header
+                                            +dropdown-menu__title Услуги
+                                            +dropdown-menu__icon
+                                        +dropdown-menu__list
+                                            +dropdown-menu__item
+                                                +dropdown-menu__link готовый завтрак
+                                            +dropdown-menu__item
+                                                +dropdown-menu__link безналичный расчет
+                                +nav-menu__item
+                                    +nav-menu__item-link
+                                        +body-text Вакансии
+                                +nav-menu__item
+                                    +nav-menu__item-link
+                                        +body-text Новости
+                                +nav-menu__item
+                                    // dropdown-menu block
+                                    +dropdown-menu
+                                        +dropdown-menu__header
+                                            +dropdown-menu__title
+                                                +body-text Соглашения
+                                            +dropdown-menu__icon
+                                        +dropdown-menu__list
+                                            +dropdown-menu__item
+                                                +dropdown-menu__link
+                                                    +body-text  готовый завтрак
+                                            +dropdown-menu__item
+                                                +dropdown-menu__link
+                                                    +body-text  безналичный расчет
+                        +header__user-data
+                            +header__user-name
+                                +body-text Юлий Цезарь
+
+                // footer desktop
+                +headers-footers__footer
+                    +footer
+                        +footer__content
+
+                            +footer__logo-block
+                                +logo
+                                    +logo__img
+                                    +logo__text
+                                +footer_hotel-description
+                                    +body-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+
+                            +footer__nav-menu
+                                +footer-menu
+                                    +footer-menu__title
+                                        +label-text навигация
+                                    +footer-menu__list
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text О нас
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Новости
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Служба поддержки
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Услуги
+
+                            +footer__about-us
+                                +footer-menu
+                                    +footer-menu__title
+                                        +label-text о нас
+                                    +footer-menu__list
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text О сервисе
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Наша команда
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Вакансии
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Инвесторы
+
+                            +footer__support-service
+                                +footer-menu
+                                    +footer-menu__title
+                                        +label-text Служба поддержки
+                                    +footer-menu__list
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Соглашения
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Сообщества
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Связь с нами
+
+                            +footer__subscription
+                                +footer-menu
+                                    +footer-menu__title
+                                        +label-text Подписка
+                                    +footer-menu__list
+                                        +footer-menu__item
+                                            +footer-menu__link
+                                                +body-text Получайте специальные предложения и новости сервиса
+                                        +footer-menu__item
+                                            +input(type='text', placeholder='Email')
+
+                        +footer__copyright-bar
+                            +footer__copyright
+                                +footer__copyright-content
+                                    +body-text Copyright © 2018 Toxin отель. Все права зачищены.
+                            +footer__social-netwoks
+                                +footer__twitter-icon
+                                +footer__facebook-icon
+                                +footer__instagram-icon
+
+                // footer mobile
+               +headers-footers__footer-mobile
+                   +footer
+                       +footer__content
+                           +footer__logo-block
+                               +logo
+                                   +logo__img
+                                   +logo__text
+                               +footer_hotel-description({theme: 'hide'})
+                                   +body-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+
+                           +footer__nav-menu({theme: 'hide'})
+                               +footer-menu
+                                   +footer-menu__title
+                                       +label-text навигация
+                                   +footer-menu__list
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text О нас
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Новости
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Служба поддержки
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Услуги
+
+                           +footer__about-us({theme: 'hide'})
+                               +footer-menu
+                                   +footer-menu__title
+                                       +label-text о нас
+                                   +footer-menu__list
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text О сервисе
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Наша команда
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Вакансии
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Инвесторы
+
+                           +footer__support-service({theme: 'hide'})
+                               +footer-menu
+                                   +footer-menu__title
+                                       +label-text Служба поддержки
+                                   +footer-menu__list
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Соглашения
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Сообщества
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Связь с нами
+
+                           +footer__subscription({theme: 'hide'})
+                               +footer-menu
+                                   +footer-menu__title
+                                       +label-text Подписка
+                                   +footer-menu__list
+                                       +footer-menu__item
+                                           +footer-menu__link
+                                               +body-text Получайте специальные предложения и новости сервиса
+                                       +footer-menu__item
+                                           +input(type='text', placeholder='Email')
+
+                       +footer__copyright-bar
+                           +footer__copyright
+                               +footer__copyright-content
+                                   +body-text Copyright © 2018 Toxin отель. Все права зачищены.
+                           +footer__social-netwoks
+                               +footer__twitter-icon
+                               +footer__facebook-icon
+                               +footer__instagram-icon
+
+
+
+
+
+
+
+
+
+
+// ! все примеры текстов это scss mixin а не html тег deprecated!!!!
+// @mixin body-text {
+//    font-size: 1rem;
+// }
+// @mixin body-text_bold {
+//    font-weight: bold;
+// }
+// ! все примеры текстов это компоненты
+//    +body-text({tag: 'p', font: 'bold'}) => <p class="body-text body-text_font_bold"></p>
+//    +body-text({tag: 'span', font: 'light'}) => <span class="body-text body-text_font_light"></span>
+//
+//
+//+body-text
+//+widget-title
+//+medium-title
+//+label-text

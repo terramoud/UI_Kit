@@ -1,0 +1,8 @@
+mixin container(args)
+    -let modifierNames = '';
+    -if (args === undefined) args = '';
+        each val, key in args
+            -modifierNames += 'container_' + key + '__' + val
+    div.container&attributes(attributes)(class=modifierNames)
+        if block
+            block

@@ -4,17 +4,17 @@ require('webpack-jquery-ui');
 require('webpack-jquery-ui/css');
 require('inputmask/dist/jquery.inputmask');
 //require('webpack-jquery-ui/selectmenu');
-require('../Common.blocks/Fonts/Fonts.scss');
-require('../Common.blocks/Fonts/font-awesome-4.7.0/scss/font-awesome.scss');
+// require('../Common.blocks/Fonts/Fonts.scss');
+// require('../Common.blocks/Fonts/font-awesome-4.7.0/scss/font-awesome.scss');
 
 /*Library.blocks*/
 
-require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
-require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
-require('../Library.blocks/AirDatepicker/AirDatepicker.css');
-require('../Library.blocks/AirDatepicker/AirDatepicker.js');
-require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/css/jquery.mswitch.css');
-require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/js/jquery.mswitch.js');
+// require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
+// require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
+// require('../Library.blocks/AirDatepicker/AirDatepicker.css');
+// require('../Library.blocks/AirDatepicker/AirDatepicker.js');
+// require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/css/jquery.mswitch.css');
+// require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/js/jquery.mswitch.js');
 
 /*End Library.blocks*/
 
@@ -449,6 +449,12 @@ require('./index.scss');
 // require('../Common.blocks/main-title/main-title.js');
 // require('../Common.blocks/container/container.js');
 
+// require('../Common.blocks/container/__layout/container__layout.js');
+// require('../Common.blocks/logo/logo.js');
+// require('../Common.blocks/colors-examples/colors-examples.js');
+
+require('../Common.blocks/container/container.js');
 require('../Common.blocks/container/__layout/container__layout.js');
-require('../Common.blocks/logo/logo.js');
-require('../Common.blocks/colors-examples/colors-examples.js');
+require('../Common.blocks/container/__layout/_theme/container__layout_theme_colors-fonts.js');
+
+require('../Common.blocks/container/__layout-logo/container__layout-logo.js');

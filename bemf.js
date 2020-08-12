@@ -97,8 +97,12 @@ fs.writeFile( overrideLevel + fullPath + '.scss', scssData, function (err) {
 
 // if ( !isModifier && modName === '' ) { - deprecated
 if ( modName === '' ) {
-  fs.writeFile( overrideLevel + fullPath + '.pug', 'mixin ' + createFileName + '(content)\n' +
-    '    div.' + createFileName + '&attributes(attributes) #{content}\n' +
+  fs.writeFile( overrideLevel + fullPath + '.pug', 'mixin ' + createFileName + '(args)\n' +
+    "    -let modifierNames = '';\n" +
+    "    -if (args === undefined) args = '';\n" +
+    "        each val, key in args\n" +
+    "            -modifierNames += 'container__layout_' + key + '__' + val\n" +
+    "    div." + createFileName + "&attributes(attributes)(class=modifierNames)\n" +
     '        if block\n' +
     '            block', function (err) {
     if (err) throw err;
@@ -114,7 +118,7 @@ if ( modName === '' ) {
     console.log('pug was prepended to file!');
   });
 
-  var data = '\n+' + createFileName + '()';
+  var data = '\n+' + createFileName;
 // append data to file
   fs.appendFile('pages/' + entryPoint + '.pug', data, 'utf8',
     // callback function
