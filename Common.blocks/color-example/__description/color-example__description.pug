@@ -1,0 +1,8 @@
+mixin color-example__description(args)
+    -let modifierNames = '';
+    -if (args === undefined) args = '';
+        each val, key in args
+            -modifierNames += 'container__layout_' + key + '__' + val
+    div.color-example__description&attributes(attributes)(class=modifierNames)
+        if block
+            block

@@ -1,0 +1,8 @@
+mixin container__layout-fonts(args)
+    -let modifierNames = '';
+    -if (args === undefined) args = '';
+        each val, key in args
+            -modifierNames += 'container__layout_' + key + '__' + val
+    div.container__layout-fonts&attributes(attributes)(class=modifierNames)
+        if block
+            block
