@@ -1,8 +1,11 @@
-mixin container__layout-examples(args)
+mixin container__layout-examples(modifiers, ...argsArr)
     -let modifierNames = '';
-    -if (args === undefined) args = '';
-        each val, key in args
-            -modifierNames += 'container__layout-examples_' + key + '_' + val
-    div.container__layout-examples&attributes(attributes)(class=modifierNames)
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+    each val, key in modifiers
+        -if (val !== undefined) modifierNames += 'container__layout-examples_' + key + '_' + val + ' ';
+    #{args.tag}.container__layout-examples&attributes(attributes)(class=modifierNames)
         if block
             block
+

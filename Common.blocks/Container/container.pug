@@ -1,13 +1,16 @@
-include ./__layout-fonts/container__layout-fonts.pug
+include ./__layout/container__layout.pug
 include ./__layout-colors/container__layout-colors.pug
 include ./__layout-examples/container__layout-examples.pug
+include ./__layout-fonts/container__layout-fonts.pug
 include ./__layout-logo/container__layout-logo.pug
-include ./__layout/container__layout.pug
-mixin container(args)
+
+mixin container(modifiers, ...argsArr)
     -let modifierNames = '';
-    -if (args === undefined) args = '';
-        each val, key in args
-            -modifierNames += 'container_' + key + '_' + val
-    div.container&attributes(attributes)(class=modifierNames)
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'container_' + key + '_' + val + ' ';
+    #{args.tag}.container&attributes(attributes)(class=modifierNames)
         if block
             block
