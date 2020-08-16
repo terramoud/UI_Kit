@@ -1,0 +1,17 @@
+include ./__tag-name/font-example__tag-name.pug
+
+include ./__tag-name/font-example__tag-name.pug
+
+include ./__tag-name/font-example__tag-name.pug
+
+mixin font-example(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'font-example_' + key + '_' + val + ' ';
+    #{args.tag}.font-example&attributes(attributes)(class=modifierNames)
+        +font-example__tag-name
+        if block
+            block

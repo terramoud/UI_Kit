@@ -458,3 +458,6 @@ require('../Common.blocks/uikit-logo/uikit-logo.js');
 require('../Common.blocks/color-example/color-example.js');
 require('../Common.blocks/inner-title/inner-title.js');
 require('../Common.blocks/container/container.js');
+require('../Common.blocks/font-example/font-example.js');
+require('../Common.blocks/font-example/font-example.js');
+require('../Common.blocks/font-example/font-example.js');

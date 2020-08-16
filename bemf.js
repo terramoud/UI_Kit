@@ -121,33 +121,35 @@ if (elementName !== '' || modName !== '') {
 
 
 // if ( !isModifier && modName === '' ) { - deprecated
+let data = '\n+' + createFileName;
+let pugData = 'mixin ' + createFileName + '(modifiers, ...argsArr)\n' +
+            "    -let modifierNames = '';\n" +
+            "    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};\n" +
+            "    -if (args.tag === undefined) args.tag = 'div';\n" +
+            "    -if (modifiers === undefined) modifiers = '';\n" +
+            "        each val, key in modifiers\n" +
+            "            -if (val !== undefined) modifierNames += '" + createFileName + "_' + key + '_' + val + ' ';\n" +
+            "    #{args.tag}." + createFileName + "&attributes(attributes)(class=modifierNames)\n" +
+            '        if block\n' +
+            '            block';
+
 if ( modName === '' ) {
-  fs.writeFile( overrideLevel + fullPath + '.pug', 'mixin ' + createFileName + '(modifiers, ...argsArr)\n' +
-    "    -let modifierNames = '';\n" +
-    "    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};\n" +
-    "    -if (args.tag === undefined) args.tag = 'div';\n" +
-    "    -if (modifiers === undefined) modifiers = '';\n" +
-    "        each val, key in modifiers\n" +
-    "            -if (val !== undefined) modifierNames += '" + createFileName + "_' + key + '_' + val + ' ';\n" +
-    "    #{args.tag}." + createFileName + "&attributes(attributes)(class=modifierNames)\n" +
-    '        if block\n' +
-    '            block',
+  fs.writeFile( overrideLevel + fullPath + '.pug', pugData,
     function (err) {
       if (err) throw err;
       console.log(`${createFileName}.pug is created successfully.`);
   });
 
-  var data = '\n+' + createFileName;
-  // append data to file
-  fs.appendFile('pages/' + entryPoint + '.pug', data, 'utf8',
-    // callback function
-    function(err) {
-      if (err) throw err;
-      // if no error
-      console.log("pug appended")
-    });
-
   if (elementName === '') {
+    // append data to file
+    fs.appendFile('pages/' + entryPoint + '.pug', data, 'utf8',
+      // callback function
+      function(err) {
+        if (err) throw err;
+        // if no error
+        console.log("pug appended")
+      });
+
     prependFile('pages/' + entryPoint + '.pug', 'include ../' + overrideLevel + fullPath + '.pug\n', function (err) {
       if (err) {
         // Error
@@ -158,15 +160,21 @@ if ( modName === '' ) {
   }
 
   if (elementName !== '') {
-    prependFile(overrideLevel + blockName + blockName.replace('/','') + '.pug', 'include ./' + elemPath + '.pug\n', function (err) {
+    prependFile(overrideLevel + blockName + blockName.replace('/','') + '.pug', 'include ./' + elemPath + '.pug\n\n', function (err) {
       if (err) {
         // Error
       }
       // Success
       console.log('pug was prepended to file!');
+      fs.appendFile(overrideLevel + blockName + blockName.replace('/','') + '.pug', data, 'utf8',
+        // callback function
+        function(err) {
+          if (err) throw err;
+          // if no error
+          console.log("pug appended!")
+        });
     });
   }
-
 }
 
 
