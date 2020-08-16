@@ -122,16 +122,19 @@ if (elementName !== '' || modName !== '') {
 
 // if ( !isModifier && modName === '' ) { - deprecated
 if ( modName === '' ) {
-  fs.writeFile( overrideLevel + fullPath + '.pug', 'mixin ' + createFileName + '(args)\n' +
+  fs.writeFile( overrideLevel + fullPath + '.pug', 'mixin ' + createFileName + '(modifiers, ...argsArr)\n' +
     "    -let modifierNames = '';\n" +
-    "    -if (args === undefined) args = '';\n" +
-    "        each val, key in args\n" +
-    "            -modifierNames += 'container__layout_' + key + '__' + val\n" +
-    "    div." + createFileName + "&attributes(attributes)(class=modifierNames)\n" +
+    "    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};\n" +
+    "    -if (args.tag === undefined) args.tag = 'div';\n" +
+    "    -if (modifiers === undefined) modifiers = '';\n" +
+    "        each val, key in modifiers\n" +
+    "            -if (val !== undefined) modifierNames += '" + createFileName + "_' + key + '_' + val + ' ';\n" +
+    "    #{args.tag}." + createFileName + "&attributes(attributes)(class=modifierNames)\n" +
     '        if block\n' +
-    '            block', function (err) {
-    if (err) throw err;
-    console.log(`${createFileName}.pug is created successfully.`);
+    '            block',
+    function (err) {
+      if (err) throw err;
+      console.log(`${createFileName}.pug is created successfully.`);
   });
 
   var data = '\n+' + createFileName;

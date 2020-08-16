@@ -1,0 +1,14 @@
+mixin inner-title(args)
+    -let modifierNames = '';
+    -let tag = '';
+    -if (args === undefined) args = '';
+    each val, key in args
+        if key === 'tag'
+            -tag = val;
+            -continue;
+        else
+            -tag = 'span';
+        -modifierNames += 'inner-title_' + key + '_' + val
+    #{tag}.inner-title&attributes(attributes)(class=modifierNames)
+        if block
+            block

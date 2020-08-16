@@ -1,3 +1,4 @@
+//include ../Common.blocks/inner-title/inner-title.pug
 include ../Common.blocks/color-example/color-example.pug
 include ../Common.blocks/uikit-logo/uikit-logo.pug
 include ../Common.blocks/container/container.pug
@@ -25,7 +26,16 @@ html
                 +container__layout-examples
 
                     +container__layout-colors
-+container__layout-fonts
-+color-example
-+color-example__image
-+color-example__description
+
+                        -let colorsExampleArr = [['dark-100','Dark Shade 100%', '#1F2041'],
+                        -                        ['dark-75', 'Dark Shade 75%', '#1F2041'],
+                        -                        ['dark-50', 'Dark Shade 50%', '#1F2041'],
+                        -                        ['dark-25', 'Dark Shade 25%', '#1F2041'],
+                        -                        ['dark-05', 'Dark Shade 5%', '#1F2041'],
+                        -                        ['purple', 'Purple', '#BC9CFF'],
+                        -                        ['green', 'Green', '#6FCF97']];
+                        each val, key in colorsExampleArr
+                            +color-example({font: 'bold', text: 'green'},{theme: val[0], colorName: val[1], hexColor: val[2]})
+
+
+                    +container__layout-fonts
