@@ -1,6 +1,7 @@
 include ./__input/text-field__input.pug
-
 include ./__header/text-field__header.pug
+include ../label-text/label-text.pug
+
 
 mixin text-field(modifiers, ...argsArr)
     -let modifierNames = '';
@@ -11,6 +12,9 @@ mixin text-field(modifiers, ...argsArr)
             -if (val !== undefined) modifierNames += 'text-field_' + key + '_' + val + ' ';
     #{args.tag}.text-field&attributes(attributes)(class=modifierNames)
         +text-field__header
+            +label-text #{args.fieldType}
+            +label-text({color: 'dark-shade50', font: 'light', text: 'uppercase'}) #{args.fieldState}
         +text-field__input
+            #{args.innerComment}
         if block
             block
