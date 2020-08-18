@@ -1,0 +1,16 @@
+include ./__input/text-field__input.pug
+
+include ./__header/text-field__header.pug
+
+mixin text-field(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'text-field_' + key + '_' + val + ' ';
+    #{args.tag}.text-field&attributes(attributes)(class=modifierNames)
+        +text-field__header
+        +text-field__input
+        if block
+            block

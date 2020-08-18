@@ -122,7 +122,7 @@ if (elementName !== '' || modName !== '') {
 
 // if ( !isModifier && modName === '' ) { - deprecated
 let data = '\n+' + createFileName;
-let pugData = 'mixin ' + createFileName + '(modifiers, ...argsArr)\n' +
+let pugData = '\nmixin ' + createFileName + '(modifiers, ...argsArr)\n' +
             "    -let modifierNames = '';\n" +
             "    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};\n" +
             "    -if (args.tag === undefined) args.tag = 'div';\n" +
@@ -160,7 +160,7 @@ if ( modName === '' ) {
   }
 
   if (elementName !== '') {
-    prependFile(overrideLevel + blockName + blockName.replace('/','') + '.pug', 'include ./' + elemPath + '.pug\n\n', function (err) {
+    prependFile(overrideLevel + blockName + blockName.replace('/','') + '.pug', 'include ./' + elemPath + '.pug\n', function (err) {
       if (err) {
         // Error
       }

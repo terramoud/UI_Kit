@@ -1,0 +1,10 @@
+mixin form-elements__component-wrapper(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'form-elements__component-wrapper_' + key + '_' + val + ' ';
+    #{args.tag}.form-elements__component-wrapper&attributes(attributes)(class=modifierNames)
+        if block
+            block

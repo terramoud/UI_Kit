@@ -1,0 +1,18 @@
+include ./__component-wrapper/form-elements__component-wrapper.pug
+
+include ./__corrective-wrapper/form-elements__corrective-wrapper.pug
+
+include ./__left-col/form-elements__left-col.pug
+
+mixin form-elements(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'form-elements_' + key + '_' + val + ' ';
+    #{args.tag}.form-elements&attributes(attributes)(class=modifierNames)
+        if block
+            block
+
+

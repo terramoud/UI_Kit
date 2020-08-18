@@ -1,4 +1,10 @@
-mixin body-text(content)
-    p.body-text&attributes(attributes) #{content}
+mixin body-text(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'body-text_' + key + '_' + val + ' ';
+    #{args.tag}.body-text&attributes(attributes)(class=modifierNames)
         if block
             block

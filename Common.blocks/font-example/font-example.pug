@@ -1,8 +1,7 @@
+include ./__name/font-example__name.pug
 include ./__tag-name/font-example__tag-name.pug
-
-include ./__tag-name/font-example__tag-name.pug
-
-include ./__tag-name/font-example__tag-name.pug
+include ../widget-title/widget-title.pug
+include ../body-text/body-text.pug
 
 mixin font-example(modifiers, ...argsArr)
     -let modifierNames = '';
@@ -13,5 +12,8 @@ mixin font-example(modifiers, ...argsArr)
             -if (val !== undefined) modifierNames += 'font-example_' + key + '_' + val + ' ';
     #{args.tag}.font-example&attributes(attributes)(class=modifierNames)
         +font-example__tag-name
+            +body-text #{args.tagName}
+        +font-example__name
+            +widget-title #{args.fontExampleName}
         if block
             block

@@ -1,55 +1,56 @@
-.font-example {
+.form-elements {
 
 }
 
 @media only screen and (min-width: 321px) {
-  .font-example {
+  .form-elements {
 
   }
 }
 
 @media only screen and (min-width: 576px) {
-  .font-example {
+  .form-elements {
 
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .font-example {
+  .form-elements {
 
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .font-example {
+  .form-elements {
 
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .font-example {
+  .form-elements {
 
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .font-example {
+  .form-elements {
 
   }
 }
 
 @media only screen and (min-width: 1681px) {
-  .font-example {
+  .form-elements {
 
   }
 }
 
 @media only screen and (min-width: 1681px) {
-  .font-example {
+  .form-elements {
 
   }
 }
 
 
-@import './__tag-name/font-example__tag-name';
-@import './__name/font-example__name';
+@import './__left-col/form-elements__left-col';
+@import './__corrective-wrapper/form-elements__corrective-wrapper';
+@import './__component-wrapper/form-elements__component-wrapper';

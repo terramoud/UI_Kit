@@ -1,10 +1,10 @@
-mixin widget-title(modifiers, ...argsArr)
+mixin form-elements__left-col(modifiers, ...argsArr)
     -let modifierNames = '';
     -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
     -if (args.tag === undefined) args.tag = 'div';
     -if (modifiers === undefined) modifiers = '';
         each val, key in modifiers
-            -if (val !== undefined) modifierNames += 'widget-title_' + key + '_' + val + ' ';
-    #{args.tag}.widget-title&attributes(attributes)(class=modifierNames)
+            -if (val !== undefined) modifierNames += 'form-elements__left-col_' + key + '_' + val + ' ';
+    #{args.tag}.form-elements__left-col&attributes(attributes)(class=modifierNames)
         if block
             block

@@ -1,3 +1,7 @@
+include ../Common.blocks/text-field/text-field.pug
+include ../Common.blocks/form-elements/form-elements.pug
+//include ../Common.blocks/widget-title/widget-title.pug
+//include ../Common.blocks/body-text/body-text.pug
 include ../Common.blocks/font-example/font-example.pug
 //include ../Common.blocks/inner-title/inner-title.pug
 include ../Common.blocks/color-example/color-example.pug
@@ -38,6 +42,25 @@ html
                             +color-example({font: 'bold', text: 'green'},{theme: val[0], colorName: val[1], hexColor: val[2]})
 
                     +container__layout-fonts
+                        -let fontExample = [['H1','This one is the sub-section or widget title'],
+                        -                   ['H2', 'Next one is the item title inside widgets'],
+                        -                   ['H3', 'This is a label or CTA text'],
+                        -                   ['Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.']];
+                        each val, key in fontExample
+                            +font-example({},{tagName: val[0], fontExampleName: val[1]})
 
-                        +font-example
 
+
+            // Form Elements
+            +container__layout({theme: 'form-elements'})
+
+                +container__layout-logo
+                    +uikit-logo
+
+                +form-elements
+                    +form-elements__left-col
+                        +form-elements__corrective-wrapper
+
+                            +form-elements__component-wrapper({theme: 'text-field'})
+
++text-field

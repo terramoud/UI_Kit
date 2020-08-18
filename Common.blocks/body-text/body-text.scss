@@ -1,10 +1,5 @@
 .body-text {
-  font-family: Montserrat;
-  font-weight: normal;
-  font-size: .875rem;
-  line-height: 1.714em;
-  color: $DarkShade75;
-  margin: 0;
+
 }
 
 @media only screen and (min-width: 321px) {
@@ -38,6 +33,12 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .body-text {
+
+  }
+}
+
+@media only screen and (min-width: 1681px) {
   .body-text {
 
   }
