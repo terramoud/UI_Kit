@@ -1,11 +1,11 @@
 
-mixin checkbox(modifiers, ...argsArr)
+mixin list__content(modifiers, ...argsArr)
     -let modifierNames = '';
     -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
     -if (args.tag === undefined) args.tag = 'div';
     -if (modifiers === undefined) modifiers = '';
         each val, key in modifiers
-            -if (val !== undefined) modifierNames += 'checkbox_' + key + '_' + val + ' ';
-    #{args.tag}.checkbox&attributes(attributes)(class=modifierNames)
+            -if (val !== undefined) modifierNames += 'list__content_' + key + '_' + val + ' ';
+    #{args.tag}.list__content&attributes(attributes)(class=modifierNames)
         if block
             block

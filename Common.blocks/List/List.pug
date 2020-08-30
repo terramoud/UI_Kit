@@ -1,4 +1,18 @@
-mixin List(content)
-    ul.List&attributes(attributes) #{content}
-        if block
-            block
+include ./__content/list__content.pug
+include ./__item/list__item.pug
+
+mixin list(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'list_' + key + '_' + val + ' ';
+    #{args.tag}.list&attributes(attributes)(class=modifierNames)
+        each val, key in args.ContentOfItems
+            +list__item
+                +checkbox(type="checkbox")
+                +list__content
+                    +body-text #{val}
+            if block
+                block

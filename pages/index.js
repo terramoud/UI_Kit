@@ -472,3 +472,5 @@ require('../Common.blocks/filter-datepicker/filter-datepicker.js');
 require('../Common.blocks/subscr-field/subscr-field.js');
 require('../Common.blocks/dropdown-facilities/dropdown-facilities.js');
 require('../Common.blocks/checkbox-list/checkbox-list.js');
+require('../Common.blocks/list/list.js');
+require('../Common.blocks/checkbox/checkbox.js');

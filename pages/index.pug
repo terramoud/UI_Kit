@@ -1,3 +1,5 @@
+include ../Common.blocks/checkbox/checkbox.pug
+include ../Common.blocks/list/list.pug
 include ../Common.blocks/checkbox-list/checkbox-list.pug
 include ../Common.blocks/dropdown-facilities/dropdown-facilities.pug
 include ../Common.blocks/subscr-field/subscr-field.pug
@@ -114,3 +116,4 @@ html
 
                         +form-elements__component-wrapper({theme: 'expandable-list'})
                             +checkbox-list({}, {checkboxListTitle: 'expandable checkbox list', iconTag: 'i', iconClass: 'material-icons', iconContent: 'expand_more'})
+                                +list({}, {ContentOfItems: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
