@@ -1,0 +1,15 @@
+include ./__icon/subscr-field__icon.pug
+include ./__input-field/subscr-field__input-field.pug
+
+mixin subscr-field(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'input';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'subscr-field_' + key + '_' + val + ' ';
+    #{args.tag}.subscr-field&attributes(attributes)(class=modifierNames)
+        +subscr-field__input-field(type='text' placeholder='Email')
+        +subscr-field__icon({},{iconTag: args.iconTag, iconClass: args.iconClass, iconContent: args.iconContent})
+        if block
+            block

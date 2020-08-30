@@ -1,0 +1,11 @@
+
+mixin subscr-field__input-field(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'subscr-field__input-field_' + key + '_' + val + ' ';
+    #{args.tag}.subscr-field__input-field&attributes(attributes)(class=modifierNames)
+        if block
+            block

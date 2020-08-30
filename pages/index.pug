@@ -1,3 +1,4 @@
+include ../Common.blocks/subscr-field/subscr-field.pug
 include ../Common.blocks/filter-datepicker/filter-datepicker.pug
 include ../Common.blocks/dropdown-datepicker/dropdown-datepicker.pug
 include ../Common.blocks/dropdown-guests/dropdown-guests.pug
@@ -92,3 +93,7 @@ html
                             +form-elements__component-wrapper({theme: 'filter-datepicker'})
                                 +text-field({},{fieldType: 'filter date dropdown'})
                                     +filter-datepicker
+
+                        +form-elements__component-wrapper({theme: 'subscr-field'})
+                            +text-field({},{fieldType: 'subscription text field'})
+                                +subscr-field({}, {iconTag: 'i', iconClass: 'material-icons', iconContent: 'arrow_forward'})

@@ -1,0 +1,13 @@
+
+mixin subscr-field__icon(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'subscr-field__icon_' + key + '_' + val + ' ';
+    #{args.tag}.subscr-field__icon&attributes(attributes)(class=modifierNames)
+        if (args.iconTag !== undefined)
+            #{args.iconTag}(class=args.iconClass) #{args.iconContent}
+        if block
+            block
