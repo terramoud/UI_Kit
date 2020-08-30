@@ -2,7 +2,7 @@
 mixin list__item(modifiers, ...argsArr)
     -let modifierNames = '';
     -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
-    -if (args.tag === undefined) args.tag = 'div';
+    -if (args.tag === undefined) args.tag = 'li';
     -if (modifiers === undefined) modifiers = '';
         each val, key in modifiers
             -if (val !== undefined) modifierNames += 'list__item_' + key + '_' + val + ' ';
