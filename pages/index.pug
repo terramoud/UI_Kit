@@ -102,5 +102,16 @@ html
 
 
                         +form-elements__component-wrapper({theme: 'dropdown-facilities'})
-                            +text-field({}, {fieldType: 'dropdown'})
+                            +text-field({}, {fieldType: 'dropdown', fieldState: 'default'})
                                 +dropdown-facilities(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'],['кроватей', 'кровать', 'кровати'],['ванных комнат', 'ванная комната', 'ванные комнаты']])
+
+
+                        +form-elements__component-wrapper({theme: 'facilities-expanded'})
+                            +text-field({}, {fieldType: 'dropdown', fieldState: 'expanded'})
+                                +dropdown-facilities(multiple='multiple', id="dropdownFacilitiesExpanded", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']])
+
+
+                        +form-elements__component-wrapper({theme: 'expandable-list'})
+
+
+
