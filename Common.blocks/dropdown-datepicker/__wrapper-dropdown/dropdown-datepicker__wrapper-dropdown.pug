@@ -1,0 +1,11 @@
+
+mixin dropdown-datepicker__wrapper-dropdown(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'dropdown-datepicker__wrapper-dropdown_' + key + '_' + val + ' ';
+    #{args.tag}.dropdown-datepicker__wrapper-dropdown&attributes(attributes)(class=modifierNames)
+        if block
+            block

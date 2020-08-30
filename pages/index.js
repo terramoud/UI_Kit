@@ -3,16 +3,17 @@ require('jquery');
 require('webpack-jquery-ui');
 require('webpack-jquery-ui/css');
 require('inputmask/dist/jquery.inputmask');
-//require('webpack-jquery-ui/selectmenu');
-// require('../Common.blocks/Fonts/Fonts.scss');
-// require('../Common.blocks/Fonts/font-awesome-4.7.0/scss/font-awesome.scss');
+require('jquery-ui-multiselect-widget');
+require('webpack-jquery-ui/selectmenu');
+require('../Common.blocks/Fonts/Fonts.scss');
+require('../Common.blocks/Fonts/font-awesome-4.7.0/scss/font-awesome.scss');
 
 /*Library.blocks*/
 
 // require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.css');
 // require('../Library.blocks/JqueryMultiselectPlugin/JqueryMultiselectPlugin.js');
-// require('../Library.blocks/AirDatepicker/AirDatepicker.css');
-// require('../Library.blocks/AirDatepicker/AirDatepicker.js');
+require('../Library.blocks/air-datepicker/air-datepicker.css');
+require('../Library.blocks/air-datepicker/air-datepicker.js');
 // require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/css/jquery.mswitch.css');
 // require('../Library.blocks/iOS-Toggle-Switch-jQuery-mSwitch/js/jquery.mswitch.js');
 
@@ -112,9 +113,9 @@ require('./index.scss');
 //
 // require('../Common.blocks/DropdownDatepicker/-WrapperForDropdown/DropdownDatepicker-WrapperForDropdown.js');
 // require('../Common.blocks/DropdownDatepicker/-InputHidden/DropdownDatepicker-InputHidden.js');
-// require('../Common.blocks/DropdownDatepicker/-AirDatepicker/DropdownDatepicker-AirDatepicker.js');
+// require('../Common.blocks/DropdownDatepicker/-air-datepicker/DropdownDatepicker-air-datepicker.js');
 // require('../Common.blocks/FilterDateDropdown/FilterDateDropdown.js');
-// require('../Common.blocks/FilterDateDropdown/-AirDatepicker/FilterDateDropdown-AirDatepicker.js');
+// require('../Common.blocks/FilterDateDropdown/-air-datepicker/FilterDateDropdown-air-datepicker.js');
 // require('../Common.blocks/FilterDateDropdown/-InputHidden/FilterDateDropdown-InputHidden.js');
 // require('../Common.blocks/FilterDateDropdown/-Open/FilterDateDropdown-Open.js');
 // require('../Common.blocks/FilterDateDropdown/-Icon/FilterDateDropdown-Icon.js');
@@ -463,3 +464,8 @@ require('../Common.blocks/body-text/body-text.js');
 require('../Common.blocks/widget-title/widget-title.js');
 require('../Common.blocks/form-elements/form-elements.js');
 require('../Common.blocks/text-field/text-field.js');
+require('../Common.blocks/label-text/label-text.js');
+require('../Common.blocks/input/input.js');
+require('../Common.blocks/dropdown-guests/dropdown-guests.js');
+require('../Common.blocks/dropdown-datepicker/dropdown-datepicker.js');
+require('../Common.blocks/filter-datepicker/filter-datepicker.js');

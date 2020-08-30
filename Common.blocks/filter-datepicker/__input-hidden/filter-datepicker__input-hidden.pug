@@ -1,0 +1,11 @@
+
+mixin filter-datepicker__input-hidden(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'filter-datepicker__input-hidden_' + key + '_' + val + ' ';
+    #{args.tag}.filter-datepicker__input-hidden&attributes(attributes)(class=modifierNames)
+        if block
+            block

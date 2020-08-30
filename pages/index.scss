@@ -4,7 +4,7 @@
 /*Common.blocks*/
 
 //@import '../Common.blocks/base/base';
-//@import '../Common.blocks/body/Mixins'; deleted
+@import '../Common.blocks/base/Mixins';
 
 //@import '../Common.blocks/Wrapper/Wrapper';
 //@import '../Common.blocks/ColorSwatch/ColorSwatch';
@@ -86,7 +86,7 @@
 //@import '../Common.blocks/DropdownDatepicker/-ResetButton/DropdownDatepicker-ResetButton';
 //@import '../Common.blocks/DropdownDatepicker/-WrapperForDropdown/DropdownDatepicker-WrapperForDropdown';
 //@import '../Common.blocks/DropdownDatepicker/-InputHidden/DropdownDatepicker-InputHidden';
-//@import '../Common.blocks/DropdownDatepicker/-AirDatepicker/DropdownDatepicker-AirDatepicker';
+//@import '../Common.blocks/DropdownDatepicker/-air-datepicker/DropdownDatepicker-air-datepicker';
 //
 //@import '../Common.blocks/Wrapper/-FormElements/Wrapper-FormElements';
 //@import '../Common.blocks/DropdownFacilities/DropdownFacilities';
@@ -102,7 +102,7 @@
 //
 //
 //@import '../Common.blocks/FilterDateDropdown/FilterDateDropdown';
-//@import '../Common.blocks/FilterDateDropdown/-AirDatepicker/FilterDateDropdown-AirDatepicker';
+//@import '../Common.blocks/FilterDateDropdown/-air-datepicker/FilterDateDropdown-air-datepicker';
 //@import '../Common.blocks/FilterDateDropdown/-InputHidden/FilterDateDropdown-InputHidden';
 //@import '../Common.blocks/FilterDateDropdown/-Open/FilterDateDropdown-Open';
 //@import '../Common.blocks/FilterDateDropdown/-Icon/FilterDateDropdown-Icon';
@@ -395,3 +395,8 @@
 @import '../Common.blocks/widget-title/widget-title';
 @import '../Common.blocks/form-elements/form-elements';
 @import '../Common.blocks/text-field/text-field';
+@import '../Common.blocks/label-text/label-text';
+@import '../Common.blocks/input/input';
+@import '../Common.blocks/dropdown-guests/dropdown-guests';
+@import '../Common.blocks/dropdown-datepicker/dropdown-datepicker';
+@import '../Common.blocks/filter-datepicker/filter-datepicker';

@@ -19,7 +19,7 @@
 *   </div>
 * </li>
 *
-* option's value == input's(type="checkbox") value == input's(type="text") the attribute name
+* the option's tag value == input's(type="checkbox") value == input's(type="text") the attribute name
 *
 * output:
 *   multiselect_dropdownFacilities == ['bedrooms', 'beds']
@@ -49,6 +49,9 @@ $('select.DropdownGuests').each(function(index, el) {
   /**
   * Includes widget multiselect
   */
+
+  $("select").multiselect();
+
   $('#' + dropdownGuests.id).multiselect({
     create: function(argument) {
 

@@ -1,0 +1,15 @@
+
+mixin dropdown-guests(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'dropdown-guests_' + key + '_' + val + ' ';
+
+    select.dropdown-guests&attributes(attributes)(class=modifierNames)
+        - let numOptions = (attributes['data-option-content'] !== undefined) ? attributes['data-option-content'].length : 0
+        - let value = attributes['data-option-value']
+        - let content = attributes['data-option-content']
+        - for (let x = 0; x < numOptions; x++)
+           option(value=value[x])= content[x]

@@ -1,4 +1,11 @@
-mixin label-text(content)
-    div.label-text&attributes(attributes) #{content}
+
+mixin label-text(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'label-text_' + key + '_' + val + ' ';
+    #{args.tag}.label-text&attributes(attributes)(class=modifierNames)
         if block
             block

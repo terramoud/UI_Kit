@@ -1,3 +1,7 @@
+include ../Common.blocks/filter-datepicker/filter-datepicker.pug
+include ../Common.blocks/dropdown-datepicker/dropdown-datepicker.pug
+include ../Common.blocks/dropdown-guests/dropdown-guests.pug
+include ../Common.blocks/input/input.pug
 include ../Common.blocks/text-field/text-field.pug
 include ../Common.blocks/form-elements/form-elements.pug
 //include ../Common.blocks/widget-title/widget-title.pug
@@ -61,10 +65,30 @@ html
                     +form-elements__left-col
                         +form-elements__corrective-wrapper
 
-                            +form-elements__component-wrapper({theme: 'text-field'})
-                                -let componentTextFieldContent = [['H1','This one is the sub-section or widget title'],
-                                -                   ['H2', 'Next one is the item title inside widgets'],
-                                -                   ['H3', 'This is a label or CTA text'],
-                                -                   ['Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.']];
-                                each val, key in componentTextFieldContent
-                                    +text-field({},{fieldType: val[0], fieldState: val[1]})
+                            +form-elements__component-wrapper
+                                +text-field({},{fieldType: 'text field', fieldState: 'default'})
+                                    +input(type='text' placeholder='Email')
+
+
+                            +form-elements__component-wrapper
+                                +text-field({},{fieldType: 'text field', fieldState: 'Hover / Focus'})
+                                    +input({selected: 'input'})(type='text' placeholder='This is pretty awesome')
+
+
+                            +form-elements__component-wrapper
+                                +text-field({},{fieldType: 'text field', fieldState: 'Hover / Focus'})
+                                    +dropdown-guests(multiple='multiple', id="DropdownGuests", name='DropdownGuests', size='3' data-option-value=['adults', 'children', 'babies'] data-option-content=['взрослые', 'дети', 'младенцы'])
+
+
+                            +form-elements__component-wrapper
+                                +text-field({},{fieldType: 'text field', fieldState: 'Hover / Focus'})
+                                    +input(type='date', placeholder='ДД.ММ.ГГГГ')
+
+
+                            +form-elements__component-wrapper({theme: 'datepicker'})
+                                +dropdown-datepicker
+
+
+                            +form-elements__component-wrapper({theme: 'filter-datepicker'})
+                                +text-field({},{fieldType: 'filter date dropdown'})
+                                    +filter-datepicker({}, {iconTag: 'i', iconClass: 'material-icons', iconContent: 'expand_more'})

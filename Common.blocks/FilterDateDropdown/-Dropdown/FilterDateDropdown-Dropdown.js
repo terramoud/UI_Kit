@@ -8,7 +8,7 @@ $('div.FilterDateDropdown-Dropdown').each(function(index, el) {
 
   var FilterDateDropdown = {
     applyButton: 'применить',
-    wrapperForDp: $(cloneThis).siblings(".FilterDateDropdown-AirDatepicker"),
+    wrapperForDp: $(cloneThis).siblings(".FilterDateDropdown-air-datepicker"),
   };
 
 

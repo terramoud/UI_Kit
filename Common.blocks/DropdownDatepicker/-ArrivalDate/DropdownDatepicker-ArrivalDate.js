@@ -8,7 +8,7 @@ $('div.DropdownDatepicker-ArrivalDate').each(function(index, el) {
 
   var DropdownDpArrivalDate = {
     applyButton: 'применить',
-    wrapperForDp: $(cloneThis).siblings(".DropdownDatepicker-AirDatepicker"),
+    wrapperForDp: $(cloneThis).siblings(".DropdownDatepicker-air-datepicker"),
   };
 
 

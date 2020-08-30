@@ -1,0 +1,36 @@
+include ./__arrival-date/dropdown-datepicker__arrival-date.pug
+include ./__date-departure/dropdown-datepicker__date-departure.pug
+include ./__air-datepicker/dropdown-datepicker__air-datepicker.pug
+include ./__icon/dropdown-datepicker__icon.pug
+include ./__open/dropdown-datepicker__open.pug
+include ./__input-hidden/dropdown-datepicker__input-hidden.pug
+include ./__header/dropdown-datepicker__header.pug
+include ./__wrapper-dropdown/dropdown-datepicker__wrapper-dropdown.pug
+
+mixin dropdown-datepicker(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'dropdown-datepicker_' + key + '_' + val + ' ';
+    #{args.tag}.dropdown-datepicker&attributes(attributes)(class=modifierNames)
+        +dropdown-datepicker__wrapper-dropdown
+            +dropdown-datepicker__header
+                +label-text date dropdown
+            +dropdown-datepicker__arrival-date
+                +dropdown-datepicker__input-hidden(type="hidden")
+                +dropdown-datepicker__open ДД.ММ.ГГГГ
+                +dropdown-datepicker__icon
+                    i.material-icons expand_more
+            +dropdown-datepicker__air-datepicker
+        +dropdown-datepicker__wrapper-dropdown
+            +dropdown-datepicker__header
+                +label-text date dropdown
+            +dropdown-datepicker__date-departure
+                +dropdown-datepicker__input-hidden(type="hidden")
+                +dropdown-datepicker__open 19.08.2019
+                +dropdown-datepicker__icon
+                    i.material-icons expand_more
+        if block
+            block

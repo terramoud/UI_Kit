@@ -15,6 +15,5 @@ mixin text-field(modifiers, ...argsArr)
             +label-text #{args.fieldType}
             +label-text({color: 'dark-shade50', font: 'light', text: 'uppercase'}) #{args.fieldState}
         +text-field__input
-            #{args.innerComment}
-        if block
-            block
+            if block
+                block

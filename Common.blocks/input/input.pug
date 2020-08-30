@@ -1,0 +1,8 @@
+
+mixin input(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'input_' + key + '_' + val + ' ';
+    input.input&attributes(attributes)(class=modifierNames)

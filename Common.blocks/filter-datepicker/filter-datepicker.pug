@@ -1,0 +1,21 @@
+include ./__air-datepicker/filter-datepicker__air-datepicker.pug
+include ./__icon/filter-datepicker__icon.pug
+include ./__open/filter-datepicker__open.pug
+include ./__input-hidden/filter-datepicker__input-hidden.pug
+include ./__dropdown/filter-datepicker__dropdown.pug
+
+mixin filter-datepicker(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'filter-datepicker_' + key + '_' + val + ' ';
+    #{args.tag}.filter-datepicker&attributes(attributes)(class=modifierNames)
+        +filter-datepicker__dropdown
+            +filter-datepicker__input-hidden(type='hidden')
+            +filter-datepicker__open 19 авг - 23 авг
+            +filter-datepicker__icon({},{tag: args.iconTag, iconClass: args.iconClass, iconContent: args.iconContent})
+        +filter-datepicker__air-datepicker
+        if block
+            block

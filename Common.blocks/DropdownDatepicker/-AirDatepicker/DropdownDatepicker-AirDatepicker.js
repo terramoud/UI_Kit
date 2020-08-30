@@ -1,4 +1,4 @@
-$('.DropdownDatepicker-AirDatepicker').each(function(index, el) {
+$('.DropdownDatepicker-air-datepicker').each(function(index, el) {
 
   /**
    * Namespace
@@ -7,7 +7,7 @@ $('.DropdownDatepicker-AirDatepicker').each(function(index, el) {
 
   var AirDatepicker = {
     applyButton: 'применить',
-    wrapperForDp: $(ThisAirDatepicker).siblings('.DropdownDatepicker-AirDatepicker'),
+    wrapperForDp: $(ThisAirDatepicker).siblings('.DropdownDatepicker-air-datepicker'),
     arrivalDate: '',
     dateOfDeparture: '',
   };
