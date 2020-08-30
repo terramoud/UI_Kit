@@ -1,3 +1,4 @@
+include ../Common.blocks/dropdown-facilities/dropdown-facilities.pug
 include ../Common.blocks/subscr-field/subscr-field.pug
 include ../Common.blocks/filter-datepicker/filter-datepicker.pug
 include ../Common.blocks/dropdown-datepicker/dropdown-datepicker.pug
@@ -67,22 +68,22 @@ html
                         +form-elements__corrective-wrapper
 
                             +form-elements__component-wrapper
-                                +text-field({},{fieldType: 'text field', fieldState: 'default'})
+                                +text-field({}, {fieldType: 'text field', fieldState: 'default'})
                                     +input(type='text' placeholder='Email')
 
 
                             +form-elements__component-wrapper
-                                +text-field({},{fieldType: 'text field', fieldState: 'Hover / Focus'})
+                                +text-field({}, {fieldType: 'text field', fieldState: 'Hover / Focus'})
                                     +input({selected: 'input'})(type='text' placeholder='This is pretty awesome')
 
 
                             +form-elements__component-wrapper
-                                +text-field({},{fieldType: 'text field', fieldState: 'Hover / Focus'})
+                                +text-field({}, {fieldType: 'text field', fieldState: 'Hover / Focus'})
                                     +dropdown-guests(multiple='multiple', id="DropdownGuests", name='DropdownGuests', size='3' data-option-value=['adults', 'children', 'babies'] data-option-content=['взрослые', 'дети', 'младенцы'])
 
 
                             +form-elements__component-wrapper
-                                +text-field({},{fieldType: 'text field', fieldState: 'Hover / Focus'})
+                                +text-field({}, {fieldType: 'text field', fieldState: 'Hover / Focus'})
                                     +input(type='date', placeholder='ДД.ММ.ГГГГ')
 
 
@@ -91,9 +92,15 @@ html
 
 
                             +form-elements__component-wrapper({theme: 'filter-datepicker'})
-                                +text-field({},{fieldType: 'filter date dropdown'})
+                                +text-field({}, {fieldType: 'filter date dropdown'})
                                     +filter-datepicker
 
+
                         +form-elements__component-wrapper({theme: 'subscr-field'})
-                            +text-field({},{fieldType: 'subscription text field'})
+                            +text-field({}, {fieldType: 'subscription text field'})
                                 +subscr-field({}, {iconTag: 'i', iconClass: 'material-icons', iconContent: 'arrow_forward'})
+
+
+                        +form-elements__component-wrapper({theme: 'dropdown-facilities'})
+                            +text-field({}, {fieldType: 'dropdown'})
+                                +dropdown-facilities(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'],['кроватей', 'кровать', 'кровати'],['ванных комнат', 'ванная комната', 'ванные комнаты']])

@@ -1,0 +1,16 @@
+
+mixin dropdown-facilities(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'dropdown-facilities_' + key + '_' + val + ' ';
+
+    select.dropdown-facilities&attributes(attributes)
+        - let numOptions = attributes['data-option-content'].length ? attributes['data-option-content'].length : 0
+        - let value = attributes['data-option-value']
+        - let content = attributes['data-option-content']
+        - let declension = attributes['data-option-declension']
+        - for (let x = 0; x < numOptions; x++)
+            option(value=value[x] data-option-declension=declension[x])= content[x]

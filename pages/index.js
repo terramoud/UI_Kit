@@ -470,3 +470,4 @@ require('../Common.blocks/dropdown-guests/dropdown-guests.js');
 require('../Common.blocks/dropdown-datepicker/dropdown-datepicker.js');
 require('../Common.blocks/filter-datepicker/filter-datepicker.js');
 require('../Common.blocks/subscr-field/subscr-field.js');
+require('../Common.blocks/dropdown-facilities/dropdown-facilities.js');
