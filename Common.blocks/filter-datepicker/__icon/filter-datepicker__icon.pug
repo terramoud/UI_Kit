@@ -7,6 +7,7 @@ mixin filter-datepicker__icon(modifiers, ...argsArr)
         each val, key in modifiers
             -if (val !== undefined) modifierNames += 'filter-datepicker__icon_' + key + '_' + val + ' ';
     #{args.tag}.filter-datepicker__icon&attributes(attributes)(class=modifierNames)
-        #{args.tag}(class=args.iconClass) #{args.iconContent}
+        if (args.iconTag !== undefined)
+            #{args.iconTag}(class=args.iconClass) #{args.iconContent}
         if block
             block
