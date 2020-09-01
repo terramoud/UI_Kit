@@ -1,0 +1,75 @@
+.checkbox_active {
+  &:before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    /* Primary Gradient */
+    background: $DatepickerGradient;
+    transform: rotate(45deg);
+    left: 6px;
+    top: 4px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 8px;
+    /* Primary Gradient */
+    background: $background;
+    transform: rotate(45deg);
+    left: 6px;
+    top: 1px;
+    border-top-left-radius: 5px;
+  }
+}
+
+@media only screen and (min-width: 321px) {
+  .checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 1681px) {
+  .checkbox_active {
+
+  }
+}
+
+@media only screen and (min-width: 1681px) {
+  .checkbox_active {
+
+  }
+}
+

@@ -1,5 +1,15 @@
 .checkbox {
-
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background: $background;
+  border: 1px solid $DatepickerArrowColor;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 0;
+  flex-shrink: 0;
+  align-self: start;
 }
 
 @media only screen and (min-width: 321px) {
@@ -50,3 +60,5 @@
   }
 }
 
+
+@import './_active/checkbox_active';

@@ -474,3 +474,5 @@ require('../Common.blocks/dropdown-facilities/dropdown-facilities.js');
 require('../Common.blocks/checkbox-list/checkbox-list.js');
 require('../Common.blocks/list/list.js');
 require('../Common.blocks/checkbox/checkbox.js');
+require('../Common.blocks/checkbox/checkbox.js');
+require('../Common.blocks/checkbox/checkbox.js');
