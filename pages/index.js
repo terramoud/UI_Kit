@@ -476,3 +476,4 @@ require('../Common.blocks/list/list.js');
 require('../Common.blocks/checkbox/checkbox.js');
 require('../Common.blocks/checkbox/checkbox.js');
 require('../Common.blocks/checkbox/checkbox.js');
+require('../Common.blocks/room-details/room-details.js');

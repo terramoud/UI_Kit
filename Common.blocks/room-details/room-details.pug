@@ -1,0 +1,20 @@
+include ./__text/room-details__text.pug
+include ./__icon/room-details__icon.pug
+include ./__item/room-details__item.pug
+
+mixin room-details(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'room-details_' + key + '_' + val + ' ';
+    #{args.tag}.room-details&attributes(attributes)(class=modifierNames)
+        each val, key in args.contentsOfRoomDetails
+            +room-details__item
+                +room-details__icon({},{iconTag: args.iconTag, iconClass: args.iconClass, iconContent: val.iconRoomDetails})
+                +room-details__text
+                    +body-text.body-text_bold #{val.titleRoomDetails }
+                    +body-text #{val.descriptionRoomDetails }
+            if block
+                block

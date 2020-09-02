@@ -220,17 +220,18 @@ body
                     // Room details
                     +form-elements__component-wrapper({theme: 'room-details'})
                         +room-details
-                            +room-details__icon
-                                i.material-icons insert_emoticon
-                            +room-details__text
-                                    +body-text.body-text_bold Комфорт
-                                    +body-text Шумопоглощающие стены
-                        +room-details
-                            +room-details__icon
-                                i.material-icons insert_emoticon
-                            +room-details__text
-                                    +body-text.body-text_bold Удобство
-                                    +body-text Окно в каждой из спален
+                            +room-details__item
+                                +room-details__icon
+                                    i.material-icons insert_emoticon
+                                +room-details__text
+                                        +body-text.body-text_bold Комфорт
+                                        +body-text Шумопоглощающие стены
+                            +room-details
+                                +room-details__icon
+                                    i.material-icons insert_emoticon
+                                +room-details__text
+                                        +body-text.body-text_bold Удобство
+                                        +body-text Окно в каждой из спален
 
 
                 +form-elements__big-col

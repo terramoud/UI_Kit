@@ -1,0 +1,11 @@
+
+mixin room-details__text(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'room-details__text_' + key + '_' + val + ' ';
+    #{args.tag}.room-details__text&attributes(attributes)(class=modifierNames)
+        if block
+            block

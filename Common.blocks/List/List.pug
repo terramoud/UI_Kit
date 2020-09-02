@@ -10,7 +10,7 @@ mixin list(modifiers, ...argsArr)
         each val, key in modifiers
             -if (val !== undefined) modifierNames += 'list_' + key + '_' + val + ' ';
     #{args.tag}.list&attributes(attributes)(class=modifierNames)
-        each val, key in args.ContentOfItems
+        each val, key in args.contentOfItems
             +list__item
                 +checkbox(type="checkbox")
                 +list__content

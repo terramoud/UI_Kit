@@ -1,3 +1,4 @@
+include ../Common.blocks/room-details/room-details.pug
 //include ../Common.blocks/checkbox/checkbox.pug
 include ../Common.blocks/list/list.pug
 include ../Common.blocks/checkbox-list/checkbox-list.pug
@@ -82,7 +83,12 @@ html
 
                             +form-elements__component-wrapper
                                 +text-field({}, {fieldType: 'text field', fieldState: 'Hover / Focus'})
-                                    +dropdown-guests(multiple='multiple', id="DropdownGuests", name='DropdownGuests', size='3' data-option-value=['adults', 'children', 'babies'] data-option-content=['взрослые', 'дети', 'младенцы'])
+                                    +dropdown-guests(multiple='multiple',
+                                                     id="DropdownGuests",
+                                                     name='DropdownGuests',
+                                                     size='3'
+                                                     data-option-value=['adults', 'children', 'babies']
+                                                     data-option-content=['взрослые', 'дети', 'младенцы'])
 
 
                             +form-elements__component-wrapper
@@ -106,14 +112,37 @@ html
 
                         +form-elements__component-wrapper({theme: 'dropdown-facilities'})
                             +text-field({}, {fieldType: 'dropdown', fieldState: 'default'})
-                                +dropdown-facilities(multiple='multiple', id="dropdownFacilities", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'],['кроватей', 'кровать', 'кровати'],['ванных комнат', 'ванная комната', 'ванные комнаты']])
+                                +dropdown-facilities(multiple='multiple',
+                                                     id="dropdownFacilities",
+                                                     name='dropdownFacilities',
+                                                     size='3',
+                                                     data-option-value=['bedrooms', 'beds', 'bathrooms'],
+                                                     data-option-content=['спальни', 'кровати', 'ванные комнаты'],
+                                                     data-option-declension=[['спален', 'спальня', 'спальни'],['кроватей', 'кровать', 'кровати'],['ванных комнат', 'ванная комната', 'ванные комнаты']])
 
 
                         +form-elements__component-wrapper({theme: 'facilities-expanded'})
                             +text-field({}, {fieldType: 'dropdown', fieldState: 'expanded'})
-                                +dropdown-facilities(multiple='multiple', id="dropdownFacilitiesExpanded", name='dropdownFacilities', size='3' data-option-value=['bedrooms', 'beds', 'bathrooms'] data-option-content=['спальни', 'кровати', 'ванные комнаты'] data-option-declension=[['спален', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']])
+                                +dropdown-facilities(multiple='multiple',
+                                                     id="dropdownFacilitiesExpanded",
+                                                     name='dropdownFacilities',
+                                                     size='3',
+                                                     data-option-value=['bedrooms', 'beds', 'bathrooms'],
+                                                     data-option-content=['спальни', 'кровати', 'ванные комнаты'],
+                                                     data-option-declension=[['спален', 'спальня', 'спальни'], ['кроватей', 'кровать', 'кровати'], ['ванных комнат', 'ванная комната', 'ванные комнаты']])
 
 
-                        +form-elements__component-wrapper({theme: 'expandable-list'})
+                        +form-elements__component-wrapper({theme: 'closed-dropdown-list'})
                             +checkbox-list({}, {checkboxListTitle: 'expandable checkbox list', iconTag: 'i', iconClass: 'material-icons', iconContent: 'expand_more'})
-                                +list({}, {ContentOfItems: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+                                +list({}, {contentOfItems: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+
+
+                        +form-elements__component-wrapper({theme: 'dropdown-list'})
+                            +checkbox-list({}, {checkboxListTitle: 'expandable checkbox list', iconTag: 'i', iconClass: 'material-icons', iconContent: 'expand_more'})
+                                +list({}, {contentOfItems: ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь']})
+
+
+                        // Room details
+                        +form-elements__component-wrapper({theme: 'room-details'})
+                            +room-details({}, {iconTag: 'i', iconClass: 'material-icons', contentsOfRoomDetails: [{iconRoomDetails: 'insert_emoticon', titleRoomDetails: 'Комфорт', descriptionRoomDetails: 'Шумопоглощающие стены'},
+                                                                                                                  {iconRoomDetails: 'location_city', titleRoomDetails: 'Удобство', descriptionRoomDetails: 'Окно в каждой из спален'}]})
