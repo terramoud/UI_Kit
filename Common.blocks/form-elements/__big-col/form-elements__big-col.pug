@@ -1,0 +1,11 @@
+
+mixin form-elements__big-col(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'form-elements__big-col_' + key + '_' + val + ' ';
+    #{args.tag}.form-elements__big-col&attributes(attributes)(class=modifierNames)
+        if block
+            block

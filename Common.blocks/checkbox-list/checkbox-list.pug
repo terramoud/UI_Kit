@@ -1,3 +1,4 @@
+include ./__list-wrapper/checkbox-list__list-wrapper.pug
 include ./__expandable/checkbox-list__expandable.pug
 include ./__icon/checkbox-list__icon.pug
 include ./__header/checkbox-list__header.pug
@@ -13,6 +14,12 @@ mixin checkbox-list(modifiers, ...argsArr)
         +checkbox-list__header({theme: 'expandable'})
             +label-text #{args.checkboxListTitle}
             +checkbox-list__icon({},{iconTag: args.iconTag, iconClass: args.iconClass, iconContent: args.iconContent})
-        +checkbox-list__expandable
-            if block
-                block
+        if args.isExpandable !== undefined
+            +checkbox-list__expandable
+                if block
+                    block
+        else
+            +checkbox-list__list-wrapper
+                if block
+                    block
+

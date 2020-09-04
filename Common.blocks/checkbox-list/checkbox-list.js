@@ -14,3 +14,5 @@ jQuery('.checkbox-list').each(function () {
     }
   });
 })
+
+require('./__list-wrapper/checkbox-list__list-wrapper.js');
