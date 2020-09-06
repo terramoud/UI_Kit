@@ -1,0 +1,11 @@
+
+mixin radio-buttons__radio-button(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'input';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'radio-buttons__radio-button_' + key + '_' + val + ' ';
+    #{args.tag}.radio-buttons__radio-button&attributes(attributes)(class=modifierNames)
+        if block
+            block

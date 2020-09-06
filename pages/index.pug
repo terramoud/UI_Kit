@@ -1,3 +1,4 @@
+include ../Common.blocks/radio-buttons/radio-buttons.pug
 include ../Common.blocks/room-details/room-details.pug
 //include ../Common.blocks/checkbox/checkbox.pug
 include ../Common.blocks/list/list.pug
@@ -227,3 +228,11 @@ html
                                             'Можно пригласить гостей (до 10 человек)'
                                           ]
                                         })
+
+                                // Radio Buttons
+                                +form-elements__component-wrapper({theme: 'radio-buttons'})
+                                    +form-elements__component-title({theme: 'radio-buttons'})
+                                        +label-text Radio Buttons
+                                    +radio-buttons
+
+                                    
