@@ -1,3 +1,5 @@
+include ../Common.blocks/toggle-button/toggle-button.pug
+include ../Common.blocks/toggle-block/toggle-block.pug
 include ../Common.blocks/radio-buttons/radio-buttons.pug
 include ../Common.blocks/room-details/room-details.pug
 //include ../Common.blocks/checkbox/checkbox.pug
@@ -235,4 +237,10 @@ html
                                         +label-text Radio Buttons
                                     +radio-buttons
 
-                                    
+
+                                // Toggle
+                                +form-elements__component-wrapper({theme: 'toggle'})
+                                    +form-elements__component-title({theme: 'toggle'})
+                                        +label-text Toggle
+                                    +form-elements__toggle-separator
+                                        +toggle-block({},{toggleBlockText: 'Получать спецпредложения'})

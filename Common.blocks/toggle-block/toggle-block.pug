@@ -1,0 +1,16 @@
+include ./__descr/toggle-block__descr.pug
+include ./__button/toggle-block__button.pug
+
+mixin toggle-block(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'toggle-block_' + key + '_' + val + ' ';
+    #{args.tag}.toggle-block&attributes(attributes)(class=modifierNames)
+        +toggle-block__button
+        +toggle-block__descr
+            +body-text args.toggleBlockText
+        if block
+            block

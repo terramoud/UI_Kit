@@ -11,7 +11,7 @@ mixin radio-buttons(modifiers, ...argsArr)
             -if (val !== undefined) modifierNames += 'radio-buttons_' + key + '_' + val + ' ';
     #{args.tag}.radio-buttons&attributes(attributes)(class=modifierNames)
         +radio-buttons__wrapper
-            +radio-buttons__radio-button({button: 'active'})(type="radio" name="gender" value="men" checked)
+            +radio-buttons__radio-button({state: 'active'})(type="radio" name="gender" value="men" checked)
             +radio-buttons__label
                 +body-text Мужчина
         +radio-buttons__wrapper

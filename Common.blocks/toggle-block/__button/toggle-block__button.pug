@@ -1,0 +1,11 @@
+
+mixin toggle-block__button(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+        each val, key in modifiers
+            -if (val !== undefined) modifierNames += 'toggle-block__button_' + key + '_' + val + ' ';
+    #{args.tag}.toggle-block__button&attributes(attributes)(class=modifierNames)
+        if block
+            block
