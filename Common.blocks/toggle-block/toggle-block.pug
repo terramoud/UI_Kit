@@ -9,8 +9,8 @@ mixin toggle-block(modifiers, ...argsArr)
         each val, key in modifiers
             -if (val !== undefined) modifierNames += 'toggle-block_' + key + '_' + val + ' ';
     #{args.tag}.toggle-block&attributes(attributes)(class=modifierNames)
-        +toggle-block__button
+        +toggle-block__button(type="checkbox" id="toggleOn")
         +toggle-block__descr
-            +body-text args.toggleBlockText
+            +body-text #{args.toggleBlockText}
         if block
             block
