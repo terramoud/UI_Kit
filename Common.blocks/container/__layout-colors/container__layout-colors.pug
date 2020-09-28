@@ -1,0 +1,10 @@
+mixin container__layout-colors(modifiers, ...argsArr)
+    -let modifierNames = '';
+    -let args = (argsArr[0] !== undefined) ? argsArr[0] : {};
+    -if (args.tag === undefined) args.tag = 'div';
+    -if (modifiers === undefined) modifiers = '';
+    each val, key in modifiers
+        -if (val !== undefined) modifierNames += 'container__layout-colors_' + key + '_' + val + ' ';
+    #{args.tag}.container__layout-colors&attributes(attributes)(class=modifierNames)
+        if block
+            block
